@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Howth Technology Factory — Focused Tools for People and AI Agents</title>
+    <meta name="description" content="A small, sharp set of tools that each do one job well — PDF utilities, VAT validation, sanctions screening, tech-stack detection and AI-readiness auditing. Usable in a browser or called directly by AI agents via MCP." />
+    <link rel="canonical" href="https://apifymcpfactory-droid.github.io/howth-technology-factory/" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Howth Technology Factory" />
+    <meta property="og:title" content="Howth Technology Factory — Focused Tools for People and AI Agents" />
+    <meta property="og:description" content="A small, sharp set of tools that each do one job well — PDF utilities, VAT validation, sanctions screening, tech-stack detection and AI-readiness auditing. Usable in a browser or called directly by AI agents via MCP." />
+    <meta property="og:url" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/" />
+    <meta property="og:image" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/assets/og/default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Howth Technology Factory — Focused Tools for People and AI Agents" />
+    <meta name="twitter:description" content="A small, sharp set of tools that each do one job well — PDF utilities, VAT validation, sanctions screening, tech-stack detection and AI-readiness auditing. Usable in a browser or called directly by AI agents via MCP." />
+    <meta name="twitter:image" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/assets/og/default.png" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0a0a0c',
+                        surface: '#131316',
+                        surface2: '#18181c',
+                        borderc: '#27272a',
+                        muted: '#a1a1aa',
+                        faint: '#71717a',
+                        gold: '#fcd34d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                    maxWidth: { '8xl': '90rem' },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="bg-bg text-text font-sans antialiased">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="grain"></div>
+
+    <header data-site-header class="sticky top-0 z-50 header-blur border-b border-borderc transition-shadow">
+        <div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <span class="w-8 h-8 rounded-[9px] overflow-hidden shrink-0 ring-1 ring-borderc group-hover:ring-gold/50 transition-all"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#131316"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  <path d="M176 140 V372 M176 256 H336 M336 140 V372" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg></span>
+                <span class="font-display font-semibold tracking-tight text-[15px] text-text">Howth <span class="text-muted font-normal">Technology Factory</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html#products" class="text-sm text-muted hover:text-text transition-colors">Products</a>
+                <a href="index.html#for-agents" class="text-sm text-muted hover:text-text transition-colors">For Agents</a>
+                <a href="contact.html" class="text-sm text-muted hover:text-text transition-colors">Contact</a>
+                <a href="contact.html" class="inline-flex items-center gap-1.5 text-sm font-medium bg-gold text-[#14140f] px-4 py-2 rounded-full hover:brightness-105 transition-all">
+                    Get in touch
+                </a>
+            </nav>
+            <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="md:hidden p-2 -mr-2 text-text">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div data-mobile-nav class="hidden md:hidden flex-col border-t border-borderc bg-bg/95">
+            <a href="index.html#products" class="block px-6 py-3 text-base text-muted hover:text-text">Products</a>
+                <a href="index.html#for-agents" class="block px-6 py-3 text-base text-muted hover:text-text">For Agents</a>
+                <a href="contact.html" class="block px-6 py-3 text-base text-muted hover:text-text">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="relative overflow-hidden">
+            <div class="mesh"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+            <div class="relative z-10 max-w-8xl mx-auto px-6 pt-24 pb-28 md:pt-36 md:pb-40 text-center">
+                <div class="inline-flex items-center gap-2 text-xs font-medium text-gold/90 border border-gold/25 bg-gold/5 rounded-full px-3.5 py-1.5 mb-8" data-aos="fade-up">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    Seven tools. One family. Zero bloat.
+                </div>
+                <h1 class="font-display font-medium tracking-tight text-4xl sm:text-5xl md:text-7xl text-text max-w-4xl mx-auto leading-[1.08]" data-aos="fade-up" data-aos-delay="80">
+                    Focused tools for people —
+                    <br class="hidden sm:block" />
+                    and the agents working for them.
+                </h1>
+                <div class="gold-rule mx-auto mt-8 mb-8" data-aos="fade-up" data-aos-delay="120"></div>
+                <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="140">
+                    A small, sharp set of utilities that each do one job well. Use them from a browser in seconds,
+                    or call them directly from an AI agent's workflow — same tool, same result.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="180">
+                    <a href="#products" class="inline-flex items-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
+                        Explore tools <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#for-agents" class="inline-flex items-center gap-2 border border-borderc text-text font-medium px-6 py-3.5 rounded-full hover:border-gold/40 hover:bg-surface transition-all">
+                        For AI agents <i data-lucide="bot" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST STRIP -->
+        <section class="border-y border-borderc bg-surface/50">
+            <div class="max-w-8xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-muted">
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-gold"></i>Official public data, where it applies</span>
+                <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>Nothing personal stored beyond a run's own output</span>
+                <span class="flex items-center gap-2"><i data-lucide="credit-card" class="w-4 h-4 text-gold"></i>Pay only for successful results</span>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" class="max-w-8xl mx-auto px-6 py-28 md:py-32 scroll-mt-16">
+            <div class="max-w-2xl mb-14" data-aos="fade-up">
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">The tools</div>
+                <h2 class="font-display font-medium text-3xl md:text-5xl tracking-tight text-text mb-4">Seven tools, each built to do one thing right.</h2>
+                <p class="text-muted text-lg leading-relaxed">No suites to configure, no dashboards to learn. Pick the one you need and get a result in seconds.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <a href="products/pdf-toolkit.html" data-aos="fade-up" data-aos-delay="0"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#0D9488"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <path d="M180 130 H292 L334 172 V372 C334 381.941 325.941 390 316 390 H180 C170.059 390 162 381.941 162 372 V148 C162 138.059 170.059 130 180 130 Z" fill="#FFFFFF"/>
+  <path d="M292 130 L334 172 H304 C297.373 172 292 166.627 292 160 V130 Z" fill="#0D9488"/>
+  <rect x="188" y="228" width="108" height="14" rx="7" fill="#0D9488"/>
+  <rect x="188" y="260" width="108" height="14" rx="7" fill="#0D9488"/>
+  <rect x="188" y="292" width="70" height="14" rx="7" fill="#0D9488"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">PDF Toolkit</h3>
+        <p class="text-sm text-muted leading-relaxed">Merge, split, compress and convert PDFs in one tool — batch jobs, no file-size limits.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/eu-vat-validator.html" data-aos="fade-up" data-aos-delay="80"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#16A34A"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <text x="246" y="300" font-family="'Space Grotesk', Arial, sans-serif" font-weight="700" font-size="200" fill="#FFFFFF" text-anchor="middle">&#8364;</text>
+  <circle cx="352" cy="330" r="46" fill="#FFFFFF"/>
+  <path d="M332 330 L346 344 L374 314" stroke="#16A34A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">EU VAT Validator</h3>
+        <p class="text-sm text-muted leading-relaxed">Validate EU VAT numbers against the official VIES database — single or bulk.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/tech-stack-detector.html" data-aos="fade-up" data-aos-delay="160"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#2563EB"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <rect x="156" y="160" width="200" height="52" rx="14" fill="#FFFFFF"/>
+  <rect x="156" y="230" width="200" height="52" rx="14" fill="#FFFFFF"/>
+  <rect x="156" y="300" width="200" height="52" rx="14" fill="#FFFFFF"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">Tech Stack Detector</h3>
+        <p class="text-sm text-muted leading-relaxed">See what any website is built with — CMS, frameworks, analytics and more.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/llms-txt-checker.html" data-aos="fade-up" data-aos-delay="0"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#C026D3"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <circle cx="228" cy="228" r="72" fill="none" stroke="#FFFFFF" stroke-width="28"/>
+  <line x1="280" y1="280" x2="352" y2="352" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">llms.txt Checker</h3>
+        <p class="text-sm text-muted leading-relaxed">Audit any site's llms.txt and get an AI-readiness score with concrete fixes.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/llms-txt-generator.html" data-aos="fade-up" data-aos-delay="80"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#4F46E5"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <path d="M176 140 H272 L306 174 V370 C306 379.941 297.941 388 288 388 H176 C166.059 388 158 379.941 158 370 V158 C158 148.059 166.059 140 176 140 Z" fill="#FFFFFF"/>
+  <path d="M186 224 H262" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M186 256 H262" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M186 288 H232" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M360 150 L372 182 L404 194 L372 206 L360 238 L348 206 L316 194 L348 182 Z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="6" stroke-linejoin="round"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">llms.txt Generator</h3>
+        <p class="text-sm text-muted leading-relaxed">Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/llms-txt-suite.html" data-aos="fade-up" data-aos-delay="160"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#7C3AED"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <path d="M256 148 C182 148 134 190 134 242 C134 280 158 312 195 328 L186 372 L235 336 C242 337 249 338 256 338 C330 338 378 296 378 244 C378 192 330 148 256 148 Z" fill="#FFFFFF"/>
+  <circle cx="208" cy="243" r="15" fill="#7C3AED"/>
+  <circle cx="256" cy="243" r="15" fill="#7C3AED"/>
+  <circle cx="304" cy="243" r="15" fill="#7C3AED"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">llms.txt Suite</h3>
+        <p class="text-sm text-muted leading-relaxed">Audit, generate and monitor your llms.txt in one — keep your site AI-readable.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+<a href="products/sanctions-screening.html" data-aos="fade-up" data-aos-delay="0"
+   class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
+    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#DC2626"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  
+  <path d="M256 132 L348 164 V246 C348 308 310 352 256 384 C202 352 164 308 164 246 V164 Z" fill="#FFFFFF"/>
+  <path d="M216 252 L242 278 L298 218" stroke="#DC2626" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg></div>
+    <div class="flex-1">
+        <h3 class="font-display font-semibold text-lg text-text mb-1.5">Sanctions Screening</h3>
+        <p class="text-sm text-muted leading-relaxed">Screen names against official OFAC, EU, UK and UN sanctions lists — bulk, with match scores.</p>
+    </div>
+    <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+        Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+</a>
+            </div>
+        </section>
+
+        <!-- FOR AGENTS -->
+        <section id="for-agents" class="border-y border-borderc bg-surface/40 scroll-mt-16">
+            <div class="max-w-8xl mx-auto px-6 py-28 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+                <div data-aos="fade-right">
+                    <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Built for humans and AI agents</div>
+                    <h2 class="font-display font-medium text-3xl md:text-5xl tracking-tight text-text mb-5">
+                        Click a button, or call it from code. Same tool, either way.
+                    </h2>
+                    <p class="text-muted text-lg leading-relaxed mb-8">
+                        Every tool here runs as an Apify Actor — which means it's also a remote MCP server. An AI
+                        agent can call it directly inside a conversation, with the same typed inputs and outputs a
+                        person gets in the browser. No separate "API mode" to configure.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>One atomic action per call, typed inputs and outputs</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Works with Claude, Cursor and any MCP-compatible client</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Pay-per-event pricing — an agent only spends on results it actually gets</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="code-box p-6 shadow-2xl shadow-black/40">
+                        <div class="text-faint mb-3"># Any tool's MCP endpoint follows the same shape</div>
+                        <div><span class="tok-mut">https://mcp.apify.com?tools=</span><span class="tok-str">apifmcpfactory/&lt;tool-id&gt;</span></div>
+                        <div class="mt-5 text-faint mb-3"># Example call — Sanctions Screening</div>
+                        <pre class="whitespace-pre-wrap"><span class="tok-key">screen_entity</span>({
+  <span class="tok-key">names</span>: [<span class="tok-str">"AeroCaribbean Airlines"</span>],
+  <span class="tok-key">threshold</span>: <span class="tok-mut">85</span>
+})</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY HOWTH -->
+        <section class="max-w-8xl mx-auto px-6 py-28 md:py-32">
+            <div class="max-w-2xl mb-14" data-aos="fade-up">
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Why Howth</div>
+                <h2 class="font-display font-medium text-3xl md:text-5xl tracking-tight text-text">Built the way we'd want to buy it.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="frame-hover rounded-2xl border border-borderc bg-surface p-8" data-aos="fade-up">
+                    <i data-lucide="gem" class="w-6 h-6 text-gold mb-5"></i>
+                    <h3 class="font-display font-semibold text-lg mb-2">Quality</h3>
+                    <p class="text-sm text-muted leading-relaxed">Every tool does one job, and does it properly — no bloated dashboards, no half-finished features.</p>
+                </div>
+                <div class="frame-hover rounded-2xl border border-borderc bg-surface p-8" data-aos="fade-up" data-aos-delay="80">
+                    <i data-lucide="zap" class="w-6 h-6 text-gold mb-5"></i>
+                    <h3 class="font-display font-semibold text-lg mb-2">Speed</h3>
+                    <p class="text-sm text-muted leading-relaxed">Built compute-light from the ground up, so results come back in seconds, not minutes.</p>
+                </div>
+                <div class="frame-hover rounded-2xl border border-borderc bg-surface p-8" data-aos="fade-up" data-aos-delay="160">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-gold mb-5"></i>
+                    <h3 class="font-display font-semibold text-lg mb-2">Reliability</h3>
+                    <p class="text-sm text-muted leading-relaxed">Deterministic where it matters — the same input produces the same output, every time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section class="max-w-8xl mx-auto px-6 pb-28 md:pb-32">
+            <div class="relative overflow-hidden rounded-3xl border border-gold/20 bg-surface px-8 py-16 md:py-20 text-center" data-aos="zoom-in">
+                <div class="absolute inset-0 opacity-40 mesh"><span class="b1"></span><span class="b2"></span></div>
+                <div class="relative z-10">
+                    <h2 class="font-display font-medium text-3xl md:text-4xl tracking-tight mb-4">Have a tool in mind we haven't built yet?</h2>
+                    <p class="text-muted text-lg mb-8 max-w-xl mx-auto">Tell us what you're trying to do — we're always shipping.</p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
+                        Get in touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-borderc mt-32">
+        <div class="max-w-8xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+                <div class="flex items-center gap-2.5 mb-3">
+                    <span class="w-7 h-7 rounded-[8px] overflow-hidden shrink-0 ring-1 ring-borderc"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect width="512" height="512" rx="120" fill="#131316"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FCD34D" stroke-width="16"/>
+  <rect x="30" y="30" width="452" height="452" rx="90" fill="none" stroke="#FCD34D" stroke-width="9"/>
+  <path d="M176 140 V372 M176 256 H336 M336 140 V372" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg></span>
+                    <span class="font-display font-semibold text-text text-[15px]">Howth Technology Factory</span>
+                </div>
+                <p class="text-sm text-faint max-w-xs leading-relaxed">Focused tools for people and the AI agents working for them.</p>
+            </div>
+            <div>
+                <div class="text-xs font-semibold tracking-wide text-faint uppercase mb-3">Company</div>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="contact.html" class="text-muted hover:text-text transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-muted hover:text-text transition-colors">Privacy</a></li>
+                    <li><a href="https://apify.com/apifmcpfactory" target="_blank" rel="noopener" class="text-muted hover:text-text transition-colors">Publisher on Apify ↗</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="text-xs font-semibold tracking-wide text-faint uppercase mb-3">Products</div>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="products/pdf-toolkit.html" class="text-muted hover:text-text transition-colors">PDF Toolkit</a></li>
+                    <li><a href="products/sanctions-screening.html" class="text-muted hover:text-text transition-colors">Sanctions Screening</a></li>
+                    <li><a href="index.html#products" class="text-muted hover:text-text transition-colors">View all →</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-borderc">
+            <div class="max-w-8xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-faint">
+                <span>© <span data-year>2026</span> Howth Technology Factory. All rights reserved.</span>
+                <span>Built for people and AI agents.</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

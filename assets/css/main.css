@@ -1,0 +1,215 @@
+/* Howth Technology Factory — hand-written styles layered on top of Tailwind's CDN build.
+   Tailwind handles layout/utilities; this file covers what utility classes can't:
+   the gradient-mesh hero, the gold double-line frame motif, grain texture, and animations. */
+
+:root {
+    --bg: #0a0a0c;
+    --surface: #131316;
+    --surface-2: #18181c;
+    --border: #27272a;
+    --text: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --text-faint: #71717a;
+    --gold: #fcd34d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-feature-settings: 'ss01' 1;
+}
+
+::selection {
+    background: var(--gold);
+    color: #14140f;
+}
+
+/* Grain overlay: a tiled SVG turbulence texture at very low opacity, the same trick
+   Linear/Vercel-style sites use so flat dark surfaces don't look sterile/banded. */
+.grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+}
+
+/* Animated gradient mesh used behind hero sections. Three blurred blobs drifting slowly. */
+.mesh {
+    position: absolute;
+    inset: -10%;
+    z-index: 0;
+    overflow: hidden;
+    filter: blur(70px);
+}
+
+.mesh span {
+    position: absolute;
+    border-radius: 9999px;
+    opacity: 0.55;
+    will-change: transform;
+}
+
+.mesh .b1 {
+    top: -10%;
+    left: 5%;
+    width: 42vw;
+    height: 42vw;
+    background: radial-gradient(circle at 30% 30%, #fcd34d, transparent 70%);
+    animation: drift1 22s ease-in-out infinite alternate;
+}
+
+.mesh .b2 {
+    top: 10%;
+    right: -5%;
+    width: 38vw;
+    height: 38vw;
+    background: radial-gradient(circle at 60% 40%, #7c3aed, transparent 70%);
+    animation: drift2 26s ease-in-out infinite alternate;
+}
+
+.mesh .b3 {
+    bottom: -20%;
+    left: 30%;
+    width: 34vw;
+    height: 34vw;
+    background: radial-gradient(circle at 50% 50%, #0d9488, transparent 70%);
+    animation: drift3 30s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(6%, 8%) scale(1.12);
+    }
+}
+@keyframes drift2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(-8%, 6%) scale(1.08);
+    }
+}
+@keyframes drift3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(5%, -6%) scale(1.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mesh span {
+        animation: none !important;
+    }
+}
+
+/* Gold double-line frame: the motif echoed from the product icons. Used as a
+   decorative rule and as a hover/focus frame on cards and the primary CTA. */
+.gold-rule {
+    position: relative;
+    height: 10px;
+}
+.gold-rule::before,
+.gold-rule::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 64px;
+    border-top: 2px solid var(--gold);
+}
+.gold-rule::before {
+    top: 0;
+}
+.gold-rule::after {
+    top: 6px;
+    width: 40px;
+    opacity: 0.6;
+}
+
+.frame-hover {
+    position: relative;
+    transition:
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease;
+}
+.frame-hover::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    transition: border-color 0.35s ease;
+    pointer-events: none;
+}
+.frame-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(252, 211, 77, 0.45);
+}
+.frame-hover:hover::after {
+    border-color: rgba(252, 211, 77, 0.28);
+}
+
+/* Sticky header blur */
+.header-blur {
+    background: rgba(10, 10, 12, 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.font-display {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Code / mcp snippet blocks */
+.code-box {
+    background: #0f0f11;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-family:
+        ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #d4d4d8;
+    overflow-x: auto;
+}
+.code-box .tok-key {
+    color: #93c5fd;
+}
+.code-box .tok-str {
+    color: #86efac;
+}
+.code-box .tok-mut {
+    color: var(--text-faint);
+}
+
+/* Skip link for keyboard/screen-reader users */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--gold);
+    color: #14140f;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 8px 0;
+    z-index: 100;
+    font-weight: 600;
+}
+.skip-link:focus {
+    left: 0;
+}
+
+/* Fallback reveal-on-scroll (works even before AOS's CDN script finishes loading) */
+[data-aos] {
+    opacity: 1;
+}

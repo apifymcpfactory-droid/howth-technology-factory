@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0c"/>
+  <rect x="18" y="18" width="1164" height="594" rx="28" fill="none" stroke="#FCD34D" stroke-width="4"/>
+  <rect x="34" y="34" width="1132" height="562" rx="20" fill="none" stroke="#FCD34D" stroke-width="2" opacity="0.6"/>
+
+  <circle cx="230" cy="230" r="220" fill="#FCD34D" opacity="0.06"/>
+  <circle cx="980" cy="420" r="260" fill="#7C3AED" opacity="0.08"/>
+
+  <!-- monogram -->
+  <g transform="translate(490,148)">
+    <rect width="112" height="112" rx="26" fill="#131316"/>
+    <rect x="2" y="2" width="108" height="108" rx="24" fill="none" stroke="#FCD34D" stroke-width="3.5"/>
+    <rect x="8" y="8" width="96" height="96" rx="19" fill="none" stroke="#FCD34D" stroke-width="2"/>
+    <path d="M38 30 V82 M38 56 H74 M74 30 V82" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <text x="600" y="345" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="54" fill="#F4F4F5" text-anchor="middle">Howth Technology Factory</text>
+  <text x="600" y="392" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="24" fill="#A1A1AA" text-anchor="middle">Focused tools for people — and the agents working for them.</text>
+
+  <line x1="536" y1="438" x2="664" y2="438" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="558" y1="446" x2="642" y2="446" stroke="#FCD34D" stroke-width="2" opacity="0.6"/>
+</svg>
