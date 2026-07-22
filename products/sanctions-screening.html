@@ -112,6 +112,9 @@
                         <a href="https://apify.com/apifmcpfactory/sanctions-screening" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
                             Try it on Apify <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                         </a>
+                        <a href="https://mcpize.com/mcp/sanctions-screening" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-transparent border-2 border-[#8542F0] text-[#8542F0] font-medium px-[22px] py-3 rounded-full hover:bg-[#8542F0]/10 transition-all">
+                            Get it on MCPize <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
                         <a href="#agents" class="inline-flex items-center gap-2 text-sm text-muted hover:text-text">
                             <i data-lucide="bot" class="w-4 h-4"></i> Call it via MCP
                         </a>
@@ -358,13 +361,30 @@
         "@type": "Organization",
         "name": "Howth Technology Factory"
     },
-    "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "url": "https://apify.com/apifmcpfactory/sanctions-screening",
-        "availability": "https://schema.org/InStock",
-        "description": "$0.02 per name screened."
-    }
+    "offers": [
+        {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "url": "https://apify.com/apifmcpfactory/sanctions-screening",
+            "availability": "https://schema.org/InStock",
+            "description": "$0.02 per name screened.",
+            "seller": {
+                "@type": "Organization",
+                "name": "Apify"
+            }
+        },
+        {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "url": "https://mcpize.com/mcp/sanctions-screening",
+            "availability": "https://schema.org/InStock",
+            "description": "$0.02 per name screened.",
+            "seller": {
+                "@type": "Organization",
+                "name": "MCPize"
+            }
+        }
+    ]
 }
     </script>
 </body>
