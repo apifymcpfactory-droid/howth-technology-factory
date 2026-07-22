@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact — Howth Technology Factory</title>
+    <title>Get in touch — Howth Technology Factory</title>
     <meta name="description" content="Get in touch with Howth Technology Factory — questions, feedback, or a tool you'd like to see built." />
     <link rel="canonical" href="https://apifymcpfactory-droid.github.io/howth-technology-factory/contact.html" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Howth Technology Factory" />
-    <meta property="og:title" content="Contact — Howth Technology Factory" />
+    <meta property="og:title" content="Get in touch — Howth Technology Factory" />
     <meta property="og:description" content="Get in touch with Howth Technology Factory — questions, feedback, or a tool you'd like to see built." />
     <meta property="og:url" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/contact.html" />
     <meta property="og:image" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/assets/og/default.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact — Howth Technology Factory" />
+    <meta name="twitter:title" content="Get in touch — Howth Technology Factory" />
     <meta name="twitter:description" content="Get in touch with Howth Technology Factory — questions, feedback, or a tool you'd like to see built." />
     <meta name="twitter:image" content="https://apifymcpfactory-droid.github.io/howth-technology-factory/assets/og/default.png" />
 
@@ -74,7 +74,6 @@
             <nav class="hidden md:flex items-center gap-8">
                 <a href="index.html#products" class="text-sm text-muted hover:text-text transition-colors">Products</a>
                 <a href="index.html#for-agents" class="text-sm text-muted hover:text-text transition-colors">For Agents</a>
-                <a href="contact.html" class="text-sm text-muted hover:text-text transition-colors text-text">Contact</a>
                 <a href="contact.html" class="inline-flex items-center gap-1.5 text-sm font-medium bg-gold text-[#14140f] px-4 py-2 rounded-full hover:brightness-105 transition-all">
                     Get in touch
                 </a>
@@ -84,9 +83,9 @@
             </button>
         </div>
         <div data-mobile-nav class="hidden md:hidden flex-col border-t border-borderc bg-bg/95">
-            <a href="index.html#products" class="block px-6 py-3 text-base text-muted hover:text-text">Products</a>
-                <a href="index.html#for-agents" class="block px-6 py-3 text-base text-muted hover:text-text">For Agents</a>
-                <a href="contact.html" class="block px-6 py-3 text-base text-muted hover:text-text">Contact</a>
+            <a href="index.html#products" class="block px-6 py-3 text-base hover:text-text text-muted">Products</a>
+                <a href="index.html#for-agents" class="block px-6 py-3 text-base hover:text-text text-muted">For Agents</a>
+                <a href="contact.html" class="block px-6 py-3 text-base hover:text-text text-gold font-medium">Get in touch</a>
         </div>
     </header>
 
@@ -94,7 +93,7 @@
         <section class="relative overflow-hidden border-b border-borderc">
             <div class="mesh opacity-50"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
             <div class="relative z-10 max-w-3xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3" data-aos="fade-up">Contact</div>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3" data-aos="fade-up">Get in touch</div>
                 <h1 class="font-display font-medium tracking-tight text-4xl md:text-6xl text-text mb-5" data-aos="fade-up" data-aos-delay="60">Let's talk.</h1>
                 <p class="text-lg text-muted leading-relaxed" data-aos="fade-up" data-aos-delay="120">
                     Questions, feedback, or a tool you wish existed — this goes straight to the team.
@@ -103,17 +102,20 @@
         </section>
 
         <section class="max-w-2xl mx-auto px-6 py-20 md:py-24">
-            <div data-form-success class="hidden rounded-2xl border border-gold/30 bg-gold/5 p-10 text-center mb-8">
+            <div data-form-success class="hidden rounded-2xl border border-gold/30 bg-gold/5 p-10 text-center mb-8" role="status">
                 <i data-lucide="check-circle-2" class="w-8 h-8 text-gold mx-auto mb-4"></i>
                 <h2 class="font-display font-semibold text-xl mb-2">Message sent.</h2>
                 <p class="text-muted text-sm">Thanks for reaching out — we'll get back to you shortly.</p>
             </div>
 
-            <form data-contact-form action="https://formsubmit.co/fjones@tcd.ie" method="POST" class="rounded-2xl border border-borderc bg-surface p-8 md:p-10 space-y-6" data-aos="fade-up">
+            <div data-form-error class="hidden rounded-2xl border border-red-500/30 bg-red-500/5 p-6 text-center mb-8" role="alert">
+                <p class="text-sm text-text">Something went wrong sending your message. Please try again, or email us directly.</p>
+            </div>
+
+            <form data-contact-form action="https://formsubmit.co/ajax/apifymcpfactory@gmail.com" method="POST" class="rounded-2xl border border-borderc bg-surface p-8 md:p-10 space-y-6" data-aos="fade-up">
                 <input type="hidden" name="_subject" value="New message from Howth Technology Factory website" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://apifymcpfactory-droid.github.io/howth-technology-factory/contact.html?sent=true" />
                 <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
                 <div>
@@ -143,9 +145,9 @@
                         for how we handle your data.
                     </label>
                 </div>
-                <button type="submit"
-                    class="w-full inline-flex items-center justify-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
-                    Send message <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <button type="submit" data-submit-btn
+                    class="w-full inline-flex items-center justify-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all disabled:opacity-60 disabled:cursor-not-allowed">
+                    <span data-submit-label>Send message</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
                 <p class="text-xs text-faint text-center">Sent securely via FormSubmit. No account or newsletter sign-up required.</p>
             </form>
@@ -169,7 +171,7 @@
             <div>
                 <div class="text-xs font-semibold tracking-wide text-faint uppercase mb-3">Company</div>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="contact.html" class="text-muted hover:text-text transition-colors">Contact</a></li>
+                    <li><a href="contact.html" class="text-muted hover:text-text transition-colors">Get in touch</a></li>
                     <li><a href="privacy.html" class="text-muted hover:text-text transition-colors">Privacy</a></li>
                     <li><a href="https://apify.com/apifmcpfactory" target="_blank" rel="noopener" class="text-muted hover:text-text transition-colors">Publisher on Apify ↗</a></li>
                 </ul>
