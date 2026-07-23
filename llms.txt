@@ -4,16 +4,16 @@
 
 ## Pages
 
-- [Home](https://apifymcpfactory-droid.github.io/howth-technology-factory/index.html): Overview of Howth Technology Factory and the full product grid.
-- [Contact](https://apifymcpfactory-droid.github.io/howth-technology-factory/contact.html): Get in touch with the team.
-- [Privacy](https://apifymcpfactory-droid.github.io/howth-technology-factory/privacy.html): How this site and our tools handle data.
+- [Home](https://howthtechnologyfactory.pro/index.html): Overview of Howth Technology Factory and the full product grid.
+- [Contact](https://howthtechnologyfactory.pro/contact.html): Get in touch with the team.
+- [Privacy](https://howthtechnologyfactory.pro/privacy.html): How this site and our tools handle data.
 
 ## Products
 
-- [PDF Toolkit: Merge, Split, Compress & Convert PDFs](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/pdf-toolkit.html): Merge, split, compress and convert PDFs in one tool — batch jobs, no file-size limits. MCP: https://mcp.apify.com?tools=apifmcpfactory/pdf-toolkit
-- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/eu-vat-validator.html): Validate EU VAT numbers against the official VIES database — single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator
-- [Website Technology Detector: Tech Stack Scanner](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/tech-stack-detector.html): See what any website is built with — CMS, frameworks, analytics and more. MCP: https://mcp.apify.com?tools=apifmcpfactory/tech-stack-detector
-- [llms.txt Checker: AI Search Readiness Audit](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/llms-txt-checker.html): Audit any site's llms.txt and get an AI-readiness score with concrete fixes. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-checker
-- [llms.txt Generator: Make Any Website AI-Readable](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/llms-txt-generator.html): Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-generator
-- [llms.txt Checker, Generator & Monitor: AI Search Readiness](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/llms-txt-suite.html): Audit, generate and monitor your llms.txt in one — keep your site AI-readable. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-suite
-- [Sanctions Screening: Check Names Against OFAC, EU, UK & UN](https://apifymcpfactory-droid.github.io/howth-technology-factory/products/sanctions-screening.html): Screen names against official OFAC, EU, UK and UN sanctions lists — bulk, with match scores. MCP: https://mcp.apify.com?tools=apifmcpfactory/sanctions-screening
+- [PDF Toolkit: Merge, Split, Compress & Convert PDFs](https://howthtechnologyfactory.pro/products/pdf-toolkit.html): Merge, split, compress and convert PDFs in one tool — batch jobs, no file-size limits. MCP: https://mcp.apify.com?tools=apifmcpfactory/pdf-toolkit
+- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://howthtechnologyfactory.pro/products/eu-vat-validator.html): Validate EU VAT numbers against the official VIES database — single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator
+- [Website Technology Detector: Tech Stack Scanner](https://howthtechnologyfactory.pro/products/tech-stack-detector.html): See what any website is built with — CMS, frameworks, analytics and more. MCP: https://mcp.apify.com?tools=apifmcpfactory/tech-stack-detector
+- [llms.txt Checker: AI Search Readiness Audit](https://howthtechnologyfactory.pro/products/llms-txt-checker.html): Audit any site's llms.txt and get an AI-readiness score with concrete fixes. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-checker
+- [llms.txt Generator: Make Any Website AI-Readable](https://howthtechnologyfactory.pro/products/llms-txt-generator.html): Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-generator
+- [llms.txt Checker, Generator & Monitor: AI Search Readiness](https://howthtechnologyfactory.pro/products/llms-txt-suite.html): Audit, generate and monitor your llms.txt in one — keep your site AI-readable. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-suite
+- [Sanctions Screening: Check Names Against OFAC, EU, UK & UN](https://howthtechnologyfactory.pro/products/sanctions-screening.html): Screen names against official OFAC, EU, UK and UN sanctions lists — bulk, with match scores. MCP: https://mcp.apify.com?tools=apifmcpfactory/sanctions-screening

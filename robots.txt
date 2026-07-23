@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://apifymcpfactory-droid.github.io/howth-technology-factory/sitemap.xml
+Sitemap: https://howthtechnologyfactory.pro/sitemap.xml
