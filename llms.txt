@@ -4,7 +4,7 @@
 
 ## Pages
 
-- [Home](https://howthtechnologyfactory.pro/index.html): Overview of Howth Technology Factory and the full product grid.
+- [Home](https://howthtechnologyfactory.pro/): Overview of Howth Technology Factory and the full product grid.
 - [Contact](https://howthtechnologyfactory.pro/contact.html): Get in touch with the team.
 - [Privacy](https://howthtechnologyfactory.pro/privacy.html): How this site and our tools handle data.
 
