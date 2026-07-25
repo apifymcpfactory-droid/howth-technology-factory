@@ -1,5 +1,53 @@
 // Howth Technology Factory — minimal vanilla JS. No framework, no build step.
 document.addEventListener('DOMContentLoaded', () => {
+    const sendEvent = (name, params = {}) => {
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', name, params);
+        }
+    };
+
+    const classifyDestination = (url) => {
+        if (url.hostname === 'apify.com') return 'apify';
+        if (url.hostname === 'mcpize.com') return 'mcpize';
+        if (url.hostname === 'youtube.com' || url.hostname === 'youtu.be') return 'youtube';
+        return null;
+    };
+
+    // Delegated measurement keeps new Insights and product pages covered without
+    // page-specific event handlers. Parameters intentionally avoid personal data.
+    document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href]');
+        if (!link) return;
+
+        let url;
+        try {
+            url = new URL(link.href, window.location.href);
+        } catch {
+            return;
+        }
+
+        const destination = classifyDestination(url);
+        const common = {
+            link_url: url.href,
+            link_text: (link.textContent || '').trim().slice(0, 100),
+            page_path: window.location.pathname,
+            campaign_id: link.dataset.campaignId || undefined,
+            content_id: link.dataset.contentId || undefined,
+        };
+
+        if (destination === 'apify') sendEvent('apify_outbound_click', common);
+        if (destination === 'mcpize') sendEvent('mcpize_outbound_click', common);
+        if (destination === 'youtube') sendEvent('youtube_outbound_click', common);
+
+        if (
+            window.location.pathname.startsWith('/insights/') &&
+            url.origin === window.location.origin &&
+            url.pathname.startsWith('/products/')
+        ) {
+            sendEvent('insight_to_product_click', common);
+        }
+    });
+
     // Icons (Lucide CDN)
     if (window.lucide) window.lucide.createIcons();
 
@@ -58,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 if (!response.ok) throw new Error(`Request failed: ${response.status}`);
 
+                sendEvent('contact_submit', {
+                    form_id: formEl.id || 'contact',
+                    page_path: window.location.pathname,
+                });
                 formEl.classList.add('hidden');
                 successEl.classList.remove('hidden');
                 successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });

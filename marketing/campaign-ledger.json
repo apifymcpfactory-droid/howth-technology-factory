@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "site": "https://howthtechnologyfactory.pro",
+  "campaigns": [
+    {
+      "campaign_id": "HTF-20260724-PDF-001",
+      "product_slug": "pdf-toolkit",
+      "product_url": "https://howthtechnologyfactory.pro/products/pdf-toolkit.html",
+      "created_at": "2026-07-24T00:00:00+01:00",
+      "persona": "automation engineers and technical operators",
+      "problem": "underspecified PDF operations become unreliable production workflows",
+      "search_intent": "PDF automation checklist",
+      "angle": "Define input, security, page, output, retention and limit contracts before selecting a PDF tool.",
+      "angle_fingerprint": "automation-engineer|operational-boundaries|pdf-contract-checklist",
+      "status": "migration_in_progress",
+      "historical_tracking_note": "The original 24 July campaign used campaign-level UTM values inconsistently and did not use unique post-level content IDs. Historical traffic and outcomes must remain unattributed unless another source supplies direct evidence.",
+      "baseline": {
+        "captured_at": null,
+        "status": "not_available_for_original_launch",
+        "directly_attributed": {},
+        "correlated": {},
+        "unknown": ["Historical website visits", "Historical marketplace outcomes"]
+      },
+      "publications": [
+        {
+          "content_id": "INS-PDF-001",
+          "platform": "website",
+          "format": "insight",
+          "url": "https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html",
+          "status": "ready_for_deployment"
+        },
+        {
+          "content_id": "RED-PDF-001",
+          "platform": "reddit",
+          "format": "educational_checklist",
+          "url": "https://www.reddit.com/r/u_ApifyMCPFactory/comments/1v5co2a/the_checklist_i_use_before_putting_pdf/",
+          "status": "live",
+          "verified_at": "2026-07-25T00:00:00+01:00",
+          "tracking_quality": "campaign_level_only"
+        },
+        {
+          "content_id": "MED-PDF-001",
+          "platform": "medium",
+          "format": "long_form",
+          "url": null,
+          "status": "requires_existing_post_url_and_authentication"
+        },
+        {
+          "content_id": "DEV-PDF-001",
+          "platform": "devto",
+          "format": "technical_article",
+          "url": null,
+          "status": "requires_existing_post_url_and_authentication"
+        }
+      ],
+      "review_due": {
+        "24h": "2026-07-25T00:00:00+01:00",
+        "48h": "2026-07-26T00:00:00+01:00",
+        "7d": "2026-07-31T00:00:00+01:00",
+        "30d": "2026-08-23T00:00:00+01:00"
+      }
+    }
+  ]
+}

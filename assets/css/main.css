@@ -213,3 +213,14 @@ body {
 [data-aos] {
     opacity: 1;
 }
+/* Long-form Insights typography. Kept in the shared stylesheet so future
+   articles inherit the same readable measure and rhythm. */
+.insight-prose { color: #d4d4d8; font-size: 1.075rem; line-height: 1.85; }
+.insight-prose p { margin: 1.25rem 0; }
+.insight-prose h2 { color: #fff; font-family: "Space Grotesk", sans-serif; font-size: 1.75rem; line-height: 1.25; margin: 2.75rem 0 1rem; }
+.insight-prose ol, .insight-prose ul { margin: 1.25rem 0; padding-left: 1.5rem; }
+.insight-prose ol { list-style: decimal; }
+.insight-prose ul { list-style: disc; }
+.insight-prose li { margin: .55rem 0; padding-left: .25rem; }
+.insight-prose a { color: #fcd34d; text-decoration: underline; text-underline-offset: 3px; }
+.insight-prose code { color: #fde68a; background: #18181c; border: 1px solid #27272a; border-radius: .35rem; padding: .1rem .35rem; font-size: .95em; }

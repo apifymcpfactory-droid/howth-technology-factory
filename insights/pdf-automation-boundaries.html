@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xrdxh8x5jv");</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6Z8NX31VS"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-L6Z8NX31VS');</script>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before automating PDF work, define the boundaries</title>
+    <meta name="description" content="A practical checklist for defining PDF automation inputs, network policy, page semantics, outputs, retention, security and limits." />
+    <link rel="canonical" href="https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" /><meta property="og:site_name" content="Howth Technology Factory" />
+    <meta property="og:title" content="Before automating PDF work, define the boundaries" />
+    <meta property="og:description" content="The PDF operation is usually the easy part. The surrounding contract makes an automation dependable." />
+    <meta property="og:url" content="https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html" />
+    <meta property="og:image" content="https://howthtechnologyfactory.pro/assets/insights/pdf-automation-boundaries.svg" />
+    <meta property="article:published_time" content="2026-07-25T09:00:00+01:00" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Before automating PDF work, define the boundaries" />
+    <meta name="twitter:image" content="https://howthtechnologyfactory.pro/assets/insights/pdf-automation-boundaries.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{bg:'#0a0a0c',surface:'#131316',surface2:'#18181c',borderc:'#27272a',muted:'#a1a1aa',faint:'#71717a',gold:'#fcd34d'},fontFamily:{sans:['Inter','sans-serif'],display:['"Space Grotesk"','sans-serif']},maxWidth:{'8xl':'90rem'}}}}</script>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Before automating PDF work, define the boundaries","description":"A practical checklist for defining dependable PDF automation workflows.","datePublished":"2026-07-25","dateModified":"2026-07-25","mainEntityOfPage":"https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html","image":"https://howthtechnologyfactory.pro/assets/insights/pdf-automation-boundaries.svg","author":{"@type":"Organization","name":"Howth Technology Factory","url":"https://howthtechnologyfactory.pro/"},"publisher":{"@type":"Organization","name":"Howth Technology Factory","url":"https://howthtechnologyfactory.pro/"}}</script>
+</head>
+<body class="bg-bg text-white font-sans antialiased">
+<a href="#main" class="skip-link">Skip to content</a>
+<header data-site-header class="sticky top-0 z-50 header-blur border-b border-borderc"><div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="/" class="font-display font-semibold">Howth <span class="text-muted font-normal">Technology Factory</span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm"><a href="/#products" class="text-muted hover:text-white">Products</a><a href="/insights/" class="text-gold">Insights</a><a href="/about.html" class="text-muted hover:text-white">About</a><a href="/contact.html" class="bg-gold text-[#14140f] px-4 py-2 rounded-full font-medium">Get in touch</a></nav>
+<button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="md:hidden p-2">Menu</button></div>
+<div data-mobile-nav class="hidden md:hidden flex-col border-t border-borderc bg-bg/95"><a href="/#products" class="px-6 py-3 text-muted">Products</a><a href="/insights/" class="px-6 py-3 text-gold">Insights</a><a href="/about.html" class="px-6 py-3 text-muted">About</a><a href="/contact.html" class="px-6 py-3 text-gold">Get in touch</a></div></header>
+<main id="main">
+<article>
+<header class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-10">
+<a href="/insights/" class="text-sm text-gold">← Insights</a>
+<p class="text-sm text-faint mt-8 mb-4"><time datetime="2026-07-25">25 July 2026</time> · PDF automation · 8 min read</p>
+<h1 class="font-display text-4xl md:text-6xl leading-tight tracking-tight mb-7">Before automating PDF work, define the boundaries</h1>
+<p class="text-xl text-muted leading-relaxed">“Merge these PDFs” sounds like one operation. In a production workflow it is a chain of decisions about where files come from, what may be fetched, how pages are addressed and what happens after the result is produced.</p>
+</header>
+<figure class="max-w-5xl mx-auto px-6 mb-14"><img src="/assets/insights/pdf-automation-boundaries.svg" width="1200" height="630" alt="PDF automation workflow from input through validation and processing to output, with security, observability and retention across every stage" class="rounded-2xl border border-borderc w-full" /><figcaption class="text-sm text-faint mt-3">The operation belongs inside a wider contract.</figcaption></figure>
+<div class="insight-prose max-w-3xl mx-auto px-6 pb-20">
+<p>A library comparison often starts with feature rows: merge, split, compress, convert. Those rows matter, but they do not tell you whether the finished workflow will behave safely and predictably. Two services can both “support splitting” while disagreeing about page numbering, invalid ranges, encrypted files and partial success.</p>
+<p>Write the contract first. It makes product evaluation faster because vague capability claims turn into questions that can be tested.</p>
+<h2>1. Decide how a file may enter the system</h2>
+<p>A public URL, a pre-signed URL, an uploaded file and a base64 string create different operational constraints. URL input is convenient for agents, but it also creates a network request controlled by someone else. Uploads avoid remote fetching, but require transport and size limits. Base64 increases the payload and can be awkward in logs.</p>
+<p>State the accepted input forms, maximum bytes, permitted MIME types and behavior when the extension disagrees with the file signature.</p>
+<h2>2. Treat remote fetching as a security boundary</h2>
+<p>If the processor accepts URLs, define redirect limits, timeouts, maximum download size and which address ranges it may contact. A fetcher should not quietly become a route to private network services. Decide whether DNS is checked again after redirects and whether the response must be a PDF before it is stored.</p>
+<h2>3. Make page semantics explicit</h2>
+<p>Humans usually count pages from one; many programming interfaces count from zero. A range such as <code>2-4</code> can mean three pages, a half-open interval or an invalid expression depending on the tool. Define numbering, inclusive or exclusive endpoints, duplicate-page behavior, ordering and the result of an out-of-range request.</p>
+<h2>4. Define what “compress” is allowed to change</h2>
+<p>Lossless structural cleanup and image recompression are different operations. Image recompression may change resolution, introduce artefacts or make scanned text harder to read. Record whether quality can change, what target is used and whether the original is preserved. A smaller file is not automatically a better result.</p>
+<h2>5. Specify a useful output contract</h2>
+<p>A download link alone is fragile. A workflow benefits from a stable status, output location, byte size, page count, processing duration and machine-readable error code. If a batch contains one bad item, decide whether the entire batch fails or returns per-item outcomes.</p>
+<h2>6. Set retention before processing begins</h2>
+<p>Temporary files have a lifecycle even when nobody calls them a database. Define where inputs and outputs are held, when they expire, whether logs contain filenames or URLs, and who can retrieve the result. A deletion promise should describe both the file and any derived artefacts.</p>
+<h2>7. Put hard limits around the job</h2>
+<p>Limit files per request, bytes per file, total bytes, pages, run time and extracted text. Publish the failure behavior for every limit. Predictable refusal is easier to automate than a process that slows down until the caller times out.</p>
+<h2>8. Know when the workflow needs a specialist</h2>
+<p>OCR, digital signatures, interactive forms, redaction and archival standards are not ordinary merge-and-split work. If they are in scope, evaluate them separately. If they are not, make that boundary visible so a caller cannot mistake a successful file conversion for preservation of every document property.</p>
+<h2>A compact evaluation sequence</h2>
+<ol><li>Write three representative input examples, including one failure.</li><li>Define the network and file-size policy.</li><li>Write expected page-range and batch behavior.</li><li>Choose acceptable quality changes.</li><li>Define success and failure payloads.</li><li>Set storage and deletion times.</li><li>Test the limit cases before the happy path is wired into a larger automation.</li></ol>
+<p>The result is a testable contract. Only then is it useful to compare implementations.</p>
+<aside class="rounded-2xl border border-borderc bg-surface p-6 md:p-8 mt-12">
+<h2 class="font-display text-2xl mt-0">A concrete implementation to inspect</h2>
+<p>Howth Technology Factory’s <a href="/products/pdf-toolkit.html?utm_source=website&utm_medium=insight&utm_campaign=20260724_pdf_toolkit_ops_boundaries&utm_content=ins_pdf_001" data-campaign-id="HTF-20260724-PDF-001" data-content-id="INS-PDF-001">PDF Toolkit overview</a> links to the exact marketplace contracts. Review the <a href="https://apify.com/apifmcpfactory/pdf-toolkit?utm_source=website&utm_medium=insight&utm_campaign=20260724_pdf_toolkit_ops_boundaries&utm_content=ins_pdf_apify_001" data-campaign-id="HTF-20260724-PDF-001" data-content-id="INS-PDF-APIFY-001" rel="noopener">Apify listing</a> and <a href="https://mcpize.com/mcp/pdf-toolkit-mcp?utm_source=website&utm_medium=insight&utm_campaign=20260724_pdf_toolkit_ops_boundaries&utm_content=ins_pdf_mcpize_001" data-campaign-id="HTF-20260724-PDF-001" data-content-id="INS-PDF-MCPIZE-001" rel="noopener">MCPize listing</a> against the checklist rather than treating the feature list as proof of fit.</p>
+</aside>
+</div></article></main>
+<footer class="border-t border-borderc"><div class="max-w-3xl mx-auto px-6 py-10 text-sm text-faint">© <span data-year></span> Howth Technology Factory</div></footer>
+<script src="../assets/js/main.js"></script>
+</body></html>

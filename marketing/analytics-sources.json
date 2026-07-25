@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "attribution_model": {
+    "path": "post -> insight -> product -> Apify or MCPize -> usage/customer/revenue",
+    "direct": "Matching campaign/content identifiers or a platform-provided conversion record.",
+    "correlated": "Time-aligned movement without a durable shared identifier.",
+    "unknown": "No defensible link between content and outcome."
+  },
+  "sources": [
+    {"source":"GA4","status":"connected_on_site","property_tag":"G-L6Z8NX31VS","events":["apify_outbound_click","mcpize_outbound_click","contact_submit","insight_to_product_click","youtube_outbound_click"]},
+    {"source":"Microsoft Clarity","status":"connected_on_site","project_tag":"xrdxh8x5jv"},
+    {"source":"Google Search Console","status":"authorization_not_available","required_action":"Verify the site property and grant read access."},
+    {"source":"Bing Webmaster Tools","status":"authorization_not_available","required_action":"Verify the site and grant read access."},
+    {"source":"YouTube Analytics","status":"authorization_not_available","required_action":"Complete Google OAuth for the channel."},
+    {"source":"Apify usage/customer/revenue","status":"authorization_not_available","required_action":"Provide an authenticated reporting connection; do not store a token in this repository."},
+    {"source":"MCPize usage/customer/revenue","status":"authorization_not_available","required_action":"Provide an authenticated reporting connection if the platform exposes reporting."},
+    {"source":"Platform analytics","status":"partial_manual","required_action":"Connect each publisher account or record exports without credentials in source control."}
+  ],
+  "review_intervals":["24h","48h","7d","30d"],
+  "weekly_report_fields":["content_published","reach","engagement","website_visits","traffic_sources","product_page_activity","marketplace_clicks","marketplace_usage","marketplace_customers","marketplace_revenue","conversion_rates","attribution_gaps","winning_personas_topics_angles_formats_platforms","next_controlled_test"]
+}

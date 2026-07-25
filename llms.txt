@@ -20,3 +20,7 @@
 - [Sanctions Screening: Check Names Against OFAC, EU, UK & UN](https://howthtechnologyfactory.pro/products/sanctions-screening.html): Screen names against official OFAC, EU, UK and UN sanctions lists — bulk, with match scores. MCP: https://mcp.apify.com?tools=apifmcpfactory/sanctions-screening
 - [IBAN Validator: Verify & Bulk-Check Bank IBANs](https://howthtechnologyfactory.pro/products/iban-validator.html): Validate IBANs offline against ISO 13616 — checksum, structure and SEPA coverage, single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/iban-validator
 - [Email & Domain Auth Checker: MX, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/email-domain-checker.html): Check MX, SPF, DKIM and DMARC records from DNS alone — spot disposable and role addresses too. MCP: https://mcp.apify.com?tools=apifmcpfactory/email-domain-checker
+
+## Insights
+
+- [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
