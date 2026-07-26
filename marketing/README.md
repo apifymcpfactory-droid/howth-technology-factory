@@ -27,6 +27,6 @@ node marketing/run-campaign.mjs https://howthtechnologyfactory.pro/products/pdf-
 
 Product-page shopfront links must declare a stable platform-independent identifier beginning with a letter, for example `data-shopfront="apify"`. Any number of present or future shopfronts is supported; the automation and website tracking do not use a fixed hostname list.
 
-Active generation is limited to non-video platforms. YouTube and every other video-dependent platform remain historical or paused records only until the authoritative Drive records explicitly reactivate them.
+The controlling campaign set is Website Insights, every shopfront discovered from the product page, X, Bluesky, Reddit, Medium, Dev.to, Product Hunt and Hacker News. LinkedIn is excluded until its company page is ready. YouTube and all video generation are removed from the active marketing system; historical account records do not authorise video preparation or publication. No additional platform may be introduced without explicit CEO approval.
 
 Do not add passwords or tokens. Do not mark a publication live without a read-back URL and verification timestamp.

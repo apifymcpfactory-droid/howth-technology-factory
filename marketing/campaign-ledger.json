@@ -72,7 +72,7 @@
       "search_intent": "reliable VIES VAT validation workflow",
       "angle": "Model VIES validation as valid, invalid and temporarily unavailable, with a distinct operational action for each state.",
       "angle_fingerprint": "finance-ops-and-developers|vies-state-machine|three-state-validation",
-      "status": "content_ready_for_preflight",
+      "status": "complete_package_ready_pending_final_confirmation",
       "baseline": {
         "captured_at": null,
         "status": "capture_before_publication",
@@ -81,16 +81,16 @@
         "unknown": []
       },
       "publications": [
-        {"platform":"website","post_id":"HTF-20260726-EUVATVAL-001-WEBSITE-01","status":"ready_for_deployment","url":"https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html"},
-        {"platform":"medium","post_id":"HTF-20260726-EUVATVAL-001-MEDIUM-02","status":"draft_ready_pending_authentication","url":null},
-        {"platform":"devto","post_id":"HTF-20260726-EUVATVAL-001-DEVTO-03","status":"draft_ready_pending_authentication","url":null},
-        {"platform":"x","post_id":"HTF-20260726-EUVATVAL-001-X-04","status":"draft_ready_pending_authentication","url":null},
-        {"platform":"bluesky","post_id":"HTF-20260726-EUVATVAL-001-BLUESKY-05","status":"draft_ready_pending_authentication","url":null},
-        {"platform":"reddit","post_id":"HTF-20260726-EUVATVAL-001-REDDIT-06","status":"skipped_no_verified_community_fit","url":null},
-        {"platform":"producthunt","post_id":"HTF-20260726-EUVATVAL-001-PRODUCTHUNT-07","status":"skipped_pdf_toolkit_launch_conflict_and_domain_spacing","url":null},
-        {"platform":"hackernews","post_id":"HTF-20260726-EUVATVAL-001-HACKERNEWS-08","status":"skipped_promotional_fit_risk","url":null},
-        {"platform":"dailydev","post_id":"HTF-20260726-EUVATVAL-001-DAILYDEV-09","status":"draft_ready_pending_authentication_and_format_check","url":null},
-        {"platform":"indiehackers","post_id":"HTF-20260726-EUVATVAL-001-INDIEHACKERS-10","status":"draft_ready_pending_authentication_and_community_fit_check","url":null}
+        {"platform":"website","post_id":"HTF-20260726-EUVATVAL-001-WEBSITE-01","status":"live_verified","url":"https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html"},
+        {"platform":"medium","post_id":"HTF-20260726-EUVATVAL-001-MEDIUM-02","status":"draft_ready_pending_final_confirmation","url":null},
+        {"platform":"devto","post_id":"HTF-20260726-EUVATVAL-001-DEVTO-03","status":"ready_to_schedule_2026-07-28T10:00:00+01:00_pending_final_confirmation","url":null},
+        {"platform":"x","post_id":"HTF-20260726-EUVATVAL-001-X-04","status":"draft_ready_pending_final_confirmation","url":null},
+        {"platform":"bluesky","post_id":"HTF-20260726-EUVATVAL-001-BLUESKY-05","status":"draft_ready_pending_final_confirmation","url":null},
+        {"platform":"reddit","post_id":"HTF-20260726-EUVATVAL-001-REDDIT-06","status":"profile_draft_ready_pending_final_confirmation","url":null},
+        {"platform":"producthunt","post_id":"HTF-20260726-EUVATVAL-001-PRODUCTHUNT-07","status":"deferred_until_2027-01-28_due_shared_domain_spacing","url":null},
+        {"platform":"hackernews","post_id":"HTF-20260726-EUVATVAL-001-HACKERNEWS-08","status":"skipped_current_account_and_submission_pattern_fails_community_fit","url":null},
+        {"platform":"apify","post_id":"HTF-20260726-EUVATVAL-001-APIFY-09","status":"factual_improvements_proposed_pending_final_confirmation","url":"https://apify.com/apifmcpfactory/eu-vat-validator"},
+        {"platform":"mcpize","post_id":"HTF-20260726-EUVATVAL-001-MCPIZE-10","status":"verified_unchanged","url":"https://mcpize.com/mcp/eu-vat-validator-mcp"}
       ],
       "review_due": {
         "24h": "2026-07-27T13:47:38+01:00",

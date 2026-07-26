@@ -144,9 +144,9 @@ This key was checked against the complete local campaign ledger at ${createdAt}.
 - Dev.to: a practical implementation note with inputs, outputs, failure examples and test cases.
 - X: one concise observation plus a short checklist thread only if every item earns its place.
 - Bluesky: developer discussion prompt focused on the technical lesson.
-- Reddit: use only in a community where the question already fits; disclose the product connection.
-- LinkedIn: draft only; publication remains paused.
+- Reddit: use only in a community where the question already fits; otherwise use the authenticated company profile with an explicit disclosure.
 - Product Hunt / Hacker News: skip unless launch novelty and community fit are independently established.
+- Shopfront listings: verify every discovered destination and propose only factual, useful documentation improvements.
 
 ## Tracked destinations
 
@@ -172,7 +172,8 @@ async function main() {
   const now = new Date();
   const sequence = ledger.campaigns.filter((c) => c.product_slug === slug).length + 1;
   const campaignId = `HTF-${dateKey(now)}-${slug.toUpperCase().replace(/-/g, '').slice(0, 8)}-${String(sequence).padStart(3, '0')}`;
-  const platforms = ['website','medium','devto','x','bluesky','reddit','producthunt','hackernews','dailydev','indiehackers'];
+  const editorialPlatforms = ['website','medium','devto','x','bluesky','reddit','producthunt','hackernews'];
+  const platforms = [...editorialPlatforms, ...Object.keys(shopfronts)];
   const base = { product: productUrl.href, shopfronts };
   const tracked = Object.fromEntries(platforms.map((platform, index) => {
     const postId = `${campaignId}-${platform.toUpperCase()}-${String(index+1).padStart(2,'0')}`;
@@ -184,7 +185,12 @@ async function main() {
     angle: angle.angle, angle_key: angle.key, angle_fingerprint: `${angle.persona}|${angle.problem}|${angle.key}`,
     status: 'research_required', marketplace_verification: verifications,
     baseline: { captured_at: now.toISOString(), status: 'capture_connectors_before_publication', directly_attributed: {}, correlated: {}, unknown: [] },
-    publications: Object.entries(tracked).map(([platform, item]) => ({ platform, post_id: item.post_id, status: 'draft_required', tracked_links: item.links })),
+    publications: Object.entries(tracked).map(([platform, item]) => ({
+      platform,
+      post_id: item.post_id,
+      status: Object.hasOwn(shopfronts, platform) ? 'listing_assessment_required' : 'draft_required',
+      tracked_links: item.links
+    })),
     review_due: {
       '24h': new Date(now.getTime()+86400000).toISOString(), '48h': new Date(now.getTime()+172800000).toISOString(),
       '7d': new Date(now.getTime()+604800000).toISOString(), '30d': new Date(now.getTime()+2592000000).toISOString()

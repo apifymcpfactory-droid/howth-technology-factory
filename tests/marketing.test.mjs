@@ -56,6 +56,9 @@ assert.equal(ledger.authority, 'non_authoritative_automation_data');
 assert.match(workflowReadme, /Google Drive.*03 Campaign Ledger/s);
 assert.doesNotMatch(workflowReadme, /campaign-ledger\.json` is authoritative/);
 assert.doesNotMatch(automation, /['"]youtube['"]/);
+assert.doesNotMatch(automation, /['"]dailydev['"]/);
+assert.doesNotMatch(automation, /['"]indiehackers['"]/);
+assert.doesNotMatch(automation, /LinkedIn: draft only/);
 assert.doesNotMatch(automation, /expected one exact Apify/);
 assert.doesNotMatch(automation, /expected one exact MCPize/);
 
@@ -69,7 +72,12 @@ assert.equal(dryRun.shopfront_verification.length, 2);
 assert.notEqual(dryRun.angle, ledger.campaigns[0].angle);
 assert.match(dryRun.campaign_id, /^HTF-\d{8}-[A-Z0-9]+-\d{3}$/);
 assert.equal(new Set(dryRun.publications.map((item) => item.post_id)).size, dryRun.publications.length);
-assert.ok(dryRun.publications.length > 0);
+assert.deepEqual(
+  dryRun.publications.map((item) => item.platform),
+  ['website', 'medium', 'devto', 'x', 'bluesky', 'reddit', 'producthunt', 'hackernews', 'apify', 'mcpize']
+);
+assert.equal(dryRun.publications.find((item) => item.platform === 'apify').status, 'listing_assessment_required');
+assert.equal(dryRun.publications.find((item) => item.platform === 'mcpize').status, 'listing_assessment_required');
 for (const publication of dryRun.publications) {
   assert.notEqual(publication.platform, 'youtube');
   for (const link of Object.values(publication.tracked_links)) {

@@ -50,12 +50,14 @@ The campaign does not claim universal superiority. The relevant trade-offs are b
 - DEV: eligible for a developer-focused response-contract tutorial with AI-assistance disclosure.
 - X: eligible for a compact finance-ops checklist.
 - Bluesky: eligible for a concise state-machine lesson.
-- daily.dev: eligible only if the authenticated New Post flow accepts an original developer discussion.
-- Indie Hackers: eligible only if the authenticated publishing flow and community fit are verified.
-- Reddit: skip; no established relevant-community participation was verified.
-- Hacker News: skip; a second same-day self-submission would risk reading as promotional, and this is not a natural Show HN.
-- Product Hunt: skip; the PDF Toolkit launch is scheduled for 27 July 2026 and the shared-domain launch spacing rule applies.
-- YouTube and all video-dependent channels: excluded by the Marketing Constitution.
+- Apify: exact listing verified; propose narrow factual corrections to conditional consultation-number, comparison, certainty and retention language.
+- MCPize: exact listing verified and left unchanged because its description, website/GitHub links, tool contracts and current pricing are clear and accurate.
+- Reddit: use the authenticated `u/ApifyMCPFactory` profile fallback. No VAT/accounting community with established account participation and a verified promotional-content fit was found.
+- Hacker News: skip this campaign. The technical topic is relevant, but the new account's current use is self-submission, a second campaign link would make the account primarily promotional, and the product is not a natural Show HN because trying it requires a marketplace access path.
+- Product Hunt: defer to 28 January 2027 at 12:01 AM PST (08:01 Europe/Dublin), more than six months after the PDF Toolkit launch on the shared root domain.
+- LinkedIn: paused and excluded until the company page is ready.
+- YouTube and all video generation: removed from the active marketing system. No video may be created, prepared or published.
+- daily.dev and Indie Hackers: not approved campaign platforms.
 
 ## Primary sources
 

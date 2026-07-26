@@ -67,6 +67,8 @@ Post ID: `HTF-20260726-EUVATVAL-001-DEVTO-03`
 
 Title: Model VIES VAT validation with three states, not true/false
 
+Scheduling proposal: 28 July 2026 at 10:00 Europe/Dublin. This follows the existing scheduled DEV post on 26 July 2026 at 17:23 Europe/Dublin and avoids the PDF Toolkit Product Hunt launch day on 27 July.
+
 Body:
 
 If your VAT-validation interface returns only `true` or `false`, where does an upstream VIES outage go?
@@ -173,18 +175,95 @@ https://apify.com/apifmcpfactory/eu-vat-validator?utm_source=bluesky&utm_medium=
 6/6 MCPize server:
 https://mcpize.com/mcp/eu-vat-validator-mcp?utm_source=bluesky&utm_medium=organic&utm_campaign=HTF-20260726-EUVATVAL-001&utm_content=HTF-20260726-EUVATVAL-001-BLUESKY-05&htf_product=eu-vat-validator
 
-## daily.dev
+## Reddit
 
-Post ID: `HTF-20260726-EUVATVAL-001-DAILYDEV-09`
+Post ID: `HTF-20260726-EUVATVAL-001-REDDIT-06`
 
-Title: A VAT validator needs an “unavailable” state
+Destination: authenticated company profile `u/ApifyMCPFactory`
 
-Angle: developer discussion on why upstream failure cannot be represented as `valid: false`.
+Title: A VAT number check needs a third result: unavailable
 
-## Indie Hackers
+Body:
 
-Post ID: `HTF-20260726-EUVATVAL-001-INDIEHACKERS-10`
+When a VAT-validation service cannot reach a member state's register, that is not evidence that the customer's VAT number is invalid.
 
-Title: The VAT-validation edge case that can reject a legitimate EU customer
+The distinction matters in billing and onboarding workflows:
 
-Angle: SaaS billing and finance operations; distinguish customer data problems from upstream VIES downtime.
+- `valid`: continue, and retain what was checked and when;
+- `invalid`: pause the affected transaction and ask for correction or other evidence;
+- `unavailable`: keep the error, retry later, and do not turn an upstream outage into a customer-data failure.
+
+A few implementation details make this safer:
+
+1. Keep one result per input in a batch, including failures.
+2. Show the normalized value that was actually checked.
+3. Allow business name and address to be absent; national sources do not always return them.
+4. Keep a consultation number conditional on supplying the requester VAT number.
+5. Treat VIES status as one input to a tax decision, not the whole decision.
+
+The longer state-machine explanation and European Commission sources are here:
+
+https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html?utm_source=reddit&utm_medium=organic&utm_campaign=htf-20260726-euvatval-001&utm_content=htf-20260726-euvatval-001-reddit-06&htf_product=eu-vat-validator&htf_campaign=HTF-20260726-EUVATVAL-001&htf_platform=reddit&htf_post=HTF-20260726-EUVATVAL-001-REDDIT-06
+
+Concrete implementation references:
+
+- Product contract: https://howthtechnologyfactory.pro/products/eu-vat-validator.html?utm_source=reddit&utm_medium=organic&utm_campaign=htf-20260726-euvatval-001&utm_content=htf-20260726-euvatval-001-reddit-06&htf_product=eu-vat-validator&htf_campaign=HTF-20260726-EUVATVAL-001&htf_platform=reddit&htf_post=HTF-20260726-EUVATVAL-001-REDDIT-06
+- Apify: https://apify.com/apifmcpfactory/eu-vat-validator?utm_source=reddit&utm_medium=organic&utm_campaign=htf-20260726-euvatval-001&utm_content=htf-20260726-euvatval-001-reddit-06&htf_product=eu-vat-validator&htf_campaign=HTF-20260726-EUVATVAL-001&htf_platform=reddit&htf_post=HTF-20260726-EUVATVAL-001-REDDIT-06
+- MCPize: https://mcpize.com/mcp/eu-vat-validator-mcp?utm_source=reddit&utm_medium=organic&utm_campaign=htf-20260726-euvatval-001&utm_content=htf-20260726-euvatval-001-reddit-06&htf_product=eu-vat-validator&htf_campaign=HTF-20260726-EUVATVAL-001&htf_platform=reddit&htf_post=HTF-20260726-EUVATVAL-001-REDDIT-06
+
+Disclosure: EU VAT Validator is a Howth Technology Factory product. This is posted on the company profile instead of being dropped into a community where the account has not earned participation.
+
+## Product Hunt
+
+Post ID: `HTF-20260726-EUVATVAL-001-PRODUCTHUNT-07`
+
+Decision: defer. Proposed launch: 28 January 2027 at 12:01 AM PST (08:01 Europe/Dublin), more than six months after the PDF Toolkit launch on the same root domain.
+
+Name: EU VAT Validator
+
+Tagline: Reliable EU VAT checks for finance workflows and agents
+
+Description:
+
+Validate one or many EU and Northern Ireland VAT numbers through VIES while keeping invalid and temporarily unavailable results distinct. Available as an Apify Actor and MCP tools for finance operations and automation.
+
+First comment:
+
+EU VAT checks look binary until the upstream service is unavailable. Then a `false` result can reject a legitimate customer for the wrong reason.
+
+We built EU VAT Validator around an explicit operational distinction: valid, invalid, or temporarily unavailable. Batch runs retain one result per input; business name and address remain optional because national sources differ; consultation numbers are conditional on supplying the requester VAT number.
+
+The product is available through Apify for Actor-style batch workflows and through MCPize for agent/tool calls. VIES status is evidence from a check, not a complete tax decision, so transaction context and local advice remain separate.
+
+I would value feedback on the result contract, particularly whether `unavailable` should remain a terminal result for the caller or be accompanied by a suggested retry window.
+
+## Hacker News
+
+Post ID: `HTF-20260726-EUVATVAL-001-HACKERNEWS-08`
+
+Decision: skip for this campaign. The three-state validation model is technically relevant, but the account's current use is self-submission and another campaign link would make it primarily promotional. The product also requires a marketplace access path, so it is not a natural Show HN. No submission draft is being forced.
+
+## Apify listing assessment
+
+Post ID: `HTF-20260726-EUVATVAL-001-APIFY-09`
+
+Decision: factual improvements proposed; do not edit before final confirmation.
+
+Proposed changes:
+
+- Make consultation numbers explicitly conditional on supplying `requesterVat`; remove “on every check” wording.
+- Replace “official audit evidence” and “exactly what tax authorities ask for” with a narrower description: a VIES request record whose evidential requirements should be confirmed for the relevant transaction and jurisdiction.
+- Remove the unsupported “Comparable tools charge $40+ per 1,000” comparison.
+- Replace categorical speed and “no IP-blocking risk” claims with the verified behavior: bounded concurrency, retries and one output item per input.
+- Clarify that the Actor writes results to the Apify run dataset and that storage/retention follow the user's Apify settings.
+- Add the verified Howth product page and owned Insight as documentation links.
+
+Proposed summary:
+
+Validate EU and Northern Ireland VAT numbers through VIES in single or bulk runs. Returns validity and optional business name/address; a consultation number is returned only when `requesterVat` is supplied. Temporary member-state failures remain per-number errors instead of being converted to invalid results.
+
+## MCPize listing assessment
+
+Post ID: `HTF-20260726-EUVATVAL-001-MCPIZE-10`
+
+Decision: verified and left unchanged. The exact listing has the correct Howth website and GitHub links, current Free/Pro and pay-per-call presentation, clear single/bulk/status tool descriptions, and an explicit unavailable-versus-invalid distinction. Adding campaign language would not improve the functional documentation.
