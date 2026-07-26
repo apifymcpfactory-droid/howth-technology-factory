@@ -3,10 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import { buildCampaignLinks } from './build-campaign-links.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LEDGER_PATH = path.join(ROOT, 'marketing', 'campaign-ledger.json');
 const ANGLES_PATH = path.join(ROOT, 'marketing', 'angle-catalog.json');
+const CAMPAIGN_LINKS_PATH = path.join(ROOT, 'marketing', 'campaign-links.json');
 const SITE_ORIGIN = 'https://howthtechnologyfactory.pro';
 
 function fail(message) {
@@ -115,6 +117,13 @@ function linksFor(base, campaignId, productSlug, platform, postId) {
   }));
 }
 
+function cleanLinkSlug(productSlug, platform, postId) {
+  const sequence = postId.match(/-(\d{2})$/)?.[1];
+  if (!sequence) fail(`post id cannot produce a clean campaign link: ${postId}`);
+  const productKey = productSlug.split('-').map((part) => part.slice(0, 5)).join('').slice(0, 12);
+  return `${productKey}-${platform}-${sequence}`;
+}
+
 function campaignPackage({ campaignId, product, facts, angle, links, createdAt }) {
   return `# Campaign ${campaignId}
 
@@ -142,9 +151,9 @@ This key was checked against the complete local campaign ledger at ${createdAt}.
 - Website Insight: search-focused explanation that teaches the decision framework; this is the canonical original.
 - Medium: an accessible decision story centred on organisational trade-offs, not a rewrite of the Insight.
 - Dev.to: a practical implementation note with inputs, outputs, failure examples and test cases.
-- X: one concise observation plus a short checklist thread only if every item earns its place.
-- Bluesky: developer discussion prompt focused on the technical lesson.
-- Reddit: use only in a community where the question already fits; otherwise use the authenticated company profile with an explicit disclosure.
+- X: one concise observation plus a short checklist thread only if every item earns its place; normally use one primary clean first-party link.
+- Bluesky: developer discussion prompt focused on the technical lesson; normally use one primary clean first-party link.
+- Reddit: use only in a community where the question already fits; otherwise use the authenticated company profile with an explicit disclosure and normally one primary clean link.
 - Product Hunt / Hacker News: skip unless launch novelty and community fit are independently established.
 - Shopfront listings: verify every discovered destination and propose only factual, useful documentation improvements.
 
@@ -154,7 +163,7 @@ ${Object.entries(links).map(([platform, destinations]) => `### ${platform}\n\n${
 
 ## Quality gate
 
-Do not publish until research verifies claims, purchasers, alternatives and current discussion; every platform draft is independently written; all three destinations are present; imagery teaches; and the result passes the Marketing Constitution.
+Do not publish until research verifies claims, purchasers, alternatives and current discussion; every platform draft is independently written; tracked destinations use descriptive anchors or generated clean links without visible parameters; substantive website, Medium and Dev.to articles contain 1,000–2,000 meaningful words; short-form link quantity is platform-appropriate; a human-visible preflight confirms that each configured visual teaches rather than promotes; and the result passes the Marketing Constitution.
 `;
 }
 
@@ -177,7 +186,11 @@ async function main() {
   const base = { product: productUrl.href, shopfronts };
   const tracked = Object.fromEntries(platforms.map((platform, index) => {
     const postId = `${campaignId}-${platform.toUpperCase()}-${String(index+1).padStart(2,'0')}`;
-    return [platform, { post_id: postId, links: linksFor(base, campaignId, slug, platform, postId) }];
+    const item = { post_id: postId, links: linksFor(base, campaignId, slug, platform, postId) };
+    if (['x', 'bluesky', 'reddit'].includes(platform)) {
+      item.primary_clean_link = `${SITE_ORIGIN}/go/${cleanLinkSlug(slug, platform, postId)}/`;
+    }
+    return [platform, item];
   }));
   const entry = {
     campaign_id: campaignId, product_slug: slug, product_url: productUrl.href, created_at: now.toISOString(),
@@ -189,7 +202,8 @@ async function main() {
       platform,
       post_id: item.post_id,
       status: Object.hasOwn(shopfronts, platform) ? 'listing_assessment_required' : 'draft_required',
-      tracked_links: item.links
+      tracked_links: item.links,
+      ...(item.primary_clean_link ? { primary_clean_link: item.primary_clean_link } : {})
     })),
     review_due: {
       '24h': new Date(now.getTime()+86400000).toISOString(), '48h': new Date(now.getTime()+172800000).toISOString(),
@@ -208,6 +222,20 @@ async function main() {
   const trackedLinks = Object.fromEntries(Object.entries(tracked).map(([platform, item]) => [platform, item.links]));
   fs.writeFileSync(path.join(outputDir, 'campaign.md'), campaignPackage({ campaignId, product: base, facts, angle, links: trackedLinks, createdAt: now.toISOString() }));
   fs.writeFileSync(path.join(outputDir, 'manifest.json'), `${JSON.stringify(entry, null, 2)}\n`);
+  const campaignLinks = JSON.parse(fs.readFileSync(CAMPAIGN_LINKS_PATH, 'utf8'));
+  for (const [platform, item] of Object.entries(tracked).filter(([name]) => ['x', 'bluesky', 'reddit'].includes(name))) {
+    campaignLinks.links.push({
+      slug: new URL(item.primary_clean_link).pathname.split('/').filter(Boolean).at(-1),
+      campaign_id: campaignId,
+      post_id: item.post_id,
+      product_id: slug,
+      platform,
+      destination_name: `${facts.title} guide`,
+      destination_url: productUrl.href
+    });
+  }
+  fs.writeFileSync(CAMPAIGN_LINKS_PATH, `${JSON.stringify(campaignLinks, null, 2)}\n`);
+  buildCampaignLinks();
   ledger.campaigns.push(entry);
   fs.writeFileSync(LEDGER_PATH, `${JSON.stringify(ledger, null, 2)}\n`);
   console.log(`Created ${path.relative(ROOT, outputDir)} and recorded the angle in the ledger.`);

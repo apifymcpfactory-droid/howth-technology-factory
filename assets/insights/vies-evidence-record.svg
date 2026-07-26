@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence record for a VIES VAT number check</title>
+  <desc id="desc">A workflow diagram showing normalized input, timestamped VIES result, optional fields, and an operational decision without treating the result as a complete tax decision.</desc>
+  <rect width="1200" height="630" rx="28" fill="#0a0a0c"/>
+  <rect x="24" y="24" width="1152" height="582" rx="26" fill="#131316" stroke="#27272a" stroke-width="2"/>
+  <text x="72" y="92" fill="#fcd34d" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700">VIES EVIDENCE RECORD</text>
+  <text x="72" y="142" fill="#ffffff" font-family="Space Grotesk,Arial,sans-serif" font-size="38" font-weight="700">Keep the check facts separate from the tax decision</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="72" y="212" width="240" height="174" rx="20" fill="#18181c" stroke="#52525b" stroke-width="2"/>
+    <text x="96" y="252" fill="#fcd34d" font-size="18" font-weight="700">INPUT</text>
+    <text x="96" y="294" fill="#ffffff" font-size="25" font-weight="700">Normalized VAT ID</text>
+    <text x="96" y="330" fill="#a1a1aa" font-size="18">Country prefix + number</text>
+    <text x="96" y="360" fill="#a1a1aa" font-size="18">Requester VAT if supplied</text>
+    <path d="M312 299 H370" stroke="#71717a" stroke-width="6"/>
+    <path d="M370 299 l-18 -12 v24 z" fill="#71717a"/>
+    <rect x="390" y="196" width="346" height="206" rx="20" fill="#18181c" stroke="#fcd34d" stroke-width="2"/>
+    <text x="416" y="238" fill="#fcd34d" font-size="18" font-weight="700">TIMESTAMPED CHECK</text>
+    <text x="416" y="278" fill="#ffffff" font-size="24" font-weight="700">valid · invalid · unavailable</text>
+    <text x="416" y="318" fill="#a1a1aa" font-size="18">Name/address may be absent</text>
+    <text x="416" y="348" fill="#a1a1aa" font-size="18">Consultation number is conditional</text>
+    <text x="416" y="378" fill="#a1a1aa" font-size="18">Attempts and errors stay visible</text>
+    <path d="M736 299 H794" stroke="#71717a" stroke-width="6"/>
+    <path d="M794 299 l-18 -12 v24 z" fill="#71717a"/>
+    <rect x="814" y="212" width="314" height="174" rx="20" fill="#18181c" stroke="#22c55e" stroke-width="2"/>
+    <text x="840" y="252" fill="#86efac" font-size="18" font-weight="700">OPERATIONAL ACTION</text>
+    <text x="840" y="294" fill="#ffffff" font-size="24" font-weight="700">Continue · correct · retry</text>
+    <text x="840" y="330" fill="#a1a1aa" font-size="18">Preserve the evidence record</text>
+    <text x="840" y="360" fill="#a1a1aa" font-size="18">Apply tax rules separately</text>
+    <rect x="72" y="466" width="1056" height="90" rx="18" fill="#18181c"/>
+    <text x="600" y="506" text-anchor="middle" fill="#ffffff" font-size="21">A valid VIES response is one input to a decision.</text>
+    <text x="600" y="536" text-anchor="middle" fill="#a1a1aa" font-size="18">It does not establish the complete VAT treatment of the transaction.</text>
+  </g>
+</svg>

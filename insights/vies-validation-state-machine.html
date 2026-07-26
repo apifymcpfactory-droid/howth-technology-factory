@@ -37,7 +37,7 @@
 <article>
 <header class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-10">
 <a href="/insights/" class="text-sm text-gold">← Insights</a>
-<p class="text-sm text-faint mt-8 mb-4"><time datetime="2026-07-26">26 July 2026</time> · VAT operations · 7 min read</p>
+<p class="text-sm text-faint mt-8 mb-4"><time datetime="2026-07-26">26 July 2026</time> · VAT operations · 10 min read</p>
 <h1 class="font-display text-4xl md:text-6xl leading-tight tracking-tight mb-7">Design VIES validation as a state machine</h1>
 <p class="text-xl text-muted leading-relaxed">A VAT number check can return valid, invalid or no reliable answer right now. Collapsing those outcomes into one boolean is how a temporary service problem becomes a customer rejection.</p>
 </header>
@@ -57,6 +57,25 @@
 <h2>Why “unavailable” must stay separate</h2>
 <p>National systems are sometimes unavailable. A timeout, retry exhaustion or upstream service error is not evidence that the VAT number is invalid. Record an error state, retry with a bounded delay, and give operations a path to resume the check later.</p>
 <p>This separation is especially important in batches. One unavailable national service should not erase valid results for other rows, and it should not turn the whole batch into a misleading pass/fail result.</p>
+
+<h2>Put the state transition before the tax decision</h2>
+<p>A useful workflow separates the technical lookup from the business decision that follows it. The lookup answers a narrow question: what did VIES return for this normalized identifier at this time? The business workflow then decides whether to continue, pause for correction or wait for a dependable answer.</p>
+<p>That separation prevents transport details from leaking into customer treatment. A network timeout should not trigger the same customer message as a confirmed invalid response. Equally, a valid response should not silently approve a transaction whose place-of-supply or customer-status facts still need review.</p>
+<p>Model the transition explicitly. A new record begins as <code>pending</code>. A completed lookup moves it to <code>valid</code> or <code>invalid</code>. A retryable technical failure moves it to <code>unavailable</code>, with a next-attempt time and the last error retained. Operations can then filter unresolved work without editing the original result.</p>
+
+<h2>Design retries around operational risk</h2>
+<p>Retries are useful only when they are bounded and visible. Repeating a request immediately can add load to a national service that is already struggling, while an unbounded background loop can leave finance teams believing a check is still making progress.</p>
+<p>Use a small retry budget with increasing delays and random variation. Preserve the first failure, the number of attempts and the final error category. If the budget is exhausted, return <code>unavailable</code> to the calling workflow instead of guessing. A later scheduled process can retry that individual record without rerunning successful rows.</p>
+<p>Not every error is retryable. A malformed country prefix or structurally invalid identifier should be handled before contacting VIES. Authentication, configuration and schema errors should surface to the operator. Only temporary upstream and transport conditions belong in the unavailable path.</p>
+
+<h2>Keep an evidence record that can be explained later</h2>
+<p>The useful record is not simply “VAT valid: yes”. It should show the normalized identifier sent, when the request was made, which result state was produced, and which optional fields were returned. If a requester VAT number was supplied and a consultation number was returned, retain it with that same check.</p>
+<p>Do not overwrite an earlier result when a later retry succeeds. Keep the attempts as a short event history so an operator can explain why a transaction was paused and when it became eligible to continue. This is particularly valuable when the customer corrected the identifier between attempts.</p>
+<p>Retention should follow the organisation’s evidence and privacy policy. Business names and addresses may be personal or commercially sensitive data. Store only what the workflow needs, restrict access, and apply the same deletion schedule used for the surrounding transaction record.</p>
+
+<h2>Make batches reconcile one input to one output</h2>
+<p>Bulk validation is easiest to operate when every input produces exactly one result row in the same order or with a stable correlation key. Valid rows, invalid rows and unavailable rows can then be processed independently without losing the relationship to the source file.</p>
+<p>A mixed batch should not have a single boolean status. Give the batch aggregate counts, but preserve every item result. If three checks are unavailable, a retry job should receive those three correlation keys rather than the entire original list. The successful evidence remains intact and the unresolved work stays visible.</p>
 
 <h2>Name and address are conditional fields</h2>
 <p>Some national databases do not provide a name or address through VIES. In other cases, data-protection rules mean the authority can only confirm whether a supplied name and address are associated with the number. Your schema should allow those fields to be absent without treating the validation as broken.</p>

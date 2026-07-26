@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "links": [
+    {
+      "slug": "euvat-x-04",
+      "campaign_id": "HTF-20260726-EUVATVAL-001",
+      "post_id": "HTF-20260726-EUVATVAL-001-X-04",
+      "product_id": "eu-vat-validator",
+      "platform": "x",
+      "destination_name": "VIES state-machine guide",
+      "destination_url": "https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html"
+    },
+    {
+      "slug": "euvat-bluesky-05",
+      "campaign_id": "HTF-20260726-EUVATVAL-001",
+      "post_id": "HTF-20260726-EUVATVAL-001-BLUESKY-05",
+      "product_id": "eu-vat-validator",
+      "platform": "bluesky",
+      "destination_name": "VIES state-machine guide",
+      "destination_url": "https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html"
+    },
+    {
+      "slug": "euvat-reddit-06",
+      "campaign_id": "HTF-20260726-EUVATVAL-001",
+      "post_id": "HTF-20260726-EUVATVAL-001-REDDIT-06",
+      "product_id": "eu-vat-validator",
+      "platform": "reddit",
+      "destination_name": "VIES state-machine guide",
+      "destination_url": "https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html"
+    }
+  ]
+}

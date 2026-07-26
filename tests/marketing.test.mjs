@@ -14,6 +14,45 @@ const js = fs.readFileSync(path.join(root, 'assets', 'js', 'main.js'), 'utf8');
 const automation = fs.readFileSync(path.join(root, 'marketing', 'run-campaign.mjs'), 'utf8');
 const workflowReadme = fs.readFileSync(path.join(root, 'marketing', 'README.md'), 'utf8');
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'marketing', 'campaign-ledger.json'), 'utf8'));
+const vatDrafts = fs.readFileSync(path.join(root, 'marketing', 'campaigns', 'HTF-20260726-EUVATVAL-001', 'platform-drafts.md'), 'utf8');
+const visualRecord = fs.readFileSync(path.join(root, 'marketing', 'campaigns', 'HTF-20260726-EUVATVAL-001', 'visual-generation-record.md'), 'utf8');
+const campaignLinks = JSON.parse(fs.readFileSync(path.join(root, 'marketing', 'campaign-links.json'), 'utf8'));
+
+function markdownSection(markdown, heading, nextHeading) {
+  const start = markdown.indexOf(`## ${heading}`);
+  const end = nextHeading ? markdown.indexOf(`## ${nextHeading}`, start + 1) : markdown.length;
+  assert.ok(start >= 0 && end > start, `missing ${heading} section`);
+  return markdown.slice(start, end);
+}
+
+function visibleMarkdown(markdown) {
+  return markdown
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, ' ')
+    .replace(/^(?:Post ID|Title|Subtitle|Body|Canonical source|Scheduling proposal):.*$/gmi, ' ')
+    .replace(/^Disclosure:.*$/gmi, ' ')
+    .replace(/[#>*_`|~-]/g, ' ');
+}
+
+function meaningfulWords(text) {
+  return (text.match(/\b[\p{L}\p{N}][\p{L}\p{N}’'-]*\b/gu) || []).length;
+}
+
+function visibleHtml(html) {
+  return html
+    .replace(/<(script|style|nav|header|footer)\b[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:nbsp|amp|quot|#39|#x27);/gi, ' ');
+}
+
+function visibleUrlCount(markdown) {
+  const withoutLinkDestinations = markdown
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  return (withoutLinkDestinations.match(/https?:\/\/\S+/g) || []).length;
+}
 
 assert.match(article, /rel="canonical" href="https:\/\/howthtechnologyfactory\.pro\/insights\/pdf-automation-boundaries\.html"/);
 assert.match(article, /"@type":"TechArticle"/);
@@ -30,6 +69,8 @@ assert.doesNotMatch(vatProduct, /official VIES database/);
 assert.doesNotMatch(vatProduct, /proof of a reverse-charge check/);
 assert.match(vatProduct, /national VAT databases/);
 assert.match(vatProduct, /consultation number/);
+assert.match(vatProduct, /vies-validation-state-machine\.svg/);
+assert.doesNotMatch(vatProduct, /assets\/og\/default\.png/);
 assert.match(sitemap, /https:\/\/howthtechnologyfactory\.pro\/insights\//);
 for (const event of ['insight_view','product_view','shopfront_outbound_click','contact_submit','insight_to_product_click']) {
   assert.match(js, new RegExp(event));
@@ -61,6 +102,46 @@ assert.doesNotMatch(automation, /['"]indiehackers['"]/);
 assert.doesNotMatch(automation, /LinkedIn: draft only/);
 assert.doesNotMatch(automation, /expected one exact Apify/);
 assert.doesNotMatch(automation, /expected one exact MCPize/);
+assert.match(workflowReadme, /1,000.*2,000/s);
+assert.match(workflowReadme, /X and Bluesky normally use one primary first-party campaign link/);
+assert.match(workflowReadme, /tracking parameters must never be printed as visible copy/i);
+assert.match(automation, /1,000.*2,000/s);
+assert.match(automation, /primary_clean_link/);
+
+const mediumDraft = markdownSection(vatDrafts, 'Medium', 'DEV');
+const devDraft = markdownSection(vatDrafts, 'DEV', 'X');
+const xDraft = markdownSection(vatDrafts, 'X', 'Bluesky');
+const blueskyDraft = markdownSection(vatDrafts, 'Bluesky', 'Reddit');
+const redditDraft = markdownSection(vatDrafts, 'Reddit', 'Product Hunt');
+for (const [name, copy] of [['Insight', visibleHtml(vatArticle)], ['Medium', visibleMarkdown(mediumDraft)], ['DEV', visibleMarkdown(devDraft)]]) {
+  const count = meaningfulWords(copy);
+  assert.ok(count >= 1000 && count <= 2000, `${name} meaningful length is ${count}, expected 1000–2000`);
+}
+for (const [name, copy] of [['Medium', mediumDraft], ['DEV', devDraft]]) {
+  assert.doesNotMatch(visibleMarkdown(copy), /(?:utm_|htf_)(?:source|medium|campaign|content|product|platform|post)=/i, `${name} exposes tracking parameters`);
+  assert.match(copy, /\[[^\]]{4,}\]\(https?:\/\/[^)]+\)/, `${name} requires descriptive hyperlinks`);
+}
+for (const [name, copy] of [['X', xDraft], ['Bluesky', blueskyDraft], ['Reddit', redditDraft]]) {
+  assert.ok(visibleUrlCount(copy) <= 1, `${name} has more than one visible public URL`);
+  assert.doesNotMatch(copy, /https?:\/\/\S+[?&](?:utm_|htf_)/i, `${name} exposes tracking parameters`);
+}
+assert.match(mediumDraft, /vies-evidence-record\.png/);
+assert.match(devDraft, /vies-validation-state-machine\.svg/);
+assert.match(visualRecord, /Preflight decision:\s*pass/i);
+assert.doesNotMatch(visualRecord, /promotional banner approved/i);
+
+const registryPostIds = campaignLinks.links.map((item) => item.post_id);
+assert.equal(new Set(campaignLinks.links.map((item) => item.slug)).size, campaignLinks.links.length);
+assert.equal(new Set(registryPostIds).size, registryPostIds.length);
+for (const item of campaignLinks.links) {
+  const destination = new URL(item.destination_url);
+  assert.equal(destination.origin, 'https://howthtechnologyfactory.pro');
+  assert.equal(destination.search, '');
+  const redirect = fs.readFileSync(path.join(root, 'go', item.slug, 'index.html'), 'utf8');
+  assert.match(redirect, /noindex,\s*nofollow,\s*noarchive/);
+  assert.match(redirect, new RegExp(item.post_id, 'i'));
+}
+execFileSync(process.execPath, [path.join(root, 'marketing', 'build-campaign-links.mjs'), '--check'], { cwd: root });
 
 const output = execFileSync(process.execPath, [
   path.join(root, 'marketing', 'run-campaign.mjs'),

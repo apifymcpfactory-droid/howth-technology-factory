@@ -29,4 +29,13 @@ Product-page shopfront links must declare a stable platform-independent identifi
 
 The controlling campaign set is Website Insights, every shopfront discovered from the product page, X, Bluesky, Reddit, Medium, Dev.to, Product Hunt and Hacker News. LinkedIn is excluded until its company page is ready. YouTube and all video generation are removed from the active marketing system; historical account records do not authorise video preparation or publication. No additional platform may be introduced without explicit CEO approval.
 
+## Publication quality rules
+
+- Tracking is mandatory, but tracking parameters must never be printed as visible copy. Long-form platforms use concise descriptive anchor text with the tracked destination underneath.
+- X and Bluesky normally use one primary first-party campaign link. Reddit normally uses one primary clean link. None of these platforms is required to list every shopfront.
+- Clean links are registered in `campaign-links.json` and generated under `/go/<slug>/` by `build-campaign-links.mjs`. Redirect pages are `noindex`, preserve unique campaign and post identity, and apply attribution only when the visitor follows the link.
+- Substantive website Insights, Medium articles and DEV articles must contain 1,000–2,000 meaningful editorial words. Platform-native short-form content uses its natural current limits; the long-form range must not be applied universally.
+- A campaign visual must explain the specific subject: a decision diagram, workflow, annotated screenshot, architecture, input/output example, process, evidence record or relevant data visualisation. Company-name banners, logo-led graphics, promotional heroes, generic artwork and artwork containing calls to action are prohibited.
+- Visual suitability requires a recorded human-visible preflight decision with the asset preview and explanation. Automated checks enforce the configuration and presence of that decision; they do not claim to judge visual quality.
+
 Do not add passwords or tokens. Do not mark a publication live without a read-back URL and verification timestamp.
