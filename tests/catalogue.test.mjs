@@ -11,7 +11,7 @@ const script = read('assets', 'js', 'catalogue.js');
 const sitemap = read('sitemap.xml');
 const llms = read('llms.txt');
 
-assert.equal(catalogue.schema_version, '1.0');
+assert.equal(catalogue.schema_version, '1.1');
 assert.equal(catalogue.publisher.name, 'Howth Technology Factory');
 assert.equal(catalogue.products.length, 9);
 assert.equal(new Set(catalogue.products.map(({ id }) => id)).size, catalogue.products.length);

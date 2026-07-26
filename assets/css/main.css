@@ -248,3 +248,26 @@ body {
     background: rgba(252, 211, 77, .12);
     color: var(--gold);
 }
+
+/* Future verified review cards. The section is omitted entirely until at
+   least one approved source has genuine, displayable review evidence. */
+.independent-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+}
+.independent-review-card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+    padding: 1.25rem;
+}
+.independent-review-link:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+@media (max-width: 40rem) {
+    .independent-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}

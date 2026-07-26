@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         product_id: attribution.htf_product,
         campaign_id: attribution.htf_campaign || attribution.utm_campaign,
         platform_id: attribution.htf_platform || attribution.utm_source,
+        platform: attribution.htf_platform || attribution.utm_source,
         post_id: attribution.htf_post || attribution.utm_content,
         utm_source: attribution.utm_source,
         utm_medium: attribution.utm_medium,
@@ -117,6 +118,20 @@ document.addEventListener('DOMContentLoaded', () => {
             sendEvent('shopfront_outbound_click', shopfrontParameters);
             if (safeShopfront) sendEvent(`${safeShopfront}_outbound_click`, shopfrontParameters);
             link.href = common.link_url;
+        }
+
+        // Review destinations are evidence links, not campaign landing pages.
+        // Measure the click with the active attribution, but leave the verified
+        // third-party URL byte-for-byte unchanged.
+        const reviewSource = link.dataset.reviewSource?.trim().toLowerCase();
+        if (reviewSource && url.origin !== window.location.origin) {
+            sendEvent('review_source_click', {
+                ...common,
+                product_id: link.dataset.productId || eventAttribution.product_id,
+                review_source: reviewSource,
+                destination_url: link.href,
+                platform: eventAttribution.platform,
+            });
         }
 
         if (

@@ -21,6 +21,11 @@ function runPage(pathname) {
     dataset: { shopfront: 'future_shop' },
     textContent: 'Future shop',
   };
+  const reviewLink = {
+    href: 'https://reviews.example/pdf-toolkit',
+    dataset: { reviewSource: 'future_reviews', productId: 'pdf-toolkit' },
+    textContent: 'Read independent reviews',
+  };
   const location = new URL(`https://howthtechnologyfactory.pro${pathname}?utm_source=bluesky&utm_medium=organic&utm_campaign=stage1&utm_content=stage1-bsky-01&htf_product=pdf-toolkit&htf_campaign=HTF-STAGE1&htf_platform=bluesky&htf_post=HTF-STAGE1-BSKY-01`);
   const document = {
     addEventListener(name, callback) {
@@ -56,8 +61,9 @@ function runPage(pathname) {
   for (const callback of listeners.get('DOMContentLoaded') || []) callback();
   for (const callback of listeners.get('click') || []) {
     callback({ target: { closest: () => shopfrontLink } });
+    callback({ target: { closest: () => reviewLink } });
   }
-  return { events, ownedLink, shopfrontLink, stored: JSON.parse(store.get('htf_campaign_attribution')) };
+  return { events, ownedLink, shopfrontLink, reviewLink, stored: JSON.parse(store.get('htf_campaign_attribution')) };
 }
 
 const insight = runPage('/insights/pdf-automation-boundaries.html');
@@ -69,8 +75,16 @@ assert.equal(insight.events[0].parameters.post_id, 'HTF-STAGE1-BSKY-01');
 assert.equal(insight.events[1].eventName, 'shopfront_outbound_click');
 assert.equal(insight.events[1].parameters.shopfront_id, 'future_shop');
 assert.equal(insight.events[2].eventName, 'future_shop_outbound_click');
+assert.equal(insight.events[3].eventName, 'review_source_click');
+assert.equal(insight.events[3].parameters.product_id, 'pdf-toolkit');
+assert.equal(insight.events[3].parameters.review_source, 'future_reviews');
+assert.equal(insight.events[3].parameters.destination_url, 'https://reviews.example/pdf-toolkit');
+assert.equal(insight.events[3].parameters.campaign_id, 'HTF-STAGE1');
+assert.equal(insight.events[3].parameters.post_id, 'HTF-STAGE1-BSKY-01');
+assert.equal(insight.events[3].parameters.platform, 'bluesky');
 assert.match(insight.ownedLink.href, /htf_campaign=HTF-STAGE1/);
 assert.match(insight.shopfrontLink.href, /htf_post=HTF-STAGE1-BSKY-01/);
+assert.equal(insight.reviewLink.href, 'https://reviews.example/pdf-toolkit');
 assert.equal(insight.stored.htf_product, 'pdf-toolkit');
 
 const product = runPage('/products/pdf-toolkit.html');

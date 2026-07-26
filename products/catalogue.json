@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "publisher": {
     "name": "Howth Technology Factory",
     "url": "https://howthtechnologyfactory.pro/"
@@ -53,6 +53,10 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/pdf-toolkit","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/pdf-toolkit-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/pdf-toolkit"},
         {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/pdf-toolkit-mcp"}
@@ -68,9 +72,13 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/eu-vat-validator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/eu-vat-validator-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/eu-vat-validator"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/eu-vat-number-validator"}
+        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/eu-vat-validator-mcp"}
       ]
     },
     {
@@ -83,9 +91,13 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/iban-validator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/iban-validator-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/iban-validator"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/iban-validator"}
+        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/iban-validator-mcp"}
       ]
     },
     {
@@ -98,6 +110,10 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/sanctions-screening","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/sanctions-screening","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/sanctions-screening"},
         {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/sanctions-screening"}
@@ -113,9 +129,13 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/tech-stack-detector","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/tech-stack-detector-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/tech-stack-detector"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/tech-stack-detector"}
+        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/tech-stack-detector-mcp"}
       ]
     },
     {
@@ -128,6 +148,9 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-checker","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-checker"}
       ]
@@ -142,6 +165,9 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-generator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-generator"}
       ]
@@ -156,9 +182,13 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-suite","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/llms-txt-suite-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-suite"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/llms-txt-suite"}
+        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/llms-txt-suite-mcp"}
       ]
     },
     {
@@ -171,9 +201,13 @@
       "types": ["api", "mcp", "apify-actor"],
       "access": ["web", "api", "mcp"],
       "ai_agent_compatible": true,
+      "reviews": [
+        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/email-domain-checker","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
+        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/email-domain-checker-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
+      ],
       "shopfronts": [
         {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/email-domain-checker"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/email-domain-checker"}
+        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/email-domain-checker-mcp"}
       ]
     }
   ]
