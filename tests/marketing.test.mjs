@@ -9,6 +9,8 @@ const article = fs.readFileSync(path.join(root, 'insights', 'pdf-automation-boun
 const index = fs.readFileSync(path.join(root, 'insights', 'index.html'), 'utf8');
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const js = fs.readFileSync(path.join(root, 'assets', 'js', 'main.js'), 'utf8');
+const automation = fs.readFileSync(path.join(root, 'marketing', 'run-campaign.mjs'), 'utf8');
+const workflowReadme = fs.readFileSync(path.join(root, 'marketing', 'README.md'), 'utf8');
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'marketing', 'campaign-ledger.json'), 'utf8'));
 
 assert.match(article, /rel="canonical" href="https:\/\/howthtechnologyfactory\.pro\/insights\/pdf-automation-boundaries\.html"/);
@@ -18,11 +20,33 @@ assert.match(article, /mcpize\.com\/mcp\/pdf-toolkit-mcp\?/);
 assert.match(article, /\/products\/pdf-toolkit\.html\?/);
 assert.match(index, /pdf-automation-boundaries\.html/);
 assert.match(sitemap, /https:\/\/howthtechnologyfactory\.pro\/insights\//);
-for (const event of ['apify_outbound_click','mcpize_outbound_click','contact_submit','insight_to_product_click','youtube_outbound_click']) {
+for (const event of ['insight_view','product_view','shopfront_outbound_click','contact_submit','insight_to_product_click']) {
   assert.match(js, new RegExp(event));
 }
+for (const key of ['htf_product','htf_campaign','htf_platform','htf_post']) {
+  assert.match(js, new RegExp(key));
+}
+assert.match(js, /sessionStorage/);
+assert.match(js, /data\.shopfront|dataset\.shopfront/);
+assert.doesNotMatch(js, /hostname === ['"]apify\.com/);
+assert.doesNotMatch(js, /hostname === ['"]mcpize\.com/);
+assert.doesNotMatch(js, /youtube_outbound_click/);
+
+for (const file of fs.readdirSync(path.join(root, 'products')).filter((name) => name.endsWith('.html'))) {
+  const html = fs.readFileSync(path.join(root, 'products', file), 'utf8');
+  for (const match of html.matchAll(/<a\b[^>]*href=["']https:\/\/(?:apify\.com\/apifmcpfactory\/|mcpize\.com\/mcp\/)[^"']+["'][^>]*>/gi)) {
+    assert.match(match[0], /data-shopfront=["'][a-z0-9_-]+["']/i, `${file} has an undeclared shopfront link`);
+  }
+}
+
 assert.equal(new Set(ledger.campaigns.map((item) => item.campaign_id)).size, ledger.campaigns.length);
 assert.ok(ledger.campaigns[0].historical_tracking_note.includes('unattributed'));
+assert.equal(ledger.authority, 'non_authoritative_automation_data');
+assert.match(workflowReadme, /Google Drive.*03 Campaign Ledger/s);
+assert.doesNotMatch(workflowReadme, /campaign-ledger\.json` is authoritative/);
+assert.doesNotMatch(automation, /['"]youtube['"]/);
+assert.doesNotMatch(automation, /expected one exact Apify/);
+assert.doesNotMatch(automation, /expected one exact MCPize/);
 
 const output = execFileSync(process.execPath, [
   path.join(root, 'marketing', 'run-campaign.mjs'),
@@ -30,6 +54,22 @@ const output = execFileSync(process.execPath, [
   '--offline', '--dry-run'
 ], { cwd: root, encoding: 'utf8' });
 const dryRun = JSON.parse(output);
-assert.equal(dryRun.marketplace_verification.length, 2);
+assert.equal(dryRun.shopfront_verification.length, 2);
 assert.notEqual(dryRun.angle, ledger.campaigns[0].angle);
+assert.match(dryRun.campaign_id, /^HTF-\d{8}-[A-Z0-9]+-\d{3}$/);
+assert.equal(new Set(dryRun.publications.map((item) => item.post_id)).size, dryRun.publications.length);
+assert.ok(dryRun.publications.length > 0);
+for (const publication of dryRun.publications) {
+  assert.notEqual(publication.platform, 'youtube');
+  for (const link of Object.values(publication.tracked_links)) {
+    const url = new URL(link);
+    assert.equal(url.searchParams.get('htf_product'), 'pdf-toolkit');
+    assert.equal(url.searchParams.get('htf_campaign'), dryRun.campaign_id);
+    assert.equal(url.searchParams.get('htf_platform'), publication.platform);
+    assert.equal(url.searchParams.get('htf_post'), publication.post_id);
+    assert.equal(url.searchParams.get('utm_source'), publication.platform);
+    assert.equal(url.searchParams.get('utm_campaign'), dryRun.campaign_id.toLowerCase());
+    assert.equal(url.searchParams.get('utm_content'), publication.post_id.toLowerCase());
+  }
+}
 console.log('marketing tests passed');

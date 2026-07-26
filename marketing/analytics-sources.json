@@ -1,17 +1,16 @@
 {
   "schema_version": 1,
   "attribution_model": {
-    "path": "post -> insight -> product -> Apify or MCPize -> usage/customer/revenue",
+    "path": "post -> insight -> product -> verified shopfront -> usage/customer/revenue",
     "direct": "Matching campaign/content identifiers or a platform-provided conversion record.",
     "correlated": "Time-aligned movement without a durable shared identifier.",
     "unknown": "No defensible link between content and outcome."
   },
   "sources": [
-    {"source":"GA4","status":"connected_on_site","property_tag":"G-L6Z8NX31VS","events":["apify_outbound_click","mcpize_outbound_click","contact_submit","insight_to_product_click","youtube_outbound_click"]},
+    {"source":"GA4","status":"connected_on_site","property_tag":"G-L6Z8NX31VS","events":["insight_view","product_view","insight_to_product_click","shopfront_outbound_click","<shopfront>_outbound_click","contact_submit"],"attribution_parameters":["product_id","campaign_id","platform_id","post_id","utm_source","utm_medium","utm_campaign","utm_content","shopfront_id"]},
     {"source":"Microsoft Clarity","status":"connected_on_site","project_tag":"xrdxh8x5jv"},
     {"source":"Google Search Console","status":"authorization_not_available","required_action":"Verify the site property and grant read access."},
     {"source":"Bing Webmaster Tools","status":"authorization_not_available","required_action":"Verify the site and grant read access."},
-    {"source":"YouTube Analytics","status":"authorization_not_available","required_action":"Complete Google OAuth for the channel."},
     {"source":"Apify usage/customer/revenue","status":"authorization_not_available","required_action":"Provide an authenticated reporting connection; do not store a token in this repository."},
     {"source":"MCPize usage/customer/revenue","status":"authorization_not_available","required_action":"Provide an authenticated reporting connection if the platform exposes reporting."},
     {"source":"Platform analytics","status":"partial_manual","required_action":"Connect each publisher account or record exports without credentials in source control."}

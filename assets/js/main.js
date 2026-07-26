@@ -1,20 +1,95 @@
 // Howth Technology Factory — minimal vanilla JS. No framework, no build step.
 document.addEventListener('DOMContentLoaded', () => {
+    const ATTRIBUTION_KEYS = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_content',
+        'htf_product',
+        'htf_campaign',
+        'htf_platform',
+        'htf_post',
+    ];
+    const ATTRIBUTION_STORE = 'htf_campaign_attribution';
+
     const sendEvent = (name, params = {}) => {
         if (typeof window.gtag === 'function') {
             window.gtag('event', name, params);
         }
     };
 
-    const classifyDestination = (url) => {
-        if (url.hostname === 'apify.com') return 'apify';
-        if (url.hostname === 'mcpize.com') return 'mcpize';
-        if (url.hostname === 'youtube.com' || url.hostname === 'youtu.be') return 'youtube';
-        return null;
+    const readAttribution = () => {
+        const current = new URLSearchParams(window.location.search);
+        let stored = {};
+        try {
+            stored = JSON.parse(window.sessionStorage.getItem(ATTRIBUTION_STORE) || '{}');
+        } catch {
+            stored = {};
+        }
+
+        const attribution = {};
+        for (const key of ATTRIBUTION_KEYS) {
+            const value = current.get(key) || stored[key];
+            if (value) attribution[key] = value.slice(0, 100);
+        }
+        if (Object.keys(attribution).length) {
+            try {
+                window.sessionStorage.setItem(ATTRIBUTION_STORE, JSON.stringify(attribution));
+            } catch {
+                // Tracking must never block navigation when storage is unavailable.
+            }
+        }
+        return attribution;
     };
 
-    // Delegated measurement keeps new Insights and product pages covered without
-    // page-specific event handlers. Parameters intentionally avoid personal data.
+    const attribution = readAttribution();
+    const eventAttribution = {
+        product_id: attribution.htf_product,
+        campaign_id: attribution.htf_campaign || attribution.utm_campaign,
+        platform_id: attribution.htf_platform || attribution.utm_source,
+        post_id: attribution.htf_post || attribution.utm_content,
+        utm_source: attribution.utm_source,
+        utm_medium: attribution.utm_medium,
+        utm_campaign: attribution.utm_campaign,
+        utm_content: attribution.utm_content,
+    };
+
+    const appendAttribution = (url) => {
+        for (const [key, value] of Object.entries(attribution)) {
+            if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+        }
+        return url;
+    };
+
+    // Preserve the originating campaign and post through owned-site navigation.
+    if (Object.keys(attribution).length) {
+        document.querySelectorAll('a[href]').forEach((link) => {
+            let url;
+            try {
+                url = new URL(link.href, window.location.href);
+            } catch {
+                return;
+            }
+            if (url.origin === window.location.origin && /^https?:$/.test(url.protocol)) {
+                link.href = appendAttribution(url).href;
+            }
+        });
+    }
+
+    const pageParameters = {
+        ...eventAttribution,
+        page_path: window.location.pathname,
+        page_location: window.location.href,
+    };
+    if (/^\/insights\/[^/]+\.html$/.test(window.location.pathname)) {
+        sendEvent('insight_view', pageParameters);
+    }
+    if (/^\/products\/[^/]+\.html$/.test(window.location.pathname)) {
+        sendEvent('product_view', pageParameters);
+    }
+
+    // Delegated measurement keeps future shopfronts covered when their product
+    // links declare data-shopfront="<stable-name>". No hostname allow-list is used.
     document.addEventListener('click', (event) => {
         const link = event.target.closest('a[href]');
         if (!link) return;
@@ -26,18 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const destination = classifyDestination(url);
         const common = {
-            link_url: url.href,
+            ...eventAttribution,
+            link_url: appendAttribution(url).href,
             link_text: (link.textContent || '').trim().slice(0, 100),
             page_path: window.location.pathname,
-            campaign_id: link.dataset.campaignId || undefined,
-            content_id: link.dataset.contentId || undefined,
+            campaign_id: link.dataset.campaignId || eventAttribution.campaign_id,
+            post_id: link.dataset.postId || link.dataset.contentId || eventAttribution.post_id,
         };
 
-        if (destination === 'apify') sendEvent('apify_outbound_click', common);
-        if (destination === 'mcpize') sendEvent('mcpize_outbound_click', common);
-        if (destination === 'youtube') sendEvent('youtube_outbound_click', common);
+        const shopfront = link.dataset.shopfront?.trim().toLowerCase();
+        if (shopfront && url.origin !== window.location.origin) {
+            const safeShopfront = shopfront.replace(/[^a-z0-9_]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 25);
+            const shopfrontParameters = { ...common, shopfront_id: shopfront };
+            sendEvent('shopfront_outbound_click', shopfrontParameters);
+            if (safeShopfront) sendEvent(`${safeShopfront}_outbound_click`, shopfrontParameters);
+            link.href = common.link_url;
+        }
 
         if (
             window.location.pathname.startsWith('/insights/') &&

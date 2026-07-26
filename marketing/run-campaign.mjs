@@ -37,13 +37,24 @@ function productFileFor(url) {
   return local;
 }
 
-function readMarketplaceLinks(html) {
-  const hrefs = [...html.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)].map((match) => match[1]);
-  const apify = [...new Set(hrefs.filter((href) => /^https:\/\/apify\.com\/apifmcpfactory\/[a-z0-9-]+\/?(?:\?|$)/.test(href)))];
-  const mcpize = [...new Set(hrefs.filter((href) => /^https:\/\/mcpize\.com\/mcp\/[a-z0-9-]+\/?(?:\?|$)/.test(href)))];
-  if (apify.length !== 1) fail(`expected one exact Apify listing; found ${apify.length}.`);
-  if (mcpize.length !== 1) fail(`expected one exact MCPize listing; found ${mcpize.length}.`);
-  return { apify: stripTracking(apify[0]), mcpize: stripTracking(mcpize[0]) };
+function readShopfrontLinks(html) {
+  const shopfronts = new Map();
+  for (const match of html.matchAll(/<a\b([^>]+)>/gi)) {
+    const attributes = match[1];
+    const href = attributes.match(/\bhref=["']([^"']+)["']/i)?.[1];
+    const name = attributes.match(/\bdata-shopfront=["']([a-z][a-z0-9_-]*)["']/i)?.[1]?.toLowerCase();
+    if (!href || !name) continue;
+    const url = new URL(href, SITE_ORIGIN);
+    if (url.origin === SITE_ORIGIN || !/^https?:$/.test(url.protocol)) {
+      fail(`shopfront ${name} must use an external HTTP(S) URL.`);
+    }
+    const normalized = stripTracking(url.href);
+    const existing = shopfronts.get(name);
+    if (existing && existing !== normalized) fail(`shopfront ${name} has conflicting listing URLs.`);
+    shopfronts.set(name, normalized);
+  }
+  if (!shopfronts.size) fail('the product page declares no shopfront links with data-shopfront.');
+  return Object.fromEntries([...shopfronts.entries()].sort(([a], [b]) => a.localeCompare(b)));
 }
 
 function stripTracking(value) {
@@ -81,8 +92,6 @@ function pageFacts(html) {
 function slugFrom(url) { return path.basename(url.pathname, '.html'); }
 function pad(value) { return String(value).padStart(2, '0'); }
 function dateKey(date) { return `${date.getUTCFullYear()}${pad(date.getUTCMonth()+1)}${pad(date.getUTCDate())}`; }
-function safeCampaignToken(value) { return value.replace(/[^a-z0-9]+/gi, '_').replace(/^_|_$/g, '').toLowerCase(); }
-
 function chooseUnusedAngle(ledger, slug, catalog) {
   const used = new Set(ledger.campaigns.filter((c) => c.product_slug === slug).map((c) => c.angle_key || c.angle_fingerprint?.split('|').at(-1)));
   const angle = catalog.find((candidate) => !used.has(candidate.key));
@@ -90,19 +99,23 @@ function chooseUnusedAngle(ledger, slug, catalog) {
   return angle;
 }
 
-function linksFor(base, campaignToken, platform, contentId) {
-  const destinations = { website: base.product, apify: base.apify, mcpize: base.mcpize };
+function linksFor(base, campaignId, productSlug, platform, postId) {
+  const destinations = { website: base.product, ...base.shopfronts };
   return Object.fromEntries(Object.entries(destinations).map(([name, value]) => {
     const url = new URL(value);
     url.searchParams.set('utm_source', platform);
     url.searchParams.set('utm_medium', platform === 'website' ? 'insight' : 'organic');
-    url.searchParams.set('utm_campaign', campaignToken);
-    url.searchParams.set('utm_content', `${contentId.toLowerCase()}_${name}`);
+    url.searchParams.set('utm_campaign', campaignId.toLowerCase());
+    url.searchParams.set('utm_content', postId.toLowerCase());
+    url.searchParams.set('htf_product', productSlug);
+    url.searchParams.set('htf_campaign', campaignId);
+    url.searchParams.set('htf_platform', platform);
+    url.searchParams.set('htf_post', postId);
     return [name, url.href];
   }));
 }
 
-function campaignPackage({ campaignId, campaignToken, product, facts, angle, links, createdAt }) {
+function campaignPackage({ campaignId, product, facts, angle, links, createdAt }) {
   return `# Campaign ${campaignId}
 
 Status: research and editorial review required before publication
@@ -110,8 +123,7 @@ Status: research and editorial review required before publication
 ## Verified product facts
 
 - Product page: ${product.product}
-- Apify: ${product.apify}
-- MCPize: ${product.mcpize}
+${Object.entries(product.shopfronts).map(([name, url]) => `- ${name}: ${url}`).join('\n')}
 - Page title: ${facts.title}
 - Page description: ${facts.description}
 
@@ -133,7 +145,6 @@ This key was checked against the complete local campaign ledger at ${createdAt}.
 - X: one concise observation plus a short checklist thread only if every item earns its place.
 - Bluesky: developer discussion prompt focused on the technical lesson.
 - Reddit: use only in a community where the question already fits; disclose the product connection.
-- YouTube: demonstrate the problem, a failed contract and a corrected workflow; no promotional montage.
 - LinkedIn: draft only; publication remains paused.
 - Product Hunt / Hacker News: skip unless launch novelty and community fit are independently established.
 
@@ -151,9 +162,9 @@ async function main() {
   const { productUrl: input, offline, dryRun } = parseArgs(process.argv.slice(2));
   const productUrl = assertProductUrl(input);
   const html = fs.readFileSync(productFileFor(productUrl), 'utf8');
-  const marketplace = readMarketplaceLinks(html);
+  const shopfronts = readShopfrontLinks(html);
   const facts = pageFacts(html);
-  const verifications = await Promise.all([verifyLink(marketplace.apify, offline), verifyLink(marketplace.mcpize, offline)]);
+  const verifications = await Promise.all(Object.values(shopfronts).map((url) => verifyLink(url, offline)));
   const ledger = JSON.parse(fs.readFileSync(LEDGER_PATH, 'utf8'));
   const catalog = JSON.parse(fs.readFileSync(ANGLES_PATH, 'utf8'));
   const slug = slugFrom(productUrl);
@@ -161,12 +172,11 @@ async function main() {
   const now = new Date();
   const sequence = ledger.campaigns.filter((c) => c.product_slug === slug).length + 1;
   const campaignId = `HTF-${dateKey(now)}-${slug.toUpperCase().replace(/-/g, '').slice(0, 8)}-${String(sequence).padStart(3, '0')}`;
-  const campaignToken = `${dateKey(now)}_${safeCampaignToken(slug)}_${safeCampaignToken(angle.key)}`;
-  const platforms = ['website','medium','devto','x','bluesky','reddit','youtube','linkedin'];
-  const base = { product: productUrl.href, ...marketplace };
+  const platforms = ['website','medium','devto','x','bluesky','reddit','producthunt','hackernews','dailydev','indiehackers'];
+  const base = { product: productUrl.href, shopfronts };
   const tracked = Object.fromEntries(platforms.map((platform, index) => {
-    const contentId = `${platform.toUpperCase().slice(0,4)}-${dateKey(now)}-${String(index+1).padStart(3,'0')}`;
-    return [platform, { content_id: contentId, links: linksFor(base, campaignToken, platform, contentId) }];
+    const postId = `${campaignId}-${platform.toUpperCase()}-${String(index+1).padStart(2,'0')}`;
+    return [platform, { post_id: postId, links: linksFor(base, campaignId, slug, platform, postId) }];
   }));
   const entry = {
     campaign_id: campaignId, product_slug: slug, product_url: productUrl.href, created_at: now.toISOString(),
@@ -174,18 +184,23 @@ async function main() {
     angle: angle.angle, angle_key: angle.key, angle_fingerprint: `${angle.persona}|${angle.problem}|${angle.key}`,
     status: 'research_required', marketplace_verification: verifications,
     baseline: { captured_at: now.toISOString(), status: 'capture_connectors_before_publication', directly_attributed: {}, correlated: {}, unknown: [] },
-    publications: Object.entries(tracked).map(([platform, item]) => ({ platform, content_id: item.content_id, status: platform === 'linkedin' ? 'paused_company_page_not_ready' : 'draft_required', tracked_links: item.links })),
+    publications: Object.entries(tracked).map(([platform, item]) => ({ platform, post_id: item.post_id, status: 'draft_required', tracked_links: item.links })),
     review_due: {
       '24h': new Date(now.getTime()+86400000).toISOString(), '48h': new Date(now.getTime()+172800000).toISOString(),
       '7d': new Date(now.getTime()+604800000).toISOString(), '30d': new Date(now.getTime()+2592000000).toISOString()
     }
   };
-  console.log(JSON.stringify({ campaign_id: campaignId, angle: angle.angle, marketplace_verification: verifications }, null, 2));
+  console.log(JSON.stringify({
+    campaign_id: campaignId,
+    angle: angle.angle,
+    shopfront_verification: verifications,
+    publications: entry.publications,
+  }, null, 2));
   if (dryRun) return;
   const outputDir = path.join(ROOT, 'marketing', 'campaigns', campaignId);
   fs.mkdirSync(outputDir, { recursive: false });
   const trackedLinks = Object.fromEntries(Object.entries(tracked).map(([platform, item]) => [platform, item.links]));
-  fs.writeFileSync(path.join(outputDir, 'campaign.md'), campaignPackage({ campaignId, campaignToken, product: base, facts, angle, links: trackedLinks, createdAt: now.toISOString() }));
+  fs.writeFileSync(path.join(outputDir, 'campaign.md'), campaignPackage({ campaignId, product: base, facts, angle, links: trackedLinks, createdAt: now.toISOString() }));
   fs.writeFileSync(path.join(outputDir, 'manifest.json'), `${JSON.stringify(entry, null, 2)}\n`);
   ledger.campaigns.push(entry);
   fs.writeFileSync(LEDGER_PATH, `${JSON.stringify(ledger, null, 2)}\n`);
