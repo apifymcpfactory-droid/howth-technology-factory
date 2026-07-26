@@ -261,9 +261,9 @@ When a VAT-validation service cannot reach a member state's register, that is no
 
 The distinction matters in billing and onboarding workflows:
 
-- `valid`: continue, and retain what was checked and when;
-- `invalid`: pause the affected transaction and ask for correction or other evidence;
-- `unavailable`: keep the error, retry later, and do not turn an upstream outage into a customer-data failure.
+- valid: continue, and retain what was checked and when;
+- invalid: pause the affected transaction and ask for correction or other evidence;
+- unavailable: keep the error, retry later, and do not turn an upstream outage into a customer-data failure.
 
 A few implementation details make this safer:
 
