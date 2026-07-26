@@ -15,7 +15,7 @@
 - [Machine-readable product catalogue](https://howthtechnologyfactory.pro/products/catalogue.json): Structured JSON inventory with stable product IDs, taxonomy facets, canonical pages and extensible shopfront arrays.
 
 - [PDF Toolkit: Merge, Split, Compress & Convert PDFs](https://howthtechnologyfactory.pro/products/pdf-toolkit.html): Merge, split, compress and convert PDFs in one tool — batch jobs, no file-size limits. MCP: https://mcp.apify.com?tools=apifmcpfactory/pdf-toolkit
-- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://howthtechnologyfactory.pro/products/eu-vat-validator.html): Validate EU VAT numbers against the official VIES database — single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator
+- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://howthtechnologyfactory.pro/products/eu-vat-validator.html): Validate individual or bulk EU and Northern Ireland VAT numbers with the official VIES service. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator
 - [Website Technology Detector: Tech Stack Scanner](https://howthtechnologyfactory.pro/products/tech-stack-detector.html): See what any website is built with — CMS, frameworks, analytics and more. MCP: https://mcp.apify.com?tools=apifmcpfactory/tech-stack-detector
 - [llms.txt Checker: AI Search Readiness Audit](https://howthtechnologyfactory.pro/products/llms-txt-checker.html): Audit any site's llms.txt and get an AI-readiness score with concrete fixes. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-checker
 - [llms.txt Generator: Make Any Website AI-Readable](https://howthtechnologyfactory.pro/products/llms-txt-generator.html): Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-generator
@@ -35,4 +35,5 @@
 
 ## Insights
 
+- [Design VIES validation as a state machine](https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html): A practical workflow for preserving valid, invalid and temporarily unavailable VAT-validation outcomes.
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.

@@ -1,0 +1,44 @@
+{
+  "campaign_id": "HTF-20260726-EUVATVAL-001",
+  "product_slug": "eu-vat-validator",
+  "product_url": "https://howthtechnologyfactory.pro/products/eu-vat-validator.html",
+  "insight_url": "https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html",
+  "created_at": "2026-07-26T13:47:38+01:00",
+  "persona": "finance operations teams, accountants, SaaS operators and automation developers",
+  "problem": "binary VAT-validation logic turns upstream VIES outages into false customer rejections",
+  "search_intent": "reliable VIES VAT validation workflow",
+  "angle": "Model VIES validation as valid, invalid and temporarily unavailable, with a distinct operational action for each state.",
+  "status": "content_ready_for_preflight",
+  "shopfronts": {
+    "apify": "https://apify.com/apifmcpfactory/eu-vat-validator",
+    "mcpize": "https://mcpize.com/mcp/eu-vat-validator-mcp"
+  },
+  "publications": [
+    {"platform":"website","post_id":"HTF-20260726-EUVATVAL-001-WEBSITE-01","status":"ready_for_deployment"},
+    {"platform":"medium","post_id":"HTF-20260726-EUVATVAL-001-MEDIUM-02","status":"draft_ready_pending_authentication"},
+    {"platform":"devto","post_id":"HTF-20260726-EUVATVAL-001-DEVTO-03","status":"draft_ready_pending_authentication"},
+    {"platform":"x","post_id":"HTF-20260726-EUVATVAL-001-X-04","status":"draft_ready_pending_authentication"},
+    {"platform":"bluesky","post_id":"HTF-20260726-EUVATVAL-001-BLUESKY-05","status":"draft_ready_pending_authentication"},
+    {"platform":"reddit","post_id":"HTF-20260726-EUVATVAL-001-REDDIT-06","status":"skipped_no_verified_community_fit"},
+    {"platform":"producthunt","post_id":"HTF-20260726-EUVATVAL-001-PRODUCTHUNT-07","status":"skipped_pdf_toolkit_launch_conflict_and_domain_spacing"},
+    {"platform":"hackernews","post_id":"HTF-20260726-EUVATVAL-001-HACKERNEWS-08","status":"skipped_promotional_fit_risk"},
+    {"platform":"dailydev","post_id":"HTF-20260726-EUVATVAL-001-DAILYDEV-09","status":"draft_ready_pending_authentication_and_format_check"},
+    {"platform":"indiehackers","post_id":"HTF-20260726-EUVATVAL-001-INDIEHACKERS-10","status":"draft_ready_pending_authentication_and_community_fit_check"}
+  ],
+  "tracking_template": {
+    "utm_campaign": "htf-20260726-euvatval-001",
+    "htf_product": "eu-vat-validator",
+    "htf_campaign": "HTF-20260726-EUVATVAL-001",
+    "utm_source": "{platform}",
+    "utm_medium": "organic",
+    "utm_content": "{lowercase_post_id}",
+    "htf_platform": "{platform}",
+    "htf_post": "{post_id}"
+  },
+  "review_due": {
+    "24h": "2026-07-27T13:47:38+01:00",
+    "48h": "2026-07-28T13:47:38+01:00",
+    "7d": "2026-08-02T13:47:38+01:00",
+    "30d": "2026-08-25T13:47:38+01:00"
+  }
+}

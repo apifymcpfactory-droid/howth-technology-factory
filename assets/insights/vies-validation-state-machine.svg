@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">VIES validation is a three-state workflow</title>
+  <desc id="desc">A VAT number is normalized and checked with VIES, then routed to valid, invalid, or temporarily unavailable. Each state has a different operational action.</desc>
+  <rect width="1200" height="630" rx="32" fill="#0a0a0c"/>
+  <rect x="24" y="24" width="1152" height="582" rx="24" fill="#131316" stroke="#27272a" stroke-width="2"/>
+  <text x="72" y="92" fill="#fcd34d" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600">EU VAT VALIDATION WORKFLOW</text>
+  <text x="72" y="148" fill="#ffffff" font-family="Space Grotesk,Inter,Arial,sans-serif" font-size="40" font-weight="700">A VIES check is not a boolean decision</text>
+  <text x="72" y="187" fill="#a1a1aa" font-family="Inter,Arial,sans-serif" font-size="21">Preserve three outcomes so an upstream outage never becomes a false rejection.</text>
+
+  <rect x="72" y="246" width="238" height="118" rx="20" fill="#18181c" stroke="#3f3f46" stroke-width="2"/>
+  <text x="96" y="285" fill="#fcd34d" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">INPUT</text>
+  <text x="96" y="320" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="600">Normalize VAT ID</text>
+  <text x="96" y="347" fill="#a1a1aa" font-family="Inter,Arial,sans-serif" font-size="16">Country prefix + number</text>
+
+  <path d="M310 305 H380" stroke="#71717a" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="380" y="246" width="238" height="118" rx="20" fill="#18181c" stroke="#fcd34d" stroke-width="2"/>
+  <text x="404" y="285" fill="#fcd34d" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">CHECK</text>
+  <text x="404" y="320" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="600">Query VIES</text>
+  <text x="404" y="347" fill="#a1a1aa" font-family="Inter,Arial,sans-serif" font-size="16">Live national source lookup</text>
+
+  <path d="M618 305 H688" stroke="#71717a" stroke-width="4"/>
+  <path d="M688 305 V238 H728" stroke="#71717a" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M688 305 H728" stroke="#71717a" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M688 305 V372 H728" stroke="#71717a" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="728" y="202" width="400" height="86" rx="18" fill="#11251b" stroke="#22c55e" stroke-width="2"/>
+  <text x="754" y="238" fill="#86efac" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700">VALID</text>
+  <text x="754" y="266" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="17">Continue, while retaining the check record.</text>
+
+  <rect x="728" y="305" width="400" height="86" rx="18" fill="#2a1818" stroke="#ef4444" stroke-width="2"/>
+  <text x="754" y="341" fill="#fca5a5" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700">INVALID</text>
+  <text x="754" y="369" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="17">Pause and ask for correction or other evidence.</text>
+
+  <rect x="728" y="408" width="400" height="86" rx="18" fill="#292315" stroke="#f59e0b" stroke-width="2"/>
+  <text x="754" y="444" fill="#fcd34d" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700">TEMPORARILY UNAVAILABLE</text>
+  <text x="754" y="472" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="17">Retry later; do not convert an outage to “invalid”.</text>
+
+  <rect x="72" y="525" width="1056" height="46" rx="14" fill="#18181c"/>
+  <text x="600" y="555" text-anchor="middle" fill="#d4d4d8" font-family="Inter,Arial,sans-serif" font-size="17">A valid response confirms registration status at that moment; it does not decide the full VAT treatment.</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#71717a"/>
+    </marker>
+  </defs>
+</svg>

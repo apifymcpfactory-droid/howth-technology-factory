@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xrdxh8x5jv");</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6Z8NX31VS"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-L6Z8NX31VS');</script>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design VIES validation as a state machine</title>
+    <meta name="description" content="A practical workflow for EU VAT validation: distinguish valid, invalid and temporarily unavailable responses, then preserve the evidence and context each decision needs." />
+    <link rel="canonical" href="https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" /><meta property="og:site_name" content="Howth Technology Factory" />
+    <meta property="og:title" content="Design VIES validation as a state machine" />
+    <meta property="og:description" content="A VIES lookup is not a boolean business decision. Model valid, invalid and unavailable separately." />
+    <meta property="og:url" content="https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html" />
+    <meta property="og:image" content="https://howthtechnologyfactory.pro/assets/insights/vies-validation-state-machine.svg" />
+    <meta property="article:published_time" content="2026-07-26T12:00:00+01:00" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Design VIES validation as a state machine" />
+    <meta name="twitter:description" content="A practical three-state model for reliable EU VAT validation." />
+    <meta name="twitter:image" content="https://howthtechnologyfactory.pro/assets/insights/vies-validation-state-machine.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{bg:'#0a0a0c',surface:'#131316',surface2:'#18181c',borderc:'#27272a',muted:'#a1a1aa',faint:'#71717a',gold:'#fcd34d'},fontFamily:{sans:['Inter','sans-serif'],display:['"Space Grotesk"','sans-serif']},maxWidth:{'8xl':'90rem'}}}}</script>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Design VIES validation as a state machine","description":"A practical three-state model for reliable EU VAT validation workflows.","datePublished":"2026-07-26","dateModified":"2026-07-26","mainEntityOfPage":"https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html","image":"https://howthtechnologyfactory.pro/assets/insights/vies-validation-state-machine.svg","author":{"@type":"Organization","name":"Howth Technology Factory","url":"https://howthtechnologyfactory.pro/"},"publisher":{"@type":"Organization","name":"Howth Technology Factory","url":"https://howthtechnologyfactory.pro/"}}</script>
+</head>
+<body class="bg-bg text-white font-sans antialiased">
+<a href="#main" class="skip-link">Skip to content</a>
+<header data-site-header class="sticky top-0 z-50 header-blur border-b border-borderc"><div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="/" class="font-display font-semibold">Howth <span class="text-muted font-normal">Technology Factory</span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm"><a href="/products/" class="text-muted hover:text-white">Products</a><a href="/insights/" class="text-gold">Insights</a><a href="/about.html" class="text-muted hover:text-white">About</a><a href="/contact.html" class="bg-gold text-[#14140f] px-4 py-2 rounded-full font-medium">Get in touch</a></nav>
+<button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="md:hidden p-2">Menu</button></div>
+<div data-mobile-nav class="hidden md:hidden flex-col border-t border-borderc bg-bg/95"><a href="/products/" class="px-6 py-3 text-muted">Products</a><a href="/insights/" class="px-6 py-3 text-gold">Insights</a><a href="/about.html" class="px-6 py-3 text-muted">About</a><a href="/contact.html" class="px-6 py-3 text-gold">Get in touch</a></div></header>
+<main id="main">
+<article>
+<header class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-10">
+<a href="/insights/" class="text-sm text-gold">← Insights</a>
+<p class="text-sm text-faint mt-8 mb-4"><time datetime="2026-07-26">26 July 2026</time> · VAT operations · 7 min read</p>
+<h1 class="font-display text-4xl md:text-6xl leading-tight tracking-tight mb-7">Design VIES validation as a state machine</h1>
+<p class="text-xl text-muted leading-relaxed">A VAT number check can return valid, invalid or no reliable answer right now. Collapsing those outcomes into one boolean is how a temporary service problem becomes a customer rejection.</p>
+</header>
+<figure class="max-w-5xl mx-auto px-6 mb-14"><img src="/assets/insights/vies-validation-state-machine.svg" width="1200" height="630" alt="VIES validation workflow with valid, invalid and temporarily unavailable outcomes and a distinct operational action for each" class="rounded-2xl border border-borderc w-full" /><figcaption class="text-sm text-faint mt-3">Model the operational result, not just the transport response.</figcaption></figure>
+<div class="insight-prose max-w-3xl mx-auto px-6 pb-20">
+<p>The European Commission describes VIES as a search engine that retrieves VAT registration information from national databases. That distinction matters. Your workflow depends on multiple national systems and on the information each country is permitted to return.</p>
+<p>A reliable implementation should therefore keep three states: <strong>valid</strong>, <strong>invalid</strong> and <strong>temporarily unavailable</strong>. Each state needs a different next action.</p>
+
+<h2>What “valid” establishes</h2>
+<p>A valid VIES response means the number is registered for cross-border EU trade at the time of the check. It is useful evidence, but it does not decide the complete VAT treatment of a transaction. Place of supply, what is being sold, the parties’ roles and other facts can still change the answer.</p>
+<p>Keep the normalized VAT number, response status, timestamp and any reference returned for the request. When the requesting business’s VAT number is supplied, a service may also return a consultation number. Treat that as part of the validation record, not as a substitute for tax advice.</p>
+
+<h2>What “invalid” does not necessarily mean</h2>
+<p>An invalid response can mean the number does not exist, is not activated for intra-EU transactions, or has not completed registration. The right workflow action is usually to pause, show the normalized value that was checked, and ask the customer or supplier to correct it or provide other evidence.</p>
+<p>Do not silently strip a country prefix or keep changing the value until something passes. Normalization should be deterministic and visible.</p>
+
+<h2>Why “unavailable” must stay separate</h2>
+<p>National systems are sometimes unavailable. A timeout, retry exhaustion or upstream service error is not evidence that the VAT number is invalid. Record an error state, retry with a bounded delay, and give operations a path to resume the check later.</p>
+<p>This separation is especially important in batches. One unavailable national service should not erase valid results for other rows, and it should not turn the whole batch into a misleading pass/fail result.</p>
+
+<h2>Name and address are conditional fields</h2>
+<p>Some national databases do not provide a name or address through VIES. In other cases, data-protection rules mean the authority can only confirm whether a supplied name and address are associated with the number. Your schema should allow those fields to be absent without treating the validation as broken.</p>
+
+<h2>A compact response contract</h2>
+<pre><code>{
+  "vatNumber": "IE1234567A",
+  "status": "valid | invalid | unavailable",
+  "businessName": "string | null",
+  "address": "string | null",
+  "consultationNumber": "string | null",
+  "checkedAt": "ISO-8601 timestamp",
+  "error": "string | null"
+}</code></pre>
+<p>The exact field names can differ. What matters is that absence, invalidity and upstream failure remain distinguishable and that every row retains the value and time actually checked.</p>
+
+<h2>Five implementation tests worth keeping</h2>
+<ol>
+<li>A valid number with name and address returned.</li>
+<li>A valid number where the national source omits name or address.</li>
+<li>An invalid number that stays invalid after deterministic normalization.</li>
+<li>A temporary national-service failure that becomes <code>unavailable</code>, never <code>invalid</code>.</li>
+<li>A mixed batch that preserves the individual result and timestamp for every input.</li>
+</ol>
+
+<h2>Primary sources</h2>
+<ul>
+<li><a href="https://europa.eu/youreurope/business/finance-and-tax/vat/check-vat-number-vies/index_en.htm" rel="noopener">Your Europe: Check a VAT number (VIES)</a></li>
+<li><a href="https://taxation-customs.ec.europa.eu/taxation/vat/vat-directive/vat-identification-numbers_en" rel="noopener">European Commission: VAT identification numbers</a></li>
+<li><a href="https://ec.europa.eu/taxation_customs/vies/faq.html?locale=en" rel="noopener">European Commission: VIES FAQ</a></li>
+</ul>
+
+<aside class="rounded-2xl border border-borderc bg-surface p-6 md:p-8 mt-12">
+<h2 class="font-display text-2xl mt-0">An implementation to inspect</h2>
+<p>Howth Technology Factory’s <a href="/products/eu-vat-validator.html?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" data-campaign-id="HTF-20260726-EUVATVAL-001" data-content-id="HTF-20260726-EUVATVAL-001-WEBSITE-01">EU VAT Validator overview</a> documents the input and result contract. The exact shopfronts are the <a data-shopfront="apify" href="https://apify.com/apifmcpfactory/eu-vat-validator?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">Apify Actor</a> and the <a data-shopfront="mcpize" href="https://mcpize.com/mcp/eu-vat-validator-mcp?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">MCPize server</a>. Compare their current pricing and limits directly before use.</p>
+</aside>
+</div></article></main>
+<footer class="border-t border-borderc"><div class="max-w-3xl mx-auto px-6 py-10 text-sm text-faint">© <span data-year></span> Howth Technology Factory</div></footer>
+<script src="../assets/js/main.js"></script>
+</body></html>

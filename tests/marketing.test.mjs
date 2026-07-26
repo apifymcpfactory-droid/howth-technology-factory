@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const article = fs.readFileSync(path.join(root, 'insights', 'pdf-automation-boundaries.html'), 'utf8');
+const vatArticle = fs.readFileSync(path.join(root, 'insights', 'vies-validation-state-machine.html'), 'utf8');
 const index = fs.readFileSync(path.join(root, 'insights', 'index.html'), 'utf8');
+const vatProduct = fs.readFileSync(path.join(root, 'products', 'eu-vat-validator.html'), 'utf8');
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const js = fs.readFileSync(path.join(root, 'assets', 'js', 'main.js'), 'utf8');
 const automation = fs.readFileSync(path.join(root, 'marketing', 'run-campaign.mjs'), 'utf8');
@@ -19,6 +21,15 @@ assert.match(article, /apify\.com\/apifmcpfactory\/pdf-toolkit\?/);
 assert.match(article, /mcpize\.com\/mcp\/pdf-toolkit-mcp\?/);
 assert.match(article, /\/products\/pdf-toolkit\.html\?/);
 assert.match(index, /pdf-automation-boundaries\.html/);
+assert.match(vatArticle, /rel="canonical" href="https:\/\/howthtechnologyfactory\.pro\/insights\/vies-validation-state-machine\.html"/);
+assert.match(vatArticle, /HTF-20260726-EUVATVAL-001-WEBSITE-01/);
+assert.match(vatArticle, /apify\.com\/apifmcpfactory\/eu-vat-validator\?/);
+assert.match(vatArticle, /mcpize\.com\/mcp\/eu-vat-validator-mcp\?/);
+assert.match(index, /vies-validation-state-machine\.html/);
+assert.doesNotMatch(vatProduct, /official VIES database/);
+assert.doesNotMatch(vatProduct, /proof of a reverse-charge check/);
+assert.match(vatProduct, /national VAT databases/);
+assert.match(vatProduct, /consultation number/);
 assert.match(sitemap, /https:\/\/howthtechnologyfactory\.pro\/insights\//);
 for (const event of ['insight_view','product_view','shopfront_outbound_click','contact_submit','insight_to_product_click']) {
   assert.match(js, new RegExp(event));
