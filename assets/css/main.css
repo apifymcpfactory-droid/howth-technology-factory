@@ -224,3 +224,27 @@ body {
 .insight-prose li { margin: .55rem 0; padding-left: .25rem; }
 .insight-prose a { color: #fcd34d; text-decoration: underline; text-underline-offset: 3px; }
 .insight-prose code { color: #fde68a; background: #18181c; border: 1px solid #27272a; border-radius: .35rem; padding: .1rem .35rem; font-size: .95em; }
+
+/* Product catalogue controls remain usable without the Tailwind runtime. */
+.catalogue-input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    background: var(--surface);
+    color: var(--text);
+    padding: .8rem 1rem;
+}
+.catalogue-input:focus,
+.catalogue-control:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+.catalogue-card[hidden],
+.catalogue-empty[hidden] {
+    display: none;
+}
+.catalogue-chip[aria-pressed="true"] {
+    border-color: var(--gold);
+    background: rgba(252, 211, 77, .12);
+    color: var(--gold);
+}
