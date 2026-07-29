@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Domain Checker: MX, SPF, DKIM & DMARC</title>
-    <meta name="description" content="Check MX, SPF, DKIM and DMARC records from DNS alone — spot disposable and role addresses too." />
+    <meta name="description" content="Check any email or domain&rsquo;s MX, SPF, DKIM and DMARC records from DNS alone, with disposable and role-address flags. Auth posture, not mailbox existence." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/email-domain-checker.html" />
     <meta name="robots" content="index, follow" />
 
@@ -192,6 +192,12 @@
                 <p class="text-muted leading-relaxed">Every domain publishes its own DNS records for MX, SPF, DKIM and DMARC — the public signals that determine whether mail sent to it will actually arrive and be trusted. This tool reads all of them directly, with no SMTP connection and no mailbox ping.</p>
                     <p class="text-muted leading-relaxed">Five honestly distinct outcomes replace one generic failure: a domain that doesn't exist, one that resolves but can't receive mail, a genuine DNS hiccup, bad input, or a fully checked domain — plus disposable and role-address flags for cleaning a list.</p>
                     <p class="text-muted leading-relaxed">Runs the same whether a person checks one address or an AI agent bulk-checks a hundred mid-workflow.</p>
+                    <p class="text-muted leading-relaxed">Two questions get confused with each other: whether mail to an address will bounce, and whether a domain is configured so its own mail reaches inboxes. They have different answers and different fixes, and only the second is answerable reliably.</p>
+                    <p class="text-muted leading-relaxed">Mailbox-existence checks open an SMTP conversation with the receiving server. Most large providers deliberately answer those unreliably, and being seen probing mailboxes carries its own reputational cost. This tool does not do it.</p>
+                    <p class="text-muted leading-relaxed">SPF and DMARC records are parsed rather than merely detected. You get the qualifier on the SPF <em>all</em> mechanism and the actual DMARC policy, because a DMARC record set to monitoring-only reports problems without stopping anything &mdash; a distinction that a present/absent flag hides completely.</p>
+                    <p class="text-muted leading-relaxed">A DNS failure is never reported as an absent record. A timeout or SERVFAIL returns its own status, so a transient resolver problem is a retry rather than a false finding about a domain&rsquo;s configuration.</p>
+                    <p class="text-muted leading-relaxed">Disposable-provider lists and role-address patterns both age, and both are reported as flags rather than verdicts. A domain not on the disposable list means only that: not on our list. A role address like <em>info@</em> or <em>support@</em> is worth knowing about at signup, but a real person can legitimately sit behind one.</p>
+                    <p class="text-muted leading-relaxed">A clean configuration is also not a promise of inbox placement. Content, sending history and recipient-side filtering all matter and none of them are visible in DNS. What this tells you is whether the foundations are right, which is the part you control.</p>
             </div>
         </section>
 
@@ -201,9 +207,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Growth and ops teams cleaning a signup or lead list before it hits a CRM</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Security and deliverability teams auditing SPF/DKIM/DMARC coverage</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>AI agents that need a DNS-based email/domain check in a larger workflow</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For marketing and email operations.</strong> Before a campaign, check your own sending domains and confirm SPF is strict and DMARC is enforcing rather than monitoring-only &mdash; the two settings most often left permissive after setup.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For sales and revenue operations.</strong> Clean an imported lead list: flag disposable domains and role addresses before they enter the CRM and depress deliverability.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For IT and security.</strong> Audit every domain the organisation owns, including parked ones. A domain with no DMARC record is a spoofing opportunity whether or not it sends mail.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Branch on status and the disposable flag at signup to accept, challenge or reject a registration, without ever touching SMTP.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">

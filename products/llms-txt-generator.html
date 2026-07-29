@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>llms.txt Generator: Make Websites AI-Readable</title>
-    <meta name="description" content="Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site." />
+    <meta name="description" content="Generate a publishable llms.txt from a site&rsquo;s own sitemap, titles and descriptions &mdash; nothing invented, so every line traces back to a real page." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/llms-txt-generator.html" />
     <meta name="robots" content="index, follow" />
 
@@ -195,6 +195,13 @@
                 <p class="text-muted leading-relaxed">Crawls a site's own pages and metadata and assembles a spec-compliant llms.txt — titles, summaries, and sectioned links, ready to publish as-is.</p>
                     <p class="text-muted leading-relaxed">Nothing is invented: every line traces back to content already on the site, not an AI's guess at what it might say.</p>
                     <p class="text-muted leading-relaxed">The direct fix when an audit turns up a missing or broken llms.txt.</p>
+                    <p class="text-muted leading-relaxed">The tempting shortcut is to have a language model write the file. That produces confident descriptions of pages that may not exist &mdash; the worst possible outcome, since the file&rsquo;s entire purpose is to tell assistants what is true about your site.</p>
+                    <p class="text-muted leading-relaxed">Discovery starts from your sitemap, because that is the site&rsquo;s own statement about which pages matter, with link-following as a fallback. For each page only the title and meta description are captured; nothing is generated.</p>
+                    <p class="text-muted leading-relaxed">Page titles usually repeat the site name as a suffix, so that suffix is detected and stripped, turning &ldquo;Pricing | Acme&rdquo; into &ldquo;Pricing&rdquo;. Pages are then grouped into sections derived from URL structure and emitted in a fixed order, so two runs of the same site produce comparable files.</p>
+                    <p class="text-muted leading-relaxed">The finished file comes back in full, ready to review and save at your domain root. It is a draft with real provenance, not a fabrication you have to fact-check line by line.</p>
+                    <p class="text-muted leading-relaxed">Output quality follows your own metadata. Pages without a meta description produce link entries without a summary, so the file is exactly as descriptive as the site behind it &mdash; which is usually a useful signal in itself.</p>
+                    <p class="text-muted leading-relaxed">The page cap is real and deliberate: a very large site is represented by a bounded selection rather than an unbounded crawl, which keeps runs fast, cheap and predictable. Sectioning derives from URL structure, so review and rename sections before publishing if your own mental model differs.</p>
+                    <p class="text-muted leading-relaxed">JavaScript-rendered content is not executed, so titles and descriptions need to be present in the served HTML. Publishing remains your step: the file is returned in the output rather than uploaded anywhere on your behalf.</p>
             </div>
         </section>
 
@@ -204,9 +211,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Site owners who want to be readable by AI assistants</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>SEO/GEO agencies delivering a fix, not just a diagnosis</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Dev teams shipping llms.txt as part of a launch checklist</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For marketing and SEO.</strong> Publish an llms.txt so assistants describe your product from the pages you chose, rather than from whatever they happen to crawl.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For documentation teams.</strong> Generate from your docs sitemap so assistants answering user questions reach current pages instead of stale ones.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For agencies.</strong> Produce a first-draft file for every client site in one run, then review and publish &mdash; otherwise an hour of copy-paste per site.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Regenerate after a restructure and diff against the published file to see which sections changed, as one step in a release pipeline.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">

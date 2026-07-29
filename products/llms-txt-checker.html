@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>llms.txt Checker: Audit AI Search Readiness</title>
-    <meta name="description" content="Audit any site's llms.txt and get an AI-readiness score with concrete fixes." />
+    <meta name="description" content="Check whether ChatGPT and AI assistants can read your site. Audits llms.txt, AI-crawler rules and sitemap, returning a 0&ndash;100 score with fixes." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/llms-txt-checker.html" />
     <meta name="robots" content="index, follow" />
 
@@ -189,6 +189,14 @@
                 <p class="text-muted leading-relaxed">Checks whether a site is actually readable by AI assistants: llms.txt, robots.txt access for AI crawlers, and sitemap health.</p>
                     <p class="text-muted leading-relaxed">Comes back with a 0-100 score and a plain-English list of exactly what to fix, not just a pass/fail.</p>
                     <p class="text-muted leading-relaxed">Takes seconds per site — run it once before a launch, or on a schedule to catch regressions.</p>
+                    <p class="text-muted leading-relaxed">Most people check whether a file exists at the domain root and stop there. That misses the more common failure: a robots.txt that quietly blocks the AI crawlers regardless of what llms.txt says.</p>
+                    <p class="text-muted leading-relaxed">Crawler policy is resolved properly, per crawler, against robots.txt group rules including wildcards. Each result records not just whether a crawler is allowed but <em>why</em> &mdash; an explicit rule, a wildcard group, or the absence of a robots.txt entirely.</p>
+                    <p class="text-muted leading-relaxed">The score is never a black box. Every point earned and every point available comes back as a plain sentence, so the arithmetic is visible and each missing item translates directly into a task.</p>
+                    <p class="text-muted leading-relaxed">A site is only declared unreachable when every request fails. One missing file is a finding to act on, not an error that invalidates the audit.</p>
+                    <p class="text-muted leading-relaxed">The crawler set checked here is a snapshot of the significant ones at build time, not an exhaustive registry &mdash; new AI crawlers appear regularly. Where a site publishes no robots.txt at all, every crawler is reported as allowed, with the absence recorded as the reason rather than left implicit.</p>
+                    <p class="text-muted leading-relaxed">Scoring reflects a considered view of what matters for AI readability, published openly in each result rather than presented as an industry standard. A high score means assistants <em>can</em> read your site; it is not a promise that they will cite it.</p>
+                    <p class="text-muted leading-relaxed">Checks read only files at the domain root, and only public pages. Nothing behind a login is fetched, and existence checks read a few kilobytes rather than downloading whole files.</p>
+                    <p class="text-muted leading-relaxed">A sitemap declared only inside robots.txt still counts as a sitemap. Discovery follows what the standard actually permits rather than assuming a single canonical location, so a correctly configured site is not marked down for an unconventional layout.</p>
             </div>
         </section>
 
@@ -198,9 +206,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>SEO and GEO agencies reporting on AI visibility</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Site owners preparing for ChatGPT/Claude/Perplexity traffic</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Dev teams adding an AI-readiness gate to CI</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For marketing and SEO.</strong> Score your own domain alongside your main organic competitors&rsquo; and see who is already readable by AI assistants, then close your own gap before it becomes a visibility problem.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For content and documentation teams.</strong> Audit a docs site before launch to confirm assistants can reach the pages you want cited, rather than discovering months later that robots.txt was blocking them.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For agencies.</strong> Score a client portfolio in one run and turn the output into a prioritised remediation list, since each row carries its own reasons.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Run it in CI after a robots.txt change and fail the build if the score drops, so an AI-crawler block never ships unnoticed.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">

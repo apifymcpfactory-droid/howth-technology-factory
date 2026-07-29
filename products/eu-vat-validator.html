@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EU VAT Validator: Verify VAT IDs with VIES</title>
-    <meta name="description" content="Validate individual or bulk EU and Northern Ireland VAT numbers with the official VIES service." />
+    <meta name="description" content="Validate EU and Northern Ireland VAT numbers against the official VIES registry. Get trader name, address and a consultation number as audit evidence." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/eu-vat-validator.html" />
     <meta name="robots" content="index, follow" />
 
@@ -194,6 +194,11 @@
                 <p class="text-muted leading-relaxed">Checks EU and Northern Ireland VAT numbers through VIES, the European Commission's search service over national VAT databases — not a cached guess.</p>
                     <p class="text-muted leading-relaxed">Returns a per-number result, check time and any business name or address supplied by the national source. Add your requesting VAT number when you need VIES to return a consultation number for the validation record.</p>
                     <p class="text-muted leading-relaxed">Built for bulk lists as easily as a single lookup, at human or agent speed.</p>
+                    <p class="text-muted leading-relaxed">The distinction that matters most is between <em>invalid</em> and <em>unavailable</em>. A member state taking its VIES system offline for a few minutes is routine, and a naive check treats that outage as a failed validation &mdash; so a valid customer gets billed VAT they should not have paid, or an invoice is blocked for no reason.</p>
+                    <p class="text-muted leading-relaxed">Every lookup is retried up to four times before a number is reported as unavailable, and that outcome is returned as its own state rather than folded into &ldquo;invalid&rdquo;. It is the case you retry, not the case you reject.</p>
+                    <p class="text-muted leading-relaxed">Supply your own VAT number and each valid result carries an official consultation number &mdash; the reference a tax authority may ask for when you zero-rate an intra-EU supply. VIES issues it against the identity you supply, so it must be your own registered number.</p>
+                    <p class="text-muted leading-relaxed">Some member states do not disclose trader name and address through VIES. A blank name on an otherwise valid number is that country&rsquo;s disclosure policy rather than a failure of the check.</p>
+                    <p class="text-muted leading-relaxed">Lookups run at a deliberately modest concurrency. VIES is a shared public service, and hammering it gets an address throttled &mdash; which would degrade every subsequent check you make, not just the one that caused it.</p>
             </div>
         </section>
 
@@ -203,9 +208,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Finance and accounts-payable teams</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>SaaS billing systems validating customer VAT at checkout</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Compliance teams cleaning up VAT master data</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For finance teams.</strong> Before filing a VAT return, check the customer VAT column and get a per-row valid, invalid or temporarily-unavailable verdict, so a zero-rated intra-EU sale is defensible if the return is queried.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For accountants.</strong> Re-run a client&rsquo;s supplier ledger each quarter and catch the numbers deregistered since onboarding &mdash; the ones that fail an audit two years from now, not today.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For operations.</strong> Clean a newly acquired customer list before it enters billing, so bad VAT numbers are fixed at import rather than surfacing as failed invoices.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Branch on the three states inside an onboarding flow and escalate to a human only when VIES reports the number genuinely invalid.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">

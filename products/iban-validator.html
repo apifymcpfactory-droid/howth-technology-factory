@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IBAN Validator: Verify and Bulk-Check IBANs</title>
-    <meta name="description" content="Validate IBANs offline against ISO 13616 — checksum, structure and SEPA coverage, single or bulk." />
+    <meta name="description" content="Validate IBANs offline against ISO 13616 — mod-97 checksum, country structure and SEPA membership. Bulk-clean a supplier list before a payment run." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/iban-validator.html" />
     <meta name="robots" content="index, follow" />
 
@@ -202,6 +202,11 @@
                 <p class="text-muted leading-relaxed">Every IBAN encodes a country-specific length and a two-digit checksum computed from the rest of the number. This tool runs the full ISO 13616 check — mod-97 checksum plus each country's own structure — entirely offline, in well under a second.</p>
                     <p class="text-muted leading-relaxed">Instead of one flat true/false, you get the exact reason the moment something's wrong: a bad checksum, a bad structure for that country, an unrecognized country prefix, or bad input — so you know exactly what to fix.</p>
                     <p class="text-muted leading-relaxed">Runs the same whether a person pastes one IBAN or an AI agent bulk-checks a thousand mid-workflow.</p>
+                    <p class="text-muted leading-relaxed">Structure and checksum are evaluated independently, so you can tell apart an IBAN that has the right shape for its country but a mistyped digit, from one that was never the right shape at all. Those two failures have entirely different fixes, and collapsing them into a single &ldquo;invalid&rdquo; is what makes most validators frustrating to act on.</p>
+                    <p class="text-muted leading-relaxed">A failed checksum is the case worth routing to a human: the IBAN looks right, so it is usually one character away from correct. An unrecognised country prefix, by contrast, is nearly always a typo in the first two characters and can be fixed at the form.</p>
+                    <p class="text-muted leading-relaxed">SEPA membership is reported separately from IBAN format, because they are different questions. Some countries use IBANs without participating in the SEPA scheme, and a payment run that assumes otherwise will fail at the bank rather than at your validation step.</p>
+                    <p class="text-muted leading-relaxed">Nothing is transmitted anywhere. The country registry ships inside the tool, so validation is arithmetic against bundled reference data &mdash; there is no bank API to depend on, no rate limit to hit, and no account data leaving your run.</p>
+                    <p class="text-muted leading-relaxed">The registry covers roughly seventy-six IBAN-using countries. A country outside it returns an unknown-country result, which means it is not in the bundled registry rather than that it is not a real place.</p>
             </div>
         </section>
 
@@ -211,9 +216,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Finance and ops teams cleaning a payment or supplier IBAN list</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Payment platforms validating an account before a payout</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>AI agents that need an IBAN check as one step in a larger workflow</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For finance teams.</strong> Before a month-end SEPA run, paste in the supplier IBAN column and get a per-row pass/fail with the reason, so a transposed digit is caught before the bank rejects the batch.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For accounts payable and operations.</strong> Validate new supplier bank details at onboarding rather than at first payment, while you still have the supplier&rsquo;s attention.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For compliance and KYB.</strong> Confirm a counterparty&rsquo;s stated IBAN is structurally genuine and note whether the country is a SEPA participant, as one input to an onboarding file.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Call it inline in a vendor-onboarding form and return the specific failure &mdash; wrong country, wrong length, failed checksum &mdash; instead of a generic &ldquo;invalid&rdquo;.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">

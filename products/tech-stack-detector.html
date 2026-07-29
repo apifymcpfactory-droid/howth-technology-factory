@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Technology Detector: Scan Any Tech Stack</title>
-    <meta name="description" content="See what any website is built with — CMS, frameworks, analytics and more." />
+    <meta name="description" content="Detect any website&rsquo;s CMS, framework, ecommerce platform, analytics and CDN from one URL, across 7,500+ signatures. One site or fifty at a time." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/tech-stack-detector.html" />
     <meta name="robots" content="index, follow" />
 
@@ -194,6 +194,13 @@
                 <p class="text-muted leading-relaxed">Points at any URL and identifies what's actually running underneath — CMS, ecommerce platform, JS framework, analytics and marketing tags.</p>
                     <p class="text-muted leading-relaxed">Matches against thousands of known technology signatures, so the read is specific, not a guess from page-source vibes.</p>
                     <p class="text-muted leading-relaxed">Useful for a quick one-off check or wired into a research pipeline for hundreds of sites at once.</p>
+                    <p class="text-muted leading-relaxed">Each result carries the evidence behind it, not just a label: the final URL after redirects, the HTTP status, the page title, the response headers used as signals, and the generator meta tag &mdash; which is often the single strongest CMS signal and frequently carries an exact version.</p>
+                    <p class="text-muted leading-relaxed">Every technology found comes with one or more category labels, a version where the site exposes one, and a confidence score. Confidence measures how cleanly the fingerprint matched; it is signal strength rather than independent verification.</p>
+                    <p class="text-muted leading-relaxed">Server-side components are often visible too. Response headers and platform conventions routinely reveal the web server, programming language and database &mdash; a typical CMS site returns those alongside the CMS itself. What cannot be seen is anything leaving no observable trace.</p>
+                    <p class="text-muted leading-relaxed">A site that blocks automated traffic returns an error row rather than a confident &ldquo;nothing detected&rdquo;. Reporting a block as an empty result is the main way naive detectors mislead people, and the two are kept distinct here.</p>
+                    <p class="text-muted leading-relaxed">Detection reads the single URL you supply, so a technology used only inside a checkout or account area will not be seen from a homepage. Absence of a technology means no signature matched &mdash; not proof the site does not use it.</p>
+                    <p class="text-muted leading-relaxed">Versions are reported only where a site publishes them, most often through a generator meta tag, so most entries return no version at all. Fingerprints are refreshed periodically rather than continuously, because platform signals change as new versions ship.</p>
+                    <p class="text-muted leading-relaxed">Pages are fetched once, streamed and capped, then discarded. There is no crawling beyond the URL you asked for and nothing behind a login is touched.</p>
             </div>
         </section>
 
@@ -203,9 +210,10 @@
                 <div data-aos="fade-up">
                     <h2 class="font-display font-medium text-2xl mb-6">Who it's for</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Sales and BD teams qualifying leads</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Competitive and market researchers</li>
-                    <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i>Agencies scoping a rebuild or migration</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For sales and lead generation.</strong> Feed in prospect domains and filter to the ones running the platform your product integrates with, so outreach goes where the integration story is already true.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For agencies and consultants.</strong> Check a prospect&rsquo;s stack before a pitch and open with what they actually run rather than a generic capability deck.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For operations.</strong> Audit a portfolio of company and campaign sites and find the ones still carrying an analytics tag that was supposed to be removed.</li>
+                        <li class="flex items-start gap-3 text-sm text-muted"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5 shrink-0"></i><strong>For developers and AI agents.</strong> Use it as a CRM enrichment step: submit a domain, attach the detected stack to the record, and route the lead on what came back.</li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">
