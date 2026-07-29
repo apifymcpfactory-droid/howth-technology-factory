@@ -12,4 +12,4 @@ If the private Drive folder cannot be found or read, stop rather than relying on
 
 This repository and workflow cover marketing only, not product development.
 
-GitHub writes must use the `apifymcpfactory-droid` owner and account. Never use AppForge100 for this marketing system.
+GitHub writes must use the `apifymcpfactory-droid` owner and account. No other GitHub account may be used for this marketing system; verify the authenticated identity before every write.

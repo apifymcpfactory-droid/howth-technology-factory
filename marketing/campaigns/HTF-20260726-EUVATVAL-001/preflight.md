@@ -9,7 +9,7 @@ Status: pass for owned-site deployment; platform publication remains conditional
 - Google Drive authority reviewed in full: Control Centre, Constitution, Workflow, Campaign Ledger, Platform Register and Analytics Reports.
 - GitHub source-of-truth and marketing automation documentation reviewed.
 - Repository remote is `apifymcpfactory-droid/howth-technology-factory`.
-- No AppForge100 account, folder, document, remote, code path or destination is used.
+- No account, folder, document, remote, code path or destination outside `apifymcpfactory-droid` / `apifymcpfactory@gmail.com` ownership is used.
 
 ## Product and link verification
 
