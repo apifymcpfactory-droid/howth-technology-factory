@@ -13,7 +13,7 @@ const llms = read('llms.txt');
 
 assert.equal(catalogue.schema_version, '1.1');
 assert.equal(catalogue.publisher.name, 'Howth Technology Factory');
-assert.equal(catalogue.products.length, 9);
+assert.equal(catalogue.products.length, 10);
 assert.equal(new Set(catalogue.products.map(({ id }) => id)).size, catalogue.products.length);
 
 const taxonomy = Object.fromEntries(
@@ -61,7 +61,7 @@ assert.equal(futureProduct.shopfronts.length, catalogue.products[0].shopfronts.l
 for (const control of ['data-catalogue-search', 'data-facet', 'data-reset-filters', 'data-empty-state', 'aria-live="polite"']) {
     assert.match(html, new RegExp(control));
 }
-assert.equal((html.match(/data-product-card/g) || []).length, 9);
+assert.equal((html.match(/data-product-card/g) || []).length, 10);
 assert.match(html, /<a[^>]+href="\/products\/pdf-toolkit\.html"/);
 assert.match(html, /application\/ld\+json/);
 assert.match(html, /"@type":"ItemList"/);

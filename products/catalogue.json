@@ -1,214 +1,644 @@
 {
-  "schema_version": "1.1",
-  "publisher": {
-    "name": "Howth Technology Factory",
-    "url": "https://howthtechnologyfactory.pro/"
-  },
-  "last_verified": "2026-07-26",
-  "taxonomy": {
-    "problems": [
-      {"id": "document-automation", "name": "Document automation"},
-      {"id": "compliance-screening", "name": "Compliance and screening"},
-      {"id": "financial-validation", "name": "Financial validation"},
-      {"id": "website-tech-intelligence", "name": "Website and technology intelligence"},
-      {"id": "ai-visibility-readiness", "name": "AI visibility and readiness"},
-      {"id": "email-domain-security", "name": "Email and domain security"}
-    ],
-    "buyers": [
-      {"id": "developers-ai", "name": "Developers and AI builders"},
-      {"id": "compliance-aml", "name": "Compliance and AML teams"},
-      {"id": "accountants-finance", "name": "Accountants and finance teams"},
-      {"id": "website-seo-marketing", "name": "Website, SEO and marketing teams"},
-      {"id": "it-security", "name": "IT and security teams"},
-      {"id": "operations-automation", "name": "Operations and automation teams"},
-      {"id": "sales", "name": "Sales teams"}
-    ],
-    "types": [
-      {"id": "saas", "name": "SaaS"},
-      {"id": "mobile-app", "name": "Mobile app"},
-      {"id": "api", "name": "API"},
-      {"id": "mcp", "name": "MCP"},
-      {"id": "apify-actor", "name": "Apify Actor"},
-      {"id": "chatgpt-app", "name": "ChatGPT app"},
-      {"id": "plugin-integration", "name": "Plugin or integration"}
-    ],
-    "access": [
-      {"id": "web", "name": "Web"},
-      {"id": "ios", "name": "iOS"},
-      {"id": "android", "name": "Android"},
-      {"id": "api", "name": "API"},
-      {"id": "mcp", "name": "MCP"},
-      {"id": "chatgpt", "name": "ChatGPT"},
-      {"id": "future", "name": "Future access"}
+    "schema_version": "1.1",
+    "publisher": {
+        "name": "Howth Technology Factory",
+        "url": "https://howthtechnologyfactory.pro/"
+    },
+    "last_verified": "2026-07-26",
+    "taxonomy": {
+        "problems": [
+            {
+                "id": "document-automation",
+                "name": "Document automation"
+            },
+            {
+                "id": "compliance-screening",
+                "name": "Compliance and screening"
+            },
+            {
+                "id": "financial-validation",
+                "name": "Financial validation"
+            },
+            {
+                "id": "website-tech-intelligence",
+                "name": "Website and technology intelligence"
+            },
+            {
+                "id": "ai-visibility-readiness",
+                "name": "AI visibility and readiness"
+            },
+            {
+                "id": "email-domain-security",
+                "name": "Email and domain security"
+            }
+        ],
+        "buyers": [
+            {
+                "id": "developers-ai",
+                "name": "Developers and AI builders"
+            },
+            {
+                "id": "compliance-aml",
+                "name": "Compliance and AML teams"
+            },
+            {
+                "id": "accountants-finance",
+                "name": "Accountants and finance teams"
+            },
+            {
+                "id": "website-seo-marketing",
+                "name": "Website, SEO and marketing teams"
+            },
+            {
+                "id": "it-security",
+                "name": "IT and security teams"
+            },
+            {
+                "id": "operations-automation",
+                "name": "Operations and automation teams"
+            },
+            {
+                "id": "sales",
+                "name": "Sales teams"
+            }
+        ],
+        "types": [
+            {
+                "id": "saas",
+                "name": "SaaS"
+            },
+            {
+                "id": "mobile-app",
+                "name": "Mobile app"
+            },
+            {
+                "id": "api",
+                "name": "API"
+            },
+            {
+                "id": "mcp",
+                "name": "MCP"
+            },
+            {
+                "id": "apify-actor",
+                "name": "Apify Actor"
+            },
+            {
+                "id": "chatgpt-app",
+                "name": "ChatGPT app"
+            },
+            {
+                "id": "plugin-integration",
+                "name": "Plugin or integration"
+            }
+        ],
+        "access": [
+            {
+                "id": "web",
+                "name": "Web"
+            },
+            {
+                "id": "ios",
+                "name": "iOS"
+            },
+            {
+                "id": "android",
+                "name": "Android"
+            },
+            {
+                "id": "api",
+                "name": "API"
+            },
+            {
+                "id": "mcp",
+                "name": "MCP"
+            },
+            {
+                "id": "chatgpt",
+                "name": "ChatGPT"
+            },
+            {
+                "id": "future",
+                "name": "Future access"
+            }
+        ]
+    },
+    "products": [
+        {
+            "id": "pdf-toolkit",
+            "name": "PDF Toolkit",
+            "summary": "Merge, split, compress, rotate, watermark and convert PDFs in automated workflows.",
+            "url": "https://howthtechnologyfactory.pro/products/pdf-toolkit.html",
+            "problems": [
+                "document-automation"
+            ],
+            "buyers": [
+                "developers-ai",
+                "accountants-finance",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/pdf-toolkit",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/pdf-toolkit-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/pdf-toolkit"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/pdf-toolkit-mcp"
+                }
+            ]
+        },
+        {
+            "id": "eu-vat-validator",
+            "name": "EU VAT Validator",
+            "summary": "Validate individual or bulk EU VAT numbers against the official VIES service.",
+            "url": "https://howthtechnologyfactory.pro/products/eu-vat-validator.html",
+            "problems": [
+                "financial-validation"
+            ],
+            "buyers": [
+                "accountants-finance",
+                "compliance-aml",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/eu-vat-validator",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/eu-vat-validator-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/eu-vat-validator"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/eu-vat-validator-mcp"
+                }
+            ]
+        },
+        {
+            "id": "iban-validator",
+            "name": "IBAN Validator",
+            "summary": "Check IBAN structure, checksum and SEPA details without sending account data to a bank.",
+            "url": "https://howthtechnologyfactory.pro/products/iban-validator.html",
+            "problems": [
+                "financial-validation"
+            ],
+            "buyers": [
+                "accountants-finance",
+                "developers-ai",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/iban-validator",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/iban-validator-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/iban-validator"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/iban-validator-mcp"
+                }
+            ]
+        },
+        {
+            "id": "sanctions-screening",
+            "name": "Sanctions Screening",
+            "summary": "Screen names in bulk against official OFAC, EU, UK and UN sanctions sources.",
+            "url": "https://howthtechnologyfactory.pro/products/sanctions-screening.html",
+            "problems": [
+                "compliance-screening"
+            ],
+            "buyers": [
+                "compliance-aml",
+                "developers-ai",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/sanctions-screening",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/sanctions-screening",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/sanctions-screening"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/sanctions-screening"
+                }
+            ]
+        },
+        {
+            "id": "tech-stack-detector",
+            "name": "Tech Stack Detector",
+            "summary": "Identify CMS, frameworks, analytics and other technologies used by websites.",
+            "url": "https://howthtechnologyfactory.pro/products/tech-stack-detector.html",
+            "problems": [
+                "website-tech-intelligence"
+            ],
+            "buyers": [
+                "sales",
+                "website-seo-marketing"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/tech-stack-detector",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/tech-stack-detector-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/tech-stack-detector"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/tech-stack-detector-mcp"
+                }
+            ]
+        },
+        {
+            "id": "llms-txt-checker",
+            "name": "llms.txt Checker",
+            "summary": "Audit a website's llms.txt and AI-readiness signals, with a score and concrete fixes.",
+            "url": "https://howthtechnologyfactory.pro/products/llms-txt-checker.html",
+            "problems": [
+                "ai-visibility-readiness"
+            ],
+            "buyers": [
+                "website-seo-marketing",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-checker",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/llms-txt-checker"
+                }
+            ]
+        },
+        {
+            "id": "llms-txt-generator",
+            "name": "llms.txt Generator",
+            "summary": "Generate a deterministic, ready-to-publish llms.txt file from a website.",
+            "url": "https://howthtechnologyfactory.pro/products/llms-txt-generator.html",
+            "problems": [
+                "ai-visibility-readiness"
+            ],
+            "buyers": [
+                "website-seo-marketing",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-generator",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/llms-txt-generator"
+                }
+            ]
+        },
+        {
+            "id": "llms-txt-suite",
+            "name": "llms.txt Suite",
+            "summary": "Audit, generate and monitor llms.txt and related AI-readiness signals.",
+            "url": "https://howthtechnologyfactory.pro/products/llms-txt-suite.html",
+            "problems": [
+                "ai-visibility-readiness"
+            ],
+            "buyers": [
+                "website-seo-marketing",
+                "developers-ai",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-suite",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/llms-txt-suite-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/llms-txt-suite"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/llms-txt-suite-mcp"
+                }
+            ]
+        },
+        {
+            "id": "email-domain-checker",
+            "name": "Email Domain Checker",
+            "summary": "Check MX, SPF, DKIM and DMARC records, plus disposable and role-address signals.",
+            "url": "https://howthtechnologyfactory.pro/products/email-domain-checker.html",
+            "problems": [
+                "email-domain-security"
+            ],
+            "buyers": [
+                "sales",
+                "it-security",
+                "operations-automation",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/email-domain-checker",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/email-domain-checker-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-26",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/email-domain-checker"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/email-domain-checker-mcp"
+                }
+            ]
+        },
+        {
+            "id": "domain-health-audit",
+            "name": "Domain Health Audit",
+            "summary": "Audit up to 5,000 domains for DNS, WHOIS, SSL and email authentication, with the exact records to publish for every problem.",
+            "url": "https://howthtechnologyfactory.pro/products/domain-health-audit.html",
+            "problems": [
+                "email-domain-security",
+                "website-tech-intelligence"
+            ],
+            "buyers": [
+                "it-security",
+                "developers-ai",
+                "operations-automation",
+                "website-seo-marketing"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/domain-health-audit",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-31",
+                    "verificationStatus": "verified_no_reviews"
+                },
+                {
+                    "source": "mcpize",
+                    "sourceUrl": "https://mcpize.com/mcp/domain-health-audit-mcp",
+                    "reviewCount": 0,
+                    "lastVerified": "2026-07-31",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/domain-health-audit"
+                },
+                {
+                    "id": "mcpize",
+                    "name": "MCPize",
+                    "url": "https://mcpize.com/mcp/domain-health-audit-mcp"
+                }
+            ]
+        }
     ]
-  },
-  "products": [
-    {
-      "id": "pdf-toolkit",
-      "name": "PDF Toolkit",
-      "summary": "Merge, split, compress, rotate, watermark and convert PDFs in automated workflows.",
-      "url": "https://howthtechnologyfactory.pro/products/pdf-toolkit.html",
-      "problems": ["document-automation"],
-      "buyers": ["developers-ai", "accountants-finance", "operations-automation"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/pdf-toolkit","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/pdf-toolkit-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/pdf-toolkit"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/pdf-toolkit-mcp"}
-      ]
-    },
-    {
-      "id": "eu-vat-validator",
-      "name": "EU VAT Validator",
-      "summary": "Validate individual or bulk EU VAT numbers against the official VIES service.",
-      "url": "https://howthtechnologyfactory.pro/products/eu-vat-validator.html",
-      "problems": ["financial-validation"],
-      "buyers": ["accountants-finance", "compliance-aml", "developers-ai"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/eu-vat-validator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/eu-vat-validator-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/eu-vat-validator"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/eu-vat-validator-mcp"}
-      ]
-    },
-    {
-      "id": "iban-validator",
-      "name": "IBAN Validator",
-      "summary": "Check IBAN structure, checksum and SEPA details without sending account data to a bank.",
-      "url": "https://howthtechnologyfactory.pro/products/iban-validator.html",
-      "problems": ["financial-validation"],
-      "buyers": ["accountants-finance", "developers-ai", "operations-automation"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/iban-validator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/iban-validator-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/iban-validator"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/iban-validator-mcp"}
-      ]
-    },
-    {
-      "id": "sanctions-screening",
-      "name": "Sanctions Screening",
-      "summary": "Screen names in bulk against official OFAC, EU, UK and UN sanctions sources.",
-      "url": "https://howthtechnologyfactory.pro/products/sanctions-screening.html",
-      "problems": ["compliance-screening"],
-      "buyers": ["compliance-aml", "developers-ai", "operations-automation"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/sanctions-screening","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/sanctions-screening","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/sanctions-screening"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/sanctions-screening"}
-      ]
-    },
-    {
-      "id": "tech-stack-detector",
-      "name": "Tech Stack Detector",
-      "summary": "Identify CMS, frameworks, analytics and other technologies used by websites.",
-      "url": "https://howthtechnologyfactory.pro/products/tech-stack-detector.html",
-      "problems": ["website-tech-intelligence"],
-      "buyers": ["sales", "website-seo-marketing"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/tech-stack-detector","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/tech-stack-detector-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/tech-stack-detector"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/tech-stack-detector-mcp"}
-      ]
-    },
-    {
-      "id": "llms-txt-checker",
-      "name": "llms.txt Checker",
-      "summary": "Audit a website's llms.txt and AI-readiness signals, with a score and concrete fixes.",
-      "url": "https://howthtechnologyfactory.pro/products/llms-txt-checker.html",
-      "problems": ["ai-visibility-readiness"],
-      "buyers": ["website-seo-marketing", "developers-ai"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-checker","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-checker"}
-      ]
-    },
-    {
-      "id": "llms-txt-generator",
-      "name": "llms.txt Generator",
-      "summary": "Generate a deterministic, ready-to-publish llms.txt file from a website.",
-      "url": "https://howthtechnologyfactory.pro/products/llms-txt-generator.html",
-      "problems": ["ai-visibility-readiness"],
-      "buyers": ["website-seo-marketing", "developers-ai"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-generator","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-generator"}
-      ]
-    },
-    {
-      "id": "llms-txt-suite",
-      "name": "llms.txt Suite",
-      "summary": "Audit, generate and monitor llms.txt and related AI-readiness signals.",
-      "url": "https://howthtechnologyfactory.pro/products/llms-txt-suite.html",
-      "problems": ["ai-visibility-readiness"],
-      "buyers": ["website-seo-marketing", "developers-ai", "operations-automation"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/llms-txt-suite","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/llms-txt-suite-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/llms-txt-suite"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/llms-txt-suite-mcp"}
-      ]
-    },
-    {
-      "id": "email-domain-checker",
-      "name": "Email Domain Checker",
-      "summary": "Check MX, SPF, DKIM and DMARC records, plus disposable and role-address signals.",
-      "url": "https://howthtechnologyfactory.pro/products/email-domain-checker.html",
-      "problems": ["email-domain-security"],
-      "buyers": ["sales", "it-security", "operations-automation", "developers-ai"],
-      "types": ["api", "mcp", "apify-actor"],
-      "access": ["web", "api", "mcp"],
-      "ai_agent_compatible": true,
-      "reviews": [
-        {"source":"apify","sourceUrl":"https://apify.com/apifmcpfactory/email-domain-checker","ratingCount":0,"reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"},
-        {"source":"mcpize","sourceUrl":"https://mcpize.com/mcp/email-domain-checker-mcp","reviewCount":0,"lastVerified":"2026-07-26","verificationStatus":"verified_no_reviews"}
-      ],
-      "shopfronts": [
-        {"id": "apify", "name": "Apify", "url": "https://apify.com/apifmcpfactory/email-domain-checker"},
-        {"id": "mcpize", "name": "MCPize", "url": "https://mcpize.com/mcp/email-domain-checker-mcp"}
-      ]
-    }
-  ]
 }
