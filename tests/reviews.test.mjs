@@ -34,7 +34,7 @@ function assertFreshDate(value, label) {
 
 assert.equal(catalogue.schema_version, '1.1');
 assertFreshDate(cache.lastVerified, 'review-cache header');
-assert.equal(catalogue.products.length, 10);
+assert.ok(catalogue.products.length > 0, 'catalogue must not be empty');
 
 for (const product of catalogue.products) {
   const html = fs.readFileSync(path.join(root, 'products', `${product.id}.html`), 'utf8');

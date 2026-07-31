@@ -176,7 +176,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/pdf-toolkit-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "PDF Toolkit document automation merge split compress rotate watermark convert PDF developers finance operations API MCP Apify Actor"
         },
         {
             "id": "eu-vat-validator",
@@ -230,7 +231,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/eu-vat-validator-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "EU VAT Validator financial validation VIES VAT finance compliance API MCP Apify Actor"
         },
         {
             "id": "iban-validator",
@@ -284,7 +286,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/iban-validator-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "IBAN Validator financial validation checksum structure SEPA finance operations API MCP Apify Actor"
         },
         {
             "id": "sanctions-screening",
@@ -338,7 +341,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/sanctions-screening"
                 }
-            ]
+            ],
+            "searchTerms": "Sanctions Screening compliance AML OFAC EU UK UN onboarding API MCP Apify Actor"
         },
         {
             "id": "tech-stack-detector",
@@ -391,7 +395,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/tech-stack-detector-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "Tech Stack Detector website technology intelligence CMS framework analytics sales marketing API MCP Apify Actor"
         },
         {
             "id": "llms-txt-checker",
@@ -432,7 +437,8 @@
                     "name": "Apify",
                     "url": "https://apify.com/apifmcpfactory/llms-txt-checker"
                 }
-            ]
+            ],
+            "searchTerms": "llms.txt Checker AI visibility readiness audit score SEO GEO developers API MCP Apify Actor"
         },
         {
             "id": "llms-txt-generator",
@@ -473,7 +479,8 @@
                     "name": "Apify",
                     "url": "https://apify.com/apifmcpfactory/llms-txt-generator"
                 }
-            ]
+            ],
+            "searchTerms": "llms.txt Generator AI visibility readiness generate deterministic SEO GEO developers API MCP Apify Actor"
         },
         {
             "id": "llms-txt-suite",
@@ -527,7 +534,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/llms-txt-suite-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "llms.txt Suite AI visibility readiness audit generate monitor SEO GEO operations API MCP Apify Actor"
         },
         {
             "id": "email-domain-checker",
@@ -582,7 +590,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/email-domain-checker-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "Email Domain Checker MX SPF DKIM DMARC disposable role address security sales operations API MCP Apify Actor"
         },
         {
             "id": "domain-health-audit",
@@ -638,7 +647,8 @@
                     "name": "MCPize",
                     "url": "https://mcpize.com/mcp/domain-health-audit-mcp"
                 }
-            ]
+            ],
+            "searchTerms": "Domain Health Audit DNS WHOIS SSL SPF DKIM DMARC MTA-STS DNSSEC DANE BIMI bulk domain portfolio MSP email deliverability sender readiness API MCP Apify Actor"
         }
     ]
 }
