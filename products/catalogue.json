@@ -4,7 +4,7 @@
         "name": "Howth Technology Factory",
         "url": "https://howthtechnologyfactory.pro/"
     },
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-08-03",
     "taxonomy": {
         "problems": [
             {
@@ -30,6 +30,10 @@
             {
                 "id": "email-domain-security",
                 "name": "Email and domain security"
+            },
+            {
+                "id": "hiring-market-intelligence",
+                "name": "Hiring and market intelligence"
             }
         ],
         "buyers": [
@@ -60,6 +64,10 @@
             {
                 "id": "sales",
                 "name": "Sales teams"
+            },
+            {
+                "id": "recruiting-talent",
+                "name": "Recruiting and talent teams"
             }
         ],
         "types": [
@@ -649,6 +657,221 @@
                 }
             ],
             "searchTerms": "Domain Health Audit DNS WHOIS SSL SPF DKIM DMARC MTA-STS DNSSEC DANE BIMI bulk domain portfolio MSP email deliverability sender readiness API MCP Apify Actor"
+        },
+        {
+            "id": "bankofamerica-jobs-api",
+            "name": "Bank of America Jobs API",
+            "summary": "Track open roles at Bank of America as structured JSON or CSV, with change detection between runs.",
+            "url": "https://howthtechnologyfactory.pro/products/bankofamerica-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "recruiting-talent",
+                "developers-ai",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/bankofamerica-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-08-03",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/bankofamerica-jobs-api"
+                }
+            ],
+            "searchTerms": "Bank of America Jobs API hiring market intelligence banking recruitment relationship banker wealth management vacancies careers feed recruiters developers API MCP Apify Actor"
+        },
+        {
+            "id": "homedepot-jobs-api",
+            "name": "Home Depot Jobs API",
+            "summary": "Read The Home Depot’s published vacancies as structured rows, including corporate, distribution and virtual roles.",
+            "url": "https://howthtechnologyfactory.pro/products/homedepot-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "recruiting-talent",
+                "operations-automation",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/homedepot-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-08-03",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/homedepot-jobs-api"
+                }
+            ],
+            "searchTerms": "Home Depot Jobs API retail hiring corporate store support center distribution RDC virtual remote roles vacancies careers feed recruiters operations API MCP Apify Actor"
+        },
+        {
+            "id": "lowes-jobs-api",
+            "name": "Lowe's Jobs API",
+            "summary": "Track Lowe's store-level vacancies as structured rows, including part-time and shift-specific roles.",
+            "url": "https://howthtechnologyfactory.pro/products/lowes-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "recruiting-talent",
+                "operations-automation",
+                "developers-ai"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/lowes-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-08-03",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/lowes-jobs-api"
+                }
+            ],
+            "searchTerms": "Lowe's Jobs API retail store hiring part time hourly shift fulfillment associate receiver stocker vacancies careers feed staffing workforce planning API MCP Apify Actor"
+        },
+        {
+            "id": "target-jobs-api",
+            "name": "Target Jobs API",
+            "summary": "Track Target's open roles as structured rows, spanning US retail, seasonal and Bangalore technology hiring.",
+            "url": "https://howthtechnologyfactory.pro/products/target-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "recruiting-talent",
+                "developers-ai",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/target-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-08-03",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/target-jobs-api"
+                }
+            ],
+            "searchTerms": "Target Jobs API retail hiring seasonal store security specialist team leader Bangalore technology engineering vacancies careers feed recruiters market research API MCP Apify Actor"
+        },
+        {
+            "id": "workday-jobs-api",
+            "name": "Workday Jobs API",
+            "summary": "Turn any Workday-hosted careers site into a structured jobs feed by pasting its URL.",
+            "url": "https://howthtechnologyfactory.pro/products/workday-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/workday-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-08-03",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/workday-jobs-api"
+                }
+            ],
+            "searchTerms": "Workday Jobs API careers site scraper myworkdayjobs tenant multi employer hiring feed ATS vacancies JSON CSV recruiters developers agencies API MCP Apify Actor"
         }
     ]
 }

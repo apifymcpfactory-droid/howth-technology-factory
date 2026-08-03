@@ -1,6 +1,6 @@
 {
     "schemaVersion": "1.0",
-    "lastVerified": "2026-07-26",
+    "lastVerified": "2026-08-03",
     "displayRule": "Only display a source when verificationStatus is verified_with_reviews and reviewCount or ratingCount is greater than zero.",
     "products": {
         "pdf-toolkit": [
@@ -156,6 +156,56 @@
                 "sourceUrl": "https://mcpize.com/mcp/domain-health-audit-mcp",
                 "reviewCount": 0,
                 "lastVerified": "2026-07-31",
+                "verificationStatus": "verified_no_reviews"
+            }
+        ],
+        "bankofamerica-jobs-api": [
+            {
+                "source": "apify",
+                "sourceUrl": "https://apify.com/apifmcpfactory/bankofamerica-jobs-api",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-08-03",
+                "verificationStatus": "verified_no_reviews"
+            }
+        ],
+        "homedepot-jobs-api": [
+            {
+                "source": "apify",
+                "sourceUrl": "https://apify.com/apifmcpfactory/homedepot-jobs-api",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-08-03",
+                "verificationStatus": "verified_no_reviews"
+            }
+        ],
+        "lowes-jobs-api": [
+            {
+                "source": "apify",
+                "sourceUrl": "https://apify.com/apifmcpfactory/lowes-jobs-api",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-08-03",
+                "verificationStatus": "verified_no_reviews"
+            }
+        ],
+        "target-jobs-api": [
+            {
+                "source": "apify",
+                "sourceUrl": "https://apify.com/apifmcpfactory/target-jobs-api",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-08-03",
+                "verificationStatus": "verified_no_reviews"
+            }
+        ],
+        "workday-jobs-api": [
+            {
+                "source": "apify",
+                "sourceUrl": "https://apify.com/apifmcpfactory/workday-jobs-api",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-08-03",
                 "verificationStatus": "verified_no_reviews"
             }
         ]

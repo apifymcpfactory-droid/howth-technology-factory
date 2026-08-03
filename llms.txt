@@ -24,6 +24,11 @@
 - [Domain Health Audit: DNS, WHOIS, SSL, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/domain-health-audit.html): Audit up to 5,000 domains for DNS, WHOIS, SSL, SPF, DKIM, DMARC, MTA-STS, TLS-RPT, DNSSEC, DANE and BIMI. Returns a published 0-100 score, Gmail and Outlook bulk-sender readiness, and the exact DNS record to publish for every problem found. MCP: https://mcpize.com/mcp/domain-health-audit-mcp
 - [IBAN Validator: Verify & Bulk-Check Bank IBANs](https://howthtechnologyfactory.pro/products/iban-validator.html): Validate IBANs offline against ISO 13616 — checksum, structure and SEPA coverage, single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/iban-validator
 - [Email & Domain Auth Checker: MX, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/email-domain-checker.html): Check MX, SPF, DKIM and DMARC records from DNS alone — spot disposable and role addresses too. MCP: https://mcp.apify.com?tools=apifmcpfactory/email-domain-checker
+- [Bank of America Jobs API: Open Roles as JSON](https://howthtechnologyfactory.pro/products/bankofamerica-jobs-api.html): Bank of America's live vacancy list as JSON or CSV, with change detection between runs. MCP: https://mcp.apify.com?tools=apifmcpfactory/bankofamerica-jobs-api
+- [Home Depot Jobs API: Corporate & Store Vacancies](https://howthtechnologyfactory.pro/products/homedepot-jobs-api.html): The Home Depot's published vacancies as JSON or CSV, refreshed on demand. MCP: https://mcp.apify.com?tools=apifmcpfactory/homedepot-jobs-api
+- [Lowe's Jobs API: Store-Level Hiring Data](https://howthtechnologyfactory.pro/products/lowes-jobs-api.html): Lowe's published vacancies as structured rows, with full-time and part-time shift detail. MCP: https://mcp.apify.com?tools=apifmcpfactory/lowes-jobs-api
+- [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api
+- [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api
 
 ## Curated routes
 
