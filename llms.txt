@@ -48,3 +48,7 @@
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
 
 - [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Figma migration plugin. Free inspection and preview; planned Pro $19 one-time. Public release in preparation; not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/).
+
+## Prepared Figma products (not submitted)
+- Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable.
+- User Flow & Handover Toolkit | HTF: https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/user-flow-handover/ | Planned $5 one-time; not submitted or purchasable.

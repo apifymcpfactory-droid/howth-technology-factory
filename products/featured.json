@@ -1,42 +1,112 @@
 {
   "products": [
     {
+      "id": "content-review-localization-toolkit-figma",
+      "label": "Content Review & Localization",
+      "platform": "Figma Design",
+      "heading": [
+        "Review the words.",
+        "Keep the originals."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Send screen copy for review, bring approved translations back, and create separate language versions with your originals intact.",
+      "priceLead": "Coming soon. Not submitted yet.",
+      "priceDetail": "Planned Pro: $5 once.",
+      "demo": "/products/demos/content-review-localization/",
+      "image": "/assets/previews/content-review-localization-htf-cover.jpg",
+      "imageAlt": "Content Review & Localization workflow overview",
+      "caption": "Prepared locally for Figma submission. Try the fictional browser demo; installation and purchase are not available yet.",
+      "facts": [
+        "Guarded text imports",
+        "Separate language copies",
+        "Local processing"
+      ]
+    },
+    {
+      "id": "user-flow-handover-toolkit-figma",
+      "label": "User Flow & Handover",
+      "platform": "Figma Design",
+      "heading": [
+        "Make the journey clear.",
+        "Leave a useful handover."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Turn prototype connections into an editable handover board with numbered screen previews, source links, checks and exportable documentation.",
+      "priceLead": "Coming soon. Not submitted yet.",
+      "priceDetail": "Planned Pro: $5 once.",
+      "demo": "/products/demos/user-flow-handover/",
+      "image": "/assets/previews/user-flow-handover-htf-cover.png",
+      "imageAlt": "User Flow & Handover workflow overview",
+      "caption": "Prepared locally for Figma submission. Try the fictional browser demo; installation and purchase are not available yet.",
+      "facts": [
+        "Prototype-to-handover",
+        "Editable board and labels",
+        "PNG, SVG and PDF exports"
+      ]
+    },
+    {
       "id": "design-system-migration-toolkit-figma",
       "label": "Migration Toolkit",
       "platform": "Figma Design",
-      "heading": ["Old system.", "New client.", "A clear way", "across."],
+      "heading": [
+        "Old system.",
+        "New client.",
+        "A clear way",
+        "across."
+      ],
       "emphasisFrom": 2,
       "intro": "Replace variables, styles and compatible components with a migration plan you can check. Reuse your mappings. Keep a readable handover report.",
       "priceLead": "Inspect and preview free.",
       "priceDetail": "Pro: $19 once.",
       "demo": "/products/demos/migration-toolkit/",
-      "marketplace": {"label": "View on Figma", "url": "https://www.figma.com/community/plugin/1697342956800117056"},
+      "marketplace": {
+        "label": "View on Figma",
+        "url": "https://www.figma.com/community/plugin/1697342956800117056"
+      },
       "image": "/assets/previews/migration-toolkit-htf-cover.jpg",
       "imageAlt": "Design System Migration Toolkit by HTF: inspect, map, review changes and verify the result.",
       "caption": "An independent HTF plugin for Figma Design. Try a fictional client migration in the browser demo.",
-      "facts": ["Review before applying", "Reusable recipes", "Local processing"]
+      "facts": [
+        "Review before applying",
+        "Reusable recipes",
+        "Local processing"
+      ]
     },
     {
       "id": "howth-icon-kits-figma",
       "label": "SVG Icons",
       "platform": "Figma Design",
-      "heading": ["Find your icons.", "Keep your set", "together."],
+      "heading": [
+        "Find your icons.",
+        "Keep your set",
+        "together."
+      ],
       "emphasisFrom": 1,
       "intro": "Search Lucide icons, collect a consistent project kit, and replace artwork without rebuilding your layout.",
       "priceLead": "Free search and insertion.",
       "priceDetail": "Pro kits and replacement: $7 once.",
       "demo": "/products/demos/howth-icon-kits/",
-      "marketplace": {"label": "View on Figma", "url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf"},
+      "marketplace": {
+        "label": "View on Figma",
+        "url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf"
+      },
       "image": "/assets/previews/svg-icons-htf-cover.jpg",
       "imageAlt": "SVG Icons by HTF: search Lucide icons, save project kits and replace compatible icon artwork.",
       "caption": "An independent HTF plugin for Figma Design. Explore the workflow in the browser demo.",
-      "facts": ["2,193 bundled icons", "Editable SVG vectors", "No external icon API"]
+      "facts": [
+        "2,193 bundled icons",
+        "Editable SVG vectors",
+        "No external icon API"
+      ]
     },
     {
       "id": "projectkit-jira",
       "label": "ProjectKit for Jira",
       "platform": "Jira Cloud",
-      "heading": ["The project details", "Jira leaves out."],
+      "heading": [
+        "The project details",
+        "Jira leaves out."
+      ],
       "emphasisFrom": 1,
       "intro": "Keep the owner, target date, budget and next milestone together. Choose a starting template, make the fields yours, and give the team a project brief they can actually find.",
       "priceLead": "In development.",
@@ -45,7 +115,11 @@
       "image": "/assets/previews/projectkit-browser-preview.jpg",
       "imageAlt": "ProjectKit browser sample showing starter templates, field configuration and a live project form preview.",
       "caption": "Development preview with fictional project data. The browser demo is not connected to Jira.",
-      "facts": ["Reusable starter templates", "Typed project fields", "Live form preview"]
+      "facts": [
+        "Reusable starter templates",
+        "Typed project fields",
+        "Live form preview"
+      ]
     }
   ]
 }

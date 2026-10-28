@@ -157,6 +157,54 @@
     },
     "products": [
         {
+            "id": "content-review-localization-toolkit-figma",
+            "name": "Content Review & Localization Toolkit | HTF",
+            "summary": "Review Figma copy, detect source conflicts and create separate language versions. Planned Pro price: $5 once. Not submitted yet.",
+            "url": "https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "Coming soon · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Figma content review copy localization translation CSV JSON spreadsheet proof copywriter agency multilingual source conflict placeholder"
+        },
+        {
+            "id": "user-flow-handover-toolkit-figma",
+            "name": "User Flow & Handover Toolkit | HTF",
+            "summary": "Create editable journey boards from Figma prototypes, with source links and handover exports. Planned Pro price: $5 once. Not submitted yet.",
+            "url": "https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "Coming soon · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Figma user flow handover prototype journey map documentation export PNG PDF SVG editable board source links"
+        },
+        {
             "id": "design-system-migration-toolkit-figma",
             "name": "Design System Migration Toolkit | HTF",
             "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once.",
