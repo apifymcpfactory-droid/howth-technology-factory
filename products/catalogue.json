@@ -157,6 +157,30 @@
     },
     "products": [
         {
+            "id": "howth-icon-kits-figma",
+            "name": "SVG Icons: Search & Replace | HTF",
+            "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once.",
+            "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement",
+            "release_label": ""
+        },
+        {
             "id": "pdf-toolkit",
             "name": "PDF Toolkit",
             "summary": "Merge, split, compress, rotate, watermark and convert PDFs in automated workflows.",
@@ -920,29 +944,6 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV"
-        },
-        {
-            "id": "howth-icon-kits-figma",
-            "name": "SVG Icons: Search & Replace | HTF",
-            "summary": "Find bundled icons, insert editable vectors and reuse saved icon kits in Figma Design. In development.",
-            "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
-            "problems": [
-                "design-workflow"
-            ],
-            "buyers": [
-                "product-designers"
-            ],
-            "types": [
-                "plugin-integration"
-            ],
-            "access": [
-                "figma"
-            ],
-            "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "reviews": [],
-            "shopfronts": [],
-            "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement"
         }
     ]
 }
