@@ -923,7 +923,7 @@
         },
         {
             "id": "howth-icon-kits-figma",
-            "name": "Howth Icon Kits for Figma",
+            "name": "SVG Icons: Search & Replace | HTF",
             "summary": "Find bundled icons, insert editable vectors and reuse saved icon kits in Figma Design. In development.",
             "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
             "problems": [
@@ -942,7 +942,7 @@
             "release_status": "in_development",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Howth Icon Kits Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement"
+            "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement"
         }
     ]
 }
