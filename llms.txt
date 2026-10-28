@@ -46,3 +46,5 @@
 
 - [Design VIES validation as a state machine](https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html): A practical workflow for preserving valid, invalid and temporarily unavailable VAT-validation outcomes.
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
+
+- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Figma migration plugin. Free inspection and preview; planned Pro $19 one-time. Public release in preparation; not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/).

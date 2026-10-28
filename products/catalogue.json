@@ -157,6 +157,30 @@
     },
     "products": [
         {
+            "id": "design-system-migration-toolkit-figma",
+            "name": "Design System Migration Toolkit | HTF",
+            "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once.",
+            "url": "https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Figma design system migration variables styles component swap library replace rebrand agency handover mapping recipe JSON CSS tokens HTF"
+        },
+        {
             "id": "howth-icon-kits-figma",
             "name": "SVG Icons: Search & Replace | HTF",
             "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once.",
