@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": "design-system-migration-toolkit-figma",
+      "label": "Migration Toolkit",
+      "platform": "Figma Design",
+      "heading": ["Old system.", "New client.", "A clear way", "across."],
+      "emphasisFrom": 2,
+      "intro": "Replace variables, styles and compatible components with a migration plan you can check. Reuse your mappings. Keep a readable handover report.",
+      "priceLead": "Inspect and preview free.",
+      "priceDetail": "Pro: $19 once.",
+      "demo": "/products/demos/migration-toolkit/",
+      "marketplace": {"label": "View on Figma", "url": "https://www.figma.com/community/plugin/1697342956800117056"},
+      "image": "/assets/previews/migration-toolkit-htf-cover.jpg",
+      "imageAlt": "Design System Migration Toolkit by HTF: inspect, map, review changes and verify the result.",
+      "caption": "An independent HTF plugin for Figma Design. Try a fictional client migration in the browser demo.",
+      "facts": ["Review before applying", "Reusable recipes", "Local processing"]
+    },
+    {
+      "id": "howth-icon-kits-figma",
+      "label": "SVG Icons",
+      "platform": "Figma Design",
+      "heading": ["Find your icons.", "Keep your set", "together."],
+      "emphasisFrom": 1,
+      "intro": "Search Lucide icons, collect a consistent project kit, and replace artwork without rebuilding your layout.",
+      "priceLead": "Free search and insertion.",
+      "priceDetail": "Pro kits and replacement: $7 once.",
+      "demo": "/products/demos/howth-icon-kits/",
+      "marketplace": {"label": "View on Figma", "url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf"},
+      "image": "/assets/previews/svg-icons-htf-cover.jpg",
+      "imageAlt": "SVG Icons by HTF: search Lucide icons, save project kits and replace compatible icon artwork.",
+      "caption": "An independent HTF plugin for Figma Design. Explore the workflow in the browser demo.",
+      "facts": ["2,193 bundled icons", "Editable SVG vectors", "No external icon API"]
+    },
+    {
+      "id": "projectkit-jira",
+      "label": "ProjectKit for Jira",
+      "platform": "Jira Cloud",
+      "heading": ["The project details", "Jira leaves out."],
+      "emphasisFrom": 1,
+      "intro": "Keep the owner, target date, budget and next milestone together. Choose a starting template, make the fields yours, and give the team a project brief they can actually find.",
+      "priceLead": "In development.",
+      "priceDetail": "Browser demo available. Jira installation pending.",
+      "demo": "/products/demos/projectkit/",
+      "image": "/assets/previews/projectkit-browser-preview.jpg",
+      "imageAlt": "ProjectKit browser sample showing starter templates, field configuration and a live project form preview.",
+      "caption": "Development preview with fictional project data. The browser demo is not connected to Jira.",
+      "facts": ["Reusable starter templates", "Typed project fields", "Live form preview"]
+    }
+  ]
+}

@@ -16,6 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderFeatured } from './featured-products.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
@@ -23,6 +24,15 @@ const write = (p, s) => fs.writeFileSync(path.join(root, p), s);
 
 const CHECK = process.argv.includes('--check');
 const catalogue = JSON.parse(read('products/catalogue.json'));
+const featured = JSON.parse(read('products/featured.json'));
+const featuredBlock = /<!-- BEGIN featured products -->[\s\S]*?<!-- END featured products -->/;
+function replaceFeatured(html,compact=false){
+    const rendered=renderFeatured(featured,catalogue,compact);
+    if(featuredBlock.test(html))return html.replace(featuredBlock,()=>rendered);
+    const initial=compact?/<section class="catalogue-feature"[\s\S]*?<\/section>/:/<section class="product-spotlight"[\s\S]*?<\/section>/;
+    if(!initial.test(html))throw Error('Featured product block not found.');
+    return html.replace(initial,()=>rendered);
+}
 
 const problemLabel = Object.fromEntries(catalogue.taxonomy.problems.map((p) => [p.id, p.name]));
 const accessLabel = Object.fromEntries(catalogue.taxonomy.access.map((p) => [p.id, p.name]));
@@ -116,6 +126,7 @@ const outputs = [];
 {
     let html = read('index.html');
     html = replaceGrid(html, /<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">/, '</a>', homepageCards(), 'index.html');
+    html = replaceFeatured(html);
     outputs.push(['index.html', html]);
 }
 
@@ -123,6 +134,7 @@ const outputs = [];
 {
     let html = read('products/index.html');
     html = replaceGrid(html, /<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">/, '</article>', indexCards(), 'products/index.html');
+    html = replaceFeatured(html,true);
     // The result counter is a LIVE filter readout, not a claim about the catalogue.
     // Generated so its initial value can never go stale.
     const n = catalogue.products.length;
