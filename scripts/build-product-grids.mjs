@@ -58,6 +58,13 @@ function searchTerms(p) {
     if (p.searchTerms) return p.searchTerms;
     return [p.name, p.summary, ...p.problems, ...p.buyers, ...p.types].join(' ');
 }
+function productArtwork(p){
+    const feature=featured.products.find(f=>f.id===p.id);
+    const src=feature?.image||`/assets/previews/tools/${p.id}.svg`;
+    const alt=feature?.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
+    if(!fs.existsSync(path.join(root,src)))throw new Error(`${p.id}: product artwork missing`);
+    return `<img class="tool-card-image" src="${esc(src)}" alt="${esc(alt)}" width="1200" height="675" loading="lazy" decoding="async">`;
+}
 
 // ---------------------------------------------------------------- homepage cards
 function homepageCards() {
@@ -65,7 +72,7 @@ function homepageCards() {
         const delay = (i % 3) * 80;
         return `<a href="products/${p.id}.html" data-aos="fade-up" data-aos-delay="${delay}"
    class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
-    <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0">${heroGlyph(p.id)}</div>
+    <div class="tool-card-art">${productArtwork(p)}</div>
     <div class="flex-1">
         <h3 class="font-display font-semibold text-lg text-text mb-1.5">${esc(p.name)}</h3>
         <p class="text-sm text-muted leading-relaxed">${esc(p.summary)}</p>${releaseLabel(p) ? `\n        <p class="text-xs text-gold mt-3">${esc(releaseLabel(p))}</p>` : ''}
@@ -82,7 +89,7 @@ function indexCards() {
     return catalogue.products.map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
         return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
-                            <p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabel(p) ? ` · <span class="text-gold">${esc(releaseLabel(p))}</span>` : ''}</p>
+                            <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabel(p) ? ` · <span class="text-gold">${esc(releaseLabel(p))}</span>` : ''}</p>
                         </article>`;
     }).join('\n');
 }
@@ -94,7 +101,7 @@ function replaceGrid(html, gridOpenRe, closeTag, cards, label) {
     // Idempotent: after the first run the markers exist and only their contents move.
     const marked = new RegExp(`(${BEGIN.replace(/[.*+?^${}()|[\]\\—]/g, '\\$&')})[\\s\\S]*?(${END})`);
     if (marked.test(html)) {
-        return html.replace(marked, `$1\n${cards}\n$2`);
+        return html.replace(marked, (_match, begin, end) => `${begin}\n${cards}\n${end}`);
     }
     const m = gridOpenRe.exec(html);
     if (!m) throw new Error(`${label}: grid container not found`);

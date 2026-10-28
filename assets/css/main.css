@@ -271,3 +271,6 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Product artwork uses the same visual shelf as the featured carousel. */
+.tool-card-art{display:block;overflow:hidden;border-radius:14px 14px 0 0;margin:-28px -28px 0;border-bottom:1px solid #343b2e;background:#eeeede}.tool-card-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .2s}.group:hover .tool-card-image{transform:scale(1.015)}.catalogue-card .tool-card-art{margin:-24px -24px 23px}.catalogue-card .tool-card-image{border-radius:14px 14px 0 0}@media(prefers-reduced-motion:reduce){.tool-card-image{transition:none}.group:hover .tool-card-image{transform:none}}
