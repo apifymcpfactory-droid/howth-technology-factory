@@ -37,13 +37,17 @@ assert.deepEqual(
 for (const product of catalogue.products) {
     assert.match(product.id, /^[a-z0-9-]+$/);
     assert.equal(product.url, `https://howthtechnologyfactory.pro/products/${product.id}.html`);
-    assert.equal(product.ai_agent_compatible, true);
+    assert.equal(typeof product.ai_agent_compatible, 'boolean');
     for (const facet of ['problems', 'buyers', 'types', 'access']) {
         assert.ok(product[facet].length, `${product.id} has no ${facet}`);
         for (const value of product[facet]) assert.ok(taxonomy[facet].has(value), `${product.id} uses unknown ${facet}: ${value}`);
     }
     assert.ok(Array.isArray(product.shopfronts));
-    assert.ok(product.shopfronts.length >= 1);
+    if (product.release_status === 'in_development') {
+        assert.equal(product.shopfronts.length, 0, `${product.id}: development product must not claim a live shopfront`);
+    } else {
+        assert.ok(product.shopfronts.length >= 1);
+    }
     for (const shopfront of product.shopfronts) {
         assert.ok(shopfront.id && shopfront.name);
         assert.doesNotThrow(() => new URL(shopfront.url));
@@ -53,7 +57,17 @@ for (const product of catalogue.products) {
     assert.match(productHtml, /aria-label="Breadcrumb"/);
     assert.match(productHtml, /"@type":"BreadcrumbList"/);
     assert.match(productHtml, /<link rel="canonical"/);
+    if (product.release_status === 'in_development') {
+        assert.match(productHtml, /In development/);
+        assert.doesNotMatch(productHtml, /"@type"\s*:\s*"Offer"|data-shopfront=/);
+    }
 }
+
+const itemLists = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .map(([, json]) => JSON.parse(json)).filter((value) => value['@type'] === 'ItemList');
+assert.equal(itemLists.length, 1);
+assert.equal(itemLists[0].numberOfItems, catalogue.products.length);
+assert.deepEqual(itemLists[0].itemListElement.map((item) => item.url), catalogue.products.map((product) => product.url));
 
 // Shopfronts are data, not a fixed pair: an arbitrary future destination remains valid.
 const futureProduct = structuredClone(catalogue.products[0]);

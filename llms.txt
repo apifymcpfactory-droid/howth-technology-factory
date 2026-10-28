@@ -1,6 +1,6 @@
 # Howth Technology Factory
 
-> A small, sharp set of tools that each do one job well — usable by people in a browser, and by AI agents via MCP. Every tool is a standalone Apify Actor; screening/validation tools use official public data sources only.
+> Focused tools for people and teams. Released APIs and MCP tools run on Apify; Figma and Jira plugins are in development. Each product page states its platform and release status.
 
 ## Pages
 
@@ -29,6 +29,9 @@
 - [Lowe's Jobs API: Store-Level Hiring Data](https://howthtechnologyfactory.pro/products/lowes-jobs-api.html): Lowe's published vacancies as structured rows, with full-time and part-time shift detail. MCP: https://mcp.apify.com?tools=apifmcpfactory/lowes-jobs-api
 - [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api
 - [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api
+
+- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): In development. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet.
+- [Howth Icon Kits for Figma](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): In development. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. No public installation link yet.
 
 ## Curated routes
 

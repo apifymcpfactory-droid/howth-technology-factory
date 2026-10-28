@@ -34,6 +34,14 @@
             {
                 "id": "hiring-market-intelligence",
                 "name": "Hiring and market intelligence"
+            },
+            {
+                "id": "project-context",
+                "name": "Project context and metadata"
+            },
+            {
+                "id": "design-workflow",
+                "name": "Design workflow"
             }
         ],
         "buyers": [
@@ -68,6 +76,14 @@
             {
                 "id": "recruiting-talent",
                 "name": "Recruiting and talent teams"
+            },
+            {
+                "id": "project-admins",
+                "name": "Project administrators and delivery teams"
+            },
+            {
+                "id": "product-designers",
+                "name": "Product designers and design teams"
             }
         ],
         "types": [
@@ -128,6 +144,14 @@
             {
                 "id": "future",
                 "name": "Future access"
+            },
+            {
+                "id": "jira-cloud",
+                "name": "Jira Cloud"
+            },
+            {
+                "id": "figma",
+                "name": "Figma Design"
             }
         ]
     },
@@ -872,6 +896,53 @@
                 }
             ],
             "searchTerms": "Workday Jobs API careers site scraper myworkdayjobs tenant multi employer hiring feed ATS vacancies JSON CSV recruiters developers agencies API MCP Apify Actor"
+        },
+        {
+            "id": "projectkit-jira",
+            "name": "ProjectKit for Jira",
+            "summary": "Structured project metadata, reusable templates and a live field preview for Jira Cloud. In development.",
+            "url": "https://howthtechnologyfactory.pro/products/projectkit-jira.html",
+            "problems": [
+                "project-context"
+            ],
+            "buyers": [
+                "project-admins",
+                "operations-automation"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "jira-cloud"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV"
+        },
+        {
+            "id": "howth-icon-kits-figma",
+            "name": "Howth Icon Kits for Figma",
+            "summary": "Find bundled icons, insert editable vectors and reuse saved icon kits in Figma Design. In development.",
+            "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Howth Icon Kits Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement"
         }
     ]
 }

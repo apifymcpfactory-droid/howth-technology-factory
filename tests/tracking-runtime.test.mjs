@@ -26,6 +26,11 @@ function runPage(pathname) {
     dataset: { reviewSource: 'future_reviews', productId: 'pdf-toolkit' },
     textContent: 'Read independent reviews',
   };
+  const demoLink = {
+    href: 'https://howthtechnologyfactory.pro/products/demos/projectkit/',
+    dataset: { productDemo: 'projectkit-jira' },
+    textContent: 'Try browser demo',
+  };
   const location = new URL(`https://howthtechnologyfactory.pro${pathname}?utm_source=bluesky&utm_medium=organic&utm_campaign=stage1&utm_content=stage1-bsky-01&htf_product=pdf-toolkit&htf_campaign=HTF-STAGE1&htf_platform=bluesky&htf_post=HTF-STAGE1-BSKY-01`);
   const document = {
     addEventListener(name, callback) {
@@ -62,6 +67,7 @@ function runPage(pathname) {
   for (const callback of listeners.get('click') || []) {
     callback({ target: { closest: () => shopfrontLink } });
     callback({ target: { closest: () => reviewLink } });
+    callback({ target: { closest: () => demoLink } });
   }
   return { events, ownedLink, shopfrontLink, reviewLink, stored: JSON.parse(store.get('htf_campaign_attribution')) };
 }
@@ -90,5 +96,10 @@ assert.equal(insight.stored.htf_product, 'pdf-toolkit');
 const product = runPage('/products/pdf-toolkit.html');
 assert.equal(product.events[0].eventName, 'product_view');
 assert.equal(product.events[0].parameters.utm_source, 'bluesky');
+const demoEvent = product.events.find(({ eventName }) => eventName === 'product_demo_click');
+assert.equal(demoEvent.parameters.product_id, 'projectkit-jira');
+assert.equal(demoEvent.parameters.demo_path, '/products/demos/projectkit/');
+assert.equal(demoEvent.parameters.campaign_id, 'HTF-STAGE1');
+assert.equal(demoEvent.parameters.post_id, 'HTF-STAGE1-BSKY-01');
 
 console.log('tracking runtime tests passed');

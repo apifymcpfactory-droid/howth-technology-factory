@@ -112,6 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const shopfront = link.dataset.shopfront?.trim().toLowerCase();
+        if (link.dataset.productDemo && url.origin === window.location.origin && url.pathname.startsWith('/products/demos/')) {
+            sendEvent('product_demo_click', {
+                ...common,
+                product_id: link.dataset.productDemo,
+                demo_path: url.pathname,
+            });
+        }
         if (shopfront && url.origin !== window.location.origin) {
             const safeShopfront = shopfront.replace(/[^a-z0-9_]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 25);
             const shopfrontParameters = { ...common, shopfront_id: shopfront };

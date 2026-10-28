@@ -39,6 +39,12 @@ assert.ok(catalogue.products.length > 0, 'catalogue must not be empty');
 for (const product of catalogue.products) {
   const html = fs.readFileSync(path.join(root, 'products', `${product.id}.html`), 'utf8');
   const cached = cache.products[product.id];
+  if (product.release_status === 'in_development') {
+    assert.deepEqual(product.reviews, [], `${product.id}: no review evidence exists before release`);
+    assert.equal(cached, undefined, `${product.id}: development product must not enter the review cache`);
+    assert.doesNotMatch(html, /"@type"\s*:\s*"(?:AggregateRating|Review)"|itemprop=["'](?:aggregateRating|review)["']/i);
+    continue;
+  }
   assert.ok(Array.isArray(product.reviews) && product.reviews.length > 0, `${product.id}: missing reviews array`);
   assert.deepEqual(product.reviews, cached, `${product.id}: catalogue/cache mismatch`);
   assert.equal((html.match(/aria-labelledby=["']reviews-heading["']/g) || []).length, 0, `${product.id}: hidden empty section`);
@@ -56,7 +62,7 @@ for (const product of catalogue.products) {
   }
 
   const sourceIds = product.reviews.map((review) => review.source);
-  assert.ok(sourceIds.includes('apify'), `${product.id}: Apify Actor source missing`);
+  assert.equal(sourceIds.includes('apify'), product.shopfronts.some((shop) => shop.id === 'apify'), `${product.id}: Apify applicability mismatch`);
   assert.equal(sourceIds.includes('mcpize'), product.shopfronts.some((shop) => shop.id === 'mcpize'), `${product.id}: MCPize applicability mismatch`);
 }
 

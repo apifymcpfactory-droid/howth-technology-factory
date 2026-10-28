@@ -18,13 +18,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
+const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const write = (p, s) => fs.writeFileSync(path.join(root, p), s);
 
 const CHECK = process.argv.includes('--check');
 const catalogue = JSON.parse(read('products/catalogue.json'));
 
 const problemLabel = Object.fromEntries(catalogue.taxonomy.problems.map((p) => [p.id, p.name]));
+const accessLabel = Object.fromEntries(catalogue.taxonomy.access.map((p) => [p.id, p.name]));
+const releaseLabels = { in_development: 'In development', preview: 'Preview' };
 
 const esc = (s) => String(s ?? '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -55,7 +57,7 @@ function homepageCards() {
     <div class="w-14 h-14 rounded-[14px] overflow-hidden shrink-0">${heroGlyph(p.id)}</div>
     <div class="flex-1">
         <h3 class="font-display font-semibold text-lg text-text mb-1.5">${esc(p.name)}</h3>
-        <p class="text-sm text-muted leading-relaxed">${esc(p.summary)}</p>
+        <p class="text-sm text-muted leading-relaxed">${esc(p.summary)}</p>${releaseLabels[p.release_status] ? `\n        <p class="text-xs text-gold mt-3">${releaseLabels[p.release_status]}</p>` : ''}
     </div>
     <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
         Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
@@ -69,7 +71,7 @@ function indexCards() {
     return catalogue.products.map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
         return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
-                            <p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">Web · API · MCP</p>
+                            <p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabels[p.release_status] ? ` · <span class="text-gold">${releaseLabels[p.release_status]}</span>` : ''}</p>
                         </article>`;
     }).join('\n');
 }
@@ -124,6 +126,11 @@ const outputs = [];
     // Generated so its initial value can never go stale.
     const n = catalogue.products.length;
     html = html.replace(/(<p data-result-count[^>]*>)[^<]*(<\/p>)/, `$1${n} tools$2`);
+    html = html.replace(/(<script type="application\/ld\+json">)\s*({[\s\S]*?})(\s*<\/script>)/g, (block, open, json, close) => {
+        const value = JSON.parse(json);
+        if (value['@type'] !== 'ItemList') return block;
+        return `${open}\n${JSON.stringify({ ...value, numberOfItems: n, itemListElement: catalogue.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: p.url, name: p.name })) })}\n    </script>`;
+    });
     outputs.push(['products/index.html', html]);
 }
 
