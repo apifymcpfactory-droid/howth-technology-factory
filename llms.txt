@@ -52,3 +52,5 @@
 ## Prepared Figma products (not submitted)
 - Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable.
 - User Flow & Handover Toolkit | HTF: https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/user-flow-handover/ | Planned $5 one-time; not submitted or purchasable.
+
+- Image Export & Delivery Toolkit | HTF: https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/image-export-delivery/ | Planned $5 one-time; not submitted or purchasable. Local image export recipes and ZIP delivery packs.

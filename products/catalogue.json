@@ -157,6 +157,30 @@
     },
     "products": [
         {
+            "id": "image-export-delivery-toolkit-figma",
+            "name": "Image Export & Delivery Toolkit | HTF",
+            "summary": "Prepare Figma image delivery packs with size recipes, checked filenames and an illustrated ZIP index. Planned Pro price: $5 once. Not submitted yet.",
+            "url": "https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "Coming soon · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Figma image export delivery batch PNG JPG WebP SVG ZIP client assets naming collision presets social app web file size quality contain crop saved recipe"
+        },
+        {
             "id": "content-review-localization-toolkit-figma",
             "name": "Content Review & Localization Toolkit | HTF",
             "summary": "Review Figma copy, detect source conflicts and create separate language versions. Planned Pro price: $5 once. Not submitted yet.",

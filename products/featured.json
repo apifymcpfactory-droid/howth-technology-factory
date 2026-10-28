@@ -1,6 +1,28 @@
 {
   "products": [
     {
+      "id": "image-export-delivery-toolkit-figma",
+      "label": "Image Export & Delivery",
+      "platform": "Figma Design",
+      "heading": [
+        "Every asset ready.",
+        "One delivery pack."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Prepare named image exports with channel recipes, checked dimensions, a visual source index and a clear delivery report.",
+      "priceLead": "Coming soon. Not submitted yet.",
+      "priceDetail": "Planned Pro: $5 once.",
+      "demo": "/products/demos/image-export-delivery/",
+      "image": "/assets/previews/image-export-delivery-htf-cover.jpg",
+      "imageAlt": "Image Export & Delivery export-plan overview",
+      "caption": "In development for Figma. Try the fictional browser demo; installation and purchase are not available yet.",
+      "facts": [
+        "PNG, JPG, WebP and SVG",
+        "Checked export recipes",
+        "ZIP with index and report"
+      ]
+    },
+    {
       "id": "content-review-localization-toolkit-figma",
       "label": "Content Review & Localization",
       "platform": "Figma Design",
