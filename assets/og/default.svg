@@ -14,8 +14,8 @@
     <path d="M38 30 V82 M38 56 H74 M74 30 V82" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
 
-  <text x="600" y="345" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="54" fill="#F4F4F5" text-anchor="middle">Howth Technology Factory</text>
-  <text x="600" y="392" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="24" fill="#A1A1AA" text-anchor="middle">Focused tools for people — and the agents working for them.</text>
+  <text x="600" y="345" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="47" fill="#F4F4F5" text-anchor="middle">Agentic Systems Studio | HTF</text>
+  <text x="600" y="392" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="24" fill="#A1A1AA" text-anchor="middle">MCP tools, APIs and practical software for people and AI agents.</text>
 
   <line x1="536" y1="438" x2="664" y2="438" stroke="#FCD34D" stroke-width="2"/>
   <line x1="558" y1="446" x2="642" y2="446" stroke="#FCD34D" stroke-width="2" opacity="0.6"/>

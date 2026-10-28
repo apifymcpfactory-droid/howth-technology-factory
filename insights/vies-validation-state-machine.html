@@ -9,7 +9,7 @@
     <meta name="description" content="A practical workflow for EU VAT validation: distinguish valid, invalid and temporarily unavailable responses, then preserve the evidence and context each decision needs." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="article" /><meta property="og:site_name" content="Howth Technology Factory" />
+    <meta property="og:type" content="article" /><meta property="og:site_name" content="Agentic Systems Studio | HTF" />
     <meta property="og:title" content="Design VIES validation as a state machine" />
     <meta property="og:description" content="A VIES lookup is not a boolean business decision. Model valid, invalid and unavailable separately." />
     <meta property="og:url" content="https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html" />
@@ -29,7 +29,7 @@
 <body class="bg-bg text-white font-sans antialiased">
 <a href="#main" class="skip-link">Skip to content</a>
 <header data-site-header class="sticky top-0 z-50 header-blur border-b border-borderc"><div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between">
-<a href="/" class="font-display font-semibold">Howth <span class="text-muted font-normal">Technology Factory</span></a>
+<a href="/" class="font-display font-semibold">Agentic Systems Studio <span class="text-muted font-normal">| HTF</span></a>
 <nav class="hidden md:flex items-center gap-8 text-sm"><a href="/products/" class="text-muted hover:text-white">Products</a><a href="/insights/" class="text-gold">Insights</a><a href="/about.html" class="text-muted hover:text-white">About</a><a href="/contact.html" class="bg-gold text-[#14140f] px-4 py-2 rounded-full font-medium">Get in touch</a></nav>
 <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="md:hidden p-2">Menu</button></div>
 <div data-mobile-nav class="hidden md:hidden flex-col border-t border-borderc bg-bg/95"><a href="/products/" class="px-6 py-3 text-muted">Products</a><a href="/insights/" class="px-6 py-3 text-gold">Insights</a><a href="/about.html" class="px-6 py-3 text-muted">About</a><a href="/contact.html" class="px-6 py-3 text-gold">Get in touch</a></div></header>
@@ -110,9 +110,9 @@
 
 <aside class="rounded-2xl border border-borderc bg-surface p-6 md:p-8 mt-12">
 <h2 class="font-display text-2xl mt-0">An implementation to inspect</h2>
-<p>Howth Technology Factory’s <a href="/products/eu-vat-validator.html?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" data-campaign-id="HTF-20260726-EUVATVAL-001" data-content-id="HTF-20260726-EUVATVAL-001-WEBSITE-01">EU VAT Validator overview</a> documents the input and result contract. The exact shopfronts are the <a data-shopfront="apify" href="https://apify.com/apifmcpfactory/eu-vat-validator?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">Apify Actor</a> and the <a data-shopfront="mcpize" href="https://mcpize.com/mcp/eu-vat-validator-mcp?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">MCPize server</a>. Compare their current pricing and limits directly before use.</p>
+<p>Agentic Systems Studio | HTF’s <a href="/products/eu-vat-validator.html?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" data-campaign-id="HTF-20260726-EUVATVAL-001" data-content-id="HTF-20260726-EUVATVAL-001-WEBSITE-01">EU VAT Validator overview</a> documents the input and result contract. The exact shopfronts are the <a data-shopfront="apify" href="https://apify.com/apifmcpfactory/eu-vat-validator?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">Apify Actor</a> and the <a data-shopfront="mcpize" href="https://mcpize.com/mcp/eu-vat-validator-mcp?utm_source=website&amp;utm_medium=insight&amp;utm_campaign=htf-20260726-euvatval-001&amp;utm_content=htf-20260726-euvatval-001-website-01&amp;htf_product=eu-vat-validator&amp;htf_campaign=HTF-20260726-EUVATVAL-001&amp;htf_platform=website&amp;htf_post=HTF-20260726-EUVATVAL-001-WEBSITE-01" rel="noopener">MCPize server</a>. Compare their current pricing and limits directly before use.</p>
 </aside>
 </div></article></main>
-<footer class="border-t border-borderc"><div class="max-w-3xl mx-auto px-6 py-10 text-sm text-faint">© <span data-year></span> Howth Technology Factory</div></footer>
+<footer class="border-t border-borderc"><div class="max-w-3xl mx-auto px-6 py-10 text-sm text-faint">© <span data-year></span> Agentic Systems Studio | HTF</div></footer>
 <script src="../assets/js/main.js"></script>
 </body></html>

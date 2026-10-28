@@ -1,11 +1,11 @@
-# Howth Technology Factory
+# Agentic Systems Studio | HTF
 
 > Focused tools for people and teams. Released APIs and MCP tools run on Apify; Figma and Jira plugins are in development. Each product page states its platform and release status.
 
 ## Pages
 
-- [Home](https://howthtechnologyfactory.pro/): Overview of Howth Technology Factory and the full product grid.
-- [About](https://howthtechnologyfactory.pro/about.html): Howth Technology Factory, what we build and where our tools are available.
+- [Home](https://howthtechnologyfactory.pro/): Overview of Agentic Systems Studio | HTF and the full product grid.
+- [About](https://howthtechnologyfactory.pro/about.html): Agentic Systems Studio | HTF, what we build and where our tools are available.
 - [Contact](https://howthtechnologyfactory.pro/contact.html): Get in touch with the team.
 - [Privacy](https://howthtechnologyfactory.pro/privacy.html): How this site and our tools handle data.
 
