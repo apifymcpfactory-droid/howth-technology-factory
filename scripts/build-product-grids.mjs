@@ -17,6 +17,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderFeatured } from './featured-products.mjs';
+import { prepareSearch } from './prepare-search.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
@@ -177,3 +178,4 @@ if (CHECK && stale) {
     console.error(`\n${stale} file(s) out of date. Run: node scripts/build-product-grids.mjs`);
     process.exit(1);
 }
+if (!CHECK) prepareSearch();

@@ -1,0 +1,10 @@
+{
+  "name": "htf-portfolio-website",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i assets/css/tailwind-source.css -o assets/css/utilities.css --minify",
+    "prepare:search": "node scripts/prepare-search.mjs",
+    "check:search": "node scripts/check-search.mjs"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}

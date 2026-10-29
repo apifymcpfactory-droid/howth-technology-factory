@@ -2,8 +2,8 @@
 
 Static marketing site for Howth Technology Factory, hosted on GitHub Pages.
 
-- Plain HTML + Tailwind CSS (CDN) + minimal vanilla JS. No build step, no framework.
-- Google Fonts (Inter, Space Grotesk), Lucide icons (CDN), AOS for scroll reveal (CDN).
+- Plain HTML + precompiled local Tailwind CSS + minimal vanilla JS. No runtime CSS compiler.
+- Google Fonts (Inter, Space Grotesk), Lucide icons (CDN). Content is visible without scroll-reveal JavaScript.
 - One reusable product-page template (`products/*.html`) — adding a new product means
   copying one of those files, editing its content, and adding a card + `llms.txt` +
   `sitemap.xml` entry for it.
@@ -11,6 +11,8 @@ Static marketing site for Howth Technology Factory, hosted on GitHub Pages.
 - Contact form submits via [FormSubmit.co](https://formsubmit.co) — no backend required.
 
 ## Local preview
+
+After editing or regenerating pages: `npm ci --ignore-scripts`, `npm run prepare:search`, `npm run build:css`, then `npm run check:search`. Commit `assets/css/utilities.css`; GitHub Pages serves static files. Fictional demos have unique metadata and `noindex, follow`; the 46 complete canonical landing/content pages are in the sitemap. Redirect-only tracking URLs remain excluded. Do not add fake modification dates or indexing guarantees.
 
 Any static file server works, e.g.:
 

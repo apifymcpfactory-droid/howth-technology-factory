@@ -1,4 +1,4 @@
-/* Howth Technology Factory — hand-written styles layered on top of Tailwind's CDN build.
+/* Howth Technology Factory: styles layered on precompiled local Tailwind utilities.
    Tailwind handles layout/utilities; this file covers what utility classes can't:
    the gradient-mesh hero, the gold double-line frame motif, grain texture, and animations. */
 
@@ -273,4 +273,5 @@ body {
 }
 
 /* Product artwork uses the same visual shelf as the featured carousel. */
+.product-routes{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px}.product-routes a{border:1px solid #34343b;border-radius:999px;padding:10px 16px;color:#d7d7dc;font-size:14px;line-height:1.4}.product-routes a:hover{border-color:#fcd34d;color:#fcd34d}.product-routes a:focus-visible{outline:2px solid #fcd34d;outline-offset:3px}
 .tool-card-art{display:block;overflow:hidden;border-radius:14px 14px 0 0;margin:-28px -28px 0;border-bottom:1px solid #343b2e;background:#eeeede}.tool-card-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .2s}.group:hover .tool-card-image{transform:scale(1.015)}.catalogue-card .tool-card-art{margin:-24px -24px 23px}.catalogue-card .tool-card-image{border-radius:14px 14px 0 0}@media(prefers-reduced-motion:reduce){.tool-card-image{transition:none}.group:hover .tool-card-image{transform:none}}
