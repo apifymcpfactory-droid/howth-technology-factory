@@ -157,6 +157,102 @@
     },
     "products": [
         {
+            "id": "motion-lottie-studio-figma",
+            "name": "Motion Presets & Lottie Export | HTF",
+            "summary": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export"
+        },
+        {
+            "id": "html-import-studio-figma",
+            "name": "HTML Import & Redesign Studio | HTF",
+            "summary": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/html-import-studio-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes"
+        },
+        {
+            "id": "responsive-html-export-figma",
+            "name": "Responsive HTML Export Toolkit | HTF",
+            "summary": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report"
+        },
+        {
+            "id": "device-mockup-studio-figma",
+            "name": "Device Mockup & Presentation Studio | HTF",
+            "summary": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh. Planned $7 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
+        },
+        {
             "id": "image-export-delivery-toolkit-figma",
             "name": "Image Export & Delivery Toolkit | HTF",
             "summary": "Prepare Figma image delivery packs with size recipes, checked filenames and an illustrated ZIP index. Planned Pro price: $5 once. Not submitted yet.",
