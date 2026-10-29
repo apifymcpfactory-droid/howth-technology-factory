@@ -66,3 +66,11 @@
 - Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (In development, not submitted; planned $9 once.)
 
 - Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (In development, not submitted; planned $7 once.)
+
+- Chart & Data Story Studio | HTF: https://howthtechnologyfactory.pro/products/chart-data-story-figma.html (In development, not submitted; planned $9 once.)
+
+- System Architecture & C4 Studio | HTF: https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html (In development, not submitted; planned $9 once.)
+
+- Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (In development, not submitted; planned $9 once.)
+
+- Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (In development, not submitted; planned $9 once.)

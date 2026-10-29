@@ -1,91 +1,113 @@
 {
   "products": [
     {
-      "id": "motion-lottie-studio-figma",
-      "label": "Motion & Lottie Export",
+      "id": "presentation-pptx-studio-figma",
+      "label": "Presentation & PPTX Delivery",
       "platform": "Figma Design",
       "heading": [
-        "Give shapes rhythm.",
-        "Hand over the motion."
+        "Shape a clearer story.",
+        "Deliver editable slides."
       ],
       "emphasisFrom": 1,
-      "intro": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report.",
+      "intro": "Build a presentation from a structured outline, with eight original layouts, brand settings, speaker notes and editable PPTX delivery.",
       "priceLead": "In development. Not submitted.",
       "priceDetail": "Planned: $9 once.",
-      "demo": "/products/demos/motion-lottie-studio/",
-      "image": "/assets/previews/motion-lottie-studio-htf-cover.svg",
-      "imageAlt": "Motion & Lottie Export workflow preview",
+      "demo": "/products/demos/presentation-pptx-studio/",
+      "image": "/assets/previews/presentation-pptx-studio-htf-cover.svg",
+      "imageAlt": "Presentation & PPTX Delivery workflow preview",
       "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
       "facts": [
-        "Per-layer motion controls",
-        "Scrub and preview",
-        "Lottie JSON export"
+        "Eight original slide layouts",
+        "Editable Figma and PPTX",
+        "Speaker notes included"
       ]
     },
     {
-      "id": "html-import-studio-figma",
-      "label": "HTML Import & Redesign",
+      "id": "email-html-studio-figma",
+      "label": "Email Builder & HTML Delivery",
       "platform": "Figma Design",
       "heading": [
-        "Bring the markup.",
-        "Find a new direction."
+        "Build the message.",
+        "Hand over usable email HTML."
       ],
       "emphasisFrom": 1,
-      "intro": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point.",
+      "intro": "Compose a modular email design, preview the content and prepare table HTML, plain text, image assets and a delivery checklist.",
       "priceLead": "In development. Not submitted.",
       "priceDetail": "Planned: $9 once.",
-      "demo": "/products/demos/html-import-studio/",
-      "image": "/assets/previews/html-import-studio-htf-cover.svg",
-      "imageAlt": "HTML Import & Redesign workflow preview",
+      "demo": "/products/demos/email-html-studio/",
+      "image": "/assets/previews/email-html-studio-htf-cover.svg",
+      "imageAlt": "Email Builder & HTML Delivery workflow preview",
       "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
       "facts": [
-        "Safe offline preview",
-        "Mobile to desktop widths",
-        "Editable text and shapes"
+        "Eight original email modules",
+        "600 px table-based HTML",
+        "Assets and delivery report"
       ]
     },
     {
-      "id": "responsive-html-export-figma",
-      "label": "Responsive HTML Export",
+      "id": "chart-data-story-figma",
+      "label": "Chart & Data Story",
       "platform": "Figma Design",
       "heading": [
-        "Your design.",
-        "A clearer code handoff."
+        "Make the numbers readable.",
+        "Keep the data accountable."
       ],
       "emphasisFrom": 1,
-      "intro": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report.",
+      "intro": "Turn checked CSV or JSON into editable charts, with explicit mapping, small multiples, annotations and data integrity reports.",
       "priceLead": "In development. Not submitted.",
       "priceDetail": "Planned: $9 once.",
-      "demo": "/products/demos/responsive-html-export/",
-      "image": "/assets/previews/responsive-html-export-htf-cover.svg",
-      "imageAlt": "Responsive HTML Export workflow preview",
+      "demo": "/products/demos/chart-data-story/",
+      "image": "/assets/previews/chart-data-story-htf-cover.svg",
+      "imageAlt": "Chart & Data Story workflow preview",
       "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
       "facts": [
-        "Editable HTML text",
-        "Supported flex layouts",
-        "Local assets and report"
+        "Bars, lines, scatter and donut",
+        "Explicit data validation",
+        "Editable marks and source report"
       ]
     },
     {
-      "id": "device-mockup-studio-figma",
-      "label": "Device Mockup Studio",
+      "id": "system-architecture-c4-figma",
+      "label": "System Architecture & C4",
       "platform": "Figma Design",
       "heading": [
-        "Give the screen context.",
-        "Keep the scene editable."
+        "One system inventory.",
+        "Two clearer conversations."
       ],
       "emphasisFrom": 1,
-      "intro": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh.",
+      "intro": "Build context and container architecture views from a checked inventory, with stable IDs, relationship checks and local SVG/Mermaid delivery packs.",
       "priceLead": "In development. Not submitted.",
-      "priceDetail": "Planned: $7 once.",
-      "demo": "/products/demos/device-mockup-studio/",
-      "image": "/assets/previews/device-mockup-studio-htf-cover.svg",
-      "imageAlt": "Device Mockup Studio workflow preview",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/system-architecture-c4/",
+      "image": "/assets/previews/system-architecture-c4-htf-cover.svg",
+      "imageAlt": "System Architecture & C4 workflow preview",
       "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
       "facts": [
-        "Four generic device shells",
-        "Editable presentation scenes",
-        "Refresh from source"
+        "Context and container views",
+        "Inventory comparison",
+        "Editable architecture boards"
+      ]
+    },
+    {
+      "id": "wireframe-requirements-figma",
+      "label": "Wireframe & Requirements",
+      "platform": "Figma Design",
+      "heading": [
+        "Make the rough idea clear.",
+        "Keep the requirements close."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/wireframe-requirements/",
+      "image": "/assets/previews/wireframe-requirements-htf-cover.svg",
+      "imageAlt": "Wireframe & Requirements workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "12 original building blocks",
+        "Requirements mapped to screens",
+        "Editable multi-screen output"
       ]
     },
     {
@@ -111,25 +133,91 @@
       ]
     },
     {
-      "id": "wireframe-requirements-figma",
-      "label": "Wireframe & Requirements",
+      "id": "device-mockup-studio-figma",
+      "label": "Device Mockup Studio",
       "platform": "Figma Design",
       "heading": [
-        "Make the rough idea clear.",
-        "Keep the requirements close."
+        "Give the screen context.",
+        "Keep the scene editable."
       ],
       "emphasisFrom": 1,
-      "intro": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations.",
+      "intro": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh.",
       "priceLead": "In development. Not submitted.",
-      "priceDetail": "Planned: $9 once.",
-      "demo": "/products/demos/wireframe-requirements/",
-      "image": "/assets/previews/wireframe-requirements-htf-cover.svg",
-      "imageAlt": "Wireframe & Requirements workflow preview",
+      "priceDetail": "Planned: $7 once.",
+      "demo": "/products/demos/device-mockup-studio/",
+      "image": "/assets/previews/device-mockup-studio-htf-cover.svg",
+      "imageAlt": "Device Mockup Studio workflow preview",
       "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
       "facts": [
-        "12 original building blocks",
-        "Requirements mapped to screens",
-        "Editable multi-screen output"
+        "Four generic device shells",
+        "Editable presentation scenes",
+        "Refresh from source"
+      ]
+    },
+    {
+      "id": "responsive-html-export-figma",
+      "label": "Responsive HTML Export",
+      "platform": "Figma Design",
+      "heading": [
+        "Your design.",
+        "A clearer code handoff."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/responsive-html-export/",
+      "image": "/assets/previews/responsive-html-export-htf-cover.svg",
+      "imageAlt": "Responsive HTML Export workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "Editable HTML text",
+        "Supported flex layouts",
+        "Local assets and report"
+      ]
+    },
+    {
+      "id": "html-import-studio-figma",
+      "label": "HTML Import & Redesign",
+      "platform": "Figma Design",
+      "heading": [
+        "Bring the markup.",
+        "Find a new direction."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/html-import-studio/",
+      "image": "/assets/previews/html-import-studio-htf-cover.svg",
+      "imageAlt": "HTML Import & Redesign workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "Safe offline preview",
+        "Mobile to desktop widths",
+        "Editable text and shapes"
+      ]
+    },
+    {
+      "id": "motion-lottie-studio-figma",
+      "label": "Motion & Lottie Export",
+      "platform": "Figma Design",
+      "heading": [
+        "Give shapes rhythm.",
+        "Hand over the motion."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/motion-lottie-studio/",
+      "image": "/assets/previews/motion-lottie-studio-htf-cover.svg",
+      "imageAlt": "Motion & Lottie Export workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "Per-layer motion controls",
+        "Scrub and preview",
+        "Lottie JSON export"
       ]
     },
     {

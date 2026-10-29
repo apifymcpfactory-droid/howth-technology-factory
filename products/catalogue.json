@@ -157,10 +157,10 @@
     },
     "products": [
         {
-            "id": "motion-lottie-studio-figma",
-            "name": "Motion Presets & Lottie Export | HTF",
-            "summary": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report. Planned $9 once. In development; not submitted.",
-            "url": "https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html",
+            "id": "presentation-pptx-studio-figma",
+            "name": "Presentation Builder & PPTX Delivery | HTF",
+            "summary": "Build a presentation from a structured outline, with eight original layouts, brand settings, speaker notes and editable PPTX delivery. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html",
             "problems": [
                 "design-workflow"
             ],
@@ -178,13 +178,13 @@
             "release_label": "In development · Not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export"
+            "searchTerms": "Presentation Builder & PPTX Delivery | HTF Figma offline local Eight original slide layouts Editable Figma and PPTX Speaker notes included"
         },
         {
-            "id": "html-import-studio-figma",
-            "name": "HTML Import & Redesign Studio | HTF",
-            "summary": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point. Planned $9 once. In development; not submitted.",
-            "url": "https://howthtechnologyfactory.pro/products/html-import-studio-figma.html",
+            "id": "email-html-studio-figma",
+            "name": "Email Builder & HTML Delivery | HTF",
+            "summary": "Compose a modular email design, preview the content and prepare table HTML, plain text, image assets and a delivery checklist. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/email-html-studio-figma.html",
             "problems": [
                 "design-workflow"
             ],
@@ -202,13 +202,13 @@
             "release_label": "In development · Not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes"
+            "searchTerms": "Email Builder & HTML Delivery | HTF Figma offline local Eight original email modules 600 px table-based HTML Assets and delivery report"
         },
         {
-            "id": "responsive-html-export-figma",
-            "name": "Responsive HTML Export Toolkit | HTF",
-            "summary": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report. Planned $9 once. In development; not submitted.",
-            "url": "https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html",
+            "id": "chart-data-story-figma",
+            "name": "Chart & Data Story Studio | HTF",
+            "summary": "Turn checked CSV or JSON into editable charts, with explicit mapping, small multiples, annotations and data integrity reports. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/chart-data-story-figma.html",
             "problems": [
                 "design-workflow"
             ],
@@ -226,13 +226,13 @@
             "release_label": "In development · Not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report"
+            "searchTerms": "Chart & Data Story Studio | HTF Figma offline local Bars, lines, scatter and donut Explicit data validation Editable marks and source report"
         },
         {
-            "id": "device-mockup-studio-figma",
-            "name": "Device Mockup & Presentation Studio | HTF",
-            "summary": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh. Planned $7 once. In development; not submitted.",
-            "url": "https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html",
+            "id": "system-architecture-c4-figma",
+            "name": "System Architecture & C4 Studio | HTF",
+            "summary": "Build context and container architecture views from a checked inventory, with stable IDs, relationship checks and local SVG/Mermaid delivery packs. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html",
             "problems": [
                 "design-workflow"
             ],
@@ -250,7 +250,31 @@
             "release_label": "In development · Not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
+            "searchTerms": "System Architecture & C4 Studio | HTF Figma offline local Context and container views Inventory comparison Editable architecture boards"
+        },
+        {
+            "id": "wireframe-requirements-figma",
+            "name": "Wireframe & Requirements Builder | HTF",
+            "summary": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output"
         },
         {
             "id": "mind-map-planning-figma",
@@ -277,10 +301,10 @@
             "searchTerms": "Mind Map & Planning Studio | HTF Figma offline local Outline and JSON import Three hierarchy layouts Editable planning boards"
         },
         {
-            "id": "wireframe-requirements-figma",
-            "name": "Wireframe & Requirements Builder | HTF",
-            "summary": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations. Planned $9 once. In development; not submitted.",
-            "url": "https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html",
+            "id": "device-mockup-studio-figma",
+            "name": "Device Mockup & Presentation Studio | HTF",
+            "summary": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh. Planned $7 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html",
             "problems": [
                 "design-workflow"
             ],
@@ -298,7 +322,79 @@
             "release_label": "In development · Not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output"
+            "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
+        },
+        {
+            "id": "responsive-html-export-figma",
+            "name": "Responsive HTML Export Toolkit | HTF",
+            "summary": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report"
+        },
+        {
+            "id": "html-import-studio-figma",
+            "name": "HTML Import & Redesign Studio | HTF",
+            "summary": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/html-import-studio-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes"
+        },
+        {
+            "id": "motion-lottie-studio-figma",
+            "name": "Motion Presets & Lottie Export | HTF",
+            "summary": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export"
         },
         {
             "id": "image-export-delivery-toolkit-figma",
