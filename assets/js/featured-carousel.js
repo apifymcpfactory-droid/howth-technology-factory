@@ -10,7 +10,7 @@
       clearInterval(timer);timer=null;
       toggle.setAttribute('aria-label',paused?'Resume product rotation':'Pause product rotation');
       toggle.setAttribute('aria-pressed',String(paused));toggle.textContent=paused?'▷':'Ⅱ';
-      if(!paused&&!document.hidden&&inView&&!root.matches(':hover')&&!root.contains(document.activeElement))timer=setInterval(()=>show(active+1),8000);
+      if(!paused&&!document.hidden&&inView&&!root.matches(':hover')&&!root.contains(document.activeElement))timer=setInterval(()=>show(active+1),5000);
     };
     const show=(index,manual=false)=>{
       active=(index+slides.length)%slides.length;

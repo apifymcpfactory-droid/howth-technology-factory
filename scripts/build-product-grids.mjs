@@ -154,6 +154,15 @@ const outputs = [];
     outputs.push(['products/index.html', html]);
 }
 
+// Keep Figma purchase wording tied to the recorded live release status.
+for (const product of catalogue.products.filter(p => p.access?.includes('figma'))) {
+    const file = new URL(product.url).pathname.slice(1);
+    const html = read(file);
+    const label = product.release_status === 'live' ? 'Buy on Figma' : 'View on Figma';
+    outputs.push([file, html.replace(/(<a\b[^>]*href="https:\/\/www\.figma\.com\/community\/plugin\/[^"<>]+"[^>]*>)(?:View on Figma|Buy on Figma)(<\/a>)/g,
+        (_, open, close) => open + label + close)]);
+}
+
 let stale = 0;
 for (const [file, html] of outputs) {
     if (read(file) === html) { console.log(`  unchanged  ${file}`); continue; }

@@ -16,8 +16,9 @@ export function validateFeatured(config,catalogue){
 export function renderFeatured(config,catalogue,compact=false){
   const products=validateFeatured(config,catalogue),prefix=compact?'catalogue-feature':'home-feature';
   const slides=products.map((p,i)=>{
-    const name=catalogue.products.find(c=>c.id===p.id).name,path='/products/'+p.id+'.html';
-    const actions=`<div class="spotlight-actions"><a class="spotlight-button" data-product-demo="${escape(p.id)}" href="${escape(p.demo)}">Try the interactive demo <span aria-hidden="true">&nbsp;↗</span></a>${p.marketplace?`<a class="spotlight-button secondary" href="${escape(p.marketplace.url)}" target="_blank" rel="noopener noreferrer">${escape(p.marketplace.label)} <span aria-hidden="true">&nbsp;↗</span></a>`:`<a class="spotlight-button secondary" href="${path}">Explore the product <span aria-hidden="true">&nbsp;↗</span></a>`}</div>`;
+    const product=catalogue.products.find(c=>c.id===p.id),name=product.name,path='/products/'+p.id+'.html';
+    const marketplaceLabel=product.release_status==='live'&&p.marketplace?.url.startsWith('https://www.figma.com/')?'Buy on Figma':p.marketplace?.label;
+    const actions=`<div class="spotlight-actions"><a class="spotlight-button" data-product-demo="${escape(p.id)}" href="${escape(p.demo)}">Try the interactive demo <span aria-hidden="true">&nbsp;↗</span></a>${p.marketplace?`<a class="spotlight-button secondary" href="${escape(p.marketplace.url)}" target="_blank" rel="noopener noreferrer">${escape(marketplaceLabel)} <span aria-hidden="true">&nbsp;↗</span></a>`:`<a class="spotlight-button secondary" href="${path}">Explore the product <span aria-hidden="true">&nbsp;↗</span></a>`}</div>`;
     const links=`<div class="spotlight-links"><a class="spotlight-link" href="${path}">Product details</a><a class="spotlight-link" href="${path}#privacy">Privacy &amp; data</a><a class="spotlight-link" href="${path}#support">Support</a></div>`;
     const figure=`<a class="spotlight-art" href="${path}" aria-label="Explore ${escape(name)}"><img src="${escape(p.image)}" width="1920" height="1080" ${i?'loading="lazy"':'fetchpriority="high"'} alt="${escape(p.imageAlt)}"></a>`;
     const heading=p.heading.map((line,j)=>(j===p.emphasisFrom?'<span>':'')+escape(line)+(j===p.heading.length-1&&j>=p.emphasisFrom?'</span>':'')+(j<p.heading.length-1?'<br>':'')).join('');
