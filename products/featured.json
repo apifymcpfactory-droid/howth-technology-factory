@@ -89,6 +89,50 @@
       ]
     },
     {
+      "id": "mind-map-planning-figma",
+      "label": "Mind Map & Planning",
+      "platform": "Figma Design",
+      "heading": [
+        "Give every idea a place.",
+        "Turn the outline into a plan."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Turn outlines into editable hierarchy maps, with topic notes, owners, statuses, three layouts and guarded saved-board rebuilding.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $7 once.",
+      "demo": "/products/demos/mind-map-planning/",
+      "image": "/assets/previews/mind-map-planning-htf-cover.svg",
+      "imageAlt": "Mind Map & Planning workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "Outline and JSON import",
+        "Three hierarchy layouts",
+        "Editable planning boards"
+      ]
+    },
+    {
+      "id": "wireframe-requirements-figma",
+      "label": "Wireframe & Requirements",
+      "platform": "Figma Design",
+      "heading": [
+        "Make the rough idea clear.",
+        "Keep the requirements close."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $9 once.",
+      "demo": "/products/demos/wireframe-requirements/",
+      "image": "/assets/previews/wireframe-requirements-htf-cover.svg",
+      "imageAlt": "Wireframe & Requirements workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "12 original building blocks",
+        "Requirements mapped to screens",
+        "Editable multi-screen output"
+      ]
+    },
+    {
       "id": "image-export-delivery-toolkit-figma",
       "label": "Image Export & Delivery",
       "platform": "Figma Design",

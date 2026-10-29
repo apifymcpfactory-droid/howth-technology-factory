@@ -62,3 +62,7 @@
 - HTML Import & Redesign Studio | HTF: https://howthtechnologyfactory.pro/products/html-import-studio-figma.html (In development, not submitted; planned $9 once.)
 
 - Motion Presets & Lottie Export | HTF: https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html (In development, not submitted; planned $9 once.)
+
+- Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (In development, not submitted; planned $9 once.)
+
+- Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (In development, not submitted; planned $7 once.)

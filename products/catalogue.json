@@ -253,6 +253,54 @@
             "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
         },
         {
+            "id": "mind-map-planning-figma",
+            "name": "Mind Map & Planning Studio | HTF",
+            "summary": "Turn outlines into editable hierarchy maps, with topic notes, owners, statuses, three layouts and guarded saved-board rebuilding. Planned $7 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Mind Map & Planning Studio | HTF Figma offline local Outline and JSON import Three hierarchy layouts Editable planning boards"
+        },
+        {
+            "id": "wireframe-requirements-figma",
+            "name": "Wireframe & Requirements Builder | HTF",
+            "summary": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations. Planned $9 once. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output"
+        },
+        {
             "id": "image-export-delivery-toolkit-figma",
             "name": "Image Export & Delivery Toolkit | HTF",
             "summary": "Prepare Figma image delivery packs with size recipes, checked filenames and an illustrated ZIP index. Planned Pro price: $5 once. Not submitted yet.",
