@@ -74,3 +74,5 @@
 - Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (In development, not submitted; planned $9 once.)
 
 - Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (In development, not submitted; planned $9 once.)
+
+- Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (In development, not submitted; planned $4 per month.)

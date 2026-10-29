@@ -1,6 +1,28 @@
 {
   "products": [
     {
+      "id": "accessibility-release-manager-figma",
+      "label": "Accessibility Audit & Release Manager",
+      "platform": "Figma Design",
+      "heading": [
+        "Review this release.",
+        "Know what changed."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Review supported accessibility evidence in Figma, compare releases and prepare a clear developer handover with documented human checks.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned: $4 per month.",
+      "demo": "/products/demos/accessibility-release-manager/",
+      "image": "/assets/previews/accessibility-release-manager-htf-cover.svg",
+      "imageAlt": "Accessibility Audit & Release Manager workflow preview",
+      "caption": "Try the fictional browser demo. Native testing is in progress; installation and purchase are not available.",
+      "facts": [
+        "Scoped accessibility review",
+        "Release regression comparison",
+        "HTML, CSV and JSON handover"
+      ]
+    },
+    {
       "id": "presentation-pptx-studio-figma",
       "label": "Presentation & PPTX Delivery",
       "platform": "Figma Design",

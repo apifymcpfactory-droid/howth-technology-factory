@@ -157,6 +157,30 @@
     },
     "products": [
         {
+            "id": "accessibility-release-manager-figma",
+            "name": "Accessibility Audit & Release Manager | HTF",
+            "summary": "Review supported accessibility evidence in Figma, compare releases and prepare a clear developer handover with documented human checks. Planned $4 per month. In development; not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "figma"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Accessibility Audit & Release Manager | HTF Figma offline local Scoped accessibility review Release regression comparison HTML, CSV and JSON handover"
+        },
+        {
             "id": "presentation-pptx-studio-figma",
             "name": "Presentation Builder & PPTX Delivery | HTF",
             "summary": "Build a presentation from a structured outline, with eight original layouts, brand settings, speaker notes and editable PPTX delivery. Planned $9 once. In development; not submitted.",
