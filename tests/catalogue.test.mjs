@@ -43,7 +43,7 @@ for (const product of catalogue.products) {
         for (const value of product[facet]) assert.ok(taxonomy[facet].has(value), `${product.id} uses unknown ${facet}: ${value}`);
     }
     assert.ok(Array.isArray(product.shopfronts));
-    if (product.release_status === 'in_development') {
+    if (['in_development', 'submitted_for_review'].includes(product.release_status)) {
         assert.equal(product.shopfronts.length, 0, `${product.id}: development product must not claim a live shopfront`);
     } else {
         assert.ok(product.shopfronts.length >= 1);
@@ -57,8 +57,8 @@ for (const product of catalogue.products) {
     assert.match(productHtml, /aria-label="Breadcrumb"/);
     assert.match(productHtml, /"@type":"BreadcrumbList"/);
     assert.match(productHtml, /<link rel="canonical"/);
-    if (product.release_status === 'in_development') {
-        assert.match(productHtml, /In development/);
+    if (['in_development', 'submitted_for_review'].includes(product.release_status)) {
+        assert.match(productHtml, product.release_status === 'submitted_for_review' ? /Submitted for review/ : /In development/);
         assert.doesNotMatch(productHtml, /"@type"\s*:\s*"Offer"|data-shopfront=/);
     }
 }

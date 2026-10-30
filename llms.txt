@@ -31,7 +31,7 @@
 - [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api
 
 - [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): In development. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet.
-- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): In development. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. No public installation link yet.
+- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Submitted for review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf .
 
 ## Curated routes
 
@@ -47,7 +47,7 @@
 - [Design VIES validation as a state machine](https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html): A practical workflow for preserving valid, invalid and temporarily unavailable VAT-validation outcomes.
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
 
-- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Figma migration plugin. Free inspection and preview; planned Pro $19 one-time. Public release in preparation; not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/).
+- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Submitted for review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf .
 
 ## Prepared Figma products (not submitted)
 - Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable.
@@ -76,3 +76,5 @@
 - Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (In development, not submitted; planned $9 once.)
 
 - Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (In development, not submitted; planned $4 per month.)
+
+- Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (In development. Core implementation in progress; no public demo or listing.)

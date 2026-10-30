@@ -152,10 +152,41 @@
             {
                 "id": "figma",
                 "name": "Figma Design"
+            },
+            {
+                "id": "confluence-cloud",
+                "name": "Confluence Cloud"
             }
         ]
     },
     "products": [
+        {
+            "id": "confluence-reporting-workbench",
+            "name": "Confluence Reporting Workbench | HTF",
+            "summary": "In development. A planned Confluence reporting workbench for typed data imports, filters, spreadsheet calculations, pivots, charts and reusable reports with source checks and release comparisons.",
+            "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
+            "problems": [
+                "project-context"
+            ],
+            "buyers": [
+                "project-admins",
+                "operations-automation"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "confluence-cloud"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Confluence reporting workbench HTF tables typed data filters calculations pivots charts source checks release comparison",
+            "development_status": "Core engines in implementation. Integrated UI, native permissions, licensing, exports and scale acceptance are not verified. No public listing or demo.",
+            "planned_pricing": "Subscription; final tiers to be confirmed"
+        },
         {
             "id": "accessibility-release-manager-figma",
             "name": "Accessibility Audit & Release Manager | HTF",
@@ -495,7 +526,7 @@
         {
             "id": "design-system-migration-toolkit-figma",
             "name": "Design System Migration Toolkit | HTF",
-            "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once.",
+            "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once. Submitted for review; approval and public purchase are pending.",
             "url": "https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html",
             "problems": [
                 "design-workflow"
@@ -510,16 +541,22 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "",
+            "release_status": "submitted_for_review",
+            "release_label": "Submitted for review",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Figma design system migration variables styles component swap library replace rebrand agency handover mapping recipe JSON CSS tokens HTF"
+            "searchTerms": "Figma design system migration variables styles component swap library replace rebrand agency handover mapping recipe JSON CSS tokens HTF",
+            "submission": {
+                "submitted_on": "2026-10-28",
+                "status_verified_on": "2026-10-30",
+                "listing_url": "https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf",
+                "visibility": "creator-only during review"
+            }
         },
         {
             "id": "howth-icon-kits-figma",
             "name": "SVG Icons: Search & Replace | HTF",
-            "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once.",
+            "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once. Submitted for review; approval and public purchase are pending.",
             "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
             "problems": [
                 "design-workflow"
@@ -534,11 +571,17 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
+            "release_status": "submitted_for_review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement",
-            "release_label": ""
+            "release_label": "Submitted for review",
+            "submission": {
+                "submitted_on": "2026-10-28",
+                "status_verified_on": "2026-10-30",
+                "listing_url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf",
+                "visibility": "creator-only during review"
+            }
         },
         {
             "id": "pdf-toolkit",

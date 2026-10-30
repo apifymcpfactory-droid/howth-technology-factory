@@ -39,7 +39,7 @@ assert.ok(catalogue.products.length > 0, 'catalogue must not be empty');
 for (const product of catalogue.products) {
   const html = fs.readFileSync(path.join(root, 'products', `${product.id}.html`), 'utf8');
   const cached = cache.products[product.id];
-  if (product.release_status === 'in_development') {
+  if (['in_development', 'submitted_for_review'].includes(product.release_status)) {
     assert.deepEqual(product.reviews, [], `${product.id}: no review evidence exists before release`);
     assert.equal(cached, undefined, `${product.id}: development product must not enter the review cache`);
     assert.doesNotMatch(html, /"@type"\s*:\s*"(?:AggregateRating|Review)"|itemprop=["'](?:aggregateRating|review)["']/i);
