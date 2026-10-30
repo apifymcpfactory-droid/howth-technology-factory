@@ -87,7 +87,7 @@ assert.doesNotMatch(js, /youtube_outbound_click/);
 for (const file of fs.readdirSync(path.join(root, 'products')).filter((name) => name.endsWith('.html'))) {
   const html = fs.readFileSync(path.join(root, 'products', file), 'utf8');
   for (const match of html.matchAll(/<a\b[^>]*href=["']https:\/\/(?:apify\.com\/apifmcpfactory\/|mcpize\.com\/mcp\/)[^"']+["'][^>]*>/gi)) {
-    assert.match(match[0], /data-shopfront=["'][a-z0-9_-]+["']/i, `${file} has an undeclared shopfront link`);
+    assert.match(match[0], /data-(?:shopfront|review-source)=["'][a-z0-9_-]+["']/i, `${file} has an undeclared Apify or MCPize link`);
   }
 }
 

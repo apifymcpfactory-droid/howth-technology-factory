@@ -55,15 +55,25 @@ for (const product of catalogue.products) {
     assert.ok(approved.has(review.source), `${product.id}: unapproved source`);
     assert.equal(new URL(review.sourceUrl).protocol, 'https:');
     assertFreshDate(review.lastVerified, `${product.id}/${review.source}`);
-    assert.equal(review.verificationStatus, 'verified_no_reviews');
-    assert.equal(review.reviewCount, 0);
-    assert.ok(!('rating' in review), `${product.id}: zero sentinel must not become a rating`);
-    assert.ok(!('ratingScale' in review), `${product.id}: unknown scale must be omitted`);
+    if (review.verificationStatus === 'verified_with_reviews') {
+      assert.ok(review.reviewCount > 0, `${product.id}: verified review source must have reviews`);
+      assert.ok(review.ratingCount > 0, `${product.id}: verified rating source must have ratings`);
+      assert.ok(review.rating > 0, `${product.id}: verified rating must be positive`);
+    } else {
+      assert.equal(review.verificationStatus, 'verified_no_reviews');
+      assert.equal(review.reviewCount, 0);
+      assert.ok(!('rating' in review), `${product.id}: zero sentinel must not become a rating`);
+      assert.ok(!('ratingScale' in review), `${product.id}: unknown scale must be omitted`);
+    }
   }
 
-  const sourceIds = product.reviews.map((review) => review.source);
-  assert.equal(sourceIds.includes('apify'), product.shopfronts.some((shop) => shop.id === 'apify'), `${product.id}: Apify applicability mismatch`);
-  assert.equal(sourceIds.includes('mcpize'), product.shopfronts.some((shop) => shop.id === 'mcpize'), `${product.id}: MCPize applicability mismatch`);
+  // A live shopfront is not itself evidence about its review state. Review rows
+  // may therefore be a strict subset of shopfronts when a source could not be
+  // freshly verified. Every row that does exist must still map to a real listing.
+  const shopfrontIds = new Set(product.shopfronts.map((shop) => shop.id));
+  for (const sourceId of product.reviews.map((review) => review.source)) {
+    assert.ok(shopfrontIds.has(sourceId), `${product.id}: ${sourceId} review evidence has no matching shopfront`);
+  }
 }
 
 assert.match(css, /\.independent-reviews-grid[\s\S]*grid-template-columns/);

@@ -78,3 +78,18 @@
 - Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (In development, not submitted; planned $4 per month.)
 
 - Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (In development. Core implementation in progress; no public demo or listing.)
+
+## Apify inventory reconciliation
+- [Jobs API: All Sources](https://howthtechnologyfactory.pro/products/jobs-api-all-sources.html)
+- [Accenture Jobs API + Report](https://howthtechnologyfactory.pro/products/accenture-jobs-api.html)
+- [Walmart Jobs API + Report](https://howthtechnologyfactory.pro/products/walmart-jobs-api.html)
+- [UPS Jobs API + Report](https://howthtechnologyfactory.pro/products/ups-jobs-api.html)
+- [Wells Fargo Jobs API](https://howthtechnologyfactory.pro/products/wellsfargo-jobs-api.html)
+- [Teleperformance Benelux](https://howthtechnologyfactory.pro/products/teleperformancebenelux-jobs-api.html)
+- [Twilio Jobs API + Report](https://howthtechnologyfactory.pro/products/twilio-jobs-api.html)
+- [Wise Jobs API + Report](https://howthtechnologyfactory.pro/products/wise-jobs-api.html)
+- [Tripadvisor Jobs API](https://howthtechnologyfactory.pro/products/tripadvisor-jobs-api.html)
+- [Take-Two Jobs API + Report](https://howthtechnologyfactory.pro/products/taketwo-jobs-api.html)
+- [Dropbox Jobs API + Report](https://howthtechnologyfactory.pro/products/dropbox-jobs-api.html)
+- [SEC EDGAR API: Filings, Financials, 8-K Events & Form D](https://howthtechnologyfactory.pro/products/sec-edgar-api.html)
+- [Jobs API Development Inventory | HTF](https://howthtechnologyfactory.pro/products/apify-jobs-development.html)

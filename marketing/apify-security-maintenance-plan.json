@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "recordedAt": "2026-10-30",
+  "sourceNotice": "Apify account email: Rebuild your Node.js Actors to apply security fixes",
+  "cutoff": "2026-10-21T19:00:00+02:00",
+  "inventoryEvidence": {
+    "actorCount": 70,
+    "latestBuildsBeforeCutoff": 70,
+    "mainEntrypoints": {
+      "javascript": 61,
+      "typescript": 9,
+      "python": 0,
+      "unknown": 0
+    }
+  },
+  "conclusion": "JavaScript entrypoints make the notice potentially relevant, but entrypoint language alone does not prove the affected base image or dependency state. No Actor is labelled unsafe from age alone.",
+  "followUp": [
+    "Inspect Dockerfile/base image and package lock for each distinct source family.",
+    "Prioritize public Actors and deduplicate shared job-source implementations before any rebuild.",
+    "Run local tests and a no-charge validation where available before publishing a rebuilt tag.",
+    "Record build ID, runtime evidence, test result and rollback tag."
+  ],
+  "actionsTaken": [
+    "No Actor build or run was started.",
+    "No security status claim was added to public product copy."
+  ]
+}

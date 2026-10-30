@@ -1,0 +1,567 @@
+{
+  "schemaVersion": "1.0",
+  "verifiedAt": "2026-10-30",
+  "status": "in_development",
+  "count": 43,
+  "actors": [
+    {
+      "id": "q5VGpmonyxdadrhoX",
+      "name": "greenhouse-jobs-api",
+      "title": "Greenhouse Jobs API + Report",
+      "summary": "A private build intended to turn Greenhouse public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.6",
+      "latestBuildFinishedAt": "2026-08-03T11:26:55.098Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "iLbOLwNvY1UjYYWYv",
+      "name": "lever-jobs-api",
+      "title": "Lever Jobs API + Report",
+      "summary": "A private build intended to turn Lever public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.4",
+      "latestBuildFinishedAt": "2026-08-03T11:28:11.845Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "PGw2evC51l9cAjNdZ",
+      "name": "ashby-jobs-api",
+      "title": "Ashby Jobs API + Report",
+      "summary": "A private build intended to turn Ashby public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:23:01.718Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "xbF1FleFT0IWNbUV3",
+      "name": "recruitee-jobs-api",
+      "title": "Recruitee Jobs API + Report",
+      "summary": "A private build intended to turn Recruitee public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:29:35.336Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "P3IvsGSkrSl1pIshe",
+      "name": "smartrecruiters-jobs-api",
+      "title": "SmartRecruiters Jobs API",
+      "summary": "A private build intended to turn SmartRecruiters public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:31:03.673Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "qdzBb3ac4FmGzNnJe",
+      "name": "remoteok-jobs-api",
+      "title": "Remote OK Jobs API + Report",
+      "summary": "A private build intended to turn Remote OK public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.5",
+      "latestBuildFinishedAt": "2026-08-03T11:30:22.609Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "Ulx6IHmFinkLoH7qf",
+      "name": "jobicy-jobs-api",
+      "title": "Jobicy Jobs API + Report",
+      "summary": "A private build intended to turn Jobicy public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.4",
+      "latestBuildFinishedAt": "2026-08-03T11:28:01.691Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "gDcJ7g1kF1KY7ATvZ",
+      "name": "remote-jobs-api",
+      "title": "Remote Jobs API + Report",
+      "summary": "A private build intended to turn Remote public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.4",
+      "latestBuildFinishedAt": "2026-08-03T11:30:03.685Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "j66rilnu3FzXaM9JR",
+      "name": "cvshealth-jobs-api",
+      "title": "CVS Health Jobs API + Report",
+      "summary": "A private build intended to turn CVS Health public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:24:39.526Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "nYmhH6d29eTU84VSB",
+      "name": "citigroup-jobs-api",
+      "title": "Citigroup Jobs API + Report",
+      "summary": "A private build intended to turn Citigroup public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:24:03.143Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "4gCXdFe3G7qEhA9mo",
+      "name": "fedexeurope-jobs-api",
+      "title": "FedEx Europe Jobs API",
+      "summary": "A private build intended to turn FedEx Europe public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:26:32.412Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "UrziiUV4PmaiCrMdb",
+      "name": "hcahealthcareuk-jobs-api",
+      "title": "HCA Healthcare UK Jobs",
+      "summary": "A private build intended to turn HCA Healthcare UK Jobs public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:27:06.297Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "NDozpvmURkeWiGzJo",
+      "name": "securitaseurope-jobs-api",
+      "title": "Securitas Europe Jobs API",
+      "summary": "A private build intended to turn Securitas Europe public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:30:35.566Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "ELO4MsQPikRVxIQVI",
+      "name": "sodexoaustralia-jobs-api",
+      "title": "Sodexo Australia Jobs API",
+      "summary": "A private build intended to turn Sodexo Australia public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:31:35.248Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "v1QqvCVpYtZhQSAyd",
+      "name": "stripe-jobs-api",
+      "title": "Stripe Jobs API + Report",
+      "summary": "A private build intended to turn Stripe public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:31:59.823Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "dR7f7JX44mp2ELaFv",
+      "name": "databricks-jobs-api",
+      "title": "Databricks Jobs API + Report",
+      "summary": "A private build intended to turn Databricks public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:24:51.812Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "kduNwdJAUBGYfFGWy",
+      "name": "datadog-jobs-api",
+      "title": "Datadog Jobs API + Report",
+      "summary": "A private build intended to turn Datadog public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:25:08.387Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "JLkdGTX9VMsDLR4ac",
+      "name": "snowflake-jobs-api",
+      "title": "Snowflake Jobs API + Report",
+      "summary": "A private build intended to turn Snowflake public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:31:23.022Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "Fj5POehm87xaw7xmh",
+      "name": "mongodb-jobs-api",
+      "title": "MongoDB Jobs API + Report",
+      "summary": "A private build intended to turn MongoDB public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:28:46.184Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "j18ofOO1SabwEpQEC",
+      "name": "okta-jobs-api",
+      "title": "Okta Jobs API + Report",
+      "summary": "A private build intended to turn Okta public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:28:58.976Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "BAd42HPavbancQNom",
+      "name": "cloudflare-jobs-api",
+      "title": "Cloudflare Jobs API + Report",
+      "summary": "A private build intended to turn Cloudflare public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:24:15.092Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "A1fzGXv7OYYUwcSrh",
+      "name": "canva-jobs-api",
+      "title": "Canva Jobs API + Report",
+      "summary": "A private build intended to turn Canva public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:23:51.205Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "PwzFTPPosBFh4zpOY",
+      "name": "pinterest-jobs-api",
+      "title": "Pinterest Jobs API + Report",
+      "summary": "A private build intended to turn Pinterest public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:29:11.364Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "TKTzePXiE2npVwX6x",
+      "name": "reddit-jobs-api",
+      "title": "Reddit Jobs API + Report",
+      "summary": "A private build intended to turn Reddit public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:29:47.753Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "XHW3feF0f4baSO8yt",
+      "name": "airbnbjobs-jobs-api",
+      "title": "Airbnb Jobs API + Report",
+      "summary": "A private build intended to turn Airbnb public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:22:38.344Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "UG8tzrJiAhud8ttoR",
+      "name": "spotify-jobs-api",
+      "title": "Spotify Jobs API + Report",
+      "summary": "A private build intended to turn Spotify public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:31:48.817Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "aft3sy4fB5f9opj7R",
+      "name": "gitlab-jobs-api",
+      "title": "GitLab Jobs API + Report",
+      "summary": "A private build intended to turn GitLab public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:26:44.538Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "1OTbBqzvtWZJXdFq6",
+      "name": "elastic-jobs-api",
+      "title": "Elastic Jobs API + Report",
+      "summary": "A private build intended to turn Elastic public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:26:16.749Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "yRWQR22kKmVkqScmU",
+      "name": "blockinc-jobs-api",
+      "title": "Block Jobs API + Report",
+      "summary": "A private build intended to turn Block public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:23:38.988Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "QR2MCOrbbkMP4O4vT",
+      "name": "adyen-jobs-api",
+      "title": "Adyen Jobs API + Report",
+      "summary": "A private build intended to turn Adyen public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:22:26.360Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "V7e70Xy6dbbg6WORn",
+      "name": "servicenow-jobs-api",
+      "title": "ServiceNow Jobs API + Report",
+      "summary": "A private build intended to turn ServiceNow public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:30:49.985Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "rORP4VgVUr04bIx8p",
+      "name": "abbvie-jobs-api",
+      "title": "AbbVie Jobs API + Report",
+      "summary": "A private build intended to turn AbbVie public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:21:30.518Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "MBlDuagpRfUM2hjni",
+      "name": "primark-jobs-api",
+      "title": "Primark Jobs API + Report",
+      "summary": "A private build intended to turn Primark public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:29:23.597Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "48N7bMehYLnCeMmBk",
+      "name": "deliveryhero-jobs-api",
+      "title": "Delivery Hero Jobs API",
+      "summary": "A private build intended to turn Delivery Hero public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:25:35.476Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "p77OWIhCwEBK0s8Um",
+      "name": "accor-jobs-api",
+      "title": "Accor Jobs API + Report",
+      "summary": "A private build intended to turn Accor public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:22:13.121Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "U4QmzzJulBRnAGsKT",
+      "name": "continental-jobs-api",
+      "title": "Continental Jobs API",
+      "summary": "A private build intended to turn Continental public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:24:27.660Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "gaY7UWo6GPCQsInvr",
+      "name": "hellofresh-jobs-api",
+      "title": "HelloFresh Jobs API + Report",
+      "summary": "A private build intended to turn HelloFresh public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:27:19.712Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "JFhEzlv5vTp2WRpdM",
+      "name": "dominos-jobs-api",
+      "title": "Dominos Jobs API + Report",
+      "summary": "A private build intended to turn Dominos public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:25:47.602Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "aVGitPgPaI31ovubc",
+      "name": "deliveroo-jobs-api",
+      "title": "Deliveroo Jobs API + Report",
+      "summary": "A private build intended to turn Deliveroo public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:25:22.822Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "ggQeym0IIxuNwK8KP",
+      "name": "instacart-jobs-api",
+      "title": "Instacart Jobs API + Report",
+      "summary": "A private build intended to turn Instacart public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:27:44.220Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "C03zHZSX46hjQDHCF",
+      "name": "lyft-jobs-api",
+      "title": "Lyft Jobs API + Report",
+      "summary": "A private build intended to turn Lyft public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:28:35.566Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "sNaREJjk94UiQDa9j",
+      "name": "asos-jobs-api",
+      "title": "ASOS Jobs API + Report",
+      "summary": "A private build intended to turn ASOS public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:23:14.444Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    },
+    {
+      "id": "KqczX7XenOFLYIuxn",
+      "name": "abinbev-jobs-api",
+      "title": "AB InBev Jobs API + Report",
+      "summary": "A private build intended to turn AB InBev public vacancies into a clearer feed for search and monitoring. Current output quality has not been reverified.",
+      "latestBuild": "1.0.3",
+      "latestBuildFinishedAt": "2026-08-03T11:21:48.105Z",
+      "blockers": [
+        "Private/unpublished on Apify",
+        "No current native test report matched",
+        "No public listing or Buy link"
+      ]
+    }
+  ]
+}

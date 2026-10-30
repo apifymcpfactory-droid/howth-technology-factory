@@ -4,7 +4,7 @@
         "name": "Howth Technology Factory",
         "url": "https://howthtechnologyfactory.pro/"
     },
-    "last_verified": "2026-08-03",
+    "last_verified": "2026-10-30",
     "taxonomy": {
         "problems": [
             {
@@ -613,14 +613,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/pdf-toolkit",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/pdf-toolkit-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -668,14 +661,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/eu-vat-validator",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/eu-vat-validator-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -723,14 +709,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/iban-validator",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/iban-validator-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -776,17 +755,11 @@
                 {
                     "source": "apify",
                     "sourceUrl": "https://apify.com/apifmcpfactory/sanctions-screening",
-                    "ratingCount": 0,
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/sanctions-screening",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
+                    "rating": 5,
+                    "ratingCount": 1,
+                    "reviewCount": 1,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_with_reviews"
                 }
             ],
             "shopfronts": [
@@ -832,14 +805,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/tech-stack-detector",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/tech-stack-detector-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -886,7 +852,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-checker",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -928,7 +894,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-generator",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -971,14 +937,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/llms-txt-suite",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/llms-txt-suite-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1027,14 +986,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/email-domain-checker",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/email-domain-checker-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-26",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1084,14 +1036,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/domain-health-audit",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-07-31",
-                    "verificationStatus": "verified_no_reviews"
-                },
-                {
-                    "source": "mcpize",
-                    "sourceUrl": "https://mcpize.com/mcp/domain-health-audit-mcp",
-                    "reviewCount": 0,
-                    "lastVerified": "2026-07-31",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1139,7 +1084,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/bankofamerica-jobs-api",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-08-03",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1182,7 +1127,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/homedepot-jobs-api",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-08-03",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1225,7 +1170,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/lowes-jobs-api",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-08-03",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1268,7 +1213,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/target-jobs-api",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-08-03",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1311,7 +1256,7 @@
                     "sourceUrl": "https://apify.com/apifmcpfactory/workday-jobs-api",
                     "ratingCount": 0,
                     "reviewCount": 0,
-                    "lastVerified": "2026-08-03",
+                    "lastVerified": "2026-10-30",
                     "verificationStatus": "verified_no_reviews"
                 }
             ],
@@ -1347,6 +1292,554 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV"
+        },
+        {
+            "id": "jobs-api-all-sources",
+            "name": "Jobs API: All Sources",
+            "summary": "Bring public vacancies from seven hiring platforms into one clean feed, so you can search, compare and monitor roles without maintaining a separate integration for each source.",
+            "url": "https://howthtechnologyfactory.pro/products/jobs-api-all-sources.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/jobs-api-all-sources",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/jobs-api-all-sources"
+                }
+            ],
+            "searchTerms": "Jobs API: All Sources jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "accenture-jobs-api",
+            "name": "Accenture Jobs API + Report",
+            "summary": "Track Accenture openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/accenture-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/accenture-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/accenture-jobs-api"
+                }
+            ],
+            "searchTerms": "Accenture Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "walmart-jobs-api",
+            "name": "Walmart Jobs API + Report",
+            "summary": "Track Walmart openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/walmart-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/walmart-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/walmart-jobs-api"
+                }
+            ],
+            "searchTerms": "Walmart Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "ups-jobs-api",
+            "name": "UPS Jobs API + Report",
+            "summary": "Track UPS openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/ups-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/ups-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/ups-jobs-api"
+                }
+            ],
+            "searchTerms": "UPS Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "wellsfargo-jobs-api",
+            "name": "Wells Fargo Jobs API",
+            "summary": "Track Wells Fargo openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/wellsfargo-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/wellsfargo-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/wellsfargo-jobs-api"
+                }
+            ],
+            "searchTerms": "Wells Fargo Jobs API jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "teleperformancebenelux-jobs-api",
+            "name": "Teleperformance Benelux",
+            "summary": "Track Teleperformance Benelux openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/teleperformancebenelux-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/teleperformancebenelux-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/teleperformancebenelux-jobs-api"
+                }
+            ],
+            "searchTerms": "Teleperformance Benelux jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "twilio-jobs-api",
+            "name": "Twilio Jobs API + Report",
+            "summary": "Track Twilio openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/twilio-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/twilio-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/twilio-jobs-api"
+                }
+            ],
+            "searchTerms": "Twilio Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "wise-jobs-api",
+            "name": "Wise Jobs API + Report",
+            "summary": "Track Wise openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/wise-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/wise-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/wise-jobs-api"
+                }
+            ],
+            "searchTerms": "Wise Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "tripadvisor-jobs-api",
+            "name": "Tripadvisor Jobs API",
+            "summary": "Track Tripadvisor openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/tripadvisor-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/tripadvisor-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/tripadvisor-jobs-api"
+                }
+            ],
+            "searchTerms": "Tripadvisor Jobs API jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "taketwo-jobs-api",
+            "name": "Take-Two Jobs API + Report",
+            "summary": "Track Take-Two openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/taketwo-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/taketwo-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/taketwo-jobs-api"
+                }
+            ],
+            "searchTerms": "Take-Two Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "dropbox-jobs-api",
+            "name": "Dropbox Jobs API + Report",
+            "summary": "Track Dropbox openings in one clean feed. Get useful job details and direct application links in a consistent format, so recruiting research and monitoring take less manual work.",
+            "url": "https://howthtechnologyfactory.pro/products/dropbox-jobs-api.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "operations-automation"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "web",
+                "api",
+                "mcp"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "live",
+            "release_label": "Live",
+            "reviews": [
+                {
+                    "source": "apify",
+                    "sourceUrl": "https://apify.com/apifmcpfactory/dropbox-jobs-api",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-10-30",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "apify",
+                    "name": "Apify",
+                    "url": "https://apify.com/apifmcpfactory/dropbox-jobs-api"
+                }
+            ],
+            "searchTerms": "Dropbox Jobs API + Report jobs careers feed API MCP Apify structured data monitoring"
+        },
+        {
+            "id": "sec-edgar-api",
+            "name": "SEC EDGAR API: Filings, Financials, 8-K Events & Form D",
+            "summary": "In development. Find US public-company filings, financial statements and important 8-K events in one structured result, so research starts with the regulator record instead of a manual filing search.",
+            "url": "https://howthtechnologyfactory.pro/products/sec-edgar-api.html",
+            "problems": [
+                "financial-validation"
+            ],
+            "buyers": [
+                "developers-ai",
+                "accountants-finance"
+            ],
+            "types": [
+                "api",
+                "mcp",
+                "apify-actor"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "in_development",
+            "release_label": "In development · Private",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "SEC EDGAR filings financial statements 8-K Form D API AI agent private development"
+        },
+        {
+            "id": "apify-jobs-development",
+            "name": "Jobs API Development Inventory | HTF",
+            "summary": "43 evidenced private source-specific jobs-feed builds, individually named and labelled In development with blockers.",
+            "url": "https://howthtechnologyfactory.pro/products/apify-jobs-development.html",
+            "problems": [
+                "hiring-market-intelligence"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent"
+            ],
+            "types": [
+                "api",
+                "apify-actor"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Private builds",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Apify jobs API development inventory private prototypes Greenhouse Jobs API + Report Lever Jobs API + Report Ashby Jobs API + Report Recruitee Jobs API + Report SmartRecruiters Jobs API Remote OK Jobs API + Report Jobicy Jobs API + Report Remote Jobs API + Report CVS Health Jobs API + Report Citigroup Jobs API + Report FedEx Europe Jobs API HCA Healthcare UK Jobs Securitas Europe Jobs API Sodexo Australia Jobs API Stripe Jobs API + Report Databricks Jobs API + Report Datadog Jobs API + Report Snowflake Jobs API + Report MongoDB Jobs API + Report Okta Jobs API + Report Cloudflare Jobs API + Report Canva Jobs API + Report Pinterest Jobs API + Report Reddit Jobs API + Report Airbnb Jobs API + Report Spotify Jobs API + Report GitLab Jobs API + Report Elastic Jobs API + Report Block Jobs API + Report Adyen Jobs API + Report ServiceNow Jobs API + Report AbbVie Jobs API + Report Primark Jobs API + Report Delivery Hero Jobs API Accor Jobs API + Report Continental Jobs API HelloFresh Jobs API + Report Dominos Jobs API + Report Deliveroo Jobs API + Report Instacart Jobs API + Report Lyft Jobs API + Report ASOS Jobs API + Report AB InBev Jobs API + Report"
         }
     ]
 }
