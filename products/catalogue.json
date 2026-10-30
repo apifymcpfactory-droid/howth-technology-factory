@@ -7,6 +7,7 @@
     "last_verified": "2026-10-30",
     "taxonomy": {
         "problems": [
+            {"id":"api-release-testing","name":"API release testing"},
             {
                 "id": "document-automation",
                 "name": "Document automation"
@@ -117,6 +118,7 @@
             }
         ],
         "access": [
+            {"id":"jetbrains","name":"JetBrains IDEs"},
             {
                 "id": "web",
                 "name": "Web"
@@ -160,6 +162,7 @@
         ]
     },
     "products": [
+        {"id":"api-contract-workbench-jetbrains","name":"API Contract Workbench | HTF","summary":"Review API contract changes, prepare repeatable checks and keep release evidence together in your JetBrains IDE. In development. Planned $35 per user per year.","url":"https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html","problems":["api-release-testing"],"buyers":["developers-ai"],"types":["plugin-integration"],"access":["jetbrains"],"ai_agent_compatible":false,"release_status":"in_development","release_label":"In development · Not submitted","reviews":[],"shopfronts":[],"planned_pricing":"$35 per user per year","development_status":"Development build and core automated tests; native acceptance, full planned scope, security, compatibility and licensing remain release gates.","searchTerms":"API Contract Workbench HTF JetBrains IntelliJ OpenAPI contracts HTTP testing regression release evidence Postman"},
         {
             "id": "confluence-reporting-workbench",
             "name": "Confluence Reporting Workbench | HTF",

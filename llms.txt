@@ -1,5 +1,7 @@
 # Agentic Systems Studio | HTF
 
+- [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. In development, not submitted. Planned $35 per user per year.
+
 > Focused tools for people and teams. Released APIs and MCP tools run on Apify; Figma and Jira plugins are in development. Each product page states its platform and release status.
 
 ## Pages
