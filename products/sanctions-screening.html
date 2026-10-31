@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanctions Screening: Check OFAC, EU, UK & UN</title>
-    <meta name="description" content="Screen names, companies and crypto addresses against official OFAC, EU, UK OFSI and UN sanctions lists, with cross-list consolidation and a clear verdict." />
+    <meta name="description" content="Screen names, companies and crypto addresses against five direct official sources: OFAC SDN, OFAC Consolidated, EU, the current UK Sanctions List and UN." />
     <link rel="canonical" href="https://howthtechnologyfactory.pro/products/sanctions-screening.html" />
     <meta name="robots" content="index, follow" />
 
@@ -108,7 +108,7 @@
 </svg></div>
                     <h1 class="font-display font-medium tracking-tight text-3xl sm:text-4xl md:text-5xl text-text leading-[1.12] mb-5">Sanctions Screening: Check Names Against OFAC, EU, UK & UN</h1>
                     <p class="text-lg text-muted leading-relaxed mb-8 max-w-xl">Screen names against official OFAC, EU, UK and UN sanctions lists - bulk, with match scores.</p>
-                    <p class="text-sm text-gold border border-gold/30 rounded-xl p-4 mb-6" role="note"><strong>Service verification in progress.</strong> The MCPize validation update is deployed, but hosted tool checks are still pending. The Apify version has a separate unavailable-list correction pending. Do not rely on a CLEAR result for compliance decisions while these checks and corrections remain incomplete.</p>
+                    <p class="text-sm text-gold border border-gold/30 rounded-xl p-4 mb-6" role="note"><strong>Apify maintenance verified 31 October 2026.</strong> The live Actor now fails closed on missing or stale requested coverage and screens five direct official sources. It does not provide comprehensive PEP coverage. The separate MCPize hosted checks remain pending; do not rely on MCPize CLEAR results while that verification is incomplete. All screening results still require human compliance review.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                         <a data-shopfront="apify" href="https://apify.com/apifmcpfactory/sanctions-screening" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
                             View Apify listing <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
@@ -159,10 +159,10 @@
             </div>
         </section>
 
-        <section id="mcpize-scope" class="max-w-8xl mx-auto px-6 py-12"><h2 class="font-display text-2xl mb-4">MCPize version</h2><p class="text-muted mb-3">Bring potential sanctions matches and their source evidence into one review workflow. On MCPize, screen up to 10 subjects per call against five official lists: OFAC SDN, OFAC Consolidated, EU, UK and UN. Re-screen up to 50 subjects against prior results supplied by the caller, export a cached list, or inspect list status.</p><details class="mt-4"><summary class="cursor-pointer text-gold">Capabilities, limits and platform options</summary><div class="mt-3"><p class="text-muted mb-3">The MCPize surface does not include OpenSanctions or a comprehensive PEP database. List data is cached; a monitor call does not force a new download and stores no caller history. Ownership signals do not calculate beneficial-ownership percentages. Results require human review. The MCPize validation update is deployed. Hosted screening and error handling are still awaiting verification because of a gateway access error. Do not rely on a CLEAR result for compliance decisions while this check is pending.</p><p class="text-muted">MCPize supports 10-subject screening calls and 50-subject re-checks with separate per-tool pricing. Apify offers different source coverage and bulk-run limits. <a class="text-gold underline" data-shopfront="mcpize" href="https://mcpize.com/mcp/sanctions-screening">See current MCPize plans and setup</a>.</p></div></details></section>
+        <section id="mcpize-scope" class="max-w-8xl mx-auto px-6 py-12"><h2 class="font-display text-2xl mb-4">MCPize version</h2><p class="text-muted mb-3">Bring potential sanctions matches and their source evidence into one review workflow. On MCPize, screen up to 10 subjects per call against five official lists: OFAC SDN, OFAC Consolidated, EU, UK and UN. Re-screen up to 50 subjects against prior results supplied by the caller, export a cached list, or inspect list status.</p><details class="mt-4"><summary class="cursor-pointer text-gold">Capabilities, limits and platform options</summary><div class="mt-3"><p class="text-muted mb-3">The MCPize surface does not include OpenSanctions or a comprehensive PEP database. List data is cached; a monitor call does not force a new download and stores no caller history. Ownership signals do not calculate beneficial-ownership percentages. Results require human review. The MCPize validation update is deployed. Hosted screening and error handling are still awaiting verification because of a gateway access error. Do not rely on a CLEAR result for compliance decisions while this check is pending.</p><p class="text-muted">MCPize supports 10-subject screening calls and 50-subject re-checks with separate per-tool pricing. Apify uses the same five-source scope with different bulk-run limits. <a class="text-gold underline" data-shopfront="mcpize" href="https://mcpize.com/mcp/sanctions-screening">See current MCPize plans and setup</a>.</p></div></details></section>
 
         <!-- WHAT IT DOES -->
-        <div class="max-w-8xl mx-auto px-6 pt-8"><p class="text-sm text-muted">Apify service limitation: a local source audit found that unavailable list data can leave screening incomplete without stopping a CLEAR result. A separate correction is being prepared. Do not rely on an Apify CLEAR result until this is resolved.</p></div>
+        <div class="max-w-8xl mx-auto px-6 pt-8"><p class="text-sm text-muted">Apify status: the coverage guard, current UK source migration and five-source refresh were verified on 31 October 2026. Empty, stale, missing or explicitly unsupported source coverage cannot produce a CLEAR result. Legacy OpenSanctions requests are rejected instead of silently screening fewer sources.</p></div>
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div data-aos="fade-up">
                 <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify version</div>
@@ -175,7 +175,7 @@
                     <p class="text-muted leading-relaxed">The same person or company is frequently listed independently by more than one authority. Rather than returning four rows to reconcile by hand, matches are consolidated into a single identity carrying every list it appears on, with the programme and source URL for each.</p>
                     <p class="text-muted leading-relaxed">A bare similarity score is hard to act on, so every result carries a documented verdict and a recommended action. False-positive analysis surfaces mismatching dates of birth, countries, nationalities and identifiers explicitly, so an analyst can see why a high-scoring match is probably the wrong person.</p>
                     <p class="text-muted leading-relaxed">Screening results are written before any audit certificate is generated, so a certificate failure can never cost you the screening work you already paid for. That ordering exists because of a real incident, and it is deliberate.</p>
-                    <p class="text-muted leading-relaxed">Coverage differs by shopfront and is stated honestly on each: the Apify Actor screens seven sources including OpenSanctions PEP and watchlist data, while the MCP server screens the five official government lists and says so explicitly rather than implying broader coverage.</p>
+                    <p class="text-muted leading-relaxed">Both shopfronts are scoped to five direct official sources: OFAC SDN, OFAC Consolidated, EU, the current FCDO UK Sanctions List and UN. Neither claims comprehensive PEP coverage. The Apify Actor's current five-source refresh and supported screening path are verified; MCPize hosted verification remains pending.</p>
             </div>
         </section>
 
@@ -210,8 +210,8 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div class="frame-hover rounded-2xl border border-borderc bg-surface p-7">
-                    <h3 class="font-display font-semibold text-base text-text mb-2">Five official sources on MCPize</h3>
-                    <p class="text-sm text-muted leading-relaxed">MCPize uses OFAC SDN, OFAC Consolidated, EU, UK OFSI and UN. Apify also supports OpenSanctions sanctions and PEP collections.</p>
+                    <h3 class="font-display font-semibold text-base text-text mb-2">Five direct official sources</h3>
+                    <p class="text-sm text-muted leading-relaxed">Apify uses OFAC SDN, OFAC Consolidated, EU, the current FCDO UK Sanctions List and UN. OpenSanctions feeds and comprehensive PEP coverage are not included.</p>
                 </div>
                 <div class="frame-hover rounded-2xl border border-borderc bg-surface p-7">
                     <h3 class="font-display font-semibold text-base text-text mb-2">Scored, not just flagged</h3>
