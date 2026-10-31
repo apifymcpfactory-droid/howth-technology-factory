@@ -177,7 +177,7 @@
                     <p class="text-muted leading-relaxed">Getting llms.txt right is three separate jobs: find out where you stand, produce the file, and notice when it drifts. Doing them with three different tools means three formats and no continuity &mdash; the file you write has no baseline to be measured against later.</p>
                     <p class="text-muted leading-relaxed">Because all three modes share one output contract, the score you generate against is the score you are later monitored on. Monitoring compares against a stored baseline for that site: a score and a content hash, both derived from your own public file.</p>
                     <p class="text-muted leading-relaxed">Monitoring distinguishes between the file going missing, its links breaking, the content going stale, and a plain change &mdash; so an alert tells you what happened rather than only that something did.</p>
-                    <p class="text-muted leading-relaxed">Charging happens per completed mode and never on a failed run. A run that could not finish returns its reason and costs nothing.</p>
+                    <p class="text-muted leading-relaxed">Charging happens per completed mode and never on a failed run. A mode that could not finish returns its reason without a completed-mode charge. Apify Actor-start charges can still apply.</p>
                     <p class="text-muted leading-relaxed">Link validation samples the links your file lists rather than fetching every one, so a clean result is strong evidence rather than exhaustive proof. Sampling is what keeps a monitoring run cheap enough to schedule frequently.</p>
                     <p class="text-muted leading-relaxed">The first monitoring run on a site has nothing to compare against and simply records the baseline. From then on you get a difference rather than a fresh score to interpret.</p>
                     <p class="text-muted leading-relaxed">Every mode honours the site&rsquo;s robots.txt by default and touches public pages only. The single piece of state kept between runs is the monitoring baseline, derived entirely from the site&rsquo;s own public file.</p>
@@ -202,7 +202,7 @@
                     <div class="rounded-2xl border border-gold/25 bg-surface p-7">
                         <div class="flex items-center gap-2 text-gold mb-3"><i data-lucide="credit-card" class="w-4 h-4"></i><span class="text-xs font-semibold uppercase tracking-wide">Pay per event</span></div>
                         <p class="text-text text-lg font-medium mb-2">From $0.01 per site - audit $0.01 · generate $0.03 · monitor $0.005, priced per mode.</p>
-                        <p class="text-sm text-faint">No subscription. Failed or empty inputs are never charged.</p>
+                        <p class="text-sm text-faint">Apify Actor-start and platform charges can apply separately from result events. Check the listing for current billing terms.</p>
                     </div>
                 </div>
             </div>
