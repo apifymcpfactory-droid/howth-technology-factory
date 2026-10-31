@@ -1,0 +1,9 @@
+API Contract Workbench | HTF
+Fictional sample data, not a plugin download.
+
+The contract change list is genuine output from the local development ContractDiff engine.
+The generated, authored and synced check files are actual saved native development exports. They demonstrate a separate fictional health-check contract changing minLength from 3 to 6.
+The saved-run excerpt is from the recorded native IDE development session on 31 October 2026. Private/local identifiers and timings were removed; recorded outcomes, assertions and hashes were retained.
+The check exports are draft/review-stage files. A reviewed run followed separately. Do not interpret enabled flags in a saved draft as approval to run.
+
+This browser walkthrough only reads these static files. It sends no API test requests and executes none of the sample scripts. No upload, credentials, installation or payment is involved. The IDE plugin remains in development.

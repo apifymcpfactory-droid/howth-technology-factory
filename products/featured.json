@@ -23,6 +23,29 @@
       ]
     },
     {
+      "id": "api-contract-workbench-jetbrains",
+      "label": "API Contract Workbench",
+      "platform": "JetBrains IDEs | In development",
+      "heading": [
+        "Understand the change.",
+        "Keep the proof."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Review API changes, keep authored checks through updates and hand over clear saved results. Explore the workflow with fictional data and genuine saved development outputs.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned $35 per user per year. No public installation or purchase yet.",
+      "demo": "/products/demos/api-contract-workbench-jetbrains/",
+      "demoLabel": "Explore the sample walkthrough",
+      "image": "/assets/previews/tools/api-contract-workbench-jetbrains.svg",
+      "imageAlt": "Illustrated path from contract review through reviewed checks to saved evidence",
+      "caption": "Browser walkthrough of saved fictional examples, not IDE execution or a live API test.",
+      "facts": [
+        "Review selected API changes",
+        "Preserve authored checks",
+        "Read saved evidence"
+      ]
+    },
+    {
       "id": "accessibility-release-manager-figma",
       "label": "Accessibility Audit & Release Manager",
       "platform": "Figma Design",

@@ -1,0 +1,11 @@
+[ {
+  "severity" : "BREAKING",
+  "operation" : "GET /health",
+  "location" : "header:X-Client",
+  "description" : "Parameter is newly required"
+}, {
+  "severity" : "BREAKING",
+  "operation" : "GET /legacy",
+  "location" : "operation",
+  "description" : "Operation removed"
+} ]

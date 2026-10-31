@@ -1,0 +1,54 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Fictional native constraint QA",
+    "version": "before"
+  },
+  "x-owner": {
+    "preserve": "original bytes"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "parameters": [
+          {
+            "name": "X-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "healthy",
+                    "fixture"
+                  ],
+                  "properties": {
+                    "healthy": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    },
+                    "fixture": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 100
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

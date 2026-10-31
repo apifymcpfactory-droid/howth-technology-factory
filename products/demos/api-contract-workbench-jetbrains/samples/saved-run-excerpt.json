@@ -1,0 +1,34 @@
+{
+  "notice": "Public excerpt of a genuine saved development run using fictional data. Local run/case identifiers, environment revision, Git marker, exact time and timing omitted. Outcomes, status, assertion flags, response and input hashes retained. Not a new browser or IDE execution.",
+  "recordedDate": "2026-10-31",
+  "contractRevision": "354a125d984a48054e2e679248037bc508385d6532e656ee412acf09cd0568d4",
+  "suiteRevision": "d1a9a28806b2b01bd58e1940f467a4b9639e3ed131e754ace687bfd7719434c9",
+  "results": [
+    {
+      "method": "GET",
+      "outcome": "SKIPPED",
+      "status": 0,
+      "responseSha256": "",
+      "assertions": []
+    },
+    {
+      "method": "GET",
+      "outcome": "PASS",
+      "status": 200,
+      "responseSha256": "ed8e0751a7482d816fe7c3a07a11ac38f6a6cd002a5dd2f2f500ae62a2fa1e95",
+      "assertions": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

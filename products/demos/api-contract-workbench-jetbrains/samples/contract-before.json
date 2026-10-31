@@ -1,0 +1,1 @@
+{"openapi":"3.1.0","info":{"title":"Fictional Pet API","version":"1"},"paths":{"/health":{"get":{"responses":{"200":{"description":"Healthy"}}}},"/legacy":{"get":{"responses":{"200":{"description":"Legacy"}}}}}}

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "health-check",
+    "method": "GET",
+    "path": "/health",
+    "expectedStatus": 200,
+    "scripts": [
+      "return data.status === 200;"
+    ],
+    "enabled": false
+  },
+  {
+    "id": "oas-771758d89474",
+    "method": "GET",
+    "contractOperation": "GET /health",
+    "contractSignature": "c441ba47c5b3504f04679c27355ecabb24f70c588eabfd30dee50415599194b1",
+    "needsReview": false,
+    "headers": {
+      "X-Client": "{{header_X_Client}}",
+      "X-Authored": "fictional"
+    },
+    "path": "/health",
+    "expectedStatus": 200,
+    "enabled": true,
+    "reviewNote": "Choose inputs and confirm this expected status before enabling. No request has run.",
+    "scripts": [
+      "return data.status === 200;"
+    ],
+    "jsonChecks": [
+      {
+        "pointer": "",
+        "rule": "type",
+        "expected": "object",
+        "optional": false
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "exists"
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "type",
+        "expected": "boolean",
+        "optional": false
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "enum",
+        "optional": false,
+        "expected": [
+          true
+        ]
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "exists"
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "type",
+        "expected": "string",
+        "optional": false
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "minLength",
+        "optional": false,
+        "expected": 3
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "maxLength",
+        "optional": false,
+        "expected": 100
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "equals",
+        "expected": true,
+        "x-authored": "keep"
+      }
+    ],
+    "generatedJsonChecks": [
+      {
+        "pointer": "",
+        "rule": "type",
+        "expected": "object",
+        "optional": false
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "exists"
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "type",
+        "expected": "boolean",
+        "optional": false
+      },
+      {
+        "pointer": "/healthy",
+        "rule": "enum",
+        "optional": false,
+        "expected": [
+          true
+        ]
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "exists"
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "type",
+        "expected": "string",
+        "optional": false
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "minLength",
+        "optional": false,
+        "expected": 3
+      },
+      {
+        "pointer": "/fixture",
+        "rule": "maxLength",
+        "optional": false,
+        "expected": 100
+      }
+    ],
+    "x-authored": {
+      "keep": true
+    }
+  }
+]

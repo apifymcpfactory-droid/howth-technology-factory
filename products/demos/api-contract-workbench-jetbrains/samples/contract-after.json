@@ -1,0 +1,1 @@
+{"openapi":"3.1.0","info":{"title":"Fictional Pet API","version":"2"},"paths":{"/health":{"get":{"parameters":[{"name":"X-Client","in":"header","required":true,"schema":{"type":"string"}}],"responses":{"200":{"description":"Healthy"}}}}}}
