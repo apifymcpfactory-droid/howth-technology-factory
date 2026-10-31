@@ -1,6 +1,28 @@
 {
   "products": [
     {
+      "id": "confluence-reporting-workbench",
+      "label": "Confluence Reporting Workbench",
+      "platform": "Confluence Cloud | In development",
+      "heading": [
+        "Make the numbers clear.",
+        "Review changes with confidence."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Bring tables into a clearer report. Check calculations, compare teams and review changes before sharing the next version.",
+      "priceLead": "In development. Not submitted.",
+      "priceDetail": "Planned subscription; final prices and seat tiers to be confirmed.",
+      "demo": "/products/demos/confluence-reporting-workbench/",
+      "image": "/assets/previews/tools/confluence-reporting-workbench.svg",
+      "imageAlt": "Original illustration of the reporting workflow",
+      "caption": "Original workflow illustration. The working demo uses fictional data; native Confluence acceptance is pending.",
+      "facts": [
+        "Guided fictional-data workflow",
+        "Calculations, pivots and charts",
+        "Temporary release comparison"
+      ]
+    },
+    {
       "id": "accessibility-release-manager-figma",
       "label": "Accessibility Audit & Release Manager",
       "platform": "Figma Design",

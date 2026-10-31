@@ -197,7 +197,7 @@
         {
             "id": "confluence-reporting-workbench",
             "name": "Confluence Reporting Workbench | HTF",
-            "summary": "In development. A planned Confluence reporting workbench for typed data imports, filters, spreadsheet calculations, pivots, charts and reusable reports with source checks and release comparisons.",
+            "summary": "Turn tables into a clear report, check team totals and review what changed. Working fictional browser demo. In development for Confluence; native acceptance and final pricing remain pending.",
             "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
             "problems": [
                 "project-context"
@@ -217,9 +217,9 @@
             "release_label": "In development",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Confluence reporting workbench HTF tables typed data filters calculations pivots charts source checks release comparison",
-            "development_status": "Core engines in implementation. Integrated UI, native permissions, licensing, exports and scale acceptance are not verified. No public listing or demo.",
-            "planned_pricing": "Subscription; final tiers to be confirmed"
+            "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
+            "development_status": "Working fictional-data browser demo of the current UI and calculation logic. Native Confluence permissions, storage, licensing, downloads and document-export acceptance remain pending. Not submitted.",
+            "planned_pricing": "Subscription; final prices and seat tiers to be confirmed"
         },
         {
             "id": "accessibility-release-manager-figma",
