@@ -95,3 +95,6 @@
 - [Dropbox Jobs API + Report](https://howthtechnologyfactory.pro/products/dropbox-jobs-api.html)
 - [SEC EDGAR API: Filings, Financials, 8-K Events & Form D](https://howthtechnologyfactory.pro/products/sec-edgar-api.html)
 - [Jobs API Development Inventory | HTF](https://howthtechnologyfactory.pro/products/apify-jobs-development.html)
+
+## MCPize development
+- [MCP Hiring & Company Research Tools | HTF](https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html): MCP hiring and company-research products in development, with individual scope and planned pricing.

@@ -158,14 +158,16 @@
             </div>
         </section>
 
+        <section id="mcpize-scope" class="max-w-8xl mx-auto px-6 py-12"><h2 class="font-display text-2xl mb-4">MCPize version</h2><p class="text-muted mb-3">Review the public email setup behind an address or domain before relying on it. On MCPize, check one email/domain or up to 100 inputs for MX, SPF, DMARC, DKIM selector responses and disposable or role-address flags.</p><details class="mt-4"><summary class="cursor-pointer text-gold">Capabilities, limits and platform options</summary><div class="mt-3"><p class="text-muted mb-3">No SMTP conversation or mailbox-existence check is performed. DNS records do not guarantee delivery, reputation, consent or successful authentication of a real message. DKIM selector probing cannot prove that no signing key exists.</p><p class="text-muted">MCPize supports up to 100 inputs per call, with its own plans. Apify provides a separate batch workflow and pricing. <a class="text-gold underline" data-shopfront="mcpize" href="https://mcpize.com/mcp/email-domain-checker-mcp">See current MCPize plans and setup</a>.</p></div></details></section>
+
         <!-- WHAT IT DOES -->
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">What it does</div>
-                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">In plain language.</h2>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify version</div>
+                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">The Apify workflow.</h2>
             </div>
             <div class="lg:col-span-2 space-y-4 text-base" data-aos="fade-up" data-aos-delay="80">
-                <p class="text-muted leading-relaxed">Every domain publishes its own DNS records for MX, SPF, DKIM and DMARC - the public signals that determine whether mail sent to it will actually arrive and be trusted. This tool reads all of them directly, with no SMTP connection and no mailbox ping.</p>
+                <p class="text-muted leading-relaxed">Public DNS records provide useful evidence about a domain’s mail setup. This tool checks MX, SPF, DKIM and DMARC signals without an SMTP connection or mailbox ping; records alone do not guarantee delivery or trust.</p>
                     <p class="text-muted leading-relaxed">Five honestly distinct outcomes replace one generic failure: a domain that doesn't exist, one that resolves but can't receive mail, a genuine DNS hiccup, bad input, or a fully checked domain - plus disposable and role-address flags for cleaning a list.</p>
                     <p class="text-muted leading-relaxed">Runs the same whether a person checks one address or an AI agent bulk-checks a hundred mid-workflow.</p>
                     <p class="text-muted leading-relaxed">Two questions get confused with each other: whether mail to an address will bounce, and whether a domain is configured so its own mail reaches inboxes. They have different answers and different fixes, and only the second is answerable reliably.</p>
@@ -190,7 +192,7 @@
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">
-                    <h2 class="font-display font-medium text-2xl mb-6">Pricing</h2>
+                    <h2 class="font-display font-medium text-2xl mb-6">Apify pricing</h2>
                     <div class="rounded-2xl border border-gold/25 bg-surface p-7">
                         <div class="flex items-center gap-2 text-gold mb-3"><i data-lucide="credit-card" class="w-4 h-4"></i><span class="text-xs font-semibold uppercase tracking-wide">Pay per event</span></div>
                         <p class="text-text text-lg font-medium mb-2">$0.005 per input checked.</p>
@@ -203,7 +205,7 @@
         <!-- FEATURES -->
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24">
             <div class="max-w-2xl mb-12" data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Why it's built this way</div>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify features</div>
                 <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">Fewer knobs. Better defaults.</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -343,8 +345,7 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../assets/js/main.js"></script>
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": "https://howthtechnologyfactory.pro/products/email-domain-checker.html#software",
@@ -352,14 +353,25 @@
     "description": "Check MX, SPF, DKIM and DMARC records from DNS alone - spot disposable and role addresses too.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "featureList": ["Check MX, SPF, DKIM and DMARC records using DNS", "Return clear email and domain outcomes", "Flag disposable and role addresses"],
+    "featureList": [
+        "Apify workflow: Check MX, SPF, DKIM and DMARC records using DNS",
+        "Apify workflow: Return clear email and domain outcomes",
+        "Apify workflow: Flag disposable and role addresses"
+    ],
     "url": "https://howthtechnologyfactory.pro/products/email-domain-checker.html",
-    "sameAs": ["https://apify.com/apifmcpfactory/email-domain-checker", "https://mcpize.com/mcp/email-domain-checker-mcp"],
+    "sameAs": [
+        "https://apify.com/apifmcpfactory/email-domain-checker",
+        "https://mcpize.com/mcp/email-domain-checker-mcp"
+    ],
     "brand": {
         "@id": "https://howthtechnologyfactory.pro/#organization"
     },
-    "provider": { "@id": "https://howthtechnologyfactory.pro/#organization" },
-    "publisher": { "@id": "https://howthtechnologyfactory.pro/#organization" },
+    "provider": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
+    "publisher": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
     "offers": [
         {
             "@type": "Offer",
@@ -375,18 +387,16 @@
         },
         {
             "@type": "Offer",
-            "price": 0.005,
             "priceCurrency": "USD",
             "url": "https://mcpize.com/mcp/email-domain-checker-mcp",
             "availability": "https://schema.org/InStock",
-            "description": "$0.005 per input checked.",
+            "description": "MCPize has separate plans, call quotas and billing terms. See the listing for current pricing.",
             "seller": {
                 "@type": "Organization",
                 "name": "MCPize"
             }
         }
     ]
-}
-    </script>
+}</script>
 </body>
 </html>

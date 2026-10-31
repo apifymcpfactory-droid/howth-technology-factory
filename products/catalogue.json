@@ -7,7 +7,10 @@
     "last_verified": "2026-10-30",
     "taxonomy": {
         "problems": [
-            {"id":"api-release-testing","name":"API release testing"},
+            {
+                "id": "api-release-testing",
+                "name": "API release testing"
+            },
             {
                 "id": "document-automation",
                 "name": "Document automation"
@@ -118,7 +121,10 @@
             }
         ],
         "access": [
-            {"id":"jetbrains","name":"JetBrains IDEs"},
+            {
+                "id": "jetbrains",
+                "name": "JetBrains IDEs"
+            },
             {
                 "id": "web",
                 "name": "Web"
@@ -162,7 +168,32 @@
         ]
     },
     "products": [
-        {"id":"api-contract-workbench-jetbrains","name":"API Contract Workbench | HTF","summary":"Review API contract changes, prepare repeatable checks and keep release evidence together in your JetBrains IDE. In development. Planned $35 per user per year.","url":"https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html","problems":["api-release-testing"],"buyers":["developers-ai"],"types":["plugin-integration"],"access":["jetbrains"],"ai_agent_compatible":false,"release_status":"in_development","release_label":"In development · Not submitted","reviews":[],"shopfronts":[],"planned_pricing":"$35 per user per year","development_status":"Development build and core automated tests; native acceptance, full planned scope, security, compatibility and licensing remain release gates.","searchTerms":"API Contract Workbench HTF JetBrains IntelliJ OpenAPI contracts HTTP testing regression release evidence Postman"},
+        {
+            "id": "api-contract-workbench-jetbrains",
+            "name": "API Contract Workbench | HTF",
+            "summary": "Review API contract changes, prepare repeatable checks and keep release evidence together in your JetBrains IDE. In development. Planned $35 per user per year.",
+            "url": "https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html",
+            "problems": [
+                "api-release-testing"
+            ],
+            "buyers": [
+                "developers-ai"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "jetbrains"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "planned_pricing": "$35 per user per year",
+            "development_status": "Development build and core automated tests; native acceptance, full planned scope, security, compatibility and licensing remain release gates.",
+            "searchTerms": "API Contract Workbench HTF JetBrains IntelliJ OpenAPI contracts HTTP testing regression release evidence Postman"
+        },
         {
             "id": "confluence-reporting-workbench",
             "name": "Confluence Reporting Workbench | HTF",
@@ -589,7 +620,7 @@
         {
             "id": "pdf-toolkit",
             "name": "PDF Toolkit",
-            "summary": "Merge, split, compress, rotate, watermark and convert PDFs in automated workflows.",
+            "summary": "Prepare PDF batches through Apify or MCPize, with operations and file limits clearly listed for each platform.",
             "url": "https://howthtechnologyfactory.pro/products/pdf-toolkit.html",
             "problems": [
                 "document-automation"
@@ -913,7 +944,7 @@
         {
             "id": "llms-txt-suite",
             "name": "llms.txt Suite",
-            "summary": "Audit, generate and monitor llms.txt and related AI-readiness signals.",
+            "summary": "Audit llms.txt and prepare a draft for review. Apify also supports monitoring; MCPize offers audit, generation and bulk audit.",
             "url": "https://howthtechnologyfactory.pro/products/llms-txt-suite.html",
             "problems": [
                 "ai-visibility-readiness"
@@ -1793,7 +1824,7 @@
         },
         {
             "id": "sec-edgar-api",
-            "name": "SEC EDGAR API: Filings, Financials, 8-K Events & Form D",
+            "name": "SEC EDGAR: Filings, Financials & Material Events | HTF",
             "summary": "In development. Find US public-company filings, financial statements and important 8-K events in one structured result, so research starts with the regulator record instead of a manual filing search.",
             "url": "https://howthtechnologyfactory.pro/products/sec-edgar-api.html",
             "problems": [
@@ -1813,10 +1844,10 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "in_development",
-            "release_label": "In development · Private",
+            "release_label": "In development · Apify and MCPize",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "SEC EDGAR filings financial statements 8-K Form D API AI agent private development"
+            "searchTerms": "SEC EDGAR filings financial statements 8-K  API AI agent private development"
         },
         {
             "id": "apify-jobs-development",
@@ -1843,6 +1874,34 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Apify jobs API development inventory private prototypes Greenhouse Jobs API + Report Lever Jobs API + Report Ashby Jobs API + Report Recruitee Jobs API + Report SmartRecruiters Jobs API Remote OK Jobs API + Report Jobicy Jobs API + Report Remote Jobs API + Report CVS Health Jobs API + Report Citigroup Jobs API + Report FedEx Europe Jobs API HCA Healthcare UK Jobs Securitas Europe Jobs API Sodexo Australia Jobs API Stripe Jobs API + Report Databricks Jobs API + Report Datadog Jobs API + Report Snowflake Jobs API + Report MongoDB Jobs API + Report Okta Jobs API + Report Cloudflare Jobs API + Report Canva Jobs API + Report Pinterest Jobs API + Report Reddit Jobs API + Report Airbnb Jobs API + Report Spotify Jobs API + Report GitLab Jobs API + Report Elastic Jobs API + Report Block Jobs API + Report Adyen Jobs API + Report ServiceNow Jobs API + Report AbbVie Jobs API + Report Primark Jobs API + Report Delivery Hero Jobs API Accor Jobs API + Report Continental Jobs API HelloFresh Jobs API + Report Dominos Jobs API + Report Deliveroo Jobs API + Report Instacart Jobs API + Report Lyft Jobs API + Report ASOS Jobs API + Report AB InBev Jobs API + Report"
+        },
+        {
+            "id": "mcpize-development-inventory",
+            "name": "MCP Hiring & Company Research Tools | HTF",
+            "summary": "Hiring feeds and public-company research for MCP clients. Named products, planned workflows and pricing, all clearly marked In development.",
+            "url": "https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html",
+            "problems": [
+                "hiring-market-intelligence",
+                "financial-validation"
+            ],
+            "buyers": [
+                "developers-ai",
+                "recruiting-talent",
+                "accountants-finance"
+            ],
+            "types": [
+                "mcp",
+                "api"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": true,
+            "release_status": "in_development",
+            "release_label": "In development · MCPize",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Accenture Jobs MCP | HTF Bank of America Jobs MCP | HTF Citigroup Jobs MCP | HTF CVS Health Jobs MCP | HTF Databricks Jobs MCP | HTF Datadog Jobs MCP | HTF The Home Depot Jobs MCP | HTF Jobs API MCP | HTF Lowe’s Jobs MCP | HTF SEC EDGAR MCP | HTF Stripe Jobs MCP | HTF Target Jobs MCP | HTF UPS Jobs MCP | HTF Walmart Jobs MCP | HTF hiring SEC EDGAR filings financials MCPize development"
         }
     ]
 }

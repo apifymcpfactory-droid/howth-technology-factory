@@ -108,12 +108,13 @@
 </svg></div>
                     <h1 class="font-display font-medium tracking-tight text-3xl sm:text-4xl md:text-5xl text-text leading-[1.12] mb-5">Sanctions Screening: Check Names Against OFAC, EU, UK & UN</h1>
                     <p class="text-lg text-muted leading-relaxed mb-8 max-w-xl">Screen names against official OFAC, EU, UK and UN sanctions lists - bulk, with match scores.</p>
+                    <p class="text-sm text-gold border border-gold/30 rounded-xl p-4 mb-6" role="note"><strong>Service verification in progress.</strong> The MCPize validation update is deployed, but hosted tool checks are still pending. The Apify version has a separate unavailable-list correction pending. Do not rely on a CLEAR result for compliance decisions while these checks and corrections remain incomplete.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                         <a data-shopfront="apify" href="https://apify.com/apifmcpfactory/sanctions-screening" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold text-[#14140f] font-medium px-6 py-3.5 rounded-full hover:brightness-105 transition-all">
-                            Try it on Apify <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            View Apify listing <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                         </a>
                         <a data-shopfront="mcpize" href="https://mcpize.com/mcp/sanctions-screening" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-transparent border-2 border-[#8542F0] text-[#8542F0] font-medium px-[22px] py-3 rounded-full hover:bg-[#8542F0]/10 transition-all">
-                            Get it on MCPize <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            View MCPize listing <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                         </a>
                         <a href="#agents" class="inline-flex items-center gap-2 text-sm text-muted hover:text-text">
                             <i data-lucide="bot" class="w-4 h-4"></i> Call it via MCP
@@ -158,11 +159,14 @@
             </div>
         </section>
 
+        <section id="mcpize-scope" class="max-w-8xl mx-auto px-6 py-12"><h2 class="font-display text-2xl mb-4">MCPize version</h2><p class="text-muted mb-3">Bring potential sanctions matches and their source evidence into one review workflow. On MCPize, screen up to 10 subjects per call against five official lists: OFAC SDN, OFAC Consolidated, EU, UK and UN. Re-screen up to 50 subjects against prior results supplied by the caller, export a cached list, or inspect list status.</p><details class="mt-4"><summary class="cursor-pointer text-gold">Capabilities, limits and platform options</summary><div class="mt-3"><p class="text-muted mb-3">The MCPize surface does not include OpenSanctions or a comprehensive PEP database. List data is cached; a monitor call does not force a new download and stores no caller history. Ownership signals do not calculate beneficial-ownership percentages. Results require human review. The MCPize validation update is deployed. Hosted screening and error handling are still awaiting verification because of a gateway access error. Do not rely on a CLEAR result for compliance decisions while this check is pending.</p><p class="text-muted">MCPize supports 10-subject screening calls and 50-subject re-checks with separate per-tool pricing. Apify offers different source coverage and bulk-run limits. <a class="text-gold underline" data-shopfront="mcpize" href="https://mcpize.com/mcp/sanctions-screening">See current MCPize plans and setup</a>.</p></div></details></section>
+
         <!-- WHAT IT DOES -->
+        <div class="max-w-8xl mx-auto px-6 pt-8"><p class="text-sm text-muted">Apify service limitation: a local source audit found that unavailable list data can leave screening incomplete without stopping a CLEAR result. A separate correction is being prepared. Do not rely on an Apify CLEAR result until this is resolved.</p></div>
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">What it does</div>
-                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">In plain language.</h2>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify version</div>
+                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">The Apify workflow.</h2>
             </div>
             <div class="lg:col-span-2 space-y-4 text-base" data-aos="fade-up" data-aos-delay="80">
                 <p class="text-muted leading-relaxed">Screens any name or company against the current OFAC, EU, UK and UN sanctions and watchlists - official sources only.</p>
@@ -188,10 +192,10 @@
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">
-                    <h2 class="font-display font-medium text-2xl mb-6">Pricing</h2>
+                    <h2 class="font-display font-medium text-2xl mb-6">Apify pricing</h2>
                     <div class="rounded-2xl border border-gold/25 bg-surface p-7">
                         <div class="flex items-center gap-2 text-gold mb-3"><i data-lucide="credit-card" class="w-4 h-4"></i><span class="text-xs font-semibold uppercase tracking-wide">Pay per event</span></div>
-                        <p class="text-text text-lg font-medium mb-2">$0.02 per name screened.</p>
+                        <p class="text-text text-lg font-medium mb-2">$0.01 per name screened.</p>
                         <p class="text-sm text-faint">No subscription. Failed or empty inputs are never charged.</p>
                     </div>
                 </div>
@@ -201,13 +205,13 @@
         <!-- FEATURES -->
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24">
             <div class="max-w-2xl mb-12" data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Why it's built this way</div>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify features</div>
                 <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">Fewer knobs. Better defaults.</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div class="frame-hover rounded-2xl border border-borderc bg-surface p-7">
-                    <h3 class="font-display font-semibold text-base text-text mb-2">Official lists only</h3>
-                    <p class="text-sm text-muted leading-relaxed">OFAC SDN, OFAC Consolidated, EU, UK OFSI and UN - no third-party aggregation.</p>
+                    <h3 class="font-display font-semibold text-base text-text mb-2">Five official sources on MCPize</h3>
+                    <p class="text-sm text-muted leading-relaxed">MCPize uses OFAC SDN, OFAC Consolidated, EU, UK OFSI and UN. Apify also supports OpenSanctions sanctions and PEP collections.</p>
                 </div>
                 <div class="frame-hover rounded-2xl border border-borderc bg-surface p-7">
                     <h3 class="font-display font-semibold text-base text-text mb-2">Scored, not just flagged</h3>
@@ -215,7 +219,7 @@
                 </div>
                 <div class="frame-hover rounded-2xl border border-borderc bg-surface p-7">
                     <h3 class="font-display font-semibold text-base text-text mb-2">Bulk-ready</h3>
-                    <p class="text-sm text-muted leading-relaxed">Screen one name or a few thousand in the same call shape.</p>
+                    <p class="text-sm text-muted leading-relaxed">Choose the platform for your batch size. MCPize screens up to 10 subjects per call and re-checks up to 50 against results you supply; Apify has separate bulk-run limits.</p>
                 </div>
             </div>
         </section>
@@ -338,8 +342,7 @@
     
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../assets/js/main.js"></script>
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": "https://howthtechnologyfactory.pro/products/sanctions-screening.html#software",
@@ -347,14 +350,31 @@
     "description": "Screen names against official OFAC, EU, UK and UN sanctions lists - bulk, with match scores.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "featureList": ["Screen names, companies and crypto addresses against official OFAC, EU, UK and UN sanctions lists", "Consolidate the same identity across lists into one match instead of one row per list", "Return a CLEAR, REVIEW or ESCALATE verdict with a recommended action", "Analyse likely false positives against date of birth, country, nationality and identifiers", "Screen denied-party crypto wallet addresses", "Monitor changes: re-screen subjects and report only what changed since the last check", "Export an official sanctions list as CSV, JSON or XLSX", "Generate a PDF audit certificate for the screening file", "Screen names in bulk"],
+    "featureList": [
+        "Apify workflow: Screen names, companies and crypto addresses against official OFAC, EU, UK and UN sanctions lists",
+        "Apify workflow: Consolidate the same identity across lists into one match instead of one row per list",
+        "Apify workflow: Return a CLEAR, REVIEW or ESCALATE verdict with a recommended action",
+        "Apify workflow: Analyse likely false positives against date of birth, country, nationality and identifiers",
+        "Apify workflow: Screen denied-party crypto wallet addresses",
+        "Apify workflow: Monitor changes: re-screen subjects and report only what changed since the last check",
+        "Apify workflow: Export an official sanctions list as CSV, JSON or XLSX",
+        "Apify workflow: Generate a PDF audit certificate for the screening file",
+        "Apify workflow: Screen names in bulk"
+    ],
     "url": "https://howthtechnologyfactory.pro/products/sanctions-screening.html",
-    "sameAs": ["https://apify.com/apifmcpfactory/sanctions-screening", "https://mcpize.com/mcp/sanctions-screening"],
+    "sameAs": [
+        "https://apify.com/apifmcpfactory/sanctions-screening",
+        "https://mcpize.com/mcp/sanctions-screening"
+    ],
     "brand": {
         "@id": "https://howthtechnologyfactory.pro/#organization"
     },
-    "provider": { "@id": "https://howthtechnologyfactory.pro/#organization" },
-    "publisher": { "@id": "https://howthtechnologyfactory.pro/#organization" },
+    "provider": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
+    "publisher": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
     "offers": [
         {
             "@type": "Offer",
@@ -382,11 +402,10 @@
         },
         {
             "@type": "Offer",
-            "price": 0.02,
             "priceCurrency": "USD",
             "url": "https://mcpize.com/mcp/sanctions-screening",
             "availability": "https://schema.org/InStock",
-            "description": "$0.02 per screen_entity call, and $0.02 per monitor_changes call.",
+            "description": "MCPize has separate plans, call quotas and billing terms. See the listing for current pricing.",
             "seller": {
                 "@type": "Organization",
                 "name": "MCPize"
@@ -394,18 +413,16 @@
         },
         {
             "@type": "Offer",
-            "price": 0.05,
             "priceCurrency": "USD",
             "url": "https://mcpize.com/mcp/sanctions-screening",
             "availability": "https://schema.org/InStock",
-            "description": "$0.05 per export_list call. Status checks are $0.01.",
+            "description": "MCPize has separate plans, call quotas and billing terms. See the listing for current pricing.",
             "seller": {
                 "@type": "Organization",
                 "name": "MCPize"
             }
         }
     ]
-}
-    </script>
+}</script>
 </body>
 </html>

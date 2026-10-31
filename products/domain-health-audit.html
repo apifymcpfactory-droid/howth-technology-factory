@@ -158,11 +158,13 @@
             </div>
         </section>
 
+        <section id="mcpize-scope" class="max-w-8xl mx-auto px-6 py-12"><h2 class="font-display text-2xl mb-4">MCPize version</h2><p class="text-muted mb-3">Turn domain and email-configuration findings into a clear repair plan. On MCPize, audit up to 25 domains, create an HTML portfolio report for up to 50, or check published bulk-sender configuration for up to 100. Findings include a scoring rubric and suggested DNS records to review.</p><details class="mt-4"><summary class="cursor-pointer text-gold">Capabilities, limits and platform options</summary><div class="mt-3"><p class="text-muted mb-3">The 5,000-domain batch limit belongs to Apify. MCPize returns HTML reports, not a PDF-generation tool, and exposes no persistent change-monitoring tool. Readiness covers published configuration, not complaint rates, one-click unsubscribe, sending-IP reverse DNS or a live SMTP session. Supply known DKIM selectors for more definitive evidence.</p><p class="text-muted">Choose MCPize for on-demand calls within the 25/50/100 domain limits above. Apify offers a separate bulk-run workflow and pricing. <a class="text-gold underline" data-shopfront="mcpize" href="https://mcpize.com/mcp/domain-health-audit-mcp">See current MCPize plans and setup</a>.</p></div></details></section>
+
         <!-- WHAT IT DOES -->
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">What it does</div>
-                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">In plain language.</h2>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify version</div>
+                <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">The Apify workflow.</h2>
             </div>
             <div class="lg:col-span-2 space-y-4 text-base" data-aos="fade-up" data-aos-delay="80">
                 <p class="text-muted leading-relaxed">Point it at a list of domains &mdash; one, or five thousand &mdash; and it reads everything those domains publish about themselves: DNS records, who they are registered to and when that lapses, the website certificate, how the site handles insecure connections, and the whole email-authentication stack.</p>
@@ -188,7 +190,7 @@
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="80">
-                    <h2 class="font-display font-medium text-2xl mb-6">Pricing</h2>
+                    <h2 class="font-display font-medium text-2xl mb-6">Apify pricing</h2>
                     <div class="rounded-2xl border border-gold/25 bg-surface p-7">
                         <div class="flex items-center gap-2 text-gold mb-3"><i data-lucide="credit-card" class="w-4 h-4"></i><span class="text-xs font-semibold uppercase tracking-wide">Pay per event</span></div>
                         <p class="text-text text-lg font-medium mb-2">$0.012 per domain audited.</p>
@@ -202,7 +204,7 @@
         <!-- FEATURES -->
         <section class="max-w-8xl mx-auto px-6 py-20 md:py-24">
             <div class="max-w-2xl mb-12" data-aos="fade-up">
-                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Why it's built this way</div>
+                <div class="text-xs font-semibold tracking-wide text-gold uppercase mb-3">Apify features</div>
                 <h2 class="font-display font-medium text-2xl md:text-3xl tracking-tight text-text">Fewer knobs. Better defaults.</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -381,8 +383,7 @@
     
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../assets/js/main.js"></script>
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": "https://howthtechnologyfactory.pro/products/domain-health-audit.html#software",
@@ -390,14 +391,37 @@
     "description": "Audit up to 5,000 domains for DNS, WHOIS, SSL and email-authentication problems, with a published score and the exact DNS records to publish to fix each one.",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Web",
-    "featureList": ["Audit up to 5,000 domains in one run", "Score every domain 0-100 against a published rubric", "Check SPF including the full recursive 10-lookup budget", "Validate DMARC against RFC 9989, including records still carrying removed settings", "Test DKIM across user-supplied, provider-inferred and 2,056 known selector names", "Check MX, MTA-STS, TLS-RPT, DNSSEC, DANE and reverse DNS", "Read registration and expiry via RDAP with a WHOIS fallback", "Inspect the website certificate, redirects and security headers", "Validate BIMI records and read the logo certificate issuer and expiry", "Name every sending service behind an SPF record", "Return the exact DNS record to publish for every problem found", "Rewrite an SPF record that has outgrown the lookup limit", "Produce a staged DMARC rollout plan", "Generate a white-label HTML and PDF report", "Track what changed between scheduled runs and alert on regressions"],
+    "featureList": [
+        "Apify workflow: Audit up to 5,000 domains in one run",
+        "Apify workflow: Score every domain 0-100 against a published rubric",
+        "Apify workflow: Check SPF including the full recursive 10-lookup budget",
+        "Apify workflow: Validate DMARC against RFC 9989, including records still carrying removed settings",
+        "Apify workflow: Test DKIM across user-supplied, provider-inferred and 2,056 known selector names",
+        "Apify workflow: Check MX, MTA-STS, TLS-RPT, DNSSEC, DANE and reverse DNS",
+        "Apify workflow: Read registration and expiry via RDAP with a WHOIS fallback",
+        "Apify workflow: Inspect the website certificate, redirects and security headers",
+        "Apify workflow: Validate BIMI records and read the logo certificate issuer and expiry",
+        "Apify workflow: Name every sending service behind an SPF record",
+        "Apify workflow: Return the exact DNS record to publish for every problem found",
+        "Apify workflow: Rewrite an SPF record that has outgrown the lookup limit",
+        "Apify workflow: Produce a staged DMARC rollout plan",
+        "Apify workflow: Generate a white-label HTML and PDF report",
+        "Apify workflow: Track what changed between scheduled runs and alert on regressions"
+    ],
     "url": "https://howthtechnologyfactory.pro/products/domain-health-audit.html",
-    "sameAs": ["https://apify.com/apifmcpfactory/domain-health-audit", "https://mcpize.com/mcp/domain-health-audit-mcp"],
+    "sameAs": [
+        "https://apify.com/apifmcpfactory/domain-health-audit",
+        "https://mcpize.com/mcp/domain-health-audit-mcp"
+    ],
     "brand": {
         "@id": "https://howthtechnologyfactory.pro/#organization"
     },
-    "provider": { "@id": "https://howthtechnologyfactory.pro/#organization" },
-    "publisher": { "@id": "https://howthtechnologyfactory.pro/#organization" },
+    "provider": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
+    "publisher": {
+        "@id": "https://howthtechnologyfactory.pro/#organization"
+    },
     "offers": [
         {
             "@type": "Offer",
@@ -413,18 +437,16 @@
         },
         {
             "@type": "Offer",
-            "price": 0.02,
             "priceCurrency": "USD",
             "url": "https://mcpize.com/mcp/domain-health-audit-mcp",
             "availability": "https://schema.org/InStock",
-            "description": "$0.02 per audit_domain call, $0.10 per generate_report call, and $0.01 per check_mandate_compliance call.",
+            "description": "MCPize has separate plans, call quotas and billing terms. See the listing for current pricing.",
             "seller": {
                 "@type": "Organization",
                 "name": "MCPize"
             }
         }
     ]
-}
-</script>
+}</script>
 </body>
 </html>
