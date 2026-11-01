@@ -98,3 +98,7 @@
 
 ## MCPize development
 - [MCP Hiring & Company Research Tools | HTF](https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html): MCP hiring and company-research products in development, with individual scope and planned pricing.
+
+- [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): In development for Unreal Engine · Fab. Not submitted or available to buy.
+
+- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): In development for Unity Asset Store. Not submitted or available to buy.

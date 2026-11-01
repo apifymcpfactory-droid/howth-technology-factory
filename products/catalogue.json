@@ -46,6 +46,10 @@
             {
                 "id": "design-workflow",
                 "name": "Design workflow"
+            },
+            {
+                "id": "game-save-development",
+                "name": "Game saving and recovery"
             }
         ],
         "buyers": [
@@ -1903,6 +1907,54 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Accenture Jobs MCP | HTF Bank of America Jobs MCP | HTF Citigroup Jobs MCP | HTF CVS Health Jobs MCP | HTF Databricks Jobs MCP | HTF Datadog Jobs MCP | HTF The Home Depot Jobs MCP | HTF Jobs API MCP | HTF Lowe’s Jobs MCP | HTF SEC EDGAR MCP | HTF Stripe Jobs MCP | HTF Target Jobs MCP | HTF UPS Jobs MCP | HTF Walmart Jobs MCP | HTF hiring SEC EDGAR filings financials MCPize development"
+        },
+        {
+            "id": "saveguard-studio-fab",
+            "name": "SaveGuard Studio | HTF",
+            "summary": "An Unreal Engine toolkit in development for saving game progress, reviewing changes and recovering earlier saves.",
+            "url": "https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html",
+            "problems": [
+                "game-save-development"
+            ],
+            "buyers": [
+                "developers-ai"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Unreal Engine · Fab",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "SaveGuard Studio | HTF Unreal Engine · Fab save game recovery migration backup developer tools"
+        },
+        {
+            "id": "save-game-migration-unity",
+            "name": "Save Game & Migration Workbench | HTF",
+            "summary": "A Unity workbench in development for saving game progress, inspecting records, testing migrations and recovering earlier versions.",
+            "url": "https://howthtechnologyfactory.pro/products/save-game-migration-unity.html",
+            "problems": [
+                "game-save-development"
+            ],
+            "buyers": [
+                "developers-ai"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "In development · Unity Asset Store",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"
         }
     ]
 }
