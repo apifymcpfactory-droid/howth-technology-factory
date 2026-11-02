@@ -201,8 +201,8 @@
         },
         {
             "id": "confluence-reporting-workbench",
-            "name": "Confluence Reporting Workbench | HTF",
-            "summary": "Turn tables into a clear report, check team totals and review what changed. Working fictional browser demo. In development for Confluence; native acceptance and final pricing remain pending.",
+            "name": "Tables, Charts & Reporting Workbench | HTF",
+            "summary": "Prepare tables, formulas, pivots, charts and traceable reports in Confluence. Version 3.0.0 submitted to Atlassian Marketplace for review; not yet available to purchase.",
             "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
             "problems": [
                 "project-context"
@@ -218,13 +218,13 @@
                 "confluence-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "In development",
+            "release_status": "submitted_for_review",
+            "release_label": "Submitted for review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
-            "development_status": "Working fictional-data browser demo of the current UI and calculation logic. Native Confluence permissions, storage, licensing, downloads and document-export acceptance remain pending. Not submitted.",
-            "planned_pricing": "Subscription; final prices and seat tiers to be confirmed"
+            "development_status": "Version 3.0.0 / build 3000000 submitted on 2 November 2026. Atlassian approval pending. Required native product and privacy acceptance passed; not live.",
+            "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count."
         },
         {
             "id": "accessibility-release-manager-figma",
