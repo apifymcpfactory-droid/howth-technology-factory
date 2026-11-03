@@ -86,10 +86,31 @@ function homepageCards() {
 }
 
 // ---------------------------------------------------------------- index cards
+const platformByAccess = {
+    figma: 'figma', 'confluence-cloud': 'confluence', 'jira-cloud': 'jira', jetbrains: 'jetbrains',
+};
+const plannedPlatforms = {
+    'sec-edgar-api': ['apify', 'mcpize'],
+    'apify-jobs-development': ['apify'],
+    'mcpize-development-inventory': ['mcpize'],
+    'saveguard-studio-fab': ['fab'],
+    'save-game-migration-unity': ['unity'],
+};
+
+function productPlatforms(product) {
+    return [...new Set([
+        ...product.access.map((access) => platformByAccess[access]).filter(Boolean),
+        ...(product.shopfronts || []).map((shop) => shop.id),
+        ...(plannedPlatforms[product.id] || []),
+    ])];
+}
+
 function indexCards() {
-    return catalogue.products.map((p) => {
+    const rank = (product) => product.release_status === 'in_development' ? 2
+        : product.release_status === 'submitted_for_review' ? 1 : 0;
+    return [...catalogue.products].sort((a, b) => rank(a) - rank(b)).map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
-        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
+        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-platforms="${esc(productPlatforms(p).join(' '))}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
                             <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabel(p) ? ` · <span class="text-gold">${esc(releaseLabel(p))}</span>` : ''}</p>
                         </article>`;
     }).join('\n');
