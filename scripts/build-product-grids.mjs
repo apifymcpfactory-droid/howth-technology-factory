@@ -68,8 +68,8 @@ function productArtwork(p){
 }
 
 // ---------------------------------------------------------------- homepage cards
-function homepageCards() {
-    return catalogue.products.map((p, i) => {
+function homepageCards(products) {
+    return products.map((p, i) => {
         const delay = (i % 3) * 80;
         return `<a href="products/${p.id}.html" data-aos="fade-up" data-aos-delay="${delay}"
    class="frame-hover group relative flex flex-col gap-5 rounded-2xl border border-borderc bg-surface p-7 hover:bg-surface2">
@@ -105,12 +105,41 @@ function productPlatforms(product) {
     ])];
 }
 
-function indexCards() {
+// Keep the latest submission and active release work at the top.
+const platformGroups = [
+    ['confluence', 'Confluence'],
+    ['unity', 'Unity'],
+    ['fab', 'Fab (Unreal Engine)'],
+    ['figma', 'Figma'],
+    ['apify', 'Apify'],
+    ['mcpize', 'MCPize'],
+    ['jetbrains', 'JetBrains'],
+    ['jira', 'Jira'],
+];
+
+function groupedCards(renderCards, cataloguePage = false) {
+    const assigned = new Set();
+    return platformGroups.map(([platform, name]) => {
+        const products = catalogue.products.filter((product) =>
+            productPlatforms(product).includes(platform) && (cataloguePage || !assigned.has(product.id)));
+        if (!products.length) return '';
+        for (const product of products) assigned.add(product.id);
+        const grid = cataloguePage ? 'md:grid-cols-2 xl:grid-cols-3' : 'sm:grid-cols-2 lg:grid-cols-3';
+        return `<section data-platform-group="${platform}" class="rounded-2xl border border-borderc p-4 sm:p-6" aria-labelledby="platform-${platform}">
+    <h3 id="platform-${platform}" class="font-display text-2xl mb-5">${esc(name)}</h3>
+    <div class="grid ${grid} gap-5">
+${renderCards(products)}
+    </div>
+</section>`;
+    }).filter(Boolean).join('\n');
+}
+
+function indexCards(products) {
     const rank = (product) => product.release_status === 'in_development' ? 2
         : product.release_status === 'submitted_for_review' ? 1 : 0;
-    return [...catalogue.products].sort((a, b) => rank(a) - rank(b)).map((p) => {
+    return [...products].sort((a, b) => rank(a) - rank(b)).map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
-        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-platforms="${esc(productPlatforms(p).join(' '))}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
+        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
                             <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabel(p) ? ` · <span class="text-gold">${esc(releaseLabel(p))}</span>` : ''}</p>
                         </article>`;
     }).join('\n');
@@ -154,7 +183,7 @@ const outputs = [];
 // --- homepage ---
 {
     let html = read('index.html');
-    html = replaceGrid(html, /<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">/, '</a>', homepageCards(), 'index.html');
+    html = replaceGrid(html, /<div class="grid gap-8">/, '</a>', groupedCards(homepageCards), 'index.html');
     html = replaceFeatured(html);
     outputs.push(['index.html', html]);
 }
@@ -162,7 +191,7 @@ const outputs = [];
 // --- products index ---
 {
     let html = read('products/index.html');
-    html = replaceGrid(html, /<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">/, '</article>', indexCards(), 'products/index.html');
+    html = replaceGrid(html, /<div class="grid gap-8">/, '</article>', groupedCards(indexCards, true), 'products/index.html');
     html = replaceFeatured(html,true);
     // The result counter is a LIVE filter readout, not a claim about the catalogue.
     // Generated so its initial value can never go stale.

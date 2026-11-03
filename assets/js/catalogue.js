@@ -5,6 +5,7 @@
     if (!root) return;
 
     const cards = [...root.querySelectorAll('[data-product-card]')];
+    const groups = [...root.querySelectorAll('[data-platform-group]')];
     const search = root.querySelector('[data-catalogue-search]');
     const platform = root.querySelector('[data-catalogue-platform]');
     const count = root.querySelector('[data-result-count]');
@@ -23,17 +24,22 @@
         const query = normalize(search.value);
         const selected = selectedByFacet();
         let visible = 0;
+        const shown = new Set();
 
         for (const card of cards) {
-            const platformMatch = !platform.value || card.dataset.platforms.split(' ').includes(platform.value);
+            const platformMatch = !platform.value || card.closest('[data-platform-group]').dataset.platformGroup === platform.value;
             const searchMatch = !query || normalize(card.dataset.search).includes(query);
             const facetMatch = Object.entries(selected).every(([facet, values]) => {
                 const cardValues = (card.dataset[facet] || '').split(/\s+/).filter(Boolean);
                 return values.some((value) => cardValues.includes(value));
             });
-            card.hidden = !(platformMatch && searchMatch && facetMatch);
-            if (!card.hidden) visible += 1;
+            card.hidden = !(platformMatch && searchMatch && facetMatch) || shown.has(card.dataset.productId);
+            if (!card.hidden) {
+                shown.add(card.dataset.productId);
+                visible += 1;
+            }
         }
+        for (const group of groups) group.hidden = !group.querySelector('[data-product-card]:not([hidden])');
 
         count.textContent = `${visible} ${visible === 1 ? 'tool' : 'tools'}`;
         empty.hidden = visible !== 0;
