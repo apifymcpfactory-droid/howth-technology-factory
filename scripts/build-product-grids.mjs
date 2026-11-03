@@ -105,28 +105,37 @@ function productPlatforms(product) {
     ])];
 }
 
-// Keep the latest submission and active release work at the top.
 const platformGroups = [
-    ['confluence', 'Confluence'],
-    ['unity', 'Unity'],
-    ['fab', 'Fab (Unreal Engine)'],
-    ['figma', 'Figma'],
-    ['apify', 'Apify'],
-    ['mcpize', 'MCPize'],
-    ['jetbrains', 'JetBrains'],
-    ['jira', 'Jira'],
+    ['figma', 'Figma', 'figma.png'],
+    ['confluence', 'Confluence', 'atlassian.ico'],
+    ['unity', 'Unity', 'unity.svg'],
+    ['fab', 'Fab (Unreal Engine)', 'unrealengine.svg'],
+    ['apify', 'Apify', 'apify.svg', 'https://apify.com/apifmcpfactory'],
+    ['mcpize', 'MCPize', 'mcpize.ico', 'https://mcpize.com/developers/howthfactory'],
+    ['jetbrains', 'JetBrains', 'jetbrains.svg'],
+    ['jira', 'Jira', 'atlassian.ico'],
 ];
 
 function groupedCards(renderCards, cataloguePage = false) {
     const assigned = new Set();
-    return platformGroups.map(([platform, name]) => {
+    return platformGroups.map(([platform, name, icon, publisherUrl]) => {
         const products = catalogue.products.filter((product) =>
             productPlatforms(product).includes(platform) && (cataloguePage || !assigned.has(product.id)));
         if (!products.length) return '';
         for (const product of products) assigned.add(product.id);
         const grid = cataloguePage ? 'md:grid-cols-2 xl:grid-cols-3' : 'sm:grid-cols-2 lg:grid-cols-3';
+        const hasLiveProducts = catalogue.products.some((product) =>
+            productPlatforms(product).includes(platform) &&
+            (product.release_status === 'live' ||
+                (!product.release_status && product.shopfronts?.some((shop) => shop.id === platform))));
+        const publisherLink = publisherUrl && hasLiveProducts
+            ? `<a class="inline-flex rounded-lg border border-gold px-4 py-2 text-sm font-semibold text-gold" href="${esc(publisherUrl)}">View HTF on ${esc(name)}</a>`
+            : '';
         return `<section data-platform-group="${platform}" class="rounded-2xl border border-borderc p-4 sm:p-6" aria-labelledby="platform-${platform}">
-    <h3 id="platform-${platform}" class="font-display text-2xl mb-5">${esc(name)}</h3>
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+        <h3 id="platform-${platform}" class="flex items-center gap-3 font-display text-2xl"><img src="/assets/platform-icons/${icon}" width="32" height="32" style="background:#fff;border-radius:6px;padding:4px;object-fit:contain" alt="">${esc(name)}</h3>
+        ${publisherLink}
+    </div>
     <div class="grid ${grid} gap-5">
 ${renderCards(products)}
     </div>
