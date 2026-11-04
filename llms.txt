@@ -1,6 +1,6 @@
 # Agentic Systems Studio | HTF
 
-- [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. Coming Soon - in development Planned $35 per user per year. Status: Coming Soon - in development.
+- [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. Developed but not submitted Planned $35 per user per year. Status: Developed but not submitted.
 
 > Focused tools for people and teams. Released APIs and MCP tools run on Apify; Each product uses one of four explicit release statuses: Coming Soon - in development; Developed but not submitted; Developed and in Review; Available for Purchase. Each product page states its platform and release status.
 
@@ -32,7 +32,7 @@
 - [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api Status: Available for Purchase.
 - [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api Status: Available for Purchase.
 
-- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): Coming Soon - in development. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet. Status: Coming Soon - in development.
+- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): Developed but not submitted. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet. Status: Developed but not submitted.
 - [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Developed and in Review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf . Status: Developed and in Review.
 
 ## Curated routes

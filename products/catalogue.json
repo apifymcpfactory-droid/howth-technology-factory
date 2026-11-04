@@ -190,12 +190,12 @@
                 "jetbrains"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
             "planned_pricing": "$35 per user per year",
-            "development_status": "Earlier native IDE contract/check/sync/evidence, environment, gRPC and GraphQL workflow tested. New import, selective-update and bounded local-validation additions pass source/CLI checks but need native acceptance. Authentication partially native tested. Security, compatibility and licensing remain open. Not submitted.",
+            "development_status": "Implemented and packaged 1.0.0 candidate; hidden sandbox upload only. Corrected native navigation and subscription window rendering passed. Authentic licensing acceptance is blocked by sandbox OAuth; remaining release checks and production submission are pending.",
             "searchTerms": "API Contract Workbench HTF JetBrains IntelliJ OpenAPI contracts HTTP testing regression release evidence Postman sample walkthrough generated authored checks sync local validation evidence GraphQL gRPC",
             "demo_url": "https://howthtechnologyfactory.pro/products/demos/api-contract-workbench-jetbrains/"
         },
@@ -223,7 +223,7 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
-            "development_status": "Version 3.0.0 / build 3000000 submitted on 2 November 2026. Atlassian approval pending. Required native product and privacy acceptance passed; not live.",
+            "development_status": "Version 3.0.0 / build 3000000 is developed. The earlier listing was rejected and awaits resubmission. Support-portal recovery and partner verification remain; the three security submissions are complete. Not available for purchase.",
             "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count.",
             "release_note": "Version 3.0.0 is developed. Support-portal setup and partner verification remain before resubmission; the three security submissions are complete."
         },
@@ -1372,11 +1372,11 @@
                 "jira-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
+            "release_status": "developed_not_submitted",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV",
-            "release_label": "Coming Soon - in development"
+            "release_label": "Developed but not submitted"
         },
         {
             "id": "jobs-api-all-sources",
