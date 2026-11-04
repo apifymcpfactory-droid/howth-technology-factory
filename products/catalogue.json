@@ -1911,7 +1911,7 @@
         {
             "id": "saveguard-studio-fab",
             "name": "SaveGuard Studio | HTF",
-            "summary": "An Unreal Engine toolkit in development for saving game progress, reviewing changes and recovering earlier saves.",
+            "summary": "Save, inspect, migrate and recover local game saves in Unreal Engine. SaveGuard Studio 1.0.0 is submitted to Fab for review.",
             "url": "https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html",
             "problems": [
                 "game-save-development"
@@ -1926,8 +1926,8 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "In development · Unreal Engine · Fab",
+            "release_status": "submitted_for_review",
+            "release_label": "Submitted for review · Unreal Engine · Fab",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SaveGuard Studio | HTF Unreal Engine · Fab save game recovery migration backup developer tools"
