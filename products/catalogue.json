@@ -1935,7 +1935,7 @@
         {
             "id": "save-game-migration-unity",
             "name": "Save Game & Migration Workbench | HTF",
-            "summary": "A Unity workbench in development for saving game progress, inspecting records, testing migrations and recovering earlier versions.",
+            "summary": "Inspect game-save records, rehearse migrations and recover retained generations in Unity. Submitted to the Unity Asset Store for review.",
             "url": "https://howthtechnologyfactory.pro/products/save-game-migration-unity.html",
             "problems": [
                 "game-save-development"
@@ -1950,8 +1950,8 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "In development · Unity Asset Store",
+            "release_status": "submitted_for_review",
+            "release_label": "Submitted for review · Unity Asset Store",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"
