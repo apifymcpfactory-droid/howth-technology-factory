@@ -1,3 +1,4 @@
+import { releaseLabel } from './product-status.mjs';
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function validateFeatured(config,catalogue){
   const products=config.products;
@@ -14,7 +15,7 @@ export function validateFeatured(config,catalogue){
   return products;
 }
 export function renderFeatured(config,catalogue,compact=false){
-  const products=validateFeatured(config,catalogue),prefix=compact?'catalogue-feature':'home-feature';
+  const products=validateFeatured(config,catalogue).map(p=>({...p,priceLead:releaseLabel(catalogue.products.find(c=>c.id===p.id))})),prefix=compact?'catalogue-feature':'home-feature';
   const slides=products.map((p,i)=>{
     const product=catalogue.products.find(c=>c.id===p.id),name=product.name,path='/products/'+p.id+'.html';
     const marketplaceLabel=product.release_status==='live'&&p.marketplace?.url.startsWith('https://www.figma.com/')?'Buy on Figma':p.marketplace?.label;

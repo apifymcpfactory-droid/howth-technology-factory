@@ -1,8 +1,8 @@
 # Agentic Systems Studio | HTF
 
-- [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. In development, not submitted. Planned $35 per user per year.
+- [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. Coming Soon - in development Planned $35 per user per year. Status: Coming Soon - in development.
 
-> Focused tools for people and teams. Released APIs and MCP tools run on Apify; Figma and Jira plugins are in development. Each product page states its platform and release status.
+> Focused tools for people and teams. Released APIs and MCP tools run on Apify; Each product uses one of four explicit release statuses: Coming Soon - in development; Developed but not submitted; Developed and in Review; Available for Purchase. Each product page states its platform and release status.
 
 ## Pages
 
@@ -16,24 +16,24 @@
 - [Searchable product catalogue](https://howthtechnologyfactory.pro/products/): Human-readable catalogue organised by problem, buyer, product type, access method and AI-agent compatibility.
 - [Machine-readable product catalogue](https://howthtechnologyfactory.pro/products/catalogue.json): Structured JSON inventory with stable product IDs, taxonomy facets, canonical pages and extensible shopfront arrays.
 
-- [PDF Toolkit: Merge, Split, Compress & Convert PDFs](https://howthtechnologyfactory.pro/products/pdf-toolkit.html): Merge, split, compress and convert PDFs in one tool - batch jobs, no file-size limits. MCP: https://mcp.apify.com?tools=apifmcpfactory/pdf-toolkit
-- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://howthtechnologyfactory.pro/products/eu-vat-validator.html): Validate individual or bulk EU and Northern Ireland VAT numbers with the official VIES service. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator
-- [Website Technology Detector: Tech Stack Scanner](https://howthtechnologyfactory.pro/products/tech-stack-detector.html): See what any website is built with - CMS, frameworks, analytics and more. MCP: https://mcp.apify.com?tools=apifmcpfactory/tech-stack-detector
-- [llms.txt Checker: AI Search Readiness Audit](https://howthtechnologyfactory.pro/products/llms-txt-checker.html): Audit any site's llms.txt and get an AI-readiness score with concrete fixes. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-checker
-- [llms.txt Generator: Make Any Website AI-Readable](https://howthtechnologyfactory.pro/products/llms-txt-generator.html): Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-generator
-- [llms.txt Checker, Generator & Monitor: AI Search Readiness](https://howthtechnologyfactory.pro/products/llms-txt-suite.html): Audit, generate and monitor your llms.txt in one - keep your site AI-readable. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-suite
-- [Sanctions Screening: Check Names Against OFAC, EU, UK & UN](https://howthtechnologyfactory.pro/products/sanctions-screening.html): Screen names against official OFAC, EU, UK and UN sanctions lists - bulk, with match scores. MCP: https://mcp.apify.com?tools=apifmcpfactory/sanctions-screening
-- [Domain Health Audit: DNS, WHOIS, SSL, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/domain-health-audit.html): Audit up to 5,000 domains for DNS, WHOIS, SSL, SPF, DKIM, DMARC, MTA-STS, TLS-RPT, DNSSEC, DANE and BIMI. Returns a published 0-100 score, Gmail and Outlook bulk-sender readiness, and the exact DNS record to publish for every problem found. MCP: https://mcpize.com/mcp/domain-health-audit-mcp
-- [IBAN Validator: Verify & Bulk-Check Bank IBANs](https://howthtechnologyfactory.pro/products/iban-validator.html): Validate IBANs offline against ISO 13616 - checksum, structure and SEPA coverage, single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/iban-validator
-- [Email & Domain Auth Checker: MX, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/email-domain-checker.html): Check MX, SPF, DKIM and DMARC records from DNS alone - spot disposable and role addresses too. MCP: https://mcp.apify.com?tools=apifmcpfactory/email-domain-checker
-- [Bank of America Jobs API: Open Roles as JSON](https://howthtechnologyfactory.pro/products/bankofamerica-jobs-api.html): Bank of America's live vacancy list as JSON or CSV, with change detection between runs. MCP: https://mcp.apify.com?tools=apifmcpfactory/bankofamerica-jobs-api
-- [Home Depot Jobs API: Corporate & Store Vacancies](https://howthtechnologyfactory.pro/products/homedepot-jobs-api.html): The Home Depot's published vacancies as JSON or CSV, refreshed on demand. MCP: https://mcp.apify.com?tools=apifmcpfactory/homedepot-jobs-api
-- [Lowe's Jobs API: Store-Level Hiring Data](https://howthtechnologyfactory.pro/products/lowes-jobs-api.html): Lowe's published vacancies as structured rows, with full-time and part-time shift detail. MCP: https://mcp.apify.com?tools=apifmcpfactory/lowes-jobs-api
-- [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api
-- [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api
+- [PDF Toolkit: Merge, Split, Compress & Convert PDFs](https://howthtechnologyfactory.pro/products/pdf-toolkit.html): Merge, split, compress and convert PDFs in one tool - batch jobs, no file-size limits. MCP: https://mcp.apify.com?tools=apifmcpfactory/pdf-toolkit Status: Available for Purchase.
+- [EU VAT Validator (VIES): Verify & Bulk-Check VAT IDs](https://howthtechnologyfactory.pro/products/eu-vat-validator.html): Validate individual or bulk EU and Northern Ireland VAT numbers with the official VIES service. MCP: https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator Status: Available for Purchase.
+- [Website Technology Detector: Tech Stack Scanner](https://howthtechnologyfactory.pro/products/tech-stack-detector.html): See what any website is built with - CMS, frameworks, analytics and more. MCP: https://mcp.apify.com?tools=apifmcpfactory/tech-stack-detector Status: Available for Purchase.
+- [llms.txt Checker: AI Search Readiness Audit](https://howthtechnologyfactory.pro/products/llms-txt-checker.html): Audit any site's llms.txt and get an AI-readiness score with concrete fixes. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-checker Status: Available for Purchase.
+- [llms.txt Generator: Make Any Website AI-Readable](https://howthtechnologyfactory.pro/products/llms-txt-generator.html): Generate a ready-to-publish llms.txt so ChatGPT and AI agents can read your site. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-generator Status: Available for Purchase.
+- [llms.txt Checker, Generator & Monitor: AI Search Readiness](https://howthtechnologyfactory.pro/products/llms-txt-suite.html): Audit, generate and monitor your llms.txt in one - keep your site AI-readable. MCP: https://mcp.apify.com?tools=apifmcpfactory/llms-txt-suite Status: Available for Purchase.
+- [Sanctions Screening: Check Names Against OFAC, EU, UK & UN](https://howthtechnologyfactory.pro/products/sanctions-screening.html): Screen names against official OFAC, EU, UK and UN sanctions lists - bulk, with match scores. MCP: https://mcp.apify.com?tools=apifmcpfactory/sanctions-screening Status: Available for Purchase.
+- [Domain Health Audit: DNS, WHOIS, SSL, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/domain-health-audit.html): Audit up to 5,000 domains for DNS, WHOIS, SSL, SPF, DKIM, DMARC, MTA-STS, TLS-RPT, DNSSEC, DANE and BIMI. Returns a published 0-100 score, Gmail and Outlook bulk-sender readiness, and the exact DNS record to publish for every problem found. MCP: https://mcpize.com/mcp/domain-health-audit-mcp Status: Available for Purchase.
+- [IBAN Validator: Verify & Bulk-Check Bank IBANs](https://howthtechnologyfactory.pro/products/iban-validator.html): Validate IBANs offline against ISO 13616 - checksum, structure and SEPA coverage, single or bulk. MCP: https://mcp.apify.com?tools=apifmcpfactory/iban-validator Status: Available for Purchase.
+- [Email & Domain Auth Checker: MX, SPF, DKIM & DMARC](https://howthtechnologyfactory.pro/products/email-domain-checker.html): Check MX, SPF, DKIM and DMARC records from DNS alone - spot disposable and role addresses too. MCP: https://mcp.apify.com?tools=apifmcpfactory/email-domain-checker Status: Available for Purchase.
+- [Bank of America Jobs API: Open Roles as JSON](https://howthtechnologyfactory.pro/products/bankofamerica-jobs-api.html): Bank of America's live vacancy list as JSON or CSV, with change detection between runs. MCP: https://mcp.apify.com?tools=apifmcpfactory/bankofamerica-jobs-api Status: Available for Purchase.
+- [Home Depot Jobs API: Corporate & Store Vacancies](https://howthtechnologyfactory.pro/products/homedepot-jobs-api.html): The Home Depot's published vacancies as JSON or CSV, refreshed on demand. MCP: https://mcp.apify.com?tools=apifmcpfactory/homedepot-jobs-api Status: Available for Purchase.
+- [Lowe's Jobs API: Store-Level Hiring Data](https://howthtechnologyfactory.pro/products/lowes-jobs-api.html): Lowe's published vacancies as structured rows, with full-time and part-time shift detail. MCP: https://mcp.apify.com?tools=apifmcpfactory/lowes-jobs-api Status: Available for Purchase.
+- [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api Status: Available for Purchase.
+- [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api Status: Available for Purchase.
 
-- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): In development. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet.
-- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Submitted for review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf .
+- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): Coming Soon - in development. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet. Status: Coming Soon - in development.
+- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Developed and in Review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf . Status: Developed and in Review.
 
 ## Curated routes
 
@@ -49,56 +49,56 @@
 - [Design VIES validation as a state machine](https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html): A practical workflow for preserving valid, invalid and temporarily unavailable VAT-validation outcomes.
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
 
-- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Submitted for review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf .
+- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Developed and in Review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf . Status: Developed and in Review.
 
 ## Prepared Figma products (not submitted)
-- Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable.
-- User Flow & Handover Toolkit | HTF: https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/user-flow-handover/ | Planned $5 one-time; not submitted or purchasable.
+- Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable. Status: Coming Soon - in development.
+- User Flow & Handover Toolkit | HTF: https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/user-flow-handover/ | Planned $5 one-time; not submitted or purchasable. Status: Developed but not submitted.
 
-- Image Export & Delivery Toolkit | HTF: https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/image-export-delivery/ | Planned $5 one-time; not submitted or purchasable. Local image export recipes and ZIP delivery packs.
+- Image Export & Delivery Toolkit | HTF: https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/image-export-delivery/ | Planned $5 one-time; not submitted or purchasable. Local image export recipes and ZIP delivery packs. Status: Coming Soon - in development.
 
-- Device Mockup & Presentation Studio | HTF: https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html (In development, not submitted; planned $7 once.)
+- Device Mockup & Presentation Studio | HTF: https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html (Coming Soon - in development; planned $7 once.) Status: Coming Soon - in development.
 
-- Responsive HTML Export Toolkit | HTF: https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html (In development, not submitted; planned $9 once.)
+- Responsive HTML Export Toolkit | HTF: https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- HTML Import & Redesign Studio | HTF: https://howthtechnologyfactory.pro/products/html-import-studio-figma.html (In development, not submitted; planned $9 once.)
+- HTML Import & Redesign Studio | HTF: https://howthtechnologyfactory.pro/products/html-import-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Motion Presets & Lottie Export | HTF: https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html (In development, not submitted; planned $9 once.)
+- Motion Presets & Lottie Export | HTF: https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (In development, not submitted; planned $9 once.)
+- Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (In development, not submitted; planned $7 once.)
+- Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (Coming Soon - in development; planned $7 once.) Status: Coming Soon - in development.
 
-- Chart & Data Story Studio | HTF: https://howthtechnologyfactory.pro/products/chart-data-story-figma.html (In development, not submitted; planned $9 once.)
+- Chart & Data Story Studio | HTF: https://howthtechnologyfactory.pro/products/chart-data-story-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- System Architecture & C4 Studio | HTF: https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html (In development, not submitted; planned $9 once.)
+- System Architecture & C4 Studio | HTF: https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (In development, not submitted; planned $9 once.)
+- Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (In development, not submitted; planned $9 once.)
+- Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
 
-- Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (In development, not submitted; planned $4 per month.)
+- Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (Coming Soon - in development; planned $4 per month.) Status: Coming Soon - in development.
 
-- Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (In development. Core implementation in progress; no public demo or listing.)
+- Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (Developed but not submitted. Core implementation in progress; no public demo or listing.) Status: Developed but not submitted.
 
 ## Apify inventory reconciliation
-- [Jobs API: All Sources](https://howthtechnologyfactory.pro/products/jobs-api-all-sources.html)
-- [Accenture Jobs API + Report](https://howthtechnologyfactory.pro/products/accenture-jobs-api.html)
-- [Walmart Jobs API + Report](https://howthtechnologyfactory.pro/products/walmart-jobs-api.html)
-- [UPS Jobs API + Report](https://howthtechnologyfactory.pro/products/ups-jobs-api.html)
-- [Wells Fargo Jobs API](https://howthtechnologyfactory.pro/products/wellsfargo-jobs-api.html)
-- [Teleperformance Benelux](https://howthtechnologyfactory.pro/products/teleperformancebenelux-jobs-api.html)
-- [Twilio Jobs API + Report](https://howthtechnologyfactory.pro/products/twilio-jobs-api.html)
-- [Wise Jobs API + Report](https://howthtechnologyfactory.pro/products/wise-jobs-api.html)
-- [Tripadvisor Jobs API](https://howthtechnologyfactory.pro/products/tripadvisor-jobs-api.html)
-- [Take-Two Jobs API + Report](https://howthtechnologyfactory.pro/products/taketwo-jobs-api.html)
-- [Dropbox Jobs API + Report](https://howthtechnologyfactory.pro/products/dropbox-jobs-api.html)
-- [SEC EDGAR API: Filings, Financials, 8-K Events & Form D](https://howthtechnologyfactory.pro/products/sec-edgar-api.html)
-- [Jobs API Development Inventory | HTF](https://howthtechnologyfactory.pro/products/apify-jobs-development.html)
+- [Jobs API: All Sources](https://howthtechnologyfactory.pro/products/jobs-api-all-sources.html) Status: Available for Purchase.
+- [Accenture Jobs API + Report](https://howthtechnologyfactory.pro/products/accenture-jobs-api.html) Status: Available for Purchase.
+- [Walmart Jobs API + Report](https://howthtechnologyfactory.pro/products/walmart-jobs-api.html) Status: Available for Purchase.
+- [UPS Jobs API + Report](https://howthtechnologyfactory.pro/products/ups-jobs-api.html) Status: Available for Purchase.
+- [Wells Fargo Jobs API](https://howthtechnologyfactory.pro/products/wellsfargo-jobs-api.html) Status: Available for Purchase.
+- [Teleperformance Benelux](https://howthtechnologyfactory.pro/products/teleperformancebenelux-jobs-api.html) Status: Available for Purchase.
+- [Twilio Jobs API + Report](https://howthtechnologyfactory.pro/products/twilio-jobs-api.html) Status: Available for Purchase.
+- [Wise Jobs API + Report](https://howthtechnologyfactory.pro/products/wise-jobs-api.html) Status: Available for Purchase.
+- [Tripadvisor Jobs API](https://howthtechnologyfactory.pro/products/tripadvisor-jobs-api.html) Status: Available for Purchase.
+- [Take-Two Jobs API + Report](https://howthtechnologyfactory.pro/products/taketwo-jobs-api.html) Status: Available for Purchase.
+- [Dropbox Jobs API + Report](https://howthtechnologyfactory.pro/products/dropbox-jobs-api.html) Status: Available for Purchase.
+- [SEC EDGAR API: Filings, Financials, 8-K Events & Form D](https://howthtechnologyfactory.pro/products/sec-edgar-api.html) Status: Coming Soon - in development.
+- [Jobs API Development Inventory | HTF](https://howthtechnologyfactory.pro/products/apify-jobs-development.html) Status: Coming Soon - in development.
 
 ## MCPize development
-- [MCP Hiring & Company Research Tools | HTF](https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html): MCP hiring and company-research products in development, with individual scope and planned pricing.
+- [MCP Hiring & Company Research Tools | HTF](https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html): MCP hiring and company-research products in development, with individual scope and planned pricing. Status: Coming Soon - in development.
 
-- [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy.
+- [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
 
-- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval.
+- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Developed and in Review.

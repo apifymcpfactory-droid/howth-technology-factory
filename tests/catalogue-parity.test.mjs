@@ -60,7 +60,7 @@ for (const file of fs.readdirSync(path.join(root, 'products'))) {
 // Card counts must match exactly, derived — never asserted against a literal.
 assert.equal((home.match(/href="products\/[a-z0-9-]+\.html" data-aos/g) ?? []).length, ids.length,
     'homepage card count must equal the catalogue');
-assert.equal((index.match(/data-product-card/g) ?? []).length, ids.length,
+assert.equal(new Set([...index.matchAll(/data-product-id="([^"]+)"/g)].map(match => match[1])).size, ids.length,
     'products index card count must equal the catalogue');
 
 // ---------------------------------------------------------------- no written counts

@@ -11,7 +11,7 @@ const script = read('assets', 'js', 'catalogue.js');
 const sitemap = read('sitemap.xml');
 const llms = read('llms.txt');
 
-assert.equal(catalogue.schema_version, '1.1');
+assert.equal(catalogue.schema_version, '1.2');
 assert.equal(catalogue.publisher.name, 'Howth Technology Factory');
 // Deliberately no hard-coded count: a test that needs editing every time a
 // product ships is a chore, not a test.
@@ -43,7 +43,7 @@ for (const product of catalogue.products) {
         for (const value of product[facet]) assert.ok(taxonomy[facet].has(value), `${product.id} uses unknown ${facet}: ${value}`);
     }
     assert.ok(Array.isArray(product.shopfronts));
-    if (['in_development', 'submitted_for_review'].includes(product.release_status)) {
+    if (product.release_status !== 'live') {
         assert.equal(product.shopfronts.length, 0, `${product.id}: development product must not claim a live shopfront`);
     } else {
         assert.ok(product.shopfronts.length >= 1);
@@ -57,8 +57,10 @@ for (const product of catalogue.products) {
     assert.match(productHtml, /aria-label="Breadcrumb"/);
     assert.match(productHtml, /"@type":"BreadcrumbList"/);
     assert.match(productHtml, /<link rel="canonical"/);
-    if (['in_development', 'submitted_for_review'].includes(product.release_status)) {
-        assert.match(productHtml, product.release_status === 'submitted_for_review' ? /Submitted for review/ : /In development/);
+    assert.equal(catalogue.release_statuses[product.release_status], product.release_label, `${product.id}: use an approved status`);
+    assert.ok(productHtml.includes(`data-release-status="${product.release_status}">${product.release_label}</p>`), `${product.id}: primary status must match the catalogue`);
+    assert.ok(html.includes(`data-product-id="${product.id}" data-status="${product.release_status}"`), `${product.id}: filter status must match the catalogue`);
+    if (product.release_status !== 'live') {
         assert.doesNotMatch(productHtml, /"@type"\s*:\s*"Offer"|data-shopfront=/);
     }
 }
@@ -77,7 +79,7 @@ assert.equal(futureProduct.shopfronts.length, catalogue.products[0].shopfronts.l
 for (const control of ['data-catalogue-search', 'data-facet', 'data-reset-filters', 'data-empty-state', 'aria-live="polite"']) {
     assert.match(html, new RegExp(control));
 }
-assert.equal((html.match(/data-product-card/g) || []).length, catalogue.products.length,
+assert.equal(new Set([...html.matchAll(/data-product-id="([^"]+)"/g)].map(match => match[1])).size, catalogue.products.length,
     'every catalogue product needs a card on the products index');
 assert.match(html, /<a[^>]+href="\/products\/pdf-toolkit\.html"/);
 assert.match(html, /application\/ld\+json/);

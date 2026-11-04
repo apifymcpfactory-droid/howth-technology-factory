@@ -1,5 +1,5 @@
 {
-    "schema_version": "1.1",
+    "schema_version": "1.2",
     "publisher": {
         "name": "Howth Technology Factory",
         "url": "https://howthtechnologyfactory.pro/"
@@ -175,7 +175,7 @@
         {
             "id": "api-contract-workbench-jetbrains",
             "name": "API Contract Workbench | HTF",
-            "summary": "Review API changes, keep authored checks through updates and hand over clear saved results. Explore genuine development outputs in a fictional-data browser sample. In development; planned $35 per user per year.",
+            "summary": "Review API changes, keep authored checks through updates and hand over clear saved results. Explore genuine development outputs in a fictional-data browser sample. Planned $35 per user per year.",
             "url": "https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html",
             "problems": [
                 "api-release-testing"
@@ -191,7 +191,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "planned_pricing": "$35 per user per year",
@@ -202,7 +202,7 @@
         {
             "id": "confluence-reporting-workbench",
             "name": "Tables, Charts & Reporting Workbench | HTF",
-            "summary": "Prepare tables, formulas, pivots, charts and traceable reports in Confluence. Version 3.0.0 submitted to Atlassian Marketplace for review; not yet available to purchase.",
+            "summary": "Build reports from Confluence tables and spreadsheets, with calculations, pivots, charts and saved comparisons. Awaiting resubmission after marketplace feedback; purchase is not available yet.",
             "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
             "problems": [
                 "project-context"
@@ -218,18 +218,19 @@
                 "confluence-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Submitted to Atlassian Marketplace for approval",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
             "development_status": "Version 3.0.0 / build 3000000 submitted on 2 November 2026. Atlassian approval pending. Required native product and privacy acceptance passed; not live.",
-            "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count."
+            "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count.",
+            "release_note": "Version 3.0.0 is developed. Support-portal setup and partner verification remain before resubmission; the three security submissions are complete."
         },
         {
             "id": "accessibility-release-manager-figma",
             "name": "Accessibility Audit & Release Manager | HTF",
-            "summary": "Review supported accessibility evidence in Figma, compare releases and prepare a clear developer handover with documented human checks. Planned $4 per month. In development; not submitted.",
+            "summary": "Review supported accessibility evidence in Figma, compare releases and prepare a clear developer handover with documented human checks. Planned $4 per month.",
             "url": "https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html",
             "problems": [
                 "design-workflow"
@@ -245,7 +246,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Accessibility Audit & Release Manager | HTF Figma offline local Scoped accessibility review Release regression comparison HTML, CSV and JSON handover"
@@ -253,7 +254,7 @@
         {
             "id": "presentation-pptx-studio-figma",
             "name": "Presentation Builder & PPTX Delivery | HTF",
-            "summary": "Build a presentation from a structured outline, with eight original layouts, brand settings, speaker notes and editable PPTX delivery. Planned $9 once. In development; not submitted.",
+            "summary": "Build a presentation from a structured outline, with eight original layouts, brand settings, speaker notes and editable PPTX delivery. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html",
             "problems": [
                 "design-workflow"
@@ -269,7 +270,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Presentation Builder & PPTX Delivery | HTF Figma offline local Eight original slide layouts Editable Figma and PPTX Speaker notes included"
@@ -277,7 +278,7 @@
         {
             "id": "email-html-studio-figma",
             "name": "Email Builder & HTML Delivery | HTF",
-            "summary": "Compose a modular email design, preview the content and prepare table HTML, plain text, image assets and a delivery checklist. Planned $9 once. In development; not submitted.",
+            "summary": "Compose a modular email design, preview the content and prepare table HTML, plain text, image assets and a delivery checklist. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/email-html-studio-figma.html",
             "problems": [
                 "design-workflow"
@@ -293,7 +294,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Email Builder & HTML Delivery | HTF Figma offline local Eight original email modules 600 px table-based HTML Assets and delivery report"
@@ -301,7 +302,7 @@
         {
             "id": "chart-data-story-figma",
             "name": "Chart & Data Story Studio | HTF",
-            "summary": "Turn checked CSV or JSON into editable charts, with explicit mapping, small multiples, annotations and data integrity reports. Planned $9 once. In development; not submitted.",
+            "summary": "Turn checked CSV or JSON into editable charts, with explicit mapping, small multiples, annotations and data integrity reports. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/chart-data-story-figma.html",
             "problems": [
                 "design-workflow"
@@ -317,7 +318,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Chart & Data Story Studio | HTF Figma offline local Bars, lines, scatter and donut Explicit data validation Editable marks and source report"
@@ -325,7 +326,7 @@
         {
             "id": "system-architecture-c4-figma",
             "name": "System Architecture & C4 Studio | HTF",
-            "summary": "Build context and container architecture views from a checked inventory, with stable IDs, relationship checks and local SVG/Mermaid delivery packs. Planned $9 once. In development; not submitted.",
+            "summary": "Build context and container architecture views from a checked inventory, with stable IDs, relationship checks and local SVG/Mermaid delivery packs. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html",
             "problems": [
                 "design-workflow"
@@ -341,7 +342,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "System Architecture & C4 Studio | HTF Figma offline local Context and container views Inventory comparison Editable architecture boards"
@@ -349,7 +350,7 @@
         {
             "id": "wireframe-requirements-figma",
             "name": "Wireframe & Requirements Builder | HTF",
-            "summary": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations. Planned $9 once. In development; not submitted.",
+            "summary": "Build editable multi-screen wireframes from an outline, with original UI blocks, requirement mapping and explicit prototype destinations. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html",
             "problems": [
                 "design-workflow"
@@ -365,7 +366,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output"
@@ -373,7 +374,7 @@
         {
             "id": "mind-map-planning-figma",
             "name": "Mind Map & Planning Studio | HTF",
-            "summary": "Turn outlines into editable hierarchy maps, with topic notes, owners, statuses, three layouts and guarded saved-board rebuilding. Planned $7 once. In development; not submitted.",
+            "summary": "Turn outlines into editable hierarchy maps, with topic notes, owners, statuses, three layouts and guarded saved-board rebuilding. Planned $7 once.",
             "url": "https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html",
             "problems": [
                 "design-workflow"
@@ -389,7 +390,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Mind Map & Planning Studio | HTF Figma offline local Outline and JSON import Three hierarchy layouts Editable planning boards"
@@ -397,7 +398,7 @@
         {
             "id": "device-mockup-studio-figma",
             "name": "Device Mockup & Presentation Studio | HTF",
-            "summary": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh. Planned $7 once. In development; not submitted.",
+            "summary": "Create original device presentation scenes from Figma frames, with editable shells, saved recipes and guarded refresh. Planned $7 once.",
             "url": "https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html",
             "problems": [
                 "design-workflow"
@@ -413,7 +414,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
@@ -421,7 +422,7 @@
         {
             "id": "responsive-html-export-figma",
             "name": "Responsive HTML Export Toolkit | HTF",
-            "summary": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report. Planned $9 once. In development; not submitted.",
+            "summary": "Export supported Figma layouts as readable HTML, CSS and local image assets, with an explicit handoff report. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html",
             "problems": [
                 "design-workflow"
@@ -437,7 +438,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report"
@@ -445,7 +446,7 @@
         {
             "id": "html-import-studio-figma",
             "name": "HTML Import & Redesign Studio | HTF",
-            "summary": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point. Planned $9 once. In development; not submitted.",
+            "summary": "Preview local HTML and inline CSS, then create editable Figma text and shape layers for a redesign starting point. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/html-import-studio-figma.html",
             "problems": [
                 "design-workflow"
@@ -461,7 +462,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes"
@@ -469,7 +470,7 @@
         {
             "id": "motion-lottie-studio-figma",
             "name": "Motion Presets & Lottie Export | HTF",
-            "summary": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report. Planned $9 once. In development; not submitted.",
+            "summary": "Animate supported solid shapes with explicit presets, inspect the timeline and export local Lottie JSON with a delivery report. Planned $9 once.",
             "url": "https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html",
             "problems": [
                 "design-workflow"
@@ -485,7 +486,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export"
@@ -509,7 +510,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "Coming soon · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Figma image export delivery batch PNG JPG WebP SVG ZIP client assets naming collision presets social app web file size quality contain crop saved recipe"
@@ -533,7 +534,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "Coming soon · Not submitted",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Figma content review copy localization translation CSV JSON spreadsheet proof copywriter agency multilingual source conflict placeholder"
@@ -556,16 +557,17 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming soon · Not submitted",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Figma user flow handover prototype journey map documentation export PNG PDF SVG editable board source links"
+            "searchTerms": "Figma user flow handover prototype journey map documentation export PNG PDF SVG editable board source links",
+            "release_note": "The developed Figma plugin has passed the recorded native acceptance checks and awaits an available submission slot."
         },
         {
             "id": "design-system-migration-toolkit-figma",
             "name": "Design System Migration Toolkit | HTF",
-            "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once. Submitted for review; approval and public purchase are pending.",
+            "summary": "Migrate supported Figma variables, styles and compatible components with reusable mappings, a reviewed preview and verification reports. Pro $19 once. Approval and public purchase are pending.",
             "url": "https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html",
             "problems": [
                 "design-workflow"
@@ -581,7 +583,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted to Figma Community for approval",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Figma design system migration variables styles component swap library replace rebrand agency handover mapping recipe JSON CSS tokens HTF",
@@ -595,7 +597,7 @@
         {
             "id": "howth-icon-kits-figma",
             "name": "SVG Icons: Search & Replace | HTF",
-            "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once. Submitted for review; approval and public purchase are pending.",
+            "summary": "Search Lucide SVG icons, save local project kits and replace compatible icon artwork. Free search and insertion; Pro $7 once. Approval and public purchase are pending.",
             "url": "https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html",
             "problems": [
                 "design-workflow"
@@ -614,7 +616,7 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement",
-            "release_label": "Submitted to Figma Community for approval",
+            "release_label": "Developed and in Review",
             "submission": {
                 "submitted_on": "2026-10-28",
                 "status_verified_on": "2026-10-30",
@@ -668,7 +670,9 @@
                     "url": "https://mcpize.com/mcp/pdf-toolkit-mcp"
                 }
             ],
-            "searchTerms": "PDF Toolkit document automation merge split compress rotate watermark convert PDF developers finance operations API MCP Apify Actor"
+            "searchTerms": "PDF Toolkit document automation merge split compress rotate watermark convert PDF developers finance operations API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "eu-vat-validator",
@@ -716,7 +720,9 @@
                     "url": "https://mcpize.com/mcp/eu-vat-validator-mcp"
                 }
             ],
-            "searchTerms": "EU VAT Validator financial validation VIES VAT finance compliance API MCP Apify Actor"
+            "searchTerms": "EU VAT Validator financial validation VIES VAT finance compliance API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "iban-validator",
@@ -764,7 +770,9 @@
                     "url": "https://mcpize.com/mcp/iban-validator-mcp"
                 }
             ],
-            "searchTerms": "IBAN Validator financial validation checksum structure SEPA finance operations API MCP Apify Actor"
+            "searchTerms": "IBAN Validator financial validation checksum structure SEPA finance operations API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "sanctions-screening",
@@ -813,7 +821,9 @@
                     "url": "https://mcpize.com/mcp/sanctions-screening"
                 }
             ],
-            "searchTerms": "Sanctions Screening compliance AML OFAC EU UK UN onboarding API MCP Apify Actor"
+            "searchTerms": "Sanctions Screening compliance AML OFAC EU UK UN onboarding API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "tech-stack-detector",
@@ -860,7 +870,9 @@
                     "url": "https://mcpize.com/mcp/tech-stack-detector-mcp"
                 }
             ],
-            "searchTerms": "Tech Stack Detector website technology intelligence CMS framework analytics sales marketing API MCP Apify Actor"
+            "searchTerms": "Tech Stack Detector website technology intelligence CMS framework analytics sales marketing API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "llms-txt-checker",
@@ -902,7 +914,9 @@
                     "url": "https://apify.com/apifmcpfactory/llms-txt-checker"
                 }
             ],
-            "searchTerms": "llms.txt Checker AI visibility readiness audit score SEO GEO developers API MCP Apify Actor"
+            "searchTerms": "llms.txt Checker AI visibility readiness audit score SEO GEO developers API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "llms-txt-generator",
@@ -944,7 +958,9 @@
                     "url": "https://apify.com/apifmcpfactory/llms-txt-generator"
                 }
             ],
-            "searchTerms": "llms.txt Generator AI visibility readiness generate deterministic SEO GEO developers API MCP Apify Actor"
+            "searchTerms": "llms.txt Generator AI visibility readiness generate deterministic SEO GEO developers API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "llms-txt-suite",
@@ -992,7 +1008,9 @@
                     "url": "https://mcpize.com/mcp/llms-txt-suite-mcp"
                 }
             ],
-            "searchTerms": "llms.txt Suite AI visibility readiness audit generate monitor SEO GEO operations API MCP Apify Actor"
+            "searchTerms": "llms.txt Suite AI visibility readiness audit generate monitor SEO GEO operations API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "email-domain-checker",
@@ -1041,7 +1059,9 @@
                     "url": "https://mcpize.com/mcp/email-domain-checker-mcp"
                 }
             ],
-            "searchTerms": "Email Domain Checker MX SPF DKIM DMARC disposable role address security sales operations API MCP Apify Actor"
+            "searchTerms": "Email Domain Checker MX SPF DKIM DMARC disposable role address security sales operations API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "domain-health-audit",
@@ -1091,7 +1111,9 @@
                     "url": "https://mcpize.com/mcp/domain-health-audit-mcp"
                 }
             ],
-            "searchTerms": "Domain Health Audit DNS WHOIS SSL SPF DKIM DMARC MTA-STS DNSSEC DANE BIMI bulk domain portfolio MSP email deliverability sender readiness API MCP Apify Actor"
+            "searchTerms": "Domain Health Audit DNS WHOIS SSL SPF DKIM DMARC MTA-STS DNSSEC DANE BIMI bulk domain portfolio MSP email deliverability sender readiness API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "bankofamerica-jobs-api",
@@ -1134,7 +1156,9 @@
                     "url": "https://apify.com/apifmcpfactory/bankofamerica-jobs-api"
                 }
             ],
-            "searchTerms": "Bank of America Jobs API hiring market intelligence banking recruitment relationship banker wealth management vacancies careers feed recruiters developers API MCP Apify Actor"
+            "searchTerms": "Bank of America Jobs API hiring market intelligence banking recruitment relationship banker wealth management vacancies careers feed recruiters developers API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "homedepot-jobs-api",
@@ -1177,7 +1201,9 @@
                     "url": "https://apify.com/apifmcpfactory/homedepot-jobs-api"
                 }
             ],
-            "searchTerms": "Home Depot Jobs API retail hiring corporate store support center distribution RDC virtual remote roles vacancies careers feed recruiters operations API MCP Apify Actor"
+            "searchTerms": "Home Depot Jobs API retail hiring corporate store support center distribution RDC virtual remote roles vacancies careers feed recruiters operations API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "lowes-jobs-api",
@@ -1220,7 +1246,9 @@
                     "url": "https://apify.com/apifmcpfactory/lowes-jobs-api"
                 }
             ],
-            "searchTerms": "Lowe's Jobs API retail store hiring part time hourly shift fulfillment associate receiver stocker vacancies careers feed staffing workforce planning API MCP Apify Actor"
+            "searchTerms": "Lowe's Jobs API retail store hiring part time hourly shift fulfillment associate receiver stocker vacancies careers feed staffing workforce planning API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "target-jobs-api",
@@ -1263,7 +1291,9 @@
                     "url": "https://apify.com/apifmcpfactory/target-jobs-api"
                 }
             ],
-            "searchTerms": "Target Jobs API retail hiring seasonal store security specialist team leader Bangalore technology engineering vacancies careers feed recruiters market research API MCP Apify Actor"
+            "searchTerms": "Target Jobs API retail hiring seasonal store security specialist team leader Bangalore technology engineering vacancies careers feed recruiters market research API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "workday-jobs-api",
@@ -1306,12 +1336,14 @@
                     "url": "https://apify.com/apifmcpfactory/workday-jobs-api"
                 }
             ],
-            "searchTerms": "Workday Jobs API careers site scraper myworkdayjobs tenant multi employer hiring feed ATS vacancies JSON CSV recruiters developers agencies API MCP Apify Actor"
+            "searchTerms": "Workday Jobs API careers site scraper myworkdayjobs tenant multi employer hiring feed ATS vacancies JSON CSV recruiters developers agencies API MCP Apify Actor",
+            "release_status": "live",
+            "release_label": "Available for Purchase"
         },
         {
             "id": "projectkit-jira",
             "name": "ProjectKit for Jira",
-            "summary": "Structured project metadata, reusable templates and a live field preview for Jira Cloud. In development.",
+            "summary": "Structured project metadata, reusable templates and a live field preview for Jira Cloud.",
             "url": "https://howthtechnologyfactory.pro/products/projectkit-jira.html",
             "problems": [
                 "project-context"
@@ -1330,7 +1362,8 @@
             "release_status": "in_development",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV"
+            "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV",
+            "release_label": "Coming Soon - in development"
         },
         {
             "id": "jobs-api-all-sources",
@@ -1357,7 +1390,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1402,7 +1435,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1447,7 +1480,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1492,7 +1525,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1537,7 +1570,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1582,7 +1615,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1627,7 +1660,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1672,7 +1705,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1717,7 +1750,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1762,7 +1795,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1807,7 +1840,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "live",
-            "release_label": "Live",
+            "release_label": "Available for Purchase",
             "reviews": [
                 {
                     "source": "apify",
@@ -1830,7 +1863,7 @@
         {
             "id": "sec-edgar-api",
             "name": "SEC EDGAR: Filings, Financials & Material Events | HTF",
-            "summary": "In development. Find US public-company filings, financial statements and important 8-K events in one structured result, so research starts with the regulator record instead of a manual filing search.",
+            "summary": "Find US public-company filings, financial statements and important 8-K events in one structured result, so research starts with the regulator record instead of a manual filing search.",
             "url": "https://howthtechnologyfactory.pro/products/sec-edgar-api.html",
             "problems": [
                 "financial-validation"
@@ -1849,7 +1882,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "in_development",
-            "release_label": "In development · Apify and MCPize",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SEC EDGAR filings financial statements 8-K  API AI agent private development"
@@ -1857,7 +1890,7 @@
         {
             "id": "apify-jobs-development",
             "name": "Jobs API Development Inventory | HTF",
-            "summary": "43 evidenced private source-specific jobs-feed builds, individually named and labelled In development with blockers.",
+            "summary": "Private source-specific jobs-feed builds, with each named entry showing its release status and remaining blockers.",
             "url": "https://howthtechnologyfactory.pro/products/apify-jobs-development.html",
             "problems": [
                 "hiring-market-intelligence"
@@ -1875,7 +1908,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "in_development",
-            "release_label": "In development · Private builds",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Apify jobs API development inventory private prototypes Greenhouse Jobs API + Report Lever Jobs API + Report Ashby Jobs API + Report Recruitee Jobs API + Report SmartRecruiters Jobs API Remote OK Jobs API + Report Jobicy Jobs API + Report Remote Jobs API + Report CVS Health Jobs API + Report Citigroup Jobs API + Report FedEx Europe Jobs API HCA Healthcare UK Jobs Securitas Europe Jobs API Sodexo Australia Jobs API Stripe Jobs API + Report Databricks Jobs API + Report Datadog Jobs API + Report Snowflake Jobs API + Report MongoDB Jobs API + Report Okta Jobs API + Report Cloudflare Jobs API + Report Canva Jobs API + Report Pinterest Jobs API + Report Reddit Jobs API + Report Airbnb Jobs API + Report Spotify Jobs API + Report GitLab Jobs API + Report Elastic Jobs API + Report Block Jobs API + Report Adyen Jobs API + Report ServiceNow Jobs API + Report AbbVie Jobs API + Report Primark Jobs API + Report Delivery Hero Jobs API Accor Jobs API + Report Continental Jobs API HelloFresh Jobs API + Report Dominos Jobs API + Report Deliveroo Jobs API + Report Instacart Jobs API + Report Lyft Jobs API + Report ASOS Jobs API + Report AB InBev Jobs API + Report"
@@ -1883,7 +1916,7 @@
         {
             "id": "mcpize-development-inventory",
             "name": "MCP Hiring & Company Research Tools | HTF",
-            "summary": "Hiring feeds and public-company research for MCP clients. Named products, planned workflows and pricing, all clearly marked In development.",
+            "summary": "Hiring feeds and public-company research for MCP clients, with named products, planned workflows and pricing.",
             "url": "https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html",
             "problems": [
                 "hiring-market-intelligence",
@@ -1903,7 +1936,7 @@
             ],
             "ai_agent_compatible": true,
             "release_status": "in_development",
-            "release_label": "In development · MCPize",
+            "release_label": "Coming Soon - in development",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Accenture Jobs MCP | HTF Bank of America Jobs MCP | HTF Citigroup Jobs MCP | HTF CVS Health Jobs MCP | HTF Databricks Jobs MCP | HTF Datadog Jobs MCP | HTF The Home Depot Jobs MCP | HTF Jobs API MCP | HTF Lowe’s Jobs MCP | HTF SEC EDGAR MCP | HTF Stripe Jobs MCP | HTF Target Jobs MCP | HTF UPS Jobs MCP | HTF Walmart Jobs MCP | HTF hiring SEC EDGAR filings financials MCPize development"
@@ -1927,7 +1960,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted for review · Unreal Engine · Fab",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SaveGuard Studio | HTF Unreal Engine · Fab save game recovery migration backup developer tools"
@@ -1951,10 +1984,17 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted for review · Unity Asset Store",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"
         }
-    ]
+    ],
+    "release_statuses": {
+        "in_development": "Coming Soon - in development",
+        "developed_not_submitted": "Developed but not submitted",
+        "submitted_for_review": "Developed and in Review",
+        "live": "Available for Purchase"
+    },
+    "status_updated": "2026-11-04"
 }

@@ -18,6 +18,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderFeatured } from './featured-products.mjs';
 import { prepareSearch } from './prepare-search.mjs';
+import { releaseLabel, renderReleaseStatus } from './product-status.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
@@ -37,8 +38,6 @@ function replaceFeatured(html,compact=false){
 
 const problemLabel = Object.fromEntries(catalogue.taxonomy.problems.map((p) => [p.id, p.name]));
 const accessLabel = Object.fromEntries(catalogue.taxonomy.access.map((p) => [p.id, p.name]));
-const releaseLabels = { in_development: 'In development', preview: 'Preview' };
-const releaseLabel = p => p.release_label ?? releaseLabels[p.release_status];
 
 const esc = (s) => String(s ?? '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -76,7 +75,8 @@ function homepageCards(products) {
     <div class="tool-card-art">${productArtwork(p)}</div>
     <div class="flex-1">
         <h3 class="font-display font-semibold text-lg text-text mb-1.5">${esc(p.name)}</h3>
-        <p class="text-sm text-muted leading-relaxed">${esc(p.summary)}</p>${releaseLabel(p) ? `\n        <p class="text-xs text-gold mt-3">${esc(releaseLabel(p))}</p>` : ''}
+        <p class="text-sm text-muted leading-relaxed">${esc(p.summary)}</p>
+        ${renderReleaseStatus(p)}
     </div>
     <div class="flex items-center gap-1.5 text-sm font-medium text-gold opacity-0 group-hover:opacity-100 transition-opacity">
         Learn more <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
@@ -148,8 +148,8 @@ function indexCards(products) {
         : product.release_status === 'submitted_for_review' ? 1 : 0;
     return [...products].sort((a, b) => rank(a) - rank(b)).map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
-        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
-                            <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p><p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}${releaseLabel(p) ? ` · <span class="text-gold">${esc(releaseLabel(p))}</span>` : ''}</p>
+        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-status="${esc(p.release_status)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
+                            <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p>${renderReleaseStatus(p)}<p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}</p>
                         </article>`;
     }).join('\n');
 }
@@ -214,10 +214,25 @@ const outputs = [];
     outputs.push(['products/index.html', html]);
 }
 
-// Keep Figma purchase wording tied to the recorded live release status.
-for (const product of catalogue.products.filter(p => p.access?.includes('figma'))) {
+// Keep the primary page status and structured data tied to the catalogue.
+for (const product of catalogue.products) {
     const file = new URL(product.url).pathname.slice(1);
-    const html = read(file);
+    let html = read(file);
+    html = html.replace(/<p\b[^>]*data-release-status="[^"]*"[^>]*>[\s\S]*?<\/p>/g, '');
+    if (!/<h1\b[\s\S]*?<\/h1>/.test(html)) throw Error(`${file}: missing product heading`);
+    html = html.replace(/(<h1\b[\s\S]*?<\/h1>)/, (_, heading) => heading + renderReleaseStatus(product));
+    html = html.replace(/(<dt>Status<\/dt>\s*<dd>)[\s\S]*?(<\/dd>)/g, (_, open, close) => open + releaseLabel(product) + close);
+    html = html.replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g, (block, open, json, close) => {
+        const value = JSON.parse(json);
+        if (!['SoftwareApplication', 'WebApplication'].includes(value['@type'])) return block;
+        const status = JSON.stringify(releaseLabel(product));
+        if (/"creativeWorkStatus"\s*:/.test(json)) {
+            return open + json.replace(/("creativeWorkStatus"\s*:\s*)"[^"]*"/, (_, prefix) => prefix + status) + close;
+        }
+        const indent = json.match(/\n([ \t]+)"/)?.[1];
+        return open + json.replace(/("@type"\s*:\s*"(?:SoftwareApplication|WebApplication)"\s*,)/,
+            (_, type) => type + (indent ? '\n' + indent : '') + '"creativeWorkStatus":' + status + ',') + close;
+    });
     const label = product.release_status === 'live' ? 'Buy on Figma' : 'View on Figma';
     outputs.push([file, html.replace(/(<a\b[^>]*href="https:\/\/www\.figma\.com\/community\/plugin\/[^"<>]+"[^>]*>)(?:View on Figma|Buy on Figma)(<\/a>)/g,
         (_, open, close) => open + label + close)]);
