@@ -52,32 +52,32 @@
 - [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Developed and in Review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf . Status: Developed and in Review.
 
 ## Prepared Figma products (not submitted)
-- Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable. Status: Coming Soon - in development.
+- Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable. Status: Developed but not submitted.
 - User Flow & Handover Toolkit | HTF: https://howthtechnologyfactory.pro/products/user-flow-handover-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/user-flow-handover/ | Planned $5 one-time; not submitted or purchasable. Status: Developed but not submitted.
 
-- Image Export & Delivery Toolkit | HTF: https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/image-export-delivery/ | Planned $5 one-time; not submitted or purchasable. Local image export recipes and ZIP delivery packs. Status: Coming Soon - in development.
+- Image Export & Delivery Toolkit | HTF: https://howthtechnologyfactory.pro/products/image-export-delivery-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/image-export-delivery/ | Planned $5 one-time; not submitted or purchasable. Local image export recipes and ZIP delivery packs. Status: Developed but not submitted.
 
-- Device Mockup & Presentation Studio | HTF: https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html (Coming Soon - in development; planned $7 once.) Status: Coming Soon - in development.
+- Device Mockup & Presentation Studio | HTF: https://howthtechnologyfactory.pro/products/device-mockup-studio-figma.html (Developed but not submitted; planned $7 once.) Status: Developed but not submitted.
 
-- Responsive HTML Export Toolkit | HTF: https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Responsive HTML Export Toolkit | HTF: https://howthtechnologyfactory.pro/products/responsive-html-export-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- HTML Import & Redesign Studio | HTF: https://howthtechnologyfactory.pro/products/html-import-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- HTML Import & Redesign Studio | HTF: https://howthtechnologyfactory.pro/products/html-import-studio-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Motion Presets & Lottie Export | HTF: https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Motion Presets & Lottie Export | HTF: https://howthtechnologyfactory.pro/products/motion-lottie-studio-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Wireframe & Requirements Builder | HTF: https://howthtechnologyfactory.pro/products/wireframe-requirements-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (Coming Soon - in development; planned $7 once.) Status: Coming Soon - in development.
+- Mind Map & Planning Studio | HTF: https://howthtechnologyfactory.pro/products/mind-map-planning-figma.html (Developed but not submitted; planned $7 once.) Status: Developed but not submitted.
 
-- Chart & Data Story Studio | HTF: https://howthtechnologyfactory.pro/products/chart-data-story-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Chart & Data Story Studio | HTF: https://howthtechnologyfactory.pro/products/chart-data-story-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- System Architecture & C4 Studio | HTF: https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- System Architecture & C4 Studio | HTF: https://howthtechnologyfactory.pro/products/system-architecture-c4-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Presentation Builder & PPTX Delivery | HTF: https://howthtechnologyfactory.pro/products/presentation-pptx-studio-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (Coming Soon - in development; planned $9 once.) Status: Coming Soon - in development.
+- Email Builder & HTML Delivery | HTF: https://howthtechnologyfactory.pro/products/email-html-studio-figma.html (Developed but not submitted; planned $9 once.) Status: Developed but not submitted.
 
-- Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (Coming Soon - in development; planned $4 per month.) Status: Coming Soon - in development.
+- Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (Developed but not submitted; planned $4 per month.) Status: Developed but not submitted.
 
 - Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (Developed but not submitted. Core implementation in progress; no public demo or listing.) Status: Developed but not submitted.
 

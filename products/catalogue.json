@@ -245,11 +245,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Accessibility Audit & Release Manager | HTF Figma offline local Scoped accessibility review Release regression comparison HTML, CSV and JSON handover"
+            "searchTerms": "Accessibility Audit & Release Manager | HTF Figma offline local Scoped accessibility review Release regression comparison HTML, CSV and JSON handover",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "presentation-pptx-studio-figma",
@@ -269,11 +270,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Presentation Builder & PPTX Delivery | HTF Figma offline local Eight original slide layouts Editable Figma and PPTX Speaker notes included"
+            "searchTerms": "Presentation Builder & PPTX Delivery | HTF Figma offline local Eight original slide layouts Editable Figma and PPTX Speaker notes included",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "email-html-studio-figma",
@@ -293,11 +295,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Email Builder & HTML Delivery | HTF Figma offline local Eight original email modules 600 px table-based HTML Assets and delivery report"
+            "searchTerms": "Email Builder & HTML Delivery | HTF Figma offline local Eight original email modules 600 px table-based HTML Assets and delivery report",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "chart-data-story-figma",
@@ -317,11 +320,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Chart & Data Story Studio | HTF Figma offline local Bars, lines, scatter and donut Explicit data validation Editable marks and source report"
+            "searchTerms": "Chart & Data Story Studio | HTF Figma offline local Bars, lines, scatter and donut Explicit data validation Editable marks and source report",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "system-architecture-c4-figma",
@@ -341,11 +345,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "System Architecture & C4 Studio | HTF Figma offline local Context and container views Inventory comparison Editable architecture boards"
+            "searchTerms": "System Architecture & C4 Studio | HTF Figma offline local Context and container views Inventory comparison Editable architecture boards",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "wireframe-requirements-figma",
@@ -365,11 +370,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output"
+            "searchTerms": "Wireframe & Requirements Builder | HTF Figma offline local 12 original building blocks Requirements mapped to screens Editable multi-screen output",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "mind-map-planning-figma",
@@ -389,11 +395,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Mind Map & Planning Studio | HTF Figma offline local Outline and JSON import Three hierarchy layouts Editable planning boards"
+            "searchTerms": "Mind Map & Planning Studio | HTF Figma offline local Outline and JSON import Three hierarchy layouts Editable planning boards",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "device-mockup-studio-figma",
@@ -413,11 +420,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source"
+            "searchTerms": "Device Mockup & Presentation Studio | HTF Figma offline local Four generic device shells Editable presentation scenes Refresh from source",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "responsive-html-export-figma",
@@ -437,11 +445,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report"
+            "searchTerms": "Responsive HTML Export Toolkit | HTF Figma offline local Editable HTML text Supported flex layouts Local assets and report",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "html-import-studio-figma",
@@ -461,11 +470,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes"
+            "searchTerms": "HTML Import & Redesign Studio | HTF Figma offline local Safe offline preview Mobile to desktop widths Editable text and shapes",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "motion-lottie-studio-figma",
@@ -485,11 +495,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export"
+            "searchTerms": "Motion Presets & Lottie Export | HTF Figma offline local Per-layer motion controls Scrub and preview Lottie JSON export",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "image-export-delivery-toolkit-figma",
@@ -509,11 +520,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Figma image export delivery batch PNG JPG WebP SVG ZIP client assets naming collision presets social app web file size quality contain crop saved recipe"
+            "searchTerms": "Figma image export delivery batch PNG JPG WebP SVG ZIP client assets naming collision presets social app web file size quality contain crop saved recipe",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "content-review-localization-toolkit-figma",
@@ -533,11 +545,12 @@
                 "figma"
             ],
             "ai_agent_compatible": false,
-            "release_status": "in_development",
-            "release_label": "Coming Soon - in development",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Figma content review copy localization translation CSV JSON spreadsheet proof copywriter agency multilingual source conflict placeholder"
+            "searchTerms": "Figma content review copy localization translation CSV JSON spreadsheet proof copywriter agency multilingual source conflict placeholder",
+            "release_note": "The Figma plugin is developed and packaged. Remaining release checks and submission gates must be completed before marketplace submission; purchase is not yet available."
         },
         {
             "id": "user-flow-handover-toolkit-figma",
