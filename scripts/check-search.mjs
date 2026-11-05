@@ -14,6 +14,7 @@ for(const file of walk(root)){
  assert.doesNotMatch(html,/https:\/\/unpkg\.com\/aos@/,`${rel}: script-dependent content visibility`);
  const noindex=/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/i.test(html);
  if(rel.startsWith('go/')){assert(noindex);continue;}
+ if(rel.startsWith('private/')){assert(noindex,`${rel}: private page must be noindex`);assert(!urls.some(u=>u.includes('/private/')),'Private page included in sitemap');continue;}
  assert.match(html,/<title>[^<]+<\/title>/i,`${rel}: title`);
  assert.match(html,/<meta\b[^>]*name="description"[^>]*content="[^"]+"/i,`${rel}: description`);
  const canon=[...html.matchAll(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/gi)].map(m=>m[1]);
