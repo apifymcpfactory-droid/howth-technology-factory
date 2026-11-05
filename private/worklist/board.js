@@ -10,10 +10,12 @@
   const groups=[
     ['all','All',()=>true],
     ['next','Ready next',e=>e.lane==='Ready to act'],
+    ['development','In development',e=>e.status==='Coming Soon - in development'],
     ['waiting','Waiting / blocked',e=>['Waiting','Blocked'].includes(e.lane)],
     ['review','In review',e=>e.status==='Developed and in Review'],
     ['live','Live',e=>e.status==='Available for Purchase'],
-    ['setup','Platform setup',e=>e.kind==='setup']
+    ['setup','Platform setup',e=>e.kind==='setup'],
+    ['later','Low priority',e=>e.lane==='Deprioritised']
   ];
   async function decrypt(envelope){
     if(envelope.v!==1)throw Error('version');
