@@ -11,7 +11,7 @@
     ['all','All',()=>true],
     ['next','Ready next',e=>e.lane==='Ready to act'],
     ['development','In development',e=>e.status==='Coming Soon - in development'],
-    ['waiting','Waiting / blocked',e=>['Waiting','Blocked'].includes(e.lane)],
+    ['waiting','Waiting / blocked',e=>['Waiting','Blocked','Owner action'].includes(e.lane)],
     ['review','In review',e=>e.status==='Developed and in Review'],
     ['live','Live',e=>e.status==='Available for Purchase'],
     ['setup','Platform setup',e=>e.kind==='setup'],
@@ -46,7 +46,7 @@
       const row=el('tr');row.dataset.index=i;const info=el('td'),done=el('td'),todo=el('td');
       info.append(el('div',`${i+1} · ${e.platform}`,'platform'),el('div',e.product,'product'));
       const cls=e.status==='Available for Purchase'?'live':e.status==='Developed and in Review'?'review':e.status==='Developed but not submitted'?'built':e.status==='Setup only'?'setup':'development';
-      info.append(el('span',e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked'].includes(e.lane)?' blocker':'')));
+      info.append(el('span',e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
       if(e.note)info.append(el('p',e.note,'detail'));
       if(e.completed.length)for(const text of e.completed){const item=el('div',undefined,'task');item.append(el('span','✓','done-icon'),el('span',text));done.append(item);}else done.append(el('p','No completed step recorded.','detail'));
       for(const task of e.tasks){const label=el('label',undefined,'task'),box=el('input'),text=el('span'),mark=el('span','Marked done on this device','local-mark');box.type='checkbox';box.dataset.task=task.id;box.checked=ticks[task.id]===true;mark.hidden=!box.checked;text.append(el('span',task.text,'task-text'),el('span',task.owner+(task.dependency?' · After: '+task.dependency:''),'meta'),mark);box.addEventListener('change',()=>{ticks[task.id]=box.checked;mark.hidden=!box.checked;saveChain=saveChain.then(saveTicks).catch(()=>{$('#save-status').textContent='This browser could not save your latest tick. Shared progress is unchanged.';});});label.append(box,text);todo.append(label);}
