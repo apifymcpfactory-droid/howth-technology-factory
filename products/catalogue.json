@@ -202,7 +202,7 @@
         {
             "id": "confluence-reporting-workbench",
             "name": "Tables, Charts & Reporting Workbench | HTF",
-            "summary": "Build reports from Confluence tables and spreadsheets, with calculations, pivots, charts and saved comparisons. Resubmitted for Marketplace review; purchase is not available yet.",
+            "summary": "Build reports from Confluence tables and spreadsheets, with calculations, pivots, charts and saved comparisons. Submission corrections are pending; purchase is not available yet.",
             "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
             "problems": [
                 "project-context"
@@ -218,14 +218,14 @@
                 "confluence-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
-            "development_status": "Version 3.0.0 / build 3000000 was resubmitted on 7 November 2026. Atlassian partner verification is approved and the app is pending Marketplace approval. Not available for purchase.",
+            "development_status": "Version3.0.0/build3000000 is developed. The prior submission requires listing corrections before resubmission. Not in active listing review and not available for purchase.",
             "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count.",
-            "release_note": "Version 3.0.0 was resubmitted on 7 November 2026 and is pending Atlassian approval. Purchase and public installation are not yet available."
+            "release_note": "Submission corrections are pending before resubmission. Purchase and public installation are not yet available."
         },
         {
             "id": "accessibility-release-manager-figma",
