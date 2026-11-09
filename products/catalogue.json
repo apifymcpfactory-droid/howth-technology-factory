@@ -1372,11 +1372,12 @@
                 "jira-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
+            "release_status": "submitted_for_review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV",
-            "release_label": "Developed but not submitted"
+            "release_label": "Developed and in Review",
+            "release_note": "Version 3.0.0 submitted for Marketplace review on 9 November 2026. Public installation and purchase are not yet available."
         },
         {
             "id": "jobs-api-all-sources",
