@@ -17,3 +17,39 @@
 .compact-row.expanded .row-toggle {
   background: #eee7f9;
 }
+
+.quick-links-title {
+  margin: 2px 0 10px;
+  font-size: 14px;
+}
+
+.platform-summary td {
+  padding: 10px 14px;
+  background: #f5f2f9;
+}
+
+.platform-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(100px, .35fr) 1fr auto;
+  gap: 14px;
+  align-items: center;
+  text-align: left;
+}
+
+.platform-summary-note,
+.platform-summary-count {
+  color: #635b73;
+  font-size: 12px;
+}
+
+.platform-summary-count {
+  white-space: nowrap;
+}
+
+@media(max-width:800px) {
+  .platform-toggle {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}

@@ -5,17 +5,15 @@
   const encode = a => btoa(String.fromCharCode(...new Uint8Array(a)));
   const decode = s => Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')), c=>c.charCodeAt(0));
   const el = (tag, text, cls) => { const n=document.createElement(tag); if(text!==undefined)n.textContent=text; if(cls)n.className=cls; return n; };
-  let secret, data, ticks={}, active='all', saveChain=Promise.resolve();
+  let secret, data, ticks={}, active='live', saveChain=Promise.resolve();
+  const collapsedPlatforms=new Set(['Apify','MCPize']);
+  const openedPlatforms=new Set();
   const storageKey='htf-private-worklist-ticks-v1';
   const groups=[
-    ['all','All',()=>true],
-    ['next','Ready next',e=>e.lane==='Ready to act'],
-    ['development','In development',e=>e.status==='Coming Soon - in development'],
-    ['waiting','Waiting / blocked',e=>['Waiting','Blocked','Owner action'].includes(e.lane)],
-    ['review','In review',e=>['Developed and in Review','Submitted and in Review'].includes(e.status)],
-    ['live','Live',e=>e.status==='Available for Purchase'],
-    ['setup','Platform setup',e=>e.kind==='setup'],
-    ['later','Low priority',e=>e.lane==='Deprioritised']
+    ['live','Available for Purchase',e=>e.status==='Available for Purchase'],
+    ['review','Developed and in Review',e=>e.status==='Developed and in Review'],
+    ['built','Developed but not submitted',e=>e.status==='Developed but not submitted'],
+    ['development','Coming Soon - in development',e=>e.status==='Coming Soon - in development']
   ];
   async function decrypt(envelope){
     if(envelope.v!==1)throw Error('version');
@@ -31,7 +29,8 @@
   function filter(){
     const term=$('#search').value.trim().toLowerCase(), platform=$('#platform').value;
     const predicate=groups.find(g=>g[0]===active)[2];let shown=0;
-    for(const row of $('#rows').children){const e=data.entries[Number(row.dataset.index)];row.hidden=!(predicate(e)&&(platform==='all'||e.platform===platform)&&row.textContent.toLowerCase().includes(term));if(!row.hidden)shown++;}
+    for(const row of $('#rows').children){const e=data.entries[Number(row.dataset.index)];const matches=predicate(e)&&(platform==='all'||e.platform===platform)&&row.textContent.toLowerCase().includes(term);const collapsed=collapsedPlatforms.has(e.platform)&&!openedPlatforms.has(e.platform);row.hidden=!(matches&&!collapsed);if(matches)shown++;}
+    for(const summary of $('#rows').querySelectorAll('.platform-summary')){const name=summary.dataset.platform;const entries=data.entries.filter(predicate).filter(e=>e.platform===name&&(platform==='all'||platform===name)&&(!term||e.platform.toLowerCase().includes(term)||e.product.toLowerCase().includes(term)));summary.hidden=entries.length===0;summary.querySelector('.platform-summary-count').textContent=`${entries.length} products in this status`;}
     $('#count').textContent=`${shown} of ${data.entries.length} entries shown`;
     $('#empty').hidden=shown>0;
   }
@@ -44,12 +43,11 @@
     const previous=$('#platform').value;$('#platform').replaceChildren(new Option('All platforms','all'),...[...new Set(data.entries.map(e=>e.platform))].sort().map(p=>new Option(p,p)));$('#platform').value=previous;if(!$('#platform').value)$('#platform').value='all';
     const rows=data.entries.map((e,i)=>{
       const row=el('tr');row.dataset.index=i;const info=el('td'),done=el('td'),todo=el('td');
-      const compact=['Developed and in Review','Submitted and in Review','Available for Purchase'].includes(e.status);
+      const compact=['Developed and in Review','Available for Purchase'].includes(e.status);
       if(compact)row.classList.add('compact-row');
       info.append(el('div',`${i+1} · ${e.platform}`,'platform'),el('div',e.product,'product'));
-      const cls=e.status==='Available for Purchase'?'live':['Developed and in Review','Submitted and in Review'].includes(e.status)?'review':e.status==='Developed but not submitted'?'built':e.status==='Setup only'?'setup':'development';
-      const statusLabel=e.status==='Developed and in Review'?'Submitted and in Review':e.status;
-      info.append(el('span',statusLabel,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
+      const cls=e.status==='Available for Purchase'?'live':e.status==='Developed and in Review'?'review':e.status==='Developed but not submitted'?'built':'development';
+      info.append(el('span',e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
       if(compact){const toggle=el('button','Show release details','row-toggle');toggle.type='button';toggle.setAttribute('aria-expanded','false');toggle.addEventListener('click',()=>{const open=row.classList.toggle('expanded');toggle.textContent=open?'Hide release details':'Show release details';toggle.setAttribute('aria-expanded',String(open));});info.append(toggle);}
       if(e.note)info.append(el('p',e.note,'detail row-detail'));
       if(e.completed.length)for(const text of e.completed){const item=el('div',undefined,'task');item.append(el('span','✓','done-icon'),el('span',text));done.append(item);}else done.append(el('p','No completed step recorded.','detail'));
@@ -57,7 +55,9 @@
       if(!e.tasks.length)todo.append(el('p','Historical release. No maintenance task authorised.','detail'));
       row.append(info,done,todo);return row;
     });
-    $('#rows').replaceChildren(...rows);$('#standards').replaceChildren(...data.shared_release_checklist.map(t=>el('li',t)));
+    const output=[];
+    for(const name of ['Apify','MCPize']){const summary=el('tr',undefined,'platform-summary');summary.dataset.platform=name;summary.dataset.index=data.entries.findIndex(e=>e.platform===name);const cell=el('td');cell.colSpan=3;const button=el('button',undefined,'platform-toggle');button.type='button';button.append(el('strong',name),el('span','Products collapsed to keep the active list short','platform-summary-note'),el('span','','platform-summary-count'));button.addEventListener('click',()=>{if(openedPlatforms.has(name))openedPlatforms.delete(name);else openedPlatforms.add(name);button.setAttribute('aria-expanded',String(openedPlatforms.has(name)));filter();});button.setAttribute('aria-expanded','false');cell.append(button);summary.append(cell);output.push(summary);}
+    output.push(...rows);$('#rows').replaceChildren(...output);$('#standards').replaceChildren(...data.shared_release_checklist.map(t=>el('li',t)));
     $('#locked').hidden=true;$('#board').hidden=false;filter();
   }
   async function load(){
