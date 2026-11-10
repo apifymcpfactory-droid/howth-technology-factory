@@ -2,7 +2,7 @@
 
 - [API Contract Workbench | HTF](https://howthtechnologyfactory.pro/products/api-contract-workbench-jetbrains.html): JetBrains API contract review and repeatable checks. Developed but not submitted Planned $35 per user per year. Status: Developed but not submitted.
 
-> Focused tools for people and teams. Released APIs and MCP tools run on Apify; Each product uses one of four explicit release statuses: Coming Soon - in development; Developed but not submitted; Developed and in Review; Available for Purchase. Each product page states its platform and release status.
+> Focused tools for people and teams. Released APIs and MCP tools run on Apify; Each product uses one of four explicit release statuses: Coming Soon - in development; Developed but not submitted; Submitted and in Review; Available for Purchase. Each product page states its platform and release status.
 
 ## Pages
 
@@ -32,8 +32,8 @@
 - [Target Jobs API: Retail & Tech Roles as Data](https://howthtechnologyfactory.pro/products/target-jobs-api.html): Target's live vacancy list as JSON or CSV, covering US retail and Bangalore technology roles. MCP: https://mcp.apify.com?tools=apifmcpfactory/target-jobs-api Status: Available for Purchase.
 - [Workday Careers Scraper: Any Tenant as a Jobs API](https://howthtechnologyfactory.pro/products/workday-jobs-api.html): Paste any Workday careers URL and get its open roles as structured JSON or CSV. MCP: https://mcp.apify.com?tools=apifmcpfactory/workday-jobs-api Status: Available for Purchase.
 
-- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): Developed but not submitted. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet. Status: Developed but not submitted.
-- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Developed and in Review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf . Status: Developed and in Review.
+- [ProjectKit for Jira](https://howthtechnologyfactory.pro/products/projectkit-jira.html): Submitted and in Review. Project-level metadata, typed fields, starter templates and a live preview for Jira Cloud. No public installation link yet. Status: Submitted and in Review.
+- [SVG Icons: Search & Replace | HTF](https://howthtechnologyfactory.pro/products/howth-icon-kits-figma.html): Submitted and in Review. Offline icon search, editable vector insertion and reusable icon kits for Figma Design. Approval pending; no public purchase yet. Creator-only submitted listing: https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf . Status: Submitted and in Review.
 
 ## Curated routes
 
@@ -49,7 +49,7 @@
 - [Design VIES validation as a state machine](https://howthtechnologyfactory.pro/insights/vies-validation-state-machine.html): A practical workflow for preserving valid, invalid and temporarily unavailable VAT-validation outcomes.
 - [Before automating PDF work, define the boundaries](https://howthtechnologyfactory.pro/insights/pdf-automation-boundaries.html): A practical checklist for PDF inputs, network policy, page semantics, outputs, retention, security and limits.
 
-- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Developed and in Review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf . Status: Developed and in Review.
+- [Design System Migration Toolkit | HTF](https://howthtechnologyfactory.pro/products/design-system-migration-toolkit-figma.html): Submitted and in Review. Figma migration plugin. Free inspection and preview; Pro $19 one-time after approval. Not currently purchasable. [Simulated demo](https://howthtechnologyfactory.pro/products/demos/migration-toolkit/). Creator-only submitted listing: https://www.figma.com/community/plugin/1697342956800117056/design-system-migration-toolkit-htf . Status: Submitted and in Review.
 
 ## Prepared Figma products (not submitted)
 - Content Review & Localization Toolkit | HTF: https://howthtechnologyfactory.pro/products/content-review-localization-toolkit-figma.html | Browser demo: https://howthtechnologyfactory.pro/products/demos/content-review-localization/ | Planned $5 one-time; not submitted or purchasable. Status: Developed but not submitted.
@@ -101,4 +101,4 @@
 
 - [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
 
-- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Developed and in Review.
+- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Submitted and in Review.
