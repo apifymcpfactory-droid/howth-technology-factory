@@ -1,0 +1,19 @@
+.row-toggle {
+  margin-top: 9px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.compact-row:not(.expanded) td:nth-child(2),
+.compact-row:not(.expanded) td:nth-child(3),
+.compact-row:not(.expanded) .row-detail {
+  display: none;
+}
+
+.compact-row:not(.expanded) td:first-child {
+  width: 100%;
+}
+
+.compact-row.expanded .row-toggle {
+  background: #eee7f9;
+}
