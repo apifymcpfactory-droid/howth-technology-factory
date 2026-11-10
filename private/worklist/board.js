@@ -43,12 +43,12 @@
     const previous=$('#platform').value;$('#platform').replaceChildren(new Option('All platforms','all'),...[...new Set(data.entries.map(e=>e.platform))].sort().map(p=>new Option(p,p)));$('#platform').value=previous;if(!$('#platform').value)$('#platform').value='all';
     const rows=data.entries.map((e,i)=>{
       const row=el('tr');row.dataset.index=i;const info=el('td'),done=el('td'),todo=el('td');
-      const compact=['Developed and in Review','Available for Purchase'].includes(e.status);
-      if(compact)row.classList.add('compact-row');
+      const compact=true;
+      row.classList.add('compact-row');
       info.append(el('div',`${i+1} · ${e.platform}`,'platform'),el('div',e.product,'product'));
       const cls=e.status==='Available for Purchase'?'live':e.status==='Developed and in Review'?'review':e.status==='Developed but not submitted'?'built':'development';
       info.append(el('span',e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
-      if(compact){const toggle=el('button','Show release details','row-toggle');toggle.type='button';toggle.setAttribute('aria-expanded','false');toggle.addEventListener('click',()=>{const open=row.classList.toggle('expanded');toggle.textContent=open?'Hide release details':'Show release details';toggle.setAttribute('aria-expanded',String(open));});info.append(toggle);}
+      if(compact){const toggle=el('button','View checklist','row-toggle');toggle.type='button';toggle.setAttribute('aria-expanded','false');toggle.addEventListener('click',()=>{const open=row.classList.toggle('expanded');toggle.textContent=open?'Hide checklist':'View checklist';toggle.setAttribute('aria-expanded',String(open));});info.append(toggle);}
       if(e.note)info.append(el('p',e.note,'detail row-detail'));
       if(e.completed.length)for(const text of e.completed){const item=el('div',undefined,'task');item.append(el('span','✓','done-icon'),el('span',text));done.append(item);}else done.append(el('p','No completed step recorded.','detail'));
       for(const task of e.tasks){const label=el('label',undefined,'task'),box=el('input'),text=el('span'),mark=el('span','Marked done on this device','local-mark');box.type='checkbox';box.dataset.task=task.id;box.checked=ticks[task.id]===true;mark.hidden=!box.checked;text.append(el('span',task.text,'task-text'),el('span',task.owner+(task.dependency?' · After: '+task.dependency:''),'meta'),mark);box.addEventListener('change',()=>{ticks[task.id]=box.checked;mark.hidden=!box.checked;saveChain=saveChain.then(saveTicks).catch(()=>{$('#save-status').textContent='This browser could not save your latest tick. Shared progress is unchanged.';});});label.append(box,text);todo.append(label);}
