@@ -38,6 +38,13 @@ function replaceFeatured(html,compact=false){
 
 const problemLabel = Object.fromEntries(catalogue.taxonomy.problems.map((p) => [p.id, p.name]));
 const accessLabel = Object.fromEntries(catalogue.taxonomy.access.map((p) => [p.id, p.name]));
+const refreshedApifyArtwork = new Set([
+    'accenture-jobs-api', 'apify-jobs-development', 'dropbox-jobs-api',
+    'jobs-api-all-sources', 'sec-edgar-api', 'taketwo-jobs-api',
+    'teleperformancebenelux-jobs-api', 'tripadvisor-jobs-api',
+    'twilio-jobs-api', 'ups-jobs-api', 'walmart-jobs-api',
+    'wellsfargo-jobs-api', 'wise-jobs-api'
+]);
 
 const esc = (s) => String(s ?? '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -60,9 +67,10 @@ function searchTerms(p) {
 }
 function productArtwork(p){
     const feature=featured.products.find(f=>f.id===p.id);
-    const src=feature?.image||`/assets/previews/tools/${p.id}.svg`;
+    const rawSrc=feature?.image||`/assets/previews/tools/${p.id}.svg`;
+    const src=refreshedApifyArtwork.has(p.id)?`${rawSrc}?v=20261111apify`:rawSrc;
     const alt=feature?.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
-    if(!fs.existsSync(path.join(root,src)))throw new Error(`${p.id}: product artwork missing`);
+    if(!fs.existsSync(path.join(root,rawSrc)))throw new Error(`${p.id}: product artwork missing`);
     return `<img class="tool-card-image" src="${esc(src)}" alt="${esc(alt)}" width="1200" height="675" loading="lazy" decoding="async">`;
 }
 
