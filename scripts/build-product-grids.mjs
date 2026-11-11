@@ -68,7 +68,7 @@ function searchTerms(p) {
 function productArtwork(p){
     const feature=featured.products.find(f=>f.id===p.id);
     const rawSrc=feature?.image||`/assets/previews/tools/${p.id}.svg`;
-    const src=refreshedApifyArtwork.has(p.id)?`${rawSrc}?v=20261111apify`:rawSrc;
+    const src=refreshedApifyArtwork.has(p.id)?`${rawSrc}?v=20261111apify2`:rawSrc;
     const alt=feature?.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
     if(!fs.existsSync(path.join(root,rawSrc)))throw new Error(`${p.id}: product artwork missing`);
     return `<img class="tool-card-image" src="${esc(src)}" alt="${esc(alt)}" width="1200" height="675" loading="lazy" decoding="async">`;
