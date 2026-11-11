@@ -8,7 +8,7 @@ const catalogue = JSON.parse(fs.readFileSync(path.join(root, 'products', 'catalo
 const cache = JSON.parse(fs.readFileSync(path.join(root, 'marketing', 'review-cache.json'), 'utf8'));
 const css = fs.readFileSync(path.join(root, 'assets', 'css', 'main.css'), 'utf8');
 const runtime = fs.readFileSync(path.join(root, 'assets', 'js', 'main.js'), 'utf8');
-const approved = new Set(['apify', 'mcpize', 'apple-app-store', 'google-play', 'g2', 'capterra', 'trustpilot']);
+const approved = new Set(['apify', 'mcpize', 'fab', 'apple-app-store', 'google-play', 'g2', 'capterra', 'trustpilot']);
 
 // Review freshness is validated per row, not against one site-wide constant.
 //

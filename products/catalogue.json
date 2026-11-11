@@ -219,7 +219,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted and in Review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
@@ -596,7 +596,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted and in Review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Figma design system migration variables styles component swap library replace rebrand agency handover mapping recipe JSON CSS tokens HTF",
@@ -629,7 +629,7 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "SVG Icons | HTF Figma Design plugin offline icon search Lucide SVG vector saved kits batch replacement",
-            "release_label": "Submitted and in Review",
+            "release_label": "Developed and in Review",
             "submission": {
                 "submitted_on": "2026-10-28",
                 "status_verified_on": "2026-10-30",
@@ -1376,7 +1376,7 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV",
-            "release_label": "Submitted and in Review",
+            "release_label": "Developed and in Review",
             "release_note": "Version 3.0.0 submitted for Marketplace review on 9 November 2026. Public installation and purchase are not yet available."
         },
         {
@@ -1958,7 +1958,7 @@
         {
             "id": "saveguard-studio-fab",
             "name": "SaveGuard Studio | HTF",
-            "summary": "Save, inspect, migrate and recover local game saves in Unreal Engine. SaveGuard Studio 1.0.0 is submitted to Fab for review.",
+            "summary": "Save, inspect, migrate and recover local game saves in Unreal Engine. Available for purchase on Fab.",
             "url": "https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html",
             "problems": [
                 "game-save-development"
@@ -1975,8 +1975,23 @@
             "ai_agent_compatible": false,
             "release_status": "live",
             "release_label": "Available for Purchase",
-            "reviews": [],
-            "shopfronts": [],
+            "reviews": [
+                {
+                    "source": "fab",
+                    "sourceUrl": "https://www.fab.com/listings/d459cd35-53bc-4635-8e3b-a95b16faaf8b",
+                    "ratingCount": 0,
+                    "reviewCount": 0,
+                    "lastVerified": "2026-11-11",
+                    "verificationStatus": "verified_no_reviews"
+                }
+            ],
+            "shopfronts": [
+                {
+                    "id": "fab",
+                    "name": "Fab",
+                    "url": "https://www.fab.com/listings/d459cd35-53bc-4635-8e3b-a95b16faaf8b"
+                }
+            ],
             "searchTerms": "SaveGuard Studio | HTF Unreal Engine · Fab save game recovery migration backup developer tools"
         },
         {
@@ -1998,7 +2013,7 @@
             ],
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
-            "release_label": "Submitted and in Review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"

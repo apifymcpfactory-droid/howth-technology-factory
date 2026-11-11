@@ -264,6 +264,16 @@
                 "lastVerified": "2026-10-30",
                 "verificationStatus": "verified_no_reviews"
             }
+        ],
+        "saveguard-studio-fab": [
+            {
+                "source": "fab",
+                "sourceUrl": "https://www.fab.com/listings/d459cd35-53bc-4635-8e3b-a95b16faaf8b",
+                "ratingCount": 0,
+                "reviewCount": 0,
+                "lastVerified": "2026-11-11",
+                "verificationStatus": "verified_no_reviews"
+            }
         ]
     }
 }
