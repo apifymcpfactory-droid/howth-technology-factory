@@ -67,7 +67,8 @@ function searchTerms(p) {
 }
 function productArtwork(p){
     const feature=featured.products.find(f=>f.id===p.id);
-    const rawSrc=feature?.image||`/assets/previews/tools/${p.id}.svg`;
+    const pngArtwork=`/assets/previews/tools/${p.id}.png`;
+    const rawSrc=feature?.image||(fs.existsSync(path.join(root,pngArtwork))?pngArtwork:`/assets/previews/tools/${p.id}.svg`);
     const src=refreshedApifyArtwork.has(p.id)?`${rawSrc}?v=20261111apify3`:rawSrc;
     const alt=feature?.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
     if(!fs.existsSync(path.join(root,rawSrc)))throw new Error(`${p.id}: product artwork missing`);
@@ -117,6 +118,7 @@ function productPlatforms(product) {
 }
 
 const platformGroups = [
+    ['cgtrader', 'CGTrader', 'cgtrader.svg', 'https://www.cgtrader.com/designers/howth-technology-factory'],
     ['figma', 'Figma', 'figma.png'],
     ['confluence', 'Confluence', 'atlassian.ico'],
     ['unity', 'Unity', 'unity.svg'],

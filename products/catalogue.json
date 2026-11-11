@@ -122,6 +122,10 @@
             {
                 "id": "plugin-integration",
                 "name": "Plugin or integration"
+            },
+            {
+                "id": "3d-asset-kit",
+                "name": "3D asset kit"
             }
         ],
         "access": [
@@ -172,6 +176,60 @@
         ]
     },
     "products": [
+        {
+            "id": "fluxaisle-studio-cgtrader",
+            "name": "FluxAisle Studio | HTF",
+            "summary": "Build AI data centre visualisations with 66 reusable infrastructure assets, two complete cooling layouts and five checked file formats.",
+            "url": "https://howthtechnologyfactory.pro/products/fluxaisle-studio-cgtrader.html",
+            "problems": ["design-workflow"],
+            "buyers": ["product-designers", "operations-automation"],
+            "types": ["3d-asset-kit"],
+            "access": ["web"],
+            "ai_agent_compatible": false,
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "reviews": [],
+            "shopfronts": [{"id":"cgtrader","name":"CGTrader","url":"https://www.cgtrader.com/3d-models/industrial/industrial-machine/fluxaisle-studio-ai-data-center-digital-twin-kit"}],
+            "planned_pricing": "$45 one-time",
+            "development_status": "Published on CGTrader on 11 November 2026 with instant download verified.",
+            "searchTerms": "FluxAisle Studio HTF CGTrader AI data centre digital twin Blender FBX GLB OBJ USD racks liquid cooling CDU"
+        },
+        {
+            "id": "circuitbench-studio-cgtrader",
+            "name": "CircuitBench Studio | HTF",
+            "summary": "Create electronics repair workshop scenes with 51 named assets, two complete bench workflows and five checked file formats.",
+            "url": "https://howthtechnologyfactory.pro/products/circuitbench-studio-cgtrader.html",
+            "problems": ["design-workflow"],
+            "buyers": ["product-designers"],
+            "types": ["3d-asset-kit"],
+            "access": ["web"],
+            "ai_agent_compatible": false,
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "reviews": [],
+            "shopfronts": [{"id":"cgtrader","name":"CGTrader","url":"https://www.cgtrader.com/3d-models/electronics/other/circuitbench-studio-electronics-repair-workshop-kit"}],
+            "planned_pricing": "$9.99 one-time",
+            "development_status": "Published on CGTrader on 11 November 2026 with instant download verified.",
+            "searchTerms": "CircuitBench Studio HTF CGTrader electronics repair workshop Blender FBX GLB OBJ USD asset kit"
+        },
+        {
+            "id": "flowdock-studio-cgtrader",
+            "name": "FlowDock Studio | HTF",
+            "summary": "Build warehouse operations scenes with 205 named parts across inbound, storage, picking and outbound workflows.",
+            "url": "https://howthtechnologyfactory.pro/products/flowdock-studio-cgtrader.html",
+            "problems": ["design-workflow"],
+            "buyers": ["product-designers", "operations-automation"],
+            "types": ["3d-asset-kit"],
+            "access": ["web"],
+            "ai_agent_compatible": false,
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "reviews": [],
+            "shopfronts": [{"id":"cgtrader","name":"CGTrader","url":"https://www.cgtrader.com/3d-models/industrial/other/flowdock-studio-warehouse-operations-environment-kit"}],
+            "planned_pricing": "$9.99 one-time",
+            "development_status": "Published on CGTrader on 11 November 2026 with instant download verified.",
+            "searchTerms": "FlowDock Studio HTF CGTrader warehouse operations environment Blender FBX GLB OBJ USD asset kit"
+        },
         {
             "id": "api-contract-workbench-jetbrains",
             "name": "API Contract Workbench | HTF",
