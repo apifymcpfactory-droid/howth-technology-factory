@@ -2002,6 +2002,54 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"
+        },
+        {
+            "id": "fieldnote-playtest-research-studio",
+            "name": "Fieldnote | Playtest Research Studio",
+            "summary": "Plan structured playtests, capture bounded observations, compare sessions and export local research evidence in Unreal Engine.",
+            "url": "https://howthtechnologyfactory.pro/products/fieldnote-playtest-research-studio.html",
+            "problems": ["project-context"],
+            "buyers": ["developers-ai", "product-designers"],
+            "types": ["plugin-integration"],
+            "access": ["future"],
+            "ai_agent_compatible": false,
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence"
+        },
+        {
+            "id": "buildscope-release-readiness-studio",
+            "name": "BuildScope | Unreal Release Readiness Studio",
+            "summary": "Define project checks, scan observable release evidence, resolve findings, compare a baseline and export a local review bundle.",
+            "url": "https://howthtechnologyfactory.pro/products/buildscope-release-readiness-studio.html",
+            "problems": ["project-context"],
+            "buyers": ["developers-ai", "project-admins"],
+            "types": ["plugin-integration"],
+            "access": ["future"],
+            "ai_agent_compatible": false,
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "BuildScope Unreal Release Readiness Studio Fab project scan findings baseline compare export local review bundle"
+        },
+        {
+            "id": "caliper-forge-shopify-theme",
+            "name": "Caliper Forge | Technical Catalogue Theme",
+            "summary": "Help technical-product buyers compare specifications, navigate large catalogues and place clear multi-option orders on Shopify.",
+            "url": "https://howthtechnologyfactory.pro/products/caliper-forge-shopify-theme.html",
+            "problems": ["website-tech-intelligence"],
+            "buyers": ["website-seo-marketing", "sales"],
+            "types": ["plugin-integration"],
+            "access": ["future"],
+            "ai_agent_compatible": false,
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "Caliper Forge Shopify Theme Store technical catalogue specifications filters multi-option ordering theme $100"
         }
     ],
     "release_statuses": {
@@ -2010,5 +2058,5 @@
         "submitted_for_review": "Developed and in Review",
         "live": "Available for Purchase"
     },
-    "status_updated": "2026-11-07"
+    "status_updated": "2026-11-11"
 }

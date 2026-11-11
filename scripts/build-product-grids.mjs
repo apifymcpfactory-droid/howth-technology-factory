@@ -103,6 +103,9 @@ const plannedPlatforms = {
     'mcpize-development-inventory': ['mcpize'],
     'saveguard-studio-fab': ['fab'],
     'save-game-migration-unity': ['unity'],
+    'fieldnote-playtest-research-studio': ['fab'],
+    'buildscope-release-readiness-studio': ['fab'],
+    'caliper-forge-shopify-theme': ['shopify'],
 };
 
 function productPlatforms(product) {
@@ -118,6 +121,7 @@ const platformGroups = [
     ['confluence', 'Confluence', 'atlassian.ico'],
     ['unity', 'Unity', 'unity.svg'],
     ['fab', 'Fab (Unreal Engine)', 'unrealengine.svg'],
+    ['shopify', 'Shopify Theme Store', 'shopify.svg'],
     ['apify', 'Apify', 'apify.svg', 'https://apify.com/apifmcpfactory'],
     ['mcpize', 'MCPize', 'mcpize.ico', 'https://mcpize.com/developers/howthfactory'],
     ['jetbrains', 'JetBrains', 'jetbrains.svg'],
