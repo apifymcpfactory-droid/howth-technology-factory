@@ -1,7 +1,7 @@
 export const releaseLabels = Object.freeze({
     in_development: 'Coming Soon - in development',
     developed_not_submitted: 'Developed but not submitted',
-    submitted_for_review: 'Submitted and in Review',
+    submitted_for_review: 'Developed and in Review',
     live: 'Available for Purchase',
 });
 
