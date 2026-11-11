@@ -432,3 +432,12 @@ body::before{background:radial-gradient(circle at 82% 8%,rgba(0,0,0,.07),transpa
 .status-developed_not_submitted,.product-release-status.status-developed_not_submitted{color:#262626!important;background:#f5f5f5!important;border-color:#cfcfcf!important}
 .status-in_development{color:#404040!important;background:#fafafa!important;border-color:#d4d4d4!important}
 .insight-prose code{color:#171717;background:#f5f5f5;border-color:#d4d4d4}
+
+/* A consistent, buyer-readable feature list on every product page. */
+.product-features{max-width:1280px;margin-inline:auto;padding:clamp(3rem,7vw,5rem) clamp(1.25rem,5vw,3rem)}
+.product-features .section-heading{max-width:760px;margin-bottom:1.5rem}
+.product-features .section-heading h2{margin:.35rem 0 .7rem;font-size:clamp(1.75rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.035em}
+.product-features .section-heading p:last-child{color:var(--muted);line-height:1.65}
+.product-feature-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.8rem;margin:0;padding:0;list-style:none}
+.product-feature-list li{position:relative;min-height:4.2rem;padding:1.05rem 1.1rem 1.05rem 2.6rem;border:1px solid var(--border);border-radius:.9rem;background:var(--surface);color:var(--text);font-weight:650;line-height:1.45}
+.product-feature-list li::before{content:"✓";position:absolute;left:1rem;top:1.05rem;color:var(--gold);font-weight:800}

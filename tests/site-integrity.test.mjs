@@ -66,5 +66,16 @@ assert.match(caliperSupport, /<form\b[^>]*action=["']https:\/\/formsubmit\.co\/2
 assert.match(caliperSupport, /name=["']_next["'][^>]*value=["']https:\/\/howthtechnologyfactory\.pro\/caliper\/support-received\.html["']/i);
 assert.match(caliperSupport, /id=["']support-email["'][^>]*name=["']email["'][^>]*required/i);
 assert.match(caliperSupport, /id=["']support-consent["'][^>]*required/i);
+const catalogue = JSON.parse(text(path.join(root, 'products', 'catalogue.json')));
+for (const product of catalogue.products) {
+  const productPath = new URL(product.url).pathname.replace(/^\//, '');
+  const productHtml = text(path.join(root, productPath));
+  if (!/class=["'][^"']*product-features[^"']*["']/i.test(productHtml)) {
+    errors.push(`${productPath}: missing visible key features section`);
+  }
+  const featureSection = /<section\b[^>]*class=["'][^"']*product-features[^"']*["'][^>]*>([\s\S]*?)<\/section>/i.exec(productHtml)?.[1] ?? '';
+  const featureCount = [...featureSection.matchAll(/<li\b/gi)].length;
+  if (featureCount < 3) errors.push(`${productPath}: expected at least three visible features, found ${featureCount}`);
+}
 assert.deepEqual(errors, [], `Site integrity failures:\n${errors.join('\n')}`);
 console.log(`site integrity: ${htmlFiles.length} HTML files checked`);
