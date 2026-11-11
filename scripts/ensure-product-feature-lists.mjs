@@ -14,6 +14,7 @@ const explicitFeatures = new Map([
     "Research SEC filings, tagged financials and material events",
   ]],
 ]);
+const styleVersion = "20261111fx";
 
 const decode = (value) => value.replace(/&amp;/g, "&").replace(/&quot;/g, "\"").replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 const clean = (value) => decode(value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
@@ -72,6 +73,7 @@ for (const name of fs.readdirSync(productsDir).filter((name) => name.endsWith(".
     } else {
       html = insertFeatureList(html, features);
     }
+    html = html.replace(/assets\/css\/main\.css\?v=[^"']+/g, `assets/css/main.css?v=${styleVersion}`);
     fs.writeFileSync(file, html);
     changed += 1;
   } catch (error) {
