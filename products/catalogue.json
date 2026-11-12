@@ -2016,7 +2016,7 @@
         {
             "id": "reprocase-unreal",
             "name": "ReproCase | HTF",
-            "summary": "Create, check, compare and export local bug-report evidence inside Unreal Editor. Developed but not submitted.",
+            "summary": "Create, check, compare and export local bug-report evidence inside Unreal Editor. Submitted to Fab and pending approval.",
             "url": "https://howthtechnologyfactory.pro/products/reprocase-unreal.html",
             "problems": [
                 "game-save-development"
@@ -2031,8 +2031,8 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "ReproCase HTF Unreal Engine Fab bug report QA evidence completeness recovery comparison JSON Markdown local editor plugin"

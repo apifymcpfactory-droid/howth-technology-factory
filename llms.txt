@@ -101,7 +101,7 @@
 
 - [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
 
-- [ReproCase | HTF](https://howthtechnologyfactory.pro/products/reprocase-unreal.html): Create, check, compare and export local bug-report evidence inside Unreal Editor. Verified on Unreal Engine 5.8 / Windows Win64. No public Fab listing or purchase is available yet. Status: Developed but not submitted.
+- [ReproCase | HTF](https://howthtechnologyfactory.pro/products/reprocase-unreal.html): Create, check, compare and export local bug-report evidence inside Unreal Editor. Submitted to Fab on 12 November 2026 and pending approval with automatic publication configured. No public purchase is available yet. Status: Developed and in Review.
 
 - [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Submitted and in Review.
 
