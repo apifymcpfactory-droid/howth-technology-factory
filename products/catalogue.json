@@ -2014,6 +2014,30 @@
             "searchTerms": "Accenture Jobs MCP | HTF Bank of America Jobs MCP | HTF Citigroup Jobs MCP | HTF CVS Health Jobs MCP | HTF Databricks Jobs MCP | HTF Datadog Jobs MCP | HTF The Home Depot Jobs MCP | HTF Jobs API MCP | HTF Lowe’s Jobs MCP | HTF SEC EDGAR MCP | HTF Stripe Jobs MCP | HTF Target Jobs MCP | HTF UPS Jobs MCP | HTF Walmart Jobs MCP | HTF hiring SEC EDGAR filings financials MCPize development"
         },
         {
+            "id": "reprocase-unreal",
+            "name": "ReproCase | HTF",
+            "summary": "Create, check, compare and export local bug-report evidence inside Unreal Editor. Developed but not submitted.",
+            "url": "https://howthtechnologyfactory.pro/products/reprocase-unreal.html",
+            "problems": [
+                "game-save-development"
+            ],
+            "buyers": [
+                "developers-ai"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "searchTerms": "ReproCase HTF Unreal Engine Fab bug report QA evidence completeness recovery comparison JSON Markdown local editor plugin"
+        },
+        {
             "id": "saveguard-studio-fab",
             "name": "SaveGuard Studio | HTF",
             "summary": "Save, inspect, migrate and recover local game saves in Unreal Engine. Available for purchase on Fab.",

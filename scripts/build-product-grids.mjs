@@ -102,6 +102,7 @@ const plannedPlatforms = {
     'sec-edgar-api': ['apify', 'mcpize'],
     'apify-jobs-development': ['apify'],
     'mcpize-development-inventory': ['mcpize'],
+    'reprocase-unreal': ['fab'],
     'saveguard-studio-fab': ['fab'],
     'save-game-migration-unity': ['unity'],
     'fieldnote-playtest-research-studio': ['fab'],
