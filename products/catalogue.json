@@ -2086,8 +2086,8 @@
             "types": ["plugin-integration"],
             "access": ["future"],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence"
@@ -2102,8 +2102,8 @@
             "types": ["plugin-integration"],
             "access": ["future"],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "BuildScope Unreal Release Readiness Studio Fab project scan findings baseline compare export local review bundle"
