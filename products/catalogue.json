@@ -1435,7 +1435,7 @@
             "shopfronts": [],
             "searchTerms": "ProjectKit Jira Cloud Atlassian Forge project metadata typed fields templates admin delivery account release CSV",
             "release_label": "Developed and in Review",
-            "release_note": "Version 3.0.0 submitted for Marketplace review on 9 November 2026. Public installation and purchase are not yet available."
+            "release_note": "Version 3.0.0 submitted on 9 November 2026. Both required security questionnaires are submitted; Forge submission and saved pricing were verified on 13 November. Awaiting Atlassian approval; public installation and purchase are not yet available."
         },
         {
             "id": "jobs-api-all-sources",
