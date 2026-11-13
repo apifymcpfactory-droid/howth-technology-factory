@@ -2126,8 +2126,9 @@
             "types": ["plugin-integration"],
             "access": ["future"],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Corrected package resubmitted to Fab on 13 November 2026. Pending approval, with automatic publication enabled after approval. Not yet available for purchase.",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "BuildScope Unreal Release Readiness Studio Fab project scan findings baseline compare export local review bundle"
