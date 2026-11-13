@@ -35,6 +35,8 @@
     $('#empty').hidden=shown>0;
   }
   function render(){
+    const blueprints=$('#blueprints');blueprints.replaceChildren();
+    for(const b of data.blueprints||[]){if(b.route!=='/private/production-platform/')continue;const card=el('article'),link=el('a','Open blueprint and feature checklist');link.href=b.route+location.hash;card.append(el('h2',b.title),el('p',b.description),el('p',b.status),link);blueprints.append(card);}blueprints.hidden=!blueprints.children.length;
     $('#updated').textContent='Shared progress updated '+data.as_of+' · '+(data.focus||'Work one eligible release at a time.');
     const verified=data.entries.reduce((n,e)=>n+e.completed.length,0);
     const metrics=[[data.platform_count,'retained platforms'],[data.product_entry_count,'product entries'],[verified,'verified completed steps'],[data.entries.reduce((n,e)=>n+e.tasks.length,0),'remaining steps']];
