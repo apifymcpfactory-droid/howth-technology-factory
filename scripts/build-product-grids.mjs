@@ -68,11 +68,11 @@ function searchTerms(p) {
 function productArtwork(p){
     const feature=featured.products.find(f=>f.id===p.id);
     const pngArtwork=`/assets/previews/tools/${p.id}.png`;
-    const rawSrc=feature?.image||(fs.existsSync(path.join(root,pngArtwork))?pngArtwork:`/assets/previews/tools/${p.id}.svg`);
+    const rawSrc=feature?.image||p.image||(fs.existsSync(path.join(root,pngArtwork))?pngArtwork:`/assets/previews/tools/${p.id}.svg`);
     const src=refreshedApifyArtwork.has(p.id)?`${rawSrc}?v=20261111apify3`:rawSrc;
-    const alt=feature?.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
+    const alt=feature?.imageAlt||p.imageAlt||`${p.name}: workflow illustration, not an application screenshot`;
     if(!fs.existsSync(path.join(root,rawSrc)))throw new Error(`${p.id}: product artwork missing`);
-    return `<img class="tool-card-image" src="${esc(src)}" alt="${esc(alt)}" width="1200" height="675" loading="lazy" decoding="async">`;
+    return `<img class="tool-card-image" src="${esc(src)}" alt="${esc(alt)}" width="1200" height="675"${p.image ? ' style="object-fit:contain"' : ''} loading="lazy" decoding="async">`;
 }
 
 // ---------------------------------------------------------------- homepage cards
@@ -108,6 +108,7 @@ const plannedPlatforms = {
     'fieldnote-playtest-research-studio': ['fab'],
     'buildscope-release-readiness-studio': ['fab'],
     'caliper-forge-shopify-theme': ['shopify'],
+    'production-operations-suite': ['elgato'],
 };
 
 function productPlatforms(product) {
@@ -125,6 +126,7 @@ const platformGroups = [
     ['unity', 'Unity', 'unity.svg'],
     ['fab', 'Fab (Unreal Engine)', 'unrealengine.svg'],
     ['shopify', 'Shopify Theme Store', 'shopify.svg'],
+    ['elgato', 'Elgato Marketplace', null],
     ['apify', 'Apify', 'apify.svg', 'https://apify.com/apifmcpfactory'],
     ['mcpize', 'MCPize', 'mcpize.ico', 'https://mcpize.com/developers/howthfactory'],
     ['jetbrains', 'JetBrains', 'jetbrains.svg'],
@@ -148,7 +150,7 @@ function groupedCards(renderCards, cataloguePage = false) {
             : '';
         return `<section data-platform-group="${platform}" class="rounded-2xl border border-borderc p-4 sm:p-6" aria-labelledby="platform-${platform}">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
-        <h3 id="platform-${platform}" class="flex items-center gap-3 font-display text-2xl"><img src="/assets/platform-icons/${icon}" width="32" height="32" style="background:#fff;border-radius:6px;padding:4px;object-fit:contain" alt="">${esc(name)}</h3>
+        <h3 id="platform-${platform}" class="flex items-center gap-3 font-display text-2xl">${icon ? `<img src="/assets/platform-icons/${icon}" width="32" height="32" style="background:#fff;border-radius:6px;padding:4px;object-fit:contain" alt="">` : ''}${esc(name)}</h3>
         ${publisherLink}
     </div>
     <div class="grid ${grid} gap-5">

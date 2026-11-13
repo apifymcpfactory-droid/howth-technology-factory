@@ -2147,6 +2147,25 @@
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Caliper Forge Shopify Theme Store technical catalogue specifications filters multi-option ordering theme $100"
+        },
+        {
+            "id": "production-operations-suite",
+            "name": "Production Operations Suite",
+            "summary": "Use Stream Deck to follow an OBS production checklist, timestamp important moments and record problems and fixes. Export clear session notes for your editor or next operator.",
+            "url": "https://howthtechnologyfactory.pro/products/production-operations-suite.html",
+            "problems": ["project-context"],
+            "buyers": ["operations-automation"],
+            "types": ["plugin-integration"],
+            "access": ["future"],
+            "ai_agent_compatible": false,
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/production-operations/01-production-operations.png",
+            "imageAlt": "Production Operations Suite: genuine Windows Stream Deck capture with external feature captions and a decorative silver monitor frame",
+            "searchTerms": "Production Operations Suite OPS Elgato Stream Deck OBS Windows production checklist session notes timestamps incident resolution report JSON Markdown CSV local plugin",
+            "status_verified": "2026-11-13"
         }
     ],
     "release_statuses": {

@@ -99,6 +99,9 @@
 ## MCPize development
 - [MCP Hiring & Company Research Tools | HTF](https://howthtechnologyfactory.pro/products/mcpize-development-inventory.html): MCP hiring and company-research products in development, with individual scope and planned pricing. Status: Coming Soon - in development.
 
+## OBS production notes for Stream Deck
+- [Production Operations Suite](https://howthtechnologyfactory.pro/products/production-operations-suite.html): Follow a production checklist, timestamp important moments, record problems and fixes, and export local session notes for an editor or next operator. Twelve Stream Deck actions for OBS on Windows. Built and packaged; final real OBS/device testing and demonstration video remain before Elgato submission. No purchase is available. Status: Developed but not submitted.
+
 - [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
 
 - [ReproCase | HTF](https://howthtechnologyfactory.pro/products/reprocase-unreal.html): Create, check, compare and export local bug-report evidence inside Unreal Editor. Submitted to Fab on 12 November 2026 and pending approval with automatic publication configured. No public purchase is available yet. Status: Developed and in Review.
