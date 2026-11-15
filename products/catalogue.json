@@ -24,6 +24,10 @@
                 "name": "Financial validation"
             },
             {
+                "id": "receivables-collections",
+                "name": "Receivables and collections"
+            },
+            {
                 "id": "website-tech-intelligence",
                 "name": "Website and technology intelligence"
             },
@@ -2167,6 +2171,26 @@
             "imageAlt": "Production Operations Suite: genuine Windows Stream Deck capture with external feature captions and a decorative silver monitor frame",
             "searchTerms": "Production Operations Suite OPS Elgato Stream Deck OBS Windows production checklist session notes timestamps incident resolution report JSON Markdown CSV local plugin",
             "status_verified": "2026-11-13"
+        },
+        {
+            "id": "receivables-workbench-zoho-books",
+            "name": "HTC Receivables Workbench",
+            "summary": "A planned Zoho Books workspace for finance teams to organise unpaid-invoice cases, disputes, payment promises and next actions for manager review.",
+            "url": "https://howthtechnologyfactory.pro/products/receivables-workbench-zoho-books.html",
+            "problems": ["receivables-collections"],
+            "buyers": ["accountants-finance", "operations-automation"],
+            "types": ["plugin-integration"],
+            "access": ["future"],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "Coming Soon - in development",
+            "release_note": "An early prototype opens inside Zoho Books and reads basic organisation and user context in an Ireland/EUR sandbox. Financial workflows are planned and unverified. No marketplace submission, price or purchase availability.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/receivables-workbench-zoho-books.svg",
+            "imageAlt": "HTC Receivables Workbench: development announcement for a planned Zoho Books collections workspace, not an application screenshot",
+            "searchTerms": "HTC Receivables Workbench Zoho Books finance accounts receivable collections unpaid invoices customer cases disputes payment promises next actions manager review planned development",
+            "status_verified": "2026-11-15"
         }
     ],
     "release_statuses": {

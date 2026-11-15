@@ -109,6 +109,7 @@ const plannedPlatforms = {
     'buildscope-release-readiness-studio': ['fab'],
     'caliper-forge-shopify-theme': ['shopify'],
     'production-operations-suite': ['elgato'],
+    'receivables-workbench-zoho-books': ['zoho-books'],
 };
 
 function productPlatforms(product) {
@@ -127,6 +128,7 @@ const platformGroups = [
     ['fab', 'Fab (Unreal Engine)', 'unrealengine.svg'],
     ['shopify', 'Shopify Theme Store', 'shopify.svg'],
     ['elgato', 'Elgato Marketplace', null],
+    ['zoho-books', 'Zoho Books', null],
     ['apify', 'Apify', 'apify.svg', 'https://apify.com/apifmcpfactory'],
     ['mcpize', 'MCPize', 'mcpize.ico', 'https://mcpize.com/developers/howthfactory'],
     ['jetbrains', 'JetBrains', 'jetbrains.svg'],
