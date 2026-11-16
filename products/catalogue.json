@@ -2114,8 +2114,9 @@
             "types": ["plugin-integration"],
             "access": ["future"],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "Fab requested a further packaging clarification on 16 November 2026. Resubmission is pending; purchase is not yet available.",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence"
@@ -2132,7 +2133,7 @@
             "ai_agent_compatible": false,
             "release_status": "submitted_for_review",
             "release_label": "Developed and in Review",
-            "release_note": "Corrected package resubmitted to Fab on 13 November 2026. Pending approval, with automatic publication enabled after approval. Not yet available for purchase.",
+            "release_note": "Fab approved publication on 16 November 2026. Public purchase availability is being verified.",
             "reviews": [],
             "shopfronts": [],
             "searchTerms": "BuildScope Unreal Release Readiness Studio Fab project scan findings baseline compare export local review bundle"
