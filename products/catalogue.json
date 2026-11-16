@@ -165,6 +165,7 @@
                 "id": "future",
                 "name": "Future access"
             },
+            {"id":"unreal-editor","name":"Unreal Engine Editor"},
             {
                 "id": "jira-cloud",
                 "name": "Jira Cloud"
@@ -2129,13 +2130,13 @@
             "problems": ["project-context"],
             "buyers": ["developers-ai", "project-admins"],
             "types": ["plugin-integration"],
-            "access": ["future"],
+            "access": ["unreal-editor"],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
-            "release_note": "Fab approved publication on 16 November 2026. Public purchase availability is being verified.",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "release_note": "Available on Fab from 16 November 2026. Unreal Engine 5.8, Windows editor.",
             "reviews": [],
-            "shopfronts": [],
+            "shopfronts": [{"id":"fab","name":"Fab","url":"https://www.fab.com/listings/c9936508-5d3e-44e9-9746-03920063d572"}],
             "searchTerms": "BuildScope Unreal Release Readiness Studio Fab project scan findings baseline compare export local review bundle"
         },
         {
