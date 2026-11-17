@@ -2021,7 +2021,7 @@
         {
             "id": "reprocase-unreal",
             "name": "ReproCase | HTF",
-            "summary": "Create, check, compare and export local bug-report evidence inside Unreal Editor. Submitted to Fab and pending approval.",
+            "summary": "Create, check, compare and export local bug-report evidence inside Unreal Editor. Available on Fab.",
             "url": "https://howthtechnologyfactory.pro/products/reprocase-unreal.html",
             "problems": [
                 "game-save-development"
@@ -2033,14 +2033,21 @@
                 "plugin-integration"
             ],
             "access": [
-                "future"
+                "unreal-editor"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
             "reviews": [],
-            "shopfronts": [],
-            "searchTerms": "ReproCase HTF Unreal Engine Fab bug report QA evidence completeness recovery comparison JSON Markdown local editor plugin"
+            "shopfronts": [
+                {
+                    "id": "fab",
+                    "name": "Fab",
+                    "url": "https://www.fab.com/listings/44410d54-42ea-4bda-b103-1f1b3c2004a7"
+                }
+            ],
+            "searchTerms": "ReproCase HTF Unreal Engine Fab bug report QA evidence completeness recovery comparison JSON Markdown local editor plugin",
+            "release_note": "Available on Fab from 17 November 2026. Unreal Engine 5.8, Windows / Win64 Editor."
         },
         {
             "id": "saveguard-studio-fab",
