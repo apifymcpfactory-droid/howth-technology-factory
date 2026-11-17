@@ -2115,19 +2115,29 @@
         {
             "id": "fieldnote-playtest-research-studio",
             "name": "Fieldnote | Playtest Research Studio",
-            "summary": "Plan structured playtests, capture bounded observations, compare sessions and export local research evidence in Unreal Engine.",
+            "summary": "Record playtest task outcomes and timestamped notes, then export local HTML, CSV and JSON evidence from Unreal Engine.",
             "url": "https://howthtechnologyfactory.pro/products/fieldnote-playtest-research-studio.html",
-            "problems": ["project-context"],
-            "buyers": ["developers-ai", "product-designers"],
-            "types": ["plugin-integration"],
-            "access": ["future"],
+            "problems": [
+                "project-context"
+            ],
+            "buyers": [
+                "developers-ai",
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
-            "release_note": "Fab requested a further packaging clarification on 16 November 2026. Resubmission is pending; purchase is not yet available.",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Fieldnote 1.0.0 was resubmitted to Fab on 17 November 2026 after packaging and documentation corrections. Review is pending; purchase is not yet available.",
             "reviews": [],
             "shopfronts": [],
-            "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence"
+            "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence",
+            "status_verified": "2026-11-17"
         },
         {
             "id": "buildscope-release-readiness-studio",
