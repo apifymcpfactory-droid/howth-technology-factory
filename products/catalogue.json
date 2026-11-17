@@ -233,6 +233,7 @@
             "shopfronts": [{"id":"cgtrader","name":"CGTrader","url":"https://www.cgtrader.com/3d-models/industrial/other/flowdock-studio-warehouse-operations-environment-kit"}],
             "planned_pricing": "$9.99 one-time",
             "development_status": "Published on CGTrader on 11 November 2026 with instant download verified.",
+            "editions": [{"platform":"Superhive","name":"FlowDock Studio — Warehouse Scene Kit","url":"https://howthtechnologyfactory.pro/products/flowdock-studio-superhive.html","release_status":"review","release_label":"Developed and in Review","named_mesh_parts":215,"submitted":"2026-11-17","submitted_price_usd":9.99}],
             "searchTerms": "FlowDock Studio HTF CGTrader warehouse operations environment Blender FBX GLB OBJ USD asset kit"
         },
         {
