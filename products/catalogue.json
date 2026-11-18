@@ -54,6 +54,10 @@
             {
                 "id": "game-save-development",
                 "name": "Game saving and recovery"
+            },
+            {
+                "id": "purchasing-receiving",
+                "name": "Purchasing and receiving"
             }
         ],
         "buyers": [
@@ -177,6 +181,10 @@
             {
                 "id": "confluence-cloud",
                 "name": "Confluence Cloud"
+            },
+            {
+                "id": "magento-open-source",
+                "name": "Magento Open Source"
             }
         ]
     },
@@ -2211,6 +2219,27 @@
             "imageAlt": "HTC Receivables Workbench: development announcement for a planned Zoho Books collections workspace, not an application screenshot",
             "searchTerms": "HTC Receivables Workbench Zoho Books finance accounts receivable collections unpaid invoices customer cases disputes payment promises next actions manager review planned development",
             "status_verified": "2026-11-15"
+        },
+        {
+            "id": "purchasing-workbench-magento",
+            "name": "Purchasing & Receiving Workbench",
+            "summary": "Record partial deliveries against approved purchase orders in Magento Open Source. See what arrived, what remains due and which receipt updated stock.",
+            "url": "https://howthtechnologyfactory.pro/products/purchasing-workbench-magento.html",
+            "problems": ["purchasing-receiving"],
+            "buyers": ["operations-automation"],
+            "types": ["plugin-integration"],
+            "access": ["magento-open-source"],
+            "ai_agent_compatible": false,
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Version 1.0.0 was submitted to Adobe Commerce Marketplace on 18 November 2026. Customer checkout is pending approval.",
+            "planned_pricing": "US$39 one-time",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/purchasing-workbench-magento.png",
+            "imageAlt": "Magento test order showing five packs ordered, two received and three still due.",
+            "searchTerms": "Adobe Commerce Marketplace Magento Open Source purchase orders purchasing receiving inventory source stock partial delivery supplier offers outstanding orders CSV receipts",
+            "status_verified": "2026-11-18"
         }
     ],
     "release_statuses": {

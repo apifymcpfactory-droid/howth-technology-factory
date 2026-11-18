@@ -96,6 +96,7 @@ function homepageCards(products) {
 
 // ---------------------------------------------------------------- index cards
 const platformByAccess = {
+    'magento-open-source': 'adobe-commerce',
     figma: 'figma', 'confluence-cloud': 'confluence', 'jira-cloud': 'jira', jetbrains: 'jetbrains',
 };
 const plannedPlatforms = {
@@ -121,6 +122,7 @@ function productPlatforms(product) {
 }
 
 const platformGroups = [
+    ['adobe-commerce', 'Adobe Commerce Marketplace', null],
     ['cgtrader', 'CGTrader', 'cgtrader.svg', 'https://www.cgtrader.com/designers/howth-technology-factory'],
     ['figma', 'Figma', 'figma.png'],
     ['confluence', 'Confluence', 'atlassian.ico'],

@@ -120,3 +120,4 @@
 - [Caliper Forge | Technical Catalogue Theme](https://howthtechnologyfactory.pro/products/caliper-forge-shopify-theme.html): A Shopify theme for specification-heavy catalogues, comparison and multi-option ordering. Design revisions required after initial review rejection on 17 November 2026; not currently in review or available to purchase. Status: Developed but not submitted.
 
 - [FlowDock Studio — Superhive edition](https://howthtechnologyfactory.pro/products/flowdock-studio-superhive.html): Editable warehouse scene kit with 215 named mesh parts. Submitted at $9.99; status: Developed and in Review. Not yet available to purchase on Superhive.
+- Purchasing & Receiving Workbench for Magento Open Source: https://howthtechnologyfactory.pro/products/purchasing-workbench-magento.html (Developed and in Review. Submitted to Adobe Commerce Marketplace. US$39 one-time on release.)
