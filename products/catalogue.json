@@ -2212,7 +2212,7 @@
             "ai_agent_compatible": false,
             "release_status": "developed_not_submitted",
             "release_label": "Developed but not submitted",
-            "release_note": "Private version 2.1 is installed in Zoho Books QA. Case review, dated follow-ups, native case history and scoped CSV downloads have been verified. Positive unpaid balances and role testing are still in progress.",
+            "release_note": "Zoho Books is reviewing private version 2.1. EU sandbox testing verified separate unpaid balances for two test customers and an overdue payment promise in the weekly CSV. Public Marketplace submission is pending.",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/receivables-workbench-zoho-books.jpg",
