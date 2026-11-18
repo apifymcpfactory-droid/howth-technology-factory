@@ -103,7 +103,7 @@
 - [Production Operations Suite](https://howthtechnologyfactory.pro/products/production-operations-suite.html): Follow a production checklist, timestamp important moments, record problems and fixes, and export local session notes for an editor or next operator. Twelve Stream Deck actions for OBS on Windows. Submitted to Elgato Marketplace on 13 November 2026; version 0.1 is pending review. Launch price: EUR 17.64 one time. Not yet available for purchase. Status: Developed and in Review.
 
 ## Receivables and collections for Zoho Books
-- [HTC Receivables Workbench](https://howthtechnologyfactory.pro/products/receivables-workbench-zoho-books.html): Planned workspace for finance teams to organise unpaid-invoice cases, disputes, payment promises, next actions and manager review. Only an early context prototype has been verified inside an Ireland/EUR development sandbox; financial workflows remain planned and unverified. No marketplace submission, price or purchase availability. Status: Coming Soon - in development.
+- [HTC Receivables Workbench](https://howthtechnologyfactory.pro/products/receivables-workbench-zoho-books.html) — Review a disputed invoice case, find its next action and export the cases checked for a weekly collections meeting in Zoho Books. Status: Developed but not submitted.
 
 - [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
 
