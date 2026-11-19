@@ -2240,6 +2240,64 @@
             "imageAlt": "Magento test order showing five packs ordered, two received and three still due.",
             "searchTerms": "Adobe Commerce Marketplace Magento Open Source purchase orders purchasing receiving inventory source stock partial delivery supplier offers outstanding orders CSV receipts",
             "status_verified": "2026-11-18"
+        },
+        {
+            "id": "questflow-narrative-studio",
+            "name": "QuestFlow Narrative Studio",
+            "summary": "Write branching quests in Unreal Engine, connect each player choice to a destination and rehearse both routes from one checkpoint.",
+            "url": "https://howthtechnologyfactory.pro/products/questflow-narrative-studio.html",
+            "problems": [
+                "project-context"
+            ],
+            "buyers": [
+                "developers-ai",
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "The Unreal Engine 5.8 plugin is packaged and its Fab listing is in draft.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/questflow-narrative-studio.jpg",
+            "imageAlt": "The last ferry sample running in Unreal Engine.",
+            "searchTerms": "QuestFlow branching quest dialogue narrative design Unreal Engine Fab objectives gameplay Blueprint story graph Unreal Data Table checkpoint",
+            "status_verified": "2026-11-19"
+        },
+        {
+            "id": "industrial-operations-scene-collection",
+            "name": "Industrial Operations Scene Collection",
+            "summary": "Move three editable Blender zones into place and show how a service part travels from receiving through electronics repair to a data-centre aisle.",
+            "url": "https://howthtechnologyfactory.pro/products/industrial-operations-scene-collection.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers",
+                "operations-automation"
+            ],
+            "types": [
+                "3d-asset-kit"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "The Blender collection is packaged for Creative Market.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/industrial-operations-scene-collection.jpg",
+            "imageAlt": "Three editable industrial zones in the included Blender site plan.",
+            "searchTerms": "Industrial Operations Scene Collection Blender 3D editable receiving dock repair workshop data center centre aisle rack glTF warehouse technical visualization Creative Market",
+            "status_verified": "2026-11-19"
         }
     ],
     "release_statuses": {

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Industrial Operations Scene Collection | Site planner’s guide</title>
+<link rel="canonical" href="https://howthtechnologyfactory.pro/products/industrial-operations-scene-collection.html"><link rel="icon" href="/assets/favicon.svg"><meta name="description" content="Move three editable Blender zones into place and show how a service part travels from receiving through electronics repair to a data-centre aisle."><meta property="og:image" content="https://howthtechnologyfactory.pro/assets/previews/tools/industrial-operations-scene-collection.jpg"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Industrial Operations Scene Collection", "creativeWorkStatus": "Developed but not submitted", "url": "https://howthtechnologyfactory.pro/products/industrial-operations-scene-collection.html", "publisher": {"@type": "Organization", "name": "Howth Technology Factory"}}</script>
+<style>
+:root{color-scheme:light;--ink:#182128;--paper:#faf9f5;--rule:#c3c8c9}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,sans-serif}
+main{max-width:960px;margin:auto;padding:7vw 5vw}header{border-bottom:3px solid var(--ink);padding-bottom:1.4em}
+h1,h2,h3{line-height:1.12;letter-spacing:-.035em}h1{font:clamp(43px,7.2vw,84px)/.99 Georgia,serif;margin:.25em 0}
+h2{font-size:32px;margin:1.6em 0 .4em}h3{font-size:21px;margin:1.3em 0 .2em}p{margin:.4em 0 1em}
+.brand{font:600 13px/1.3 system-ui;letter-spacing:.13em;text-transform:uppercase}
+nav{display:flex;flex-wrap:wrap;gap:6px 23px;margin:1em 0}a{color:#18425a;text-underline-offset:.18em}
+li{margin:.45em 0}code,kbd{font: .9em ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+table{border-collapse:collapse;width:100%}td,th{padding:.7em .7em .7em 0;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+small{display:block;margin:2em 0}figure{margin:1.6em 0}figure img{width:100%;border:1px solid var(--rule)}figcaption{font-size:.85em}
+@media print{main{padding:0}nav{display:none}h2,h3{break-after:avoid}tr{break-inside:avoid}}
+details{border-bottom:1px solid var(--rule);padding:.7em 0}summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--rule);margin-top:2em}.product-release-status{font-weight:650;font-size:.9em;color:#2f4653}.jump{font-size:.9em}</style></head><body>
+<main id="main"><nav class="jump" aria-label="Site navigation"><a href="/">Howth Technology Factory</a><a href="/products/">Products</a><a href="/contact.html">Support</a></nav>
+<header><div class="w-16 h-16 rounded-[16px] overflow-hidden mb-6"><img src="/assets/favicon.svg" width="52" height="52" alt="Howth Technology Factory"></div><div class="brand">Howth Technology Factory · Blender field guide</div>
+<h1>Industrial Operations<br>Scene Collection</h1><p class="product-release-status status-developed_not_submitted" data-release-status="developed_not_submitted">Developed but not submitted</p>
+<p>Lay out a receiving dock, electronics repair room and data-centre service aisle. Walk a proposal team through the handoffs between them using one editable concept scene.</p></header>
+<figure><img src="/assets/previews/tools/industrial-operations-scene-collection.jpg" width="1280" style="height:auto" alt="Rendered overhead three-quarter view of all three editable work zones"><figcaption>The initial arrangement in Site-Plan.blend. The dock and repair room sit in front of the service aisle.</figcaption></figure>
+<nav aria-label="Contents"><a href="#start">First view</a><a href="#zones">Zone review</a><a href="#edit">Layout changes</a><a href="#files">Files and recovery</a><a href="#use">Use and support</a></nav>
+<h2 id="start">Open the first review</h2>
+<ol><li>Extract the whole ZIP to a writable folder. Open <strong>Site-Plan.blend</strong> in Blender 5.2.4. Choose <strong>File → Save As</strong> and name a working copy.</li>
+<li>Start at frame <strong>1</strong> for the whole site. In the Timeline’s current-frame field, enter <strong>2</strong> for receiving, <strong>3</strong> for repair or <strong>4</strong> for the service aisle. In the 3D Viewport, choose <strong>View → Cameras → Active Camera</strong> if you have orbited away. The frames switch between four fixed views.</li>
+<li>Choose <strong>Render → Render Image</strong> for the current view. In the render window choose <strong>Image → Save As</strong> to save a PNG for a proposal or handoff.</li></ol>
+
+<h2 id="zones">Follow a service part through the site</h2>
+<p>Use one example part to structure the conversation. A planner can stage its receipt, identify where a technician would examine it, and show the destination rack. The collection supplies the visual setting. Your team supplies the actual process, route and operating requirements.</p>
+<table><thead><tr><th>Zone and view</th><th>Find in the Outliner</th><th>Review prompt</th></tr></thead><tbody>
+<tr><td>A · Receiving<br>Frame 2</td><td><code>DockDoor_01</code><br><code>Pallet_01</code></td><td>Where would a spare arrive, wait for inspection and transfer to the bench?</td></tr>
+<tr><td>B · Repair<br>Frame 3</td><td><code>CB_DiagnosticsBench_1</code><br><code>CB_ReworkBench_1</code></td><td>Which bench would receive the part, and where would the team show work awaiting handoff?</td></tr>
+<tr><td>C · Service aisle<br>Frame 4</td><td><code>FA_DTC_Rack_-1_1</code><br><code>FA_DTC_CDU_A</code></td><td>Which rack or cooling unit is the visual destination, and which view best explains the service visit?</td></tr>
+</tbody></table>
+<p>Open <strong>Review worksheet.csv</strong> in your spreadsheet app. Record an asset or view, one observation, a proposed change and the person who will confirm it. Save a separate worksheet for each proposal revision.</p>
+<h2 id="edit">Change the layout</h2>
+<h3>Move a whole zone</h3><p>In the Outliner search <code>MOVE A</code>, <code>MOVE B</code> or <code>MOVE C</code>. Select the matching Empty. With the pointer in the 3D Viewport, press <kbd>G</kbd>, then <kbd>X</kbd> or <kbd>Y</kbd>, enter a distance in metres and press <kbd>Enter</kbd>. Its equipment and detail camera move together. The overview camera stays fixed. Reframe it if you move the zones beyond its initial view.</p>
+<h3>Place or isolate a component</h3><p>Filter <strong>Asset finder.csv</strong> by zone, library or family. Copy the <strong>Example mesh in Site-Plan</strong> value into the Outliner search for a specific piece. For a multi-piece assembly, use its <strong>Catalogue name</strong> to find the matching pieces and select those you want to move or duplicate. <kbd>Shift+D</kbd> duplicates the selection. In the viewport, <strong>View → Local View → Toggle Local View</strong> isolates selected geometry. Toggle again to return to the full site.</p>
+<h3>Prepare two alternatives</h3><p>Save separate layouts with <strong>File → Save As</strong>. The scene uses local editable meshes and materials. Editing the proposal copy leaves the original layouts in <strong>Zone libraries</strong> available for the next brief. To recover an individual mesh, use <strong>File → Append</strong>, open the relevant library, choose <strong>Object</strong> and select its exact name.</p>
+<h2 id="files">Files and recovery</h2>
+<ul><li><strong>Site-Plan.blend</strong> contains the assembled layout, movable zones, four review cameras, editable geometry and materials.</li>
+<li><strong>Zone libraries</strong> contains a standalone Blender source for FlowDock Studio, CircuitBench Studio and FluxAisle Studio. Each retains its own original composition.</li>
+<li><strong>GLB</strong> contains one binary glTF per standalone zone. Import the required GLB in another compatible application and check its axis and unit conversion. The four-camera planning workflow lives in the Blender master.</li>
+<li><strong>Asset finder.csv</strong> cross-references 215 named warehouse parts, 51 workshop catalogue entries and 66 infrastructure entries. Multi-piece entries include an example mesh and a matching piece count. These three library counts use their original cataloguing conventions.</li>
+<li><strong>Review worksheet.csv</strong> holds a reusable prompt and review fields for each handoff. <strong>Site-overview.jpg</strong> shows the included default plan.</li></ul>
+<p>If you lose a zone, clear the Outliner search and check the collection’s visibility. Return to frame 1 and the active camera. For an accidental edit, use Undo or reopen a fresh copy from the archive.</p>
+<h2 id="use">Scope, licensing and help</h2>
+<p>Use this collection for concept layouts, visual explanations and training illustrations. It does not calculate equipment capacity, throughput, service clearances, temperatures, electrical behaviour or safe routes. Confirm every real-world facility decision with the relevant project specialists.</p>
+<p>The source scenes contain the same underlying FlowDock, CircuitBench and FluxAisle artwork available as individual kits. This edition adds the combined planning scene, four review views, cross-library finder and handoff worksheet. Review the Creative Market licence chosen at checkout for permitted use and sharing. <a href="https://creativemarket.com/licenses/general">Creative Market general licences</a></p>
+<p>For help, contact Howth Technology Factory through the <a href="/contact.html">Howth Technology Factory support page</a>. Include your Blender version, filename and the operation you tried.</p>
+<h2 id="buyer-questions">Buyer questions</h2>
+<details><summary>Who will use this collection?</summary><p>Site planners, industrial visualisation artists and training designers can explain a service workflow across three different facilities or work zones.</p></details>
+<details><summary>What do I open first?</summary><p>Extract the ZIP and open Start-here.html, then Site-Plan.blend.</p></details>
+<details><summary>Can I see the whole site immediately?</summary><p>Yes. The first frame opens the assembled three-zone layout with an overview camera.</p></details>
+<details><summary>Can I present only the dock?</summary><p>Select frame 2 to use the receiving camera. Frames 3 and 4 show the repair area and service aisle.</p></details>
+<details><summary>How do I move a whole facility area?</summary><p>Select its named MOVE Empty in the Outliner and translate it. Its geometry and detail camera follow.</p></details>
+<details><summary>Does the overview camera follow my changes?</summary><p>It stays in place. Reframe the overview after moving a zone beyond its initial composition.</p></details>
+<details><summary>Can I edit one rack or instrument?</summary><p>Yes. Search its catalogue name to select its constituent meshes, then edit or duplicate your selection.</p></details>
+<details><summary>How do I find one exact piece?</summary><p>Filter Asset finder.csv by library or family and paste the example mesh name into the Blender Outliner search.</p></details>
+<details><summary>Are the listed numbers all unique equipment designs?</summary><p>The warehouse count covers named parts. The repair and infrastructure counts cover catalogue entries, including assemblies, repeated units and variants.</p></details>
+<details><summary>Can I start with just the repair workshop?</summary><p>Yes. Open the CircuitBench standalone Blender library or import its GLB.</p></details>
+<details><summary>Which warehouse activities are represented?</summary><p>The dock library includes receiving doors, pallet storage, picking conveyors and outbound packing equipment.</p></details>
+<details><summary>What repair activities are represented?</summary><p>The workshop has populated diagnostics and rework benches, generic instruments, extraction equipment and parts storage.</p></details>
+<details><summary>What does the data-centre zone include?</summary><p>It includes direct-to-chip and rear-door cooling arrangements, compute racks, distribution units, pipes and aisle infrastructure.</p></details>
+<details><summary>Can I change the surface finishes?</summary><p>Yes. The native geometry carries editable Blender materials. Select a mesh and open Material Properties.</p></details>
+<details><summary>Can I use another 3D application?</summary><p>Each standalone zone has a GLB 2.0 file. Check that your importer handles binary glTF, materials and units as expected.</p></details>
+<details><summary>Which files contain the combined site?</summary><p>Site-Plan.blend contains the editable combined layout. Site-overview.jpg shows a rendered reference of its default composition.</p></details>
+<details><summary>Does the collection include the individual kits’ full catalogue of export formats?</summary><p>This edition supplies the editable Blender libraries and a GLB for each zone.</p></details>
+<details><summary>Does the scene depend on a connected asset service?</summary><p>The master contains local geometry and materials. The guide and CSV files open locally after extraction.</p></details>
+<details><summary>How do I produce a presentation image?</summary><p>Go to a marked frame, choose Render Image, then save the resulting image from the render window.</p></details>
+<details><summary>How do I compare two proposals?</summary><p>Save two Blender working copies, render the same camera in each and record the changes in separate copies of the review worksheet.</p></details>
+<details><summary>How do I recover a piece I edited or deleted?</summary><p>Append the object from its standalone Blender file, or reopen a fresh copy of the master from the ZIP.</p></details>
+<details><summary>Does it calculate clearances or test a proposed site?</summary><p>It illustrates an arrangement. A qualified project team must assess service clearances, safety, electrical capacity, thermal loads and certification.</p></details>
+<details><summary>I already own one or more individual kits. What is new?</summary><p>This edition combines their artwork into a movable site plan and adds four review views, a shared finder and a cross-zone review worksheet.</p></details>
+<details><summary>Can I hand the editable files to a client?</summary><p>Check Creative Market’s terms for the licence chosen at checkout and the intended deliverable. The included guide links to the platform’s licence information.</p></details>
+<details><summary>How do I get support?</summary><p>Contact Howth Technology Factory through the purchase or the company website and include the filename, Blender version and operation you tried.</p></details>
+<footer><nav aria-label="Footer"><a href="/products/">All products</a><a href="/contact.html">Contact and support</a></nav></footer></main></body></html>

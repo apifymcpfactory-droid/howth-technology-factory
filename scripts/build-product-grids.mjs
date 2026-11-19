@@ -107,6 +107,8 @@ const plannedPlatforms = {
     'saveguard-studio-fab': ['fab'],
     'save-game-migration-unity': ['unity'],
     'fieldnote-playtest-research-studio': ['fab'],
+    'questflow-narrative-studio': ['fab'],
+    'industrial-operations-scene-collection': ['creative-market'],
     'buildscope-release-readiness-studio': ['fab'],
     'caliper-forge-shopify-theme': ['shopify'],
     'production-operations-suite': ['elgato'],
@@ -124,6 +126,7 @@ function productPlatforms(product) {
 const platformGroups = [
     ['adobe-commerce', 'Adobe Commerce Marketplace', null],
     ['cgtrader', 'CGTrader', 'cgtrader.svg', 'https://www.cgtrader.com/designers/howth-technology-factory'],
+    ['creative-market', 'Creative Market', null],
     ['figma', 'Figma', 'figma.png'],
     ['confluence', 'Confluence', 'atlassian.ico'],
     ['unity', 'Unity', 'unity.svg'],

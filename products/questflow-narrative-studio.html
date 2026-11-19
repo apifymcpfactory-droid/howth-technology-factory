@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QuestFlow Narrative Studio for Unreal Engine | Howth Technology Factory</title>
+<meta name="description" content="Write a branching quest in Unreal Engine and play both routes. Explore the editable Harbour Watch sample and the QuestFlow integration guide.">
+<link rel="canonical" href="https://howthtechnologyfactory.pro/products/questflow-narrative-studio.html">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/css/main.css?v=20261111fx">
+<link rel="stylesheet" href="/assets/css/product-preview.css?v=20261111bw">
+<meta property="og:title" content="QuestFlow Narrative Studio for Unreal Engine">
+<meta property="og:image" content="https://howthtechnologyfactory.pro/assets/previews/tools/questflow-narrative-studio.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QuestFlow Narrative Studio","applicationCategory":"DeveloperApplication","operatingSystem":"Windows","creativeWorkStatus":"Developed but not submitted","url":"https://howthtechnologyfactory.pro/products/questflow-narrative-studio.html","publisher":{"@type":"Organization","name":"Howth Technology Factory"}}</script>
+<style>
+.quest-guide{max-width:780px;padding:40px 0 72px;font-size:1.02rem;line-height:1.68}.quest-guide h2,.quest-guide h3{font-weight:650;line-height:1.2;letter-spacing:-.025em;margin:2em 0 .6em}.quest-guide h2{font-size:2rem}.quest-guide h3{font-size:1.5rem}.quest-guide p,.quest-guide li{margin:.65em 0}.quest-guide ol{list-style:decimal;padding-left:1.6em}.quest-guide a{text-decoration:underline;text-underline-offset:3px}.quest-guide code{overflow-wrap:anywhere}.quest-guide table{border-collapse:collapse;width:100%;margin:1.5em 0}.quest-guide th,.quest-guide td{text-align:left;vertical-align:top;border-bottom:1px solid #ddd;padding:.6em}
+</style>
+</head>
+<body class="product-preview">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav"><div class="shell"><a class="brand" href="/">HTF</a><nav aria-label="Main navigation"><a href="/products/">Products</a><a href="#guide">Product guide</a><a href="/contact.html">Support</a></nav></div></header>
+<main id="main" class="shell">
+<section class="hero">
+<div>
+<div class="w-16 h-16 rounded-[16px] overflow-hidden mb-6"><img src="/assets/previews/tools/questflow-icon.png" width="64" height="64" alt=""></div>
+<p class="eyebrow">QuestFlow Narrative Studio · Unreal Engine</p>
+<h1>Write the choice.<br>Play both routes.</h1><p class="product-release-status status-developed_not_submitted" data-release-status="developed_not_submitted">Developed but not submitted</p>
+<p class="intro">Give each player choice a destination in Unreal. In the included ferry story, one route asks the player to light two lamps. The other goes straight to the ending. Keep a checkpoint at the decision and try each path.</p>
+<div class="actions"><a class="button" href="#guide">Read the product guide</a></div>
+</div>
+<figure class="hero-shot"><img src="/assets/previews/tools/questflow-narrative-studio.jpg" width="1200" height="675" alt="The Last Ferry sample running in Unreal Engine"><figcaption>The last ferry, an editable story supplied with QuestFlow.</figcaption></figure>
+</section>
+<dl class="facts"><div><dt>Host</dt><dd>Unreal Engine 5.8 on Windows</dd></div><div><dt>Intended marketplace</dt><dd>Fab</dd></div><div><dt>Files</dt><dd>Native story assets and local exports</dd></div></dl>
+<article class="quest-guide" id="guide" aria-label="QuestFlow product guide">
+<h2>Product guide</h2>
+<p>Use QuestFlow when a writer needs to author a branch, a designer needs to play both routes, and a programmer needs stable identifiers for gameplay and saves. QuestFlow runs inside Unreal Engine. The included story, <strong>The last ferry</strong>, lets the player light two harbour lamps or guide the ferry directly.</p>
+<h2 id="play-the-included-story">Play the included story</h2>
+<ol>
+<li>Enable <strong>QuestFlow Narrative Studio</strong> in <strong>Edit → Plugins</strong> and restart Unreal Editor if prompted. For a source distribution, place the plugin folder containing <code>QuestFlowStudio.uplugin</code> inside your C++ project's <code>Plugins</code> folder, then build its Development Editor target with the UE 5.8 Windows C++ toolchain.</li>
+<li>Turn on <strong>Show Plugin Content</strong> in the Content Browser settings. In the QuestFlow plugin's <strong>Examples</strong> folder, open <strong>L_HarbourWatch</strong>.</li>
+<li>Select one player and <strong>Play Standalone</strong> as the play net mode, then press <strong>Play</strong>. Continue past the harbour keeper's opening line. Keep a rehearsal checkpoint at the fork, choose <strong>Light the lamps</strong>, and record two objective events to see the ending. Return to the checkpoint and try <strong>Guide the ferry</strong>.</li>
+<li>End play. Open <strong>NS_HarbourWatch</strong> to see where the routes separate and meet again. The checkpoint lasts for that play session. The sample does not write to a player's disk slot.</li>
+</ol>
+<h2 id="author-your-own-story">Author your own story</h2>
+<p>Create a <strong>QuestFlow Story</strong> in the Content Browser. Its starting graph already contains a conversation, a decision, an objective and an ending. Select a node to edit its text and options. Drag an output pin to the next node's input. <strong>Set start</strong> selects the entry node. <strong>Validate</strong> checks for missing text, unattached outputs, unreachable nodes, duplicate IDs and circular paths. Correct the reported node, validate again and save the asset.</p>
+<p>Add a <strong>QuestFlow Story Rehearsal</strong> actor to a dedicated test level and assign your graph to its <strong>Story</strong> field to play your changes. Keep one rehearsal actor in that level. It supplies a standalone preview interface. Your production game can present the same story through its own UI.</p>
+<p>For a spreadsheet-led team, use <strong>Import / export → Create Data Table</strong>. Each named row represents a node. One row marks the start. Continuations, failure paths and keyed choices refer to row names. Use <strong>Apply Data Table</strong> to bring edits back into the story. Validate your edited table before replacing a published story. An invalid import reports the problem and retains the existing graph. During Play in Editor, the graph's live inspector can follow an active player component for that graph.</p>
+<h2 id="connect-a-game">Connect a game</h2>
+<p>Add a <strong>Quest Flow Narrative Player Component</strong> to the actor that owns the story. Call <strong>Start Narrative</strong> on the authority with your graph. Read <strong>Get Active Node</strong> and <strong>Get Playback</strong> to display the current content. Listen for <strong>On Narrative Changed</strong> to refresh the interface when state changes.</p>
+<p>To show the included gameplay HUD, use <strong>Create Widget</strong> with the <strong>QuestFlow Quest Tracker</strong> class and your local player controller. Call <strong>Bind Quest Tracker</strong> with that player's narrative component, then <strong>Add to Player Screen</strong>. The tracker shows the current story, objective counts and ending. You can pass your Unreal String Table when binding. If the local player changes characters, bind the new character's component. Bind an empty component to clear the tracker.</p>
+<table>
+<thead>
+<tr>
+<th>When the player acts</th>
+<th>Call on the authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continues a spoken line</td>
+<td><strong>Advance Dialogue</strong> with the displayed node ID</td>
+</tr>
+<tr>
+<td>Selects an option</td>
+<td><strong>Select Choice</strong> with the node and choice IDs</td>
+</tr>
+<tr>
+<td>Completes an objective action</td>
+<td><strong>Apply Objective Progress</strong> with the node ID, objective ID and positive event count</td>
+</tr>
+<tr>
+<td>Triggers an authored failure condition</td>
+<td><strong>Fail Objective</strong> with the active node ID. Connect the failure route when authoring that objective.</td>
+</tr>
+</tbody>
+</table>
+<p>Use <strong>Parallel Objectives</strong> when events can arrive in any order. Give each requirement a stable ID and target. Read each one with <strong>Get Condition Progress</strong>. The successful route opens after all targets are met. To issue a gameplay reward, set <strong>Reward ID</strong> on the objective and bind the server's <strong>On Reward Earned</strong> event. Your game decides what the reward does. If it writes to a separate inventory or service, persist the supplied playthrough ID and reward ID together to prevent a repeated grant. Restoring a checkpoint does not grant the reward again.</p>
+<p>Check the returned success flag and error text. Passing the displayed node ID prevents a delayed click from acting on the next node. For multiplayer, use a replicated owning actor. Its relevancy determines which clients see the story state. Route each player's input through your game's normal server-side checks. The rehearsal actor is for standalone play.</p>
+<h2 id="preserve-an-existing-players-progress">Preserve an existing player's progress</h2>
+<p>Call <strong>Create Snapshot</strong> on the authority and write its result with Unreal's <strong>Save Game to Slot</strong>. Your game chooses the player, slot name and storage policy. After <strong>Load Game from Slot</strong>, cast the result to <strong>Quest Flow Narrative Save Game</strong> and call <strong>Restore Narrative</strong>. Check that it succeeded before replacing an older slot.</p>
+<p>Text edits can keep their original node and choice IDs. When publishing a structural revision, increment the graph's <strong>Definition Version</strong>. Create a Data Asset of class <strong>Quest Flow Save Migration</strong>. Choose the destination graph, pin its version and add a source-version mapping for each older revision you support. Keep surviving IDs unchanged. Fill in replacements for nodes or choices that have moved to new IDs. A choice replacement uses its original node and choice IDs.</p>
+<p>Call <strong>Restore Migrated Narrative</strong> with the player's existing save. QuestFlow checks that the mapped choice history can reach the saved objective and that the original progress still fits. A failed restore leaves the source save and running state available for recovery. After success, call <strong>Create Snapshot</strong> again and persist the new version using your normal save policy.</p>
+<p>Keep reward IDs and the IDs of saved parallel conditions stable across a migration. The current playthrough cannot rewind to a snapshot that would remove an already earned reward. Use a fresh playthrough to rehearse a different reward history.</p>
+<h2 id="review-changes-and-translate-dialogue">Review changes and translate dialogue</h2>
+<p><strong>Export JSON</strong> writes the graph IDs, entry point, branch targets, source text, objective counts and layout. Nodes have stable ordering, so moving an asset or reordering its stored node array does not introduce unrelated changes into a code review. Option order stays in the writer's chosen display order. The JSON supports review and external tools. Author changes in the native graph.</p>
+<p><strong>Export string table</strong> writes an Unreal String Table CSV. Import it into a String Table asset, then use <strong>Get Localized Title</strong>, <strong>Get Localized Node Text</strong> and <strong>Get Localized Choice Label</strong> with that table. Your project handles translated cultures through Unreal's localisation tools. Missing entries fall back to the authored line. Assigning the table to the example actor's <strong>String Table</strong> field lets you rehearse the same lookup.</p>
+<p>Choose <strong>Printable narrative review</strong> to share a local HTML handout with someone who does not run Unreal. Open it in a browser and follow a choice link to its destination. Use the browser's Print command to create a paper copy or PDF.</p>
+<h2 id="compatibility-privacy-and-support">Compatibility, privacy and support</h2>
+<p>The plugin targets Windows 64-bit and Unreal Engine 5.8. The editable examples live in the plugin's <code>Content/Examples</code> directory. Exported files go to the location you select. QuestFlow includes no hosted account, analytics or separate service. The game controls normal Unreal replication and save storage.</p>
+<p>For a linear objective checklist, follow the companion <a href="#linear-example">Harbour Beacon quick start</a>. For help, include your Unreal version, the action you took and any validation message. <a href="https://howthtechnologyfactory.pro/contact.html">Contact Howth Technology Factory</a></p>
+
+<h2 id="linear-example">Play The Harbour Beacon</h2>
+<p>Open <strong>QuestFlow Studio Content → Examples → DA_HarbourBeacon</strong> in the Unreal Content Browser. Enable <strong>Show Plugin Content</strong> in the browser settings if the plugin folder is hidden. This quest asks the player to recover two lenses and light a beacon.</p>
+<ol>
+<li>In an Actor or Player Controller Blueprint, use <strong>Construct Object from Class</strong> with <strong>Quest Flow Session</strong>. Store its return value in a variable on the owning object.</li>
+<li>Call <strong>Start Quest</strong> with <strong>DA_HarbourBeacon</strong>. Check the returned success flag. On a failure, display <strong>Out Error</strong>. Use <strong>Get Active Objective</strong> to read the current description and target and <strong>Get Active Progress</strong> for the current count.</li>
+<li>On each collected lens, call <strong>Apply Progress</strong> with objective ID <code>CollectLenses</code> and amount <code>1</code>. The second lens opens <code>LightBeacon</code>. Pass <code>LightBeacon</code> and <code>1</code> when the player lights it. <strong>Is Complete</strong> now returns true.</li>
+</ol>
+<h2 id="save-halfway-through">Save halfway through</h2>
+<p>After the first lens, call <strong>Create Save</strong> and pass the returned object to Unreal's <strong>Save Game to Slot</strong> using a slot and user index chosen by your game. Check that the write succeeded. To resume, load the same slot with <strong>Load Game from Slot</strong>, cast the result to <strong>Quest Flow Save Game</strong>, construct a session and call <strong>Restore Quest</strong> with the definition and loaded save. The next objective is still <code>CollectLenses</code>, at one of two.</p>
+<p>For a new quest, create a <strong>Data Asset</strong> of class <strong>Quest Flow Definition</strong>. Give the quest and each objective permanent IDs, a player-facing description and a positive target count. Keep the IDs when polishing the text. Increment <strong>Definition Version</strong> when changing the sequence, IDs or counts. This version accepts matching save and definition versions. If a restore fails, report the returned error and preserve the player's slot.</p>
+
+</article>
+<section class="faq-section quest-guide" id="questions"><h2>Questions from game teams</h2>
+<details><summary>Who would use this on a game team?</summary><p>A writer can shape dialogue and choices, a quest designer can play the routes, and a gameplay programmer can connect the results to a game. A reviewer can read the exported story without running the project.</p></details>
+<details><summary>What should I try in the first five minutes?</summary><p>Open the Harbour Watch example level in standalone play. At the ferry decision, keep a rehearsal checkpoint. Take the lamp route, return to the checkpoint and guide the ferry directly. Both routes arrive at the same ending through different actions.</p></details>
+<details><summary>Which Unreal setup is this for?</summary><p>The target is Unreal Engine 5.8 on Windows 64-bit. The included source setup uses the matching Windows C++ toolchain. The linear quest example has run in a 5.8.4 Development Editor host.</p></details>
+<details><summary>Where do I find the examples?</summary><p>Enable the plugin and turn on <strong>Show Plugin Content</strong> in the Content Browser. Open the QuestFlow <strong>Examples</strong> folder. Harbour Watch is the branching rehearsal. Harbour Beacon demonstrates a linear sequence. The two examples serve different purposes.</p></details>
+<details><summary>Can I start with something playable?</summary><p>Choose <strong>QuestFlow Story</strong> under Gameplay in the Content Browser. The starter includes a spoken line, a two-way decision, a counted objective and a common ending. Replace the text and reconnect the routes as you write.</p></details>
+<details><summary>Can two choices lead back to the same scene?</summary><p>Yes. Connect both paths to the input on the shared node. One route can pass through an objective while another reaches that same scene immediately.</p></details>
+<details><summary>Can players loop back to an earlier node?</summary><p>Each QuestFlow story uses forward paths that reach endings. The editor rejects connections that create a cycle. During rehearsal, you can return to your checkpoint to explore an earlier decision.</p></details>
+<details><summary>What does the writer put in a Data Table?</summary><p>Use <strong>QuestFlow Story Table Row</strong>. Give each row a name, designate one start and enter the dialogue or objective text. Use destination row names to connect the routes. Give each option a stable key so you can edit its wording or reorder the choices.</p></details>
+<details><summary>What happens if a writer misspells a destination?</summary><p>Applying the Data Table reports the row and the missing destination. Fix the name in the table and apply it again. QuestFlow replaces the existing story only after the candidate rows validate and you confirm the change.</p></details>
+<details><summary>Can the graph become a table later?</summary><p><strong>Import / export → Create Data Table</strong> makes an editable Unreal asset with the node and choice identities. The asset can be edited in Unreal's table editor and applied back to the story.</p></details>
+<details><summary>What makes a quest objective complete?</summary><p>Your game sends progress with the active node ID, the objective ID and a positive amount. The objective records progress toward the count set by the author.</p></details>
+<details><summary>Can a task require two different things?</summary><p>Give an objective a primary requirement, then add parallel requirements with their own IDs and counts. For example, a quest can require a lens and lamp oil. Your gameplay code reports progress against the relevant ID.</p></details>
+<details><summary>What determines whether a player fails an objective?</summary><p>Your game decides when an objective fails. An authored failure connection supplies the next story node. This lets the writer show what happens after failure while the game controls rules such as a time limit.</p></details>
+<details><summary>Does a reward create an item in my inventory?</summary><p>Pair the objective with a reward ID and listen for the reward event. Your game maps that ID to an inventory change, achievement or other effect and decides how to persist it.</p></details>
+<details><summary>How can I tell which node is actually running?</summary><p>Open the story during Play In Editor. The live bar identifies the running instance and its current text. <strong>Find active node</strong> moves the canvas to it. <strong>Next player</strong> switches between active instances of this story when more than one is present.</p></details>
+<details><summary>Do I need to build a dialogue screen to test a story?</summary><p>The standalone rehearsal actor provides the sample controls. Place one in a dedicated test level and assign your story. In a production game, read the narrative component from your own interface.</p></details>
+<details><summary>Will a rehearsal checkpoint survive closing the level?</summary><p>It lasts for the current play session. To keep a player's production progress across sessions, create a narrative snapshot and save it using Unreal's Save Game to Slot. Your game chooses the slot and when to write.</p></details>
+<details><summary>What happens to a save if I change the dialogue?</summary><p>Keep graph, node and choice IDs stable when changing wording. When publishing a structural revision, version the definition and test existing saves against it. A migration asset can map replaced nodes and choices to a specified new revision and validate the restored route.</p></details>
+<details><summary>How do I use this from Blueprint or C++?</summary><p>Add the narrative player component to the actor that owns the story. Start the graph, read its active node and send the displayed node ID when the player acts. Your game handles the success value and error text for each call.</p></details>
+<details><summary>Can a networked game use the story state?</summary><p>The component is designed for an authoritative, replicated owning actor. The game validates player requests and Unreal actor relevancy governs which clients receive playback. The included rehearsal runs in standalone mode.</p></details>
+<details><summary>What do I send to a reviewer who has no Unreal installation?</summary><p>Export <strong>Printable narrative review</strong>. The local HTML document contains the story text and route links. Open it in a browser to read it or use the browser's print command.</p></details>
+<details><summary>What does a localisation team receive?</summary><p>Export the translation String Table CSV. It carries keys and authored text into Unreal's String Table workflow. Your team supplies and manages translations. Missing entries fall back to the authored text.</p></details>
+<details><summary>Can another tool read the story structure?</summary><p>Export story JSON for structured nodes, choices and connections. For editable rows that you plan to bring back into QuestFlow, use the Unreal Data Table workflow.</p></details>
+<details><summary>Where are my scripts, exports and player saves stored?</summary><p>The story is an Unreal project asset. You choose where to save each export. Your game controls player storage and network replication. The plugin integration uses the engine without requiring a QuestFlow cloud account.</p></details>
+<details><summary>Is there a simpler example for a linear mission?</summary><p>In Harbour Beacon, recover one lens, restore the partial count in a fresh session, then recover the second and complete the beacon objective. A separate native save-slot test preserved both completed objective IDs and partial progress. <a href="#linear-example">Harbour Beacon guide</a></p></details>
+<details><summary>Where can I get help with a story that fails validation?</summary><p>Include your Unreal version, the node or table row you were editing, the action you took and the exact message. Reproduce the issue with example text if your game is confidential. <a href="https://howthtechnologyfactory.pro/contact.html">Contact Howth Technology Factory</a></p></details></section>
+</main>
+<footer class="site-footer"><div class="shell"><span>Howth Technology Factory</span><nav aria-label="Footer"><a href="/products/">All products</a><a href="/contact.html">Support</a><a href="/privacy.html">Privacy</a></nav></div></footer>
+</body></html>
