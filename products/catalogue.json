@@ -2272,7 +2272,7 @@
         },
         {
             "id": "industrial-operations-scene-collection",
-            "name": "Industrial Operations Scene Collection",
+            "name": "Industrial Operations Site Planner for Blender",
             "summary": "Move three editable Blender zones into place and show how a service part travels from receiving through electronics repair to a data-centre aisle.",
             "url": "https://howthtechnologyfactory.pro/products/industrial-operations-scene-collection.html",
             "problems": [
@@ -2286,18 +2286,35 @@
                 "3d-asset-kit"
             ],
             "access": [
-                "future"
+                "web"
             ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
-            "release_note": "The Blender collection is packaged for Creative Market. The CGTrader edition, Industrial Operations Site Planner for Blender, is in draft.",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "release_note": "Available on CGTrader at a US$19.99 list price. The Creative Market edition is developed but not submitted.",
             "reviews": [],
-            "shopfronts": [],
+            "shopfronts": [
+                {
+                    "id": "cgtrader",
+                    "name": "CGTrader",
+                    "url": "https://www.cgtrader.com/3d-models/industrial/other/industrial-operations-site-planner-for-blender"
+                }
+            ],
             "image": "/assets/previews/tools/industrial-operations-scene-collection.jpg",
             "imageAlt": "Three editable industrial zones in the included Blender site plan.",
             "searchTerms": "Industrial Operations Scene Collection Site Planner for Blender 3D editable receiving dock repair workshop data center centre aisle rack glTF warehouse technical visualization Creative Market CGTrader",
-            "status_verified": "2026-11-19"
+            "status_verified": "2026-11-19",
+            "editions": [
+                {
+                    "platform": "Creative Market",
+                    "name": "Industrial Operations Scene Collection",
+                    "release_status": "developed_not_submitted",
+                    "release_label": "Developed but not submitted",
+                    "access": [
+                        "future"
+                    ]
+                }
+            ]
         },
         {
             "id": "dialogue-quest-production-workbench-unity",

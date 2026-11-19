@@ -145,7 +145,11 @@ function groupedCards(renderCards, cataloguePage = false) {
     const assigned = new Set();
     return platformGroups.map(([platform, name, icon, publisherUrl]) => {
         const products = catalogue.products.filter((product) =>
-            productPlatforms(product).includes(platform) && (cataloguePage || !assigned.has(product.id)));
+            productPlatforms(product).includes(platform) && (cataloguePage || !assigned.has(product.id)))
+            .map(product => {
+                const edition = product.editions?.find(candidate => candidate.platform === name);
+                return edition ? { ...product, ...edition } : product;
+            });
         if (!products.length) return '';
         for (const product of products) assigned.add(product.id);
         const grid = cataloguePage ? 'md:grid-cols-2 xl:grid-cols-3' : 'sm:grid-cols-2 lg:grid-cols-3';
