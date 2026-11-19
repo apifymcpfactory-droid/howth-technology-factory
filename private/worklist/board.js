@@ -48,6 +48,9 @@
       const summary = el('summary');
       const name = el('strong', platform, 'readiness-name');
       summary.append(name);
+      const status = el('span', review.status || '—', 'readiness-status');
+      if(review.status) status.dataset.status = review.status;
+      summary.append(status);
       for(const [label, value] of [['Customer payments', review.payment_label], ['Irish sole trader', review.seller_label], ['Next requirement', review.next_label]]){
         const cell = el('span', undefined, 'readiness-cell');
         cell.append(el('small', label), el('span', value));
