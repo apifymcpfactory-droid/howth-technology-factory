@@ -109,13 +109,14 @@
 
 - [ReproCase | HTF](https://howthtechnologyfactory.pro/products/reprocase-unreal.html): Create, check, compare and export local bug-report evidence inside Unreal Editor. Approved and published on Fab on 17 November 2026. Unreal Engine 5.8 / Windows Win64 Editor. Status: Available for Purchase. Marketplace: https://www.fab.com/listings/44410d54-42ea-4bda-b103-1f1b3c2004a7
 
+- [Fieldnote | Playtest Research Studio](https://howthtechnologyfactory.pro/products/fieldnote-playtest-research-studio.html): Record playtest task outcomes and timestamped notes, then export local HTML, CSV and JSON evidence from Unreal Engine. Unreal Engine 5.8 for Windows editor and Win64 Development playtest builds. Status: Available for Purchase. Marketplace: https://www.fab.com/listings/20389c79-3d1a-4113-beb2-351060c5b19a
+
 - [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Submitted and in Review.
 
 ## Products currently in marketplace review
 - [FluxAisle Studio | HTF](https://howthtechnologyfactory.pro/products/fluxaisle-studio-cgtrader.html): AI data centre visualisation kit with 66 reusable assets and two complete layouts. Status: Available for Purchase.
 - [CircuitBench Studio | HTF](https://howthtechnologyfactory.pro/products/circuitbench-studio-cgtrader.html): Electronics repair workshop kit with 51 named assets and two complete workflows. Status: Available for Purchase.
 - [FlowDock Studio | HTF](https://howthtechnologyfactory.pro/products/flowdock-studio-cgtrader.html): Warehouse operations kit with 205 named parts across four workflows. Status: Available for Purchase.
-- [Fieldnote | Playtest Research Studio](https://howthtechnologyfactory.pro/products/fieldnote-playtest-research-studio.html): Record playtest task outcomes and timestamped notes, then export local HTML, CSV and JSON evidence from Unreal Engine. Fieldnote 1.0.0 was resubmitted to Fab on 17 November 2026 after packaging and documentation corrections. Review is pending; purchase is not yet available. Status: Developed and in Review.
 - [BuildScope | Unreal Release Readiness Studio](https://howthtechnologyfactory.pro/products/buildscope-release-readiness-studio.html): Define project checks, scan observable evidence, compare a baseline and export a local review bundle. Published on Fab on 16 November 2026. Status: Available for Purchase. Marketplace: https://www.fab.com/listings/c9936508-5d3e-44e9-9746-03920063d572
 - [Caliper Forge | Technical Catalogue Theme](https://howthtechnologyfactory.pro/products/caliper-forge-shopify-theme.html): A Shopify theme for specification-heavy catalogues, comparison and multi-option ordering. Design revisions required after initial review rejection on 17 November 2026; not currently in review or available to purchase. Status: Developed but not submitted.
 

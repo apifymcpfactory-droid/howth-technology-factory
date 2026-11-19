@@ -2138,16 +2138,22 @@
                 "plugin-integration"
             ],
             "access": [
-                "future"
+                "unreal-editor"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
-            "release_note": "Fieldnote 1.0.0 was resubmitted to Fab on 17 November 2026 after packaging and documentation corrections. Review is pending; purchase is not yet available.",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "release_note": "Fieldnote 1.0.0 is available on Fab for Unreal Engine 5.8 on Windows. Record in the editor or in a Win64 Development playtest build.",
             "reviews": [],
-            "shopfronts": [],
+            "shopfronts": [
+                {
+                    "id": "fab",
+                    "name": "Fab",
+                    "url": "https://www.fab.com/listings/20389c79-3d1a-4113-beb2-351060c5b19a"
+                }
+            ],
             "searchTerms": "Fieldnote Playtest Research Studio Unreal Engine Fab structured playtest research observations compare export local evidence",
-            "status_verified": "2026-11-17"
+            "status_verified": "2026-11-19"
         },
         {
             "id": "buildscope-release-readiness-studio",
