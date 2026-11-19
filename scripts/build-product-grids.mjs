@@ -110,6 +110,7 @@ const plannedPlatforms = {
     'fieldnote-playtest-research-studio': ['fab'],
     'questflow-narrative-studio': ['fab'],
     'industrial-operations-scene-collection': ['creative-market', 'cgtrader'],
+    'industrial-wayfinding-approval-kit': ['creative-market'],
     'buildscope-release-readiness-studio': ['fab'],
     'caliper-forge-shopify-theme': ['shopify'],
     'production-operations-suite': ['elgato'],

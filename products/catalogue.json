@@ -134,7 +134,8 @@
             {
                 "id": "3d-asset-kit",
                 "name": "3D asset kit"
-            }
+            },
+            {"id":"design-kit","name":"Design kit"}
         ],
         "access": [
             {
@@ -2372,6 +2373,35 @@
             "image": "/assets/previews/tools/freshdesk-billing-reconciliation.jpg",
             "imageAlt": "Example billing comparison showing 75 original billable minutes and 85 current billable minutes.",
             "searchTerms": "Freshdesk support team client billable ticket time corrections billing period reconciliation hours snapshot CSV",
+            "status_verified": "2026-11-19"
+        },
+        {
+            "id": "industrial-wayfinding-approval-kit",
+            "name": "Industrial Wayfinding & Approval Kit",
+            "summary": "Compare two sign placements on your site image and give your client a PDF recording the chosen location and wording.",
+            "url": "https://howthtechnologyfactory.pro/products/industrial-wayfinding-approval-kit.html",
+            "problems": [
+                "design-workflow"
+            ],
+            "buyers": [
+                "product-designers",
+                "operations-automation"
+            ],
+            "types": [
+                "design-kit"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Creative Market confirmed receipt of the kit with our shop application. Public checkout is pending.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/industrial-wayfinding-approval-kit.jpg",
+            "imageAlt": "Two views of the same receiving-bay sign with the worked example’s approved position.",
+            "searchTerms": "Creative Market signage wayfinding industrial mockup placement client approval PSD SVG PDF warehouse sign kit",
             "status_verified": "2026-11-19"
         }
     ],
