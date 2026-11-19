@@ -109,7 +109,7 @@ const plannedPlatforms = {
     'dialogue-quest-production-workbench-unity': ['unity'],
     'fieldnote-playtest-research-studio': ['fab'],
     'questflow-narrative-studio': ['fab'],
-    'industrial-operations-scene-collection': ['creative-market'],
+    'industrial-operations-scene-collection': ['creative-market', 'cgtrader'],
     'buildscope-release-readiness-studio': ['fab'],
     'caliper-forge-shopify-theme': ['shopify'],
     'production-operations-suite': ['elgato'],
