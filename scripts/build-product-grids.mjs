@@ -114,6 +114,7 @@ const plannedPlatforms = {
     'caliper-forge-shopify-theme': ['shopify'],
     'production-operations-suite': ['elgato'],
     'receivables-workbench-zoho-books': ['zoho-books'],
+    'freshdesk-billing-reconciliation': ['freshdesk'],
 };
 
 function productPlatforms(product) {
@@ -135,6 +136,7 @@ const platformGroups = [
     ['shopify', 'Shopify Theme Store', 'shopify.svg'],
     ['elgato', 'Elgato Marketplace', null],
     ['zoho-books', 'Zoho Books', null],
+    ['freshdesk', 'Freshdesk', null],
     ['apify', 'Apify', 'apify.svg', 'https://apify.com/apifmcpfactory'],
     ['mcpize', 'MCPize', 'mcpize.ico', 'https://mcpize.com/developers/howthfactory'],
     ['jetbrains', 'JetBrains', 'jetbrains.svg'],

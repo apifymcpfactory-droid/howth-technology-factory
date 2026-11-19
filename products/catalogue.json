@@ -2344,6 +2344,35 @@
             "imageAlt": "Official workbench store artwork with two archivist slide mounts.",
             "searchTerms": "Unity dialogue quest narrative authoring localisation CSV translation checkpoint save branches Inspector Lantern Room",
             "status_verified": "2026-11-19"
+        },
+        {
+            "id": "freshdesk-billing-reconciliation",
+            "name": "Billing Period Reconciliation for Freshdesk",
+            "summary": "Compare the ticket time used for billing with a later snapshot. See which entries changed and how many billable minutes to reconcile.",
+            "url": "https://howthtechnologyfactory.pro/products/freshdesk-billing-reconciliation.html",
+            "problems": [
+                "financial-validation"
+            ],
+            "buyers": [
+                "accountants-finance",
+                "operations-automation"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "in_development",
+            "release_label": "Coming Soon - in development",
+            "release_note": "The development build compares snapshots and exports the differences. Direct capture from Freshdesk is being tested.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/freshdesk-billing-reconciliation.jpg",
+            "imageAlt": "Example billing comparison showing 75 original billable minutes and 85 current billable minutes.",
+            "searchTerms": "Freshdesk support team client billable ticket time corrections billing period reconciliation hours snapshot CSV",
+            "status_verified": "2026-11-19"
         }
     ],
     "release_statuses": {
