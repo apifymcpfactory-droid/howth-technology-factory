@@ -17,7 +17,20 @@
     <link rel="alternate" type="text/plain" title="llms.txt" href="../llms.txt">
     <link rel="stylesheet" href="/assets/css/utilities.css?v=20261111bw">
     <link rel="stylesheet" href="../assets/css/main.css?v=20261111fx">
-    <style>.receivables-page .product-feature-list li::before{content:"•"}</style>
+    <style>
+        .receivables-page .product-feature-list li::before { content: "•" }
+        .workbench-help { max-width: 62rem; margin: 0 auto; padding: 2rem 1.5rem }
+        .workbench-help h2 { font-size: clamp(1.55rem, 3vw, 2.1rem); margin-bottom: 1rem }
+        .workbench-help p, .workbench-help li { max-width: 70ch; line-height: 1.65 }
+        .workbench-help li + li, .workbench-help p + p { margin-top: .65rem }
+        .workbench-help ol { list-style: decimal; padding-left: 1.5rem }
+        .workbench-help details { border-bottom: 1px solid #444; padding: .85rem 0 }
+        .workbench-help summary { cursor: pointer; font-weight: 600 }
+        .workbench-help details p { margin: .65rem 0 .25rem }
+        .workbench-help a, .workbench-nav a { text-decoration: underline; text-underline-offset: .2em }
+        .workbench-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem }
+        .workbench-help[id] { scroll-margin-top: 5rem }
+    </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howthtechnologyfactory.pro/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://howthtechnologyfactory.pro/products/"},{"@type":"ListItem","position":3,"name":"HTC Receivables Workbench","item":"https://howthtechnologyfactory.pro/products/receivables-workbench-zoho-books.html"}]}</script>
 </head>
 <body class="receivables-page bg-bg text-text font-sans antialiased">
@@ -74,8 +87,49 @@
             <div class="lg:col-span-2 space-y-5 text-muted leading-relaxed">
                 <p>In the EU developer sandbox, two test customers each had a €1 unpaid invoice. Each case showed its own customer’s balance. The weekly CSV also identified a €1 payment promise that was two days overdue.</p>
                 <p>Zoho Books is reviewing version 2.1. Its decision is required before we can submit the public Marketplace listing.</p>
+                <nav class="workbench-nav" aria-label="Workbench help"><a href="#admin-guide">Administrator guide</a><a href="#user-guide">Collector guide</a><a href="#faqs">Buyer questions</a></nav>
                 <p><a href="../contact.html" class="text-gold underline">Contact HTC about Receivables Workbench</a>.</p>
             </div>
+        </section>
+        <section class="workbench-help" id="admin-guide" aria-labelledby="admin-title">
+            <h2 id="admin-title">Administrator guide</h2>
+            <p>Version 2.1 was installed privately in a Zoho Books EU QA organisation. Public installation instructions, supported editions and regional availability will depend on Marketplace approval and compatibility checks.</p>
+            <p>The Books connection requests invoice reading and custom-module reading, creation and updates. The invoice balance view reads invoices. The connection does not request payment, invoice-edit or delete access. Custom-module permissions can extend beyond the collection case module.</p>
+            <p>In the private installation, an administrator opened <strong>HTC Workbench Setup</strong> and <strong>HTC Weekly Review Guide</strong> inside Books. An assignee field identifies the person responsible for follow-up. It does not establish who can see a case. Confirm staff permissions separately before sharing financial records.</p>
+        </section>
+        <section class="workbench-help" id="user-guide" aria-labelledby="collector-title">
+            <h2 id="collector-title">Run a weekly collections review</h2>
+            <ol>
+                <li>Open <strong>Invoice balances</strong>, choose the review date and select <strong>Refresh invoices</strong>. Read each customer’s outstanding balance and overdue amount separately.</li>
+                <li>Open <strong>Collection cases</strong> and select a case. Choose <strong>Load follow-ups</strong> to see its promise and next action. Check the payment record in Books before recording money as received.</li>
+                <li>Choose <strong>Check invoice links</strong>. Open the source invoice in Books if a link is unresolved. A blank subtotal means the workbench could not confirm the amount.</li>
+                <li>Choose <strong>Download case review CSV</strong> for a single case. For the weekly report, check each included case using the same review date. Open <strong>Weekly manager review</strong>, set <strong>Week starting</strong> and choose <strong>Download weekly CSV</strong>. Read the coverage field before sharing the file.</li>
+            </ol>
+        </section>
+        <section class="workbench-help" id="faqs" aria-labelledby="faq-title">
+            <h2 id="faq-title">Questions from finance teams</h2>
+            <details><summary>Who is the workbench for?</summary><p>Finance staff who need to review open invoices, understand a customer dispute and bring the next collection action into a weekly meeting.</p></details>
+            <details><summary>Can I buy or install it today?</summary><p>Version 2.1 is in private Zoho Books review. Public Marketplace installation and purchase are pending.</p></details>
+            <details><summary>Where do I check the official balance or payment?</summary><p>Open the source record in Zoho Books. The workbench displays balances from loaded invoices and provides collection case context.</p></details>
+            <details><summary>Does it collect payments or email customers?</summary><p>The workbench does neither. It helps staff decide what to follow up and records case information in Books.</p></details>
+            <details><summary>How do I find a customer’s open balance?</summary><p>In <strong>Invoice balances</strong>, select a review date and choose <strong>Refresh invoices</strong>. Read the row for the customer and currency. A balance can be outstanding even when nothing is overdue.</p></details>
+            <details><summary>Which currencies were tested?</summary><p>The verified examples use EUR. Balances are grouped by currency. There is no currency conversion or combined multi-currency total.</p></details>
+            <details><summary>What does the review date control?</summary><p>It sets the date used to calculate overdue days. An invoice due that day has zero overdue days. Refresh after changing the date.</p></details>
+            <details><summary>How do I get fresh invoice figures?</summary><p>Select <strong>Refresh invoices</strong>. Searching or filtering the existing view keeps the previously loaded figures.</p></details>
+            <details><summary>What does a partial balance mean?</summary><p>Only part of the relevant data was available. Read the scope warning and check the source invoices before quoting a total.</p></details>
+            <details><summary>Does an empty view mean every invoice has been paid?</summary><p>No. Access limits, excluded statuses or missing data can leave the view empty. Confirm payment directly in Books.</p></details>
+            <details><summary>How do I trace a case subtotal back to an invoice?</summary><p>Choose <strong>Check invoice links</strong> and review the link status. The case CSV identifies matched invoices and unresolved links separately.</p></details>
+            <details><summary>Where can I read a dispute before a call?</summary><p>Open the collection case and read its saved dispute reason alongside the next action. The verified example covers this review step. An end-to-end dispute resolution workflow remains unverified.</p></details>
+            <details><summary>How do I tell a missed promise from an overdue invoice?</summary><p>The promise has its own amount, due date and recorded outcome. In the sandbox, a €1 promise was two days late while the matched invoices had €0 overdue.</p></details>
+            <details><summary>Can I see who owns the next action?</summary><p>The case includes an assignee and a dated next action. Automatic task routing and staff-level access remain unverified.</p></details>
+            <details><summary>Where can I see who approved a case?</summary><p>Open its native <strong>Activity</strong> in Books. In the private installation an approved, locked case showed the actor and time for the recorded events.</p></details>
+            <details><summary>Does assignment restrict who can see a case?</summary><p>Assignment alone does not establish access. The private test used an administrator. Staff-role access and separation between organisations still require verification.</p></details>
+            <details><summary>What should I do if a save times out?</summary><p>Open the case in Books and check whether the change was recorded before trying again. A timeout leaves the outcome uncertain.</p></details>
+            <details><summary>What goes into the weekly CSV?</summary><p>The export includes the checked cases, their matched balances and due follow-ups for the selected week. In the verified example it identified two reviewed cases out of four on the loaded page.</p></details>
+            <details><summary>How should I handle a request to remove case data?</summary><p>Contact your Books administrator before changing or uninstalling the extension. Uninstall behaviour and a customer deletion procedure are still unverified. Separately manage any CSV files already downloaded.</p></details>
+            <details><summary>Which edition do I need and what will it cost?</summary><p>The customer price, supported editions and regions are pending. The private EU installation used a trial organisation.</p></details>
+            <details><summary>Why would a linked invoice be missing from a subtotal?</summary><p>A draft invoice can retain its link to a case while falling outside the loaded open-invoice set. Check its status in Books. An entirely unmatched case leaves the subtotal blank.</p></details>
+            <details><summary>What should I send HTC if a balance looks wrong?</summary><p>Send the approximate time, currency, status wording and steps you took. Remove customer names, invoice details and credentials from examples. <a href="../contact.html">Contact HTC</a>.</p></details>
         </section>
     </main>
     <footer class="border-t border-borderc mt-24"><div class="max-w-8xl mx-auto px-6 py-10 text-sm text-faint flex flex-wrap justify-between gap-4"><span>© 2026 HTC.</span><a href="/products/" class="hover:text-text">View all products</a></div></footer>
