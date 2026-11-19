@@ -34,7 +34,56 @@
     $('#count').textContent=`${shown} of ${data.entries.length} entries shown`;
     $('#empty').hidden=shown>0;
   }
+  function renderMarketplaceReadiness(){
+    const audit = data.marketplace_readiness;
+    const section = $('#marketplace-readiness');
+    section.hidden = !audit || !Array.isArray(audit.platforms);
+    if(section.hidden) return;
+    const entries = new Map(data.entries.filter(entry => entry.marketplace_review).map(entry => [entry.platform, entry.marketplace_review]));
+    const rows = [];
+    for(const platform of audit.platforms){
+      const review = entries.get(platform);
+      if(!review) continue;
+      const detail = el('details', undefined, 'readiness-entry');
+      const summary = el('summary');
+      const name = el('strong', platform, 'readiness-name');
+      summary.append(name);
+      for(const [label, value] of [['Customer payments', review.payment_label], ['Irish sole trader', review.seller_label], ['Next requirement', review.next_label]]){
+        const cell = el('span', undefined, 'readiness-cell');
+        cell.append(el('small', label), el('span', value));
+        summary.append(cell);
+      }
+      detail.append(summary);
+      const evidence = el('div', undefined, 'readiness-detail');
+      const facts = el('dl');
+      for(const [label, value] of [['HTF setup', review.stage], ['Customer payments', review.checkout], ['Irish sole trader', review.eligibility], ['What remains', review.gate], ['Business email', review.mail]]){
+        facts.append(el('dt', label), el('dd', value));
+      }
+      evidence.append(facts);
+      const links = el('ul', undefined, 'readiness-links');
+      for(const source of review.sources){
+        const url = new URL(source.url);
+        if(url.protocol !== 'https:') continue;
+        const link = el('a', source.label);
+        link.href = url.href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        const item = el('li');
+        item.append(link);
+        links.append(item);
+      }
+      evidence.append(links);
+      detail.append(evidence);
+      rows.push(detail);
+    }
+    $('#readiness-platforms').replaceChildren(...rows);
+    $('#readiness-overview').textContent = audit.overview;
+    $('#readiness-context').textContent = audit.context;
+    $('#readiness-evidence').textContent = audit.basis;
+    if(new URLSearchParams(location.search).get('view') === 'platforms') section.open = true;
+  }
   function render(){
+    renderMarketplaceReadiness();
     const blueprints=$('#blueprints');blueprints.replaceChildren();
     for(const b of data.blueprints||[]){if(b.route!=='/private/production-platform/')continue;const card=el('article'),link=el('a','Open blueprint and feature checklist');link.href=b.route+location.hash;card.append(el('h2',b.title),el('p',b.description),el('p',b.status),link);blueprints.append(card);}blueprints.hidden=!blueprints.children.length;
     $('#updated').textContent='Shared progress updated '+data.as_of+' · '+(data.focus||'Work one eligible release at a time.');

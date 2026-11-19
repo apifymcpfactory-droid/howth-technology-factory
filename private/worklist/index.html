@@ -10,8 +10,8 @@
   <link rel="canonical" href="https://howthtechnologyfactory.pro/private/worklist/">
   <title>Private workspace | HTF</title>
   <link rel="stylesheet" href="board.css?v=20261113-blueprint">
-  <link rel="stylesheet" href="compact.css?v=20261110-status-groups">
-  <script src="board.js?v=20261113-blueprint" defer></script>
+  <link rel="stylesheet" href="compact.css?v=20261119-readiness">
+  <script src="board.js?v=20261119-readiness" defer></script>
 </head>
 <body>
   <header><div class="brand">HOWTH TECHNOLOGY FACTORY <span>PRIVATE WORKSPACE</span></div><h1>Daily release checklist</h1><p>One useful step at a time. Quality products, submitted and live.</p></header>
@@ -20,6 +20,15 @@
     <div id="board" hidden>
       <div class="topline"><p id="updated"></p><button id="reload" type="button">Refresh shared progress</button></div>
       <div id="summary" class="summary"></div>
+      <details id="marketplace-readiness" class="marketplace-readiness" hidden>
+        <summary><strong>Marketplace submission readiness</strong><span id="readiness-overview"></span></summary>
+        <div class="readiness-body">
+          <p id="readiness-context"></p>
+          <div class="readiness-head" aria-hidden="true"><span>Platform</span><span>Customer payments</span><span>Irish sole trader</span><span>Next requirement</span></div>
+          <div id="readiness-platforms"></div>
+          <p id="readiness-evidence"></p>
+        </div>
+      </details>
       <section id="blueprints" class="blueprints" aria-label="Product blueprints" hidden></section>
       <h2 class="quick-links-title">Quick links</h2>
       <nav id="tabs" class="tabs" aria-label="Checklist status quick links"></nav>

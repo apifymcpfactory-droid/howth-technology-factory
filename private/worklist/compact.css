@@ -47,6 +47,53 @@
   white-space: nowrap;
 }
 
+.marketplace-readiness {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 22px 0;
+}
+.marketplace-readiness > summary {
+  cursor: pointer;
+  padding: 16px 18px;
+  color: var(--ink);
+}
+.marketplace-readiness > summary strong { font-size: 18px; }
+#readiness-overview { display: block; color: var(--muted); margin: 3px 0 0 18px; }
+.readiness-body { padding: 0 18px 10px; }
+#readiness-context, #readiness-evidence { color: var(--muted); font-size: 13px; max-width: 105ch; }
+.readiness-head, .readiness-entry > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 14px;
+  align-items: baseline;
+  padding: 12px 10px;
+}
+.readiness-head { background: #f4f0f8; color: var(--muted); font-weight: 650; font-size: 12px; }
+.readiness-entry { border-bottom: 1px solid var(--line); }
+.readiness-entry > summary { list-style: none; cursor: pointer; font-size: 14px; }
+.readiness-entry > summary::-webkit-details-marker { display: none; }
+.readiness-name::before { content: '▸'; display: inline-block; width: 17px; color: var(--accent); }
+.readiness-entry[open] .readiness-name::before { content: '▾'; }
+.readiness-entry > summary:hover, .readiness-entry[open] > summary { background: #faf8fc; }
+.readiness-cell small { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.readiness-detail { padding: 0 12px 14px 27px; max-width: 115ch; font-size: 14px; }
+.readiness-detail dl { display: grid; grid-template-columns: 125px 1fr; gap: 9px 16px; }
+.readiness-detail dt { font-weight: 650; }
+.readiness-detail dd { margin: 0; }
+.readiness-links { display: flex; flex-wrap: wrap; gap: 5px 18px; list-style: none; padding: 0; margin: 12px 0 4px; }
+.readiness-links a { color: var(--accent); }
+@media(max-width:800px) {
+  .readiness-body { padding: 0 12px 10px; }
+  .readiness-head { display: none; }
+  .readiness-entry > summary { grid-template-columns: 1fr; gap: 4px; }
+  .readiness-cell { display: grid; grid-template-columns: 110px 1fr; gap: 6px; }
+  .readiness-cell small { position: static; width: auto; height: auto; overflow: visible; clip-path: none; color: var(--muted); padding-top: 2px; }
+  .readiness-detail { padding-left: 10px; }
+  .readiness-detail dl { display: block; }
+  .readiness-detail dt { margin-top: 10px; }
+}
+
 @media(max-width:800px) {
   .platform-toggle {
     grid-template-columns: 1fr;
