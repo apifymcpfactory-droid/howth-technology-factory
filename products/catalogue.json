@@ -2260,9 +2260,9 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
-            "release_note": "The Unreal Engine 5.8 plugin is packaged and its Fab listing is in draft.",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Fab confirmed submission of the Unreal Engine 5.8 plugin. The listing will publish automatically after approval.",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/questflow-narrative-studio.jpg",
