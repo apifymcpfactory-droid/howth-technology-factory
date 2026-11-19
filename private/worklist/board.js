@@ -56,7 +56,8 @@
       detail.append(summary);
       const evidence = el('div', undefined, 'readiness-detail');
       const facts = el('dl');
-      for(const [label, value] of [['HTF setup', review.stage], ['Customer payments', review.checkout], ['Irish sole trader', review.eligibility], ['What remains', review.gate], ['Business email', review.mail]]){
+      for(const [label, value] of [['First product intake', review.intake], ['HTF setup', review.stage], ['Customer payments', review.checkout], ['Irish sole trader', review.eligibility], ['What remains', review.gate], ['Business email', review.mail]]){
+        if(!value) continue;
         facts.append(el('dt', label), el('dd', value));
       }
       evidence.append(facts);
