@@ -106,6 +106,7 @@ const plannedPlatforms = {
     'reprocase-unreal': ['fab'],
     'saveguard-studio-fab': ['fab'],
     'save-game-migration-unity': ['unity'],
+    'dialogue-quest-production-workbench-unity': ['unity'],
     'fieldnote-playtest-research-studio': ['fab'],
     'questflow-narrative-studio': ['fab'],
     'industrial-operations-scene-collection': ['creative-market'],

@@ -2298,6 +2298,35 @@
             "imageAlt": "Three editable industrial zones in the included Blender site plan.",
             "searchTerms": "Industrial Operations Scene Collection Blender 3D editable receiving dock repair workshop data center centre aisle rack glTF warehouse technical visualization Creative Market",
             "status_verified": "2026-11-19"
+        },
+        {
+            "id": "dialogue-quest-production-workbench-unity",
+            "name": "Dialogue & Quest Production Workbench",
+            "summary": "Write a branching story in Unity, rehearse player choices, restore objective progress and hand stable dialogue rows to a translator.",
+            "url": "https://howthtechnologyfactory.pro/products/dialogue-quest-production-workbench-unity.html",
+            "problems": [
+                "project-context"
+            ],
+            "buyers": [
+                "developers-ai",
+                "product-designers"
+            ],
+            "types": [
+                "plugin-integration"
+            ],
+            "access": [
+                "future"
+            ],
+            "ai_agent_compatible": false,
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "The clean-imported Unity 6.3 LTS workbench has a publisher draft. The marketplace submission is pending.",
+            "reviews": [],
+            "shopfronts": [],
+            "image": "/assets/previews/tools/dialogue-quest-production-workbench-unity.png",
+            "imageAlt": "Official workbench store artwork with two archivist slide mounts.",
+            "searchTerms": "Unity dialogue quest narrative authoring localisation CSV translation checkpoint save branches Inspector Lantern Room",
+            "status_verified": "2026-11-19"
         }
     ],
     "release_statuses": {
