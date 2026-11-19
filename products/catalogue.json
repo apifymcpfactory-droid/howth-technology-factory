@@ -2335,9 +2335,9 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "developed_not_submitted",
-            "release_label": "Developed but not submitted",
-            "release_note": "The clean-imported Unity 6.3 LTS workbench has a publisher draft. The marketplace submission is pending.",
+            "release_status": "submitted_for_review",
+            "release_label": "Developed and in Review",
+            "release_note": "Unity confirmed receipt of version 1.0.0 for review. Automatic publication after approval is selected.",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/dialogue-quest-production-workbench-unity.png",
