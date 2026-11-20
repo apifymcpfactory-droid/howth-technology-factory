@@ -2243,16 +2243,16 @@
             "types": ["plugin-integration"],
             "access": ["magento-open-source"],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
-            "release_note": "Version 1.0.0 was submitted to Adobe Commerce Marketplace on 18 November 2026. Customer checkout is pending approval.",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "Adobe requested changes to the marketplace listing. Marketing resubmission is pending, and version 1.0.0 is awaiting manual technical review.",
             "planned_pricing": "US$39 one-time",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/purchasing-workbench-magento.png",
             "imageAlt": "Magento test order showing five packs ordered, two received and three still due.",
             "searchTerms": "Adobe Commerce Marketplace Magento Open Source purchase orders purchasing receiving inventory source stock partial delivery supplier offers outstanding orders CSV receipts",
-            "status_verified": "2026-11-18"
+            "status_verified": "2026-11-20"
         },
         {
             "id": "questflow-narrative-studio",
