@@ -79,7 +79,7 @@
 
 - Accessibility Audit & Release Manager | HTF: https://howthtechnologyfactory.pro/products/accessibility-release-manager-figma.html (Developed but not submitted; planned $4 per month.) Status: Developed but not submitted.
 
-- Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html (Developed but not submitted. Core implementation in progress; no public demo or listing.) Status: Developed but not submitted.
+- Confluence Reporting Workbench | HTF: https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html. Available for Purchase for Confluence Cloud. Marketplace listing and free trial: https://marketplace.atlassian.com/apps/1124997353/tables-charts-reporting-workbench-htf.
 
 ## Apify inventory reconciliation
 - [Jobs API: All Sources](https://howthtechnologyfactory.pro/products/jobs-api-all-sources.html) Status: Available for Purchase.

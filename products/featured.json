@@ -10,17 +10,21 @@
       ],
       "emphasisFrom": 1,
       "intro": "Bring tables into a clearer report. Check calculations, compare teams and review changes before sharing the next version.",
-      "priceLead": "Submitted and in Review",
-      "priceDetail": "Resubmitted on 8 November 2026; pending Atlassian approval. Purchase and public installation are not yet available.",
+      "priceLead": "Available for Purchase",
+      "priceDetail": "Try it free on Atlassian Marketplace. A 100-user team is USD 33 per month or USD 330 per year.",
       "demo": "/products/demos/confluence-reporting-workbench/",
       "image": "/assets/previews/tools/confluence-reporting-workbench.svg",
       "imageAlt": "Original illustration of the reporting workflow",
-      "caption": "Confluence app resubmitted for Marketplace review. The separate browser demo uses fictional data.",
+      "caption": "The Confluence Cloud app is available on Atlassian Marketplace. The browser demo uses fictional data.",
       "facts": [
         "Guided fictional-data workflow",
         "Calculations, pivots and charts",
         "Temporary release comparison"
-      ]
+      ],
+      "marketplace": {
+        "url": "https://marketplace.atlassian.com/apps/1124997353/tables-charts-reporting-workbench-htf",
+        "label": "View on Atlassian Marketplace"
+      }
     },
     {
       "id": "api-contract-workbench-jetbrains",

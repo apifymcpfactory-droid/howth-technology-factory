@@ -275,7 +275,7 @@
         {
             "id": "confluence-reporting-workbench",
             "name": "Tables, Charts & Reporting Workbench | HTF",
-            "summary": "Build reports from Confluence tables and spreadsheets, with calculations, pivots, charts and saved comparisons. Resubmitted for Marketplace review; purchase is not available yet.",
+            "summary": "Build Confluence Cloud reports from page tables and spreadsheets. Compare figures across saved versions, chart results and export the report.",
             "url": "https://howthtechnologyfactory.pro/products/confluence-reporting-workbench.html",
             "problems": [
                 "project-context"
@@ -291,14 +291,20 @@
                 "confluence-cloud"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
             "reviews": [],
-            "shopfronts": [],
+            "shopfronts": [
+                {
+                    "id": "atlassian-marketplace",
+                    "name": "Atlassian Marketplace",
+                    "url": "https://marketplace.atlassian.com/apps/1124997353/tables-charts-reporting-workbench-htf"
+                }
+            ],
             "searchTerms": "Confluence reporting workbench HTF interactive fictional demo imports spreadsheet calculations team budgets pivots charts change review",
-            "development_status": "Version 3.0.0/build 3000000 resubmitted on 8 November 2026 after support-link correction. Pending Atlassian approval; a privacy-tab review prerequisite remains. Not available for purchase.",
-            "planned_pricing": "Configured total at 100 users: $33/month or $330/year; tiers vary by user count.",
-            "release_note": "Resubmitted on 8 November 2026; pending Atlassian approval. Purchase and public installation are not yet available."
+            "development_status": "Version 3.0.0 was approved and published on the Atlassian Marketplace on 20 November 2026.",
+            "planned_pricing": "At 100 users, Atlassian estimates USD 33 per month or USD 330 per year for the team. Prices vary with user count.",
+            "release_note": "Available for Confluence Cloud with a free trial. Atlassian handles subscription billing."
         },
         {
             "id": "accessibility-release-manager-figma",
