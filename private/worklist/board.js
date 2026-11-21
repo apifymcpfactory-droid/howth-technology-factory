@@ -159,23 +159,27 @@
     const section = $('#staff-mail');
     const list = $('#staff-mailboxes');
     list.replaceChildren();
-    for(const mailbox of data.staff_mailboxes || []){
-      if(!mailbox.person || !mailbox.address || !mailbox.provider) continue;
+    function addMailbox(mailbox,pending){
+      if(!mailbox.person || !mailbox.address || !mailbox.provider) return;
       const row = el('li');
-      row.append(el('strong',mailbox.person),el('span',mailbox.provider),el('span',mailbox.address));
+      const address = pending ? 'Requested address · '+mailbox.address : mailbox.address;
+      row.append(el('strong',mailbox.person),el('span',pending ? 'Awaiting manual signup' : 'Verified inbox'),el('span',mailbox.provider),el('span',address));
       if(mailbox.temporary_password?.v === 1){
-        const button = el('button','Show temporary password');
+        const button = el('button',pending ? 'Show password for signup' : 'Show temporary password');
         button.type = 'button';
         button.addEventListener('click',()=>{
           clearPassword();
           selectedMailbox = mailbox;
-          $('#staff-password-address').textContent = mailbox.address;
+          $('#staff-password-title').textContent = pending ? 'Temporary password for signup' : 'Temporary password';
+          $('#staff-password-address').textContent = address;
           passwordDialog.showModal();
         });
         row.append(button);
       }
       list.append(row);
     }
+    for(const mailbox of data.staff_mailboxes || []) addMailbox(mailbox,false);
+    for(const mailbox of data.pending_staff_mailboxes || []) addMailbox(mailbox,true);
     section.hidden = !list.children.length;
     if(!section.hidden && new URLSearchParams(location.search).get('view') === 'staff') section.open = true;
   }
