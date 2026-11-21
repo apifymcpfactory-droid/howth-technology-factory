@@ -167,6 +167,12 @@
       row.append(el('strong',mailbox.person),el('span',status),el('span',mailbox.provider));
       if(mailbox.address) row.append(el('span',address));
       if(mailbox.detail) row.append(el('span',mailbox.detail));
+      if(pending && mailbox.signup_url){
+        const link = el('a','Sign up with '+mailbox.provider);
+        link.href = mailbox.signup_url;
+        link.referrerPolicy = 'no-referrer';
+        row.append(link);
+      }
       if(mailbox.temporary_password?.v === 1){
         const button = el('button',pending ? 'Show password for signup' : 'Show temporary password');
         button.type = 'button';
