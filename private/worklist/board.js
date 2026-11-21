@@ -190,7 +190,11 @@
     }
     for(const mailbox of data.staff_mailboxes || []) addMailbox(mailbox,false);
     for(const mailbox of data.pending_staff_mailboxes || []) addMailbox(mailbox,true);
-    section.hidden = !list.children.length;
+    const priorAttempts = $('#staff-prior-attempts');
+    const meetingList = priorAttempts.querySelector('ul');
+    meetingList.replaceChildren(...(data.staff_prior_attempts || []).map(note=>el('li',note)));
+    priorAttempts.hidden = !meetingList.children.length;
+    section.hidden = !list.children.length && priorAttempts.hidden;
     if(!section.hidden && new URLSearchParams(location.search).get('view') === 'staff') section.open = true;
   }
   function render(){
