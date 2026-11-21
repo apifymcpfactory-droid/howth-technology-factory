@@ -160,10 +160,13 @@
     const list = $('#staff-mailboxes');
     list.replaceChildren();
     function addMailbox(mailbox,pending){
-      if(!mailbox.person || !mailbox.address || !mailbox.provider) return;
+      if(!mailbox.person || !mailbox.provider) return;
       const row = el('li');
       const address = pending ? 'Requested address · '+mailbox.address : mailbox.address;
-      row.append(el('strong',mailbox.person),el('span',pending ? 'Awaiting manual signup' : 'Verified inbox'),el('span',mailbox.provider),el('span',address));
+      const status = pending ? mailbox.status || 'Awaiting manual signup' : 'Verified inbox';
+      row.append(el('strong',mailbox.person),el('span',status),el('span',mailbox.provider));
+      if(mailbox.address) row.append(el('span',address));
+      if(mailbox.detail) row.append(el('span',mailbox.detail));
       if(mailbox.temporary_password?.v === 1){
         const button = el('button',pending ? 'Show password for signup' : 'Show temporary password');
         button.type = 'button';
