@@ -59,6 +59,40 @@
   color: var(--ink);
 }
 .marketplace-readiness > summary strong { font-size: 18px; }
+#staff-mailboxes {
+  list-style: none;
+  margin: 0;
+  padding: 0 18px 10px;
+}
+#staff-mailboxes li {
+  display: grid;
+  justify-items: start;
+  gap: 3px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+#staff-mailboxes li button { margin-top: 7px; }
+#staff-password {
+  width: min(420px, calc(100% - 32px));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--ink);
+}
+#staff-password::backdrop { background: rgb(38 33 59 / 55%); }
+#staff-password-address { overflow-wrap: anywhere; }
+#staff-password label, #staff-key-file { display: block; }
+#staff-key-file { width: 100%; margin-top: 4px; }
+#staff-password-value {
+  display: block;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: var(--wash);
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+@media print { #staff-password { display: none; } }
 #readiness-overview { display: block; color: var(--muted); margin: 3px 0 0 18px; }
 .readiness-body { padding: 0 18px 10px; }
 .readiness-key { font-size: 14px; margin: 0 0 12px; }

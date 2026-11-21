@@ -86,7 +86,101 @@
     $('#readiness-evidence').textContent = audit.basis;
     if(new URLSearchParams(location.search).get('view') === 'platforms') section.open = true;
   }
+  const passwordDialog = $('#staff-password');
+  const keyFile = $('#staff-key-file');
+  const passwordValue = $('#staff-password-value');
+  const passwordStatus = $('#staff-password-status');
+  const closePassword = $('#staff-password-close');
+  let selectedMailbox = null, revealAttempt = 0, hideTimer;
+
+  function clearPassword(){
+    revealAttempt++;
+    clearTimeout(hideTimer);
+    keyFile.value = '';
+    passwordValue.textContent = '';
+    passwordValue.hidden = true;
+    passwordStatus.textContent = '';
+    closePassword.textContent = 'Close';
+  }
+  function closePasswordDialog(){
+    clearPassword();
+    selectedMailbox = null;
+    if(passwordDialog.open) passwordDialog.close();
+  }
+  closePassword.addEventListener('click',closePasswordDialog);
+  passwordDialog.addEventListener('cancel',closePasswordDialog);
+  window.addEventListener('pagehide',closePasswordDialog);
+  window.addEventListener('beforeprint',closePasswordDialog);
+  document.addEventListener('visibilitychange',()=>{
+    if(!document.hidden) return;
+    if(passwordValue.hidden) clearPassword();
+    else closePasswordDialog();
+  });
+  $('#staff-mail').addEventListener('toggle',event=>{
+    if(!event.currentTarget.open) closePasswordDialog();
+  });
+  keyFile.addEventListener('change',async ()=>{
+    const file = keyFile.files[0];
+    const mailbox = selectedMailbox;
+    clearPassword();
+    if(!file || !mailbox) return;
+    if(file.size !== 32){
+      passwordStatus.textContent = 'Choose the 32-byte HTF staff mailbox key file.';
+      return;
+    }
+    const attempt = revealAttempt;
+    let keyBytes, plaintext;
+    try{
+      keyBytes = new Uint8Array(await file.arrayBuffer());
+      const key = await crypto.subtle.importKey('raw',keyBytes,'AES-GCM',false,['decrypt']);
+      const envelope = mailbox.temporary_password;
+      const iv = decode(envelope.iv);
+      if(envelope.v !== 1 || iv.length !== 12) throw Error();
+      const additionalData = new TextEncoder().encode('htf-private-mailbox-v1:' + mailbox.address);
+      plaintext = new Uint8Array(await crypto.subtle.decrypt(
+        {name:'AES-GCM',iv,additionalData,tagLength:128},key,decode(envelope.ciphertext)
+      ));
+      if(attempt !== revealAttempt || !passwordDialog.open || document.hidden) return;
+      passwordValue.textContent = new TextDecoder('utf-8',{fatal:true}).decode(plaintext);
+      passwordValue.hidden = false;
+      passwordStatus.textContent = 'Password visible for 30 seconds.';
+      closePassword.textContent = 'Hide password';
+      hideTimer = setTimeout(closePasswordDialog,30000);
+    }catch{
+      if(attempt === revealAttempt) passwordStatus.textContent = 'Could not unlock this password. Choose the matching staff mailbox key file.';
+    }finally{
+      if(keyBytes) keyBytes.fill(0);
+      if(plaintext) plaintext.fill(0);
+    }
+  });
+
+  function renderStaffMail(){
+    closePasswordDialog();
+    const section = $('#staff-mail');
+    const list = $('#staff-mailboxes');
+    list.replaceChildren();
+    for(const mailbox of data.staff_mailboxes || []){
+      if(!mailbox.person || !mailbox.address || !mailbox.provider) continue;
+      const row = el('li');
+      row.append(el('strong',mailbox.person),el('span',mailbox.provider),el('span',mailbox.address));
+      if(mailbox.temporary_password?.v === 1){
+        const button = el('button','Show temporary password');
+        button.type = 'button';
+        button.addEventListener('click',()=>{
+          clearPassword();
+          selectedMailbox = mailbox;
+          $('#staff-password-address').textContent = mailbox.address;
+          passwordDialog.showModal();
+        });
+        row.append(button);
+      }
+      list.append(row);
+    }
+    section.hidden = !list.children.length;
+    if(!section.hidden && new URLSearchParams(location.search).get('view') === 'staff') section.open = true;
+  }
   function render(){
+    renderStaffMail();
     renderMarketplaceReadiness();
     const blueprints=$('#blueprints');blueprints.replaceChildren();
     for(const b of data.blueprints||[]){if(b.route!=='/private/production-platform/')continue;const card=el('article'),link=el('a','Open blueprint and feature checklist');link.href=b.route+location.hash;card.append(el('h2',b.title),el('p',b.description),el('p',b.status),link);blueprints.append(card);}blueprints.hidden=!blueprints.children.length;

@@ -10,8 +10,8 @@
   <link rel="canonical" href="https://howthtechnologyfactory.pro/private/worklist/">
   <title>Private workspace | HTF</title>
   <link rel="stylesheet" href="board.css?v=20261113-blueprint">
-  <link rel="stylesheet" href="compact.css?v=20261119-platform-status">
-  <script src="board.js?v=20261119-platform-status" defer></script>
+  <link rel="stylesheet" href="compact.css?v=20261121-staff">
+  <script src="board.js?v=20261121-staff" defer></script>
 </head>
 <body>
   <header><div class="brand">HOWTH TECHNOLOGY FACTORY <span>PRIVATE WORKSPACE</span></div><h1>Daily release checklist</h1><p>One useful step at a time. Quality products, submitted and live.</p></header>
@@ -20,6 +20,20 @@
     <div id="board" hidden>
       <div class="topline"><p id="updated"></p><button id="reload" type="button">Refresh shared progress</button></div>
       <div id="summary" class="summary"></div>
+      <details id="staff-mail" class="marketplace-readiness" hidden>
+        <summary><strong>Staff email</strong></summary>
+        <ul id="staff-mailboxes" aria-label="Verified staff mailboxes"></ul>
+      </details>
+      <dialog id="staff-password" aria-labelledby="staff-password-title" aria-describedby="staff-key-hint">
+        <h2 id="staff-password-title">Temporary password</h2>
+        <p id="staff-password-address"></p>
+        <p id="staff-key-hint">Choose your local key file. Your browser decrypts the password on this device. The file stays here.</p>
+        <label for="staff-key-file">HTF staff mailbox key.key</label>
+        <input id="staff-key-file" type="file" accept=".key">
+        <p id="staff-password-status" role="status"></p>
+        <code id="staff-password-value" hidden></code>
+        <button id="staff-password-close" type="button">Close</button>
+      </dialog>
       <details id="marketplace-readiness" class="marketplace-readiness" hidden>
         <summary><strong>Marketplace submission readiness</strong><span id="readiness-overview"></span></summary>
         <div class="readiness-body">
