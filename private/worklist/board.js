@@ -162,7 +162,8 @@
     function addMailbox(mailbox,pending){
       if(!mailbox.person || !mailbox.provider) return;
       const row = el('li');
-      const address = pending ? 'Requested address · '+mailbox.address : mailbox.address;
+      const awaitingSignup = pending && !mailbox.account_created;
+      const address = awaitingSignup ? 'Requested address · '+mailbox.address : mailbox.address;
       const status = pending ? mailbox.status || 'Awaiting manual signup' : 'Verified inbox';
       row.append(el('strong',mailbox.person),el('span',status),el('span',mailbox.provider));
       if(mailbox.address) row.append(el('span',address));
@@ -174,12 +175,12 @@
         row.append(link);
       }
       if(mailbox.temporary_password?.v === 1){
-        const button = el('button',pending ? 'Show password for signup' : 'Show temporary password');
+        const button = el('button',awaitingSignup ? 'Show password for signup' : 'Show temporary password');
         button.type = 'button';
         button.addEventListener('click',()=>{
           clearPassword();
           selectedMailbox = mailbox;
-          $('#staff-password-title').textContent = pending ? 'Temporary password for signup' : 'Temporary password';
+          $('#staff-password-title').textContent = awaitingSignup ? 'Temporary password for signup' : 'Temporary password';
           $('#staff-password-address').textContent = address;
           passwordDialog.showModal();
         });
