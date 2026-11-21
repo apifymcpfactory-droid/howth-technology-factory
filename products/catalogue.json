@@ -2270,18 +2270,24 @@
                 "plugin-integration"
             ],
             "access": [
-                "future"
+                "unreal-editor"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
-            "release_note": "Fab confirmed submission of the Unreal Engine 5.8 plugin. The listing will publish automatically after approval.",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
+            "release_note": "QuestFlow is available on Fab for Unreal Engine 5.8 on Windows, with Personal and Professional licences.",
             "reviews": [],
-            "shopfronts": [],
+            "shopfronts": [
+                {
+                    "id": "fab",
+                    "name": "Fab",
+                    "url": "https://www.fab.com/listings/04af655a-71af-48da-bf06-f87c0d64514c"
+                }
+            ],
             "image": "/assets/previews/tools/questflow-narrative-studio.jpg",
             "imageAlt": "The last ferry sample running in Unreal Engine.",
             "searchTerms": "QuestFlow branching quest dialogue narrative design Unreal Engine Fab objectives gameplay Blueprint story graph Unreal Data Table checkpoint",
-            "status_verified": "2026-11-19"
+            "status_verified": "2026-11-21"
         },
         {
             "id": "industrial-operations-scene-collection",
