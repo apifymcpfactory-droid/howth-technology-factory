@@ -199,7 +199,6 @@
     meetingList.replaceChildren(...(data.staff_prior_attempts || []).map(note=>el('li',note)));
     priorAttempts.hidden = !meetingList.children.length;
     section.hidden = !list.children.length && priorAttempts.hidden;
-    if(!section.hidden && new URLSearchParams(location.search).get('view') === 'staff') section.open = true;
   }
   function render(){
     renderStaffMail();
