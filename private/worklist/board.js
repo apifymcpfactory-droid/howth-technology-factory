@@ -166,7 +166,11 @@
       const address = awaitingSignup ? 'Requested address · '+mailbox.address : mailbox.address;
       const status = pending ? mailbox.status || 'Awaiting manual signup' : 'Verified inbox';
       row.append(el('strong',mailbox.person),el('span',status),el('span',mailbox.provider));
-      if(mailbox.address) row.append(el('span',address));
+      if(mailbox.address){
+        const label = mailbox.login_name === mailbox.address ? 'Email and login · ' : 'Email · ';
+        row.append(el('span',awaitingSignup ? address : label + address));
+      }
+      if(mailbox.login_name && mailbox.login_name !== mailbox.address) row.append(el('span','Login · '+mailbox.login_name));
       if(mailbox.detail) row.append(el('span',mailbox.detail));
       if(pending && mailbox.signup_url){
         const link = el('a','Sign up with '+mailbox.provider);
