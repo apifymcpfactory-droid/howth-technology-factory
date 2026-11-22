@@ -10,8 +10,8 @@
   <link rel="canonical" href="https://howthtechnologyfactory.pro/private/worklist/">
   <title>Private workspace | HTF</title>
   <link rel="stylesheet" href="board.css?v=20261113-blueprint">
-  <link rel="stylesheet" href="compact.css?v=20261121-staff">
-  <script src="board.js?v=20261122-staff-collapsed" defer></script>
+  <link rel="stylesheet" href="compact.css?v=20261122-platform-lists">
+  <script src="board.js?v=20261122-platform-lists" defer></script>
 </head>
 <body>
   <header><div class="brand">HOWTH TECHNOLOGY FACTORY <span>PRIVATE WORKSPACE</span></div><h1>Daily release checklist</h1><p>One useful step at a time. Quality products, submitted and live.</p></header>
@@ -38,12 +38,12 @@
         <code id="staff-password-value" hidden></code>
         <button id="staff-password-close" type="button">Close</button>
       </dialog>
-      <details id="marketplace-readiness" class="marketplace-readiness" hidden>
+      <details id="marketplace-readiness" class="marketplace-readiness" open hidden>
         <summary><strong>Marketplace submission readiness</strong><span id="readiness-overview"></span></summary>
         <div class="readiness-body">
-          <p class="readiness-key"><strong>Live</strong> means HTF can submit a prepared first product. <strong>Blocked</strong> means a requirement still prevents submission. <strong>Not started</strong> means setup has yet to begin.</p>
+          <p class="readiness-key"><strong>Live</strong> means HTF can submit a prepared product. <strong>Blocked</strong> means a requirement prevents submission. <strong>Paused</strong> means work is on hold.</p>
           <p id="readiness-context"></p>
-          <div class="readiness-head" aria-hidden="true"><span>Platform</span><span>Status</span><span>Customer payments</span><span>Irish sole trader</span><span>Next requirement</span></div>
+          <template id="readiness-columns"><div class="readiness-head" aria-hidden="true"><span>Platform</span><span>Status</span><span>Customer payments</span><span>Irish sole trader</span><span>Next requirement</span></div></template>
           <div id="readiness-platforms"></div>
           <p id="readiness-evidence"></p>
         </div>

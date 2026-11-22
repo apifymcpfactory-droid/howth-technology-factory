@@ -40,20 +40,26 @@
     section.hidden = !audit || !Array.isArray(audit.platforms);
     if(section.hidden) return;
     const entries = new Map(data.entries.filter(entry => entry.marketplace_review).map(entry => [entry.platform, entry.marketplace_review]));
-    const rows = [];
+    const container = $('#readiness-platforms');
+    const openLists = new Set(Array.from(container.querySelectorAll('.readiness-list[open]'), list => list.dataset.status));
+    const openEntries = new Set(Array.from(container.querySelectorAll('.readiness-entry[open]'), entry => entry.dataset.platform));
+    const rowsByStatus = new Map(['Live', 'Blocked', 'Paused', 'Not started'].map(status => [status, []]));
     for(const platform of audit.platforms){
       const review = entries.get(platform);
       if(!review) continue;
+      const statusName = review.status || 'Unclassified';
       const detail = el('details', undefined, 'readiness-entry');
+      detail.dataset.platform = platform;
+      detail.open = openEntries.has(platform);
       const summary = el('summary');
       const name = el('strong', platform, 'readiness-name');
       summary.append(name);
-      const status = el('span', review.status || '—', 'readiness-status');
-      if(review.status) status.dataset.status = review.status;
+      const status = el('span', statusName, 'readiness-status');
+      status.dataset.status = statusName;
       summary.append(status);
       for(const [label, value] of [['Customer payments', review.payment_label], ['Irish sole trader', review.seller_label], ['Next requirement', review.next_label]]){
         const cell = el('span', undefined, 'readiness-cell');
-        cell.append(el('small', label), el('span', value));
+        cell.append(el('small', label), el('span', value || '—'));
         summary.append(cell);
       }
       detail.append(summary);
@@ -65,7 +71,7 @@
       }
       evidence.append(facts);
       const links = el('ul', undefined, 'readiness-links');
-      for(const source of review.sources){
+      for(const source of review.sources || []){
         const url = new URL(source.url);
         if(url.protocol !== 'https:') continue;
         const link = el('a', source.label);
@@ -76,11 +82,22 @@
         item.append(link);
         links.append(item);
       }
-      evidence.append(links);
+      if(links.childElementCount) evidence.append(links);
       detail.append(evidence);
-      rows.push(detail);
+      if(!rowsByStatus.has(statusName)) rowsByStatus.set(statusName, []);
+      rowsByStatus.get(statusName).push(detail);
     }
-    $('#readiness-platforms').replaceChildren(...rows);
+    const lists = [];
+    for(const [statusName, rows] of rowsByStatus){
+      if(!rows.length) continue;
+      const list = el('details', undefined, 'readiness-list');
+      list.dataset.status = statusName;
+      list.open = openLists.has(statusName);
+      const title = statusName === 'Not started' ? 'Platforms not started' : statusName + ' platforms';
+      list.append(el('summary', title + ' (' + rows.length + ')'), $('#readiness-columns').content.cloneNode(true), ...rows);
+      lists.push(list);
+    }
+    container.replaceChildren(...lists);
     $('#readiness-overview').textContent = audit.overview;
     $('#readiness-context').textContent = audit.context;
     $('#readiness-evidence').textContent = audit.basis;

@@ -95,6 +95,9 @@
 @media print { #staff-password { display: none; } }
 #readiness-overview { display: block; color: var(--muted); margin: 3px 0 0 18px; }
 .readiness-body { padding: 0 18px 10px; }
+.readiness-list { border: 1px solid var(--line); border-radius: 6px; margin: 8px 0; }
+.readiness-list > summary { padding: 10px 12px; cursor: pointer; font-weight: 650; }
+.readiness-list > .readiness-entry:last-child { border-bottom: 0; }
 .readiness-key { font-size: 14px; margin: 0 0 12px; }
 #readiness-context, #readiness-evidence { color: var(--muted); font-size: 13px; max-width: 105ch; }
 .readiness-head, .readiness-entry > summary {
