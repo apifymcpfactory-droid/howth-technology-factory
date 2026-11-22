@@ -2412,15 +2412,15 @@
                 "future"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
-            "release_note": "Creative Market confirmed receipt of the kit with our shop application. Public checkout is pending.",
+            "release_status": "developed_not_submitted",
+            "release_label": "Developed but not submitted",
+            "release_note": "Creative Market declined the shop application that included this kit. The kit is unavailable for purchase.",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/industrial-wayfinding-approval-kit.jpg",
             "imageAlt": "Two views of the same receiving-bay sign with the worked example’s approved position.",
             "searchTerms": "Creative Market signage wayfinding industrial mockup placement client approval PSD SVG PDF warehouse sign kit",
-            "status_verified": "2026-11-19"
+            "status_verified": "2026-11-22"
         }
     ],
     "release_statuses": {
