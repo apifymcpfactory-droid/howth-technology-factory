@@ -19,6 +19,9 @@
 .product-preview .hero h1 {max-width:20ch}
 .product-preview .hero-shot {margin-top:2rem}
 .product-preview .hero-shot figcaption {max-width:78ch;line-height:1.55}
+.product-preview .buyer-guide {max-width:72ch;margin:0 auto 4rem;line-height:1.65}
+.product-preview .buyer-guide h2 {margin-top:2rem;line-height:1.2}
+.product-preview .buyer-guide li {margin-block:.6rem}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Billing Period Reconciliation for Freshdesk","applicationCategory":"BusinessApplication","creativeWorkStatus":"Coming Soon - in development","url":"https://howthtechnologyfactory.pro/products/freshdesk-billing-reconciliation.html"}</script>
 </head>
@@ -37,6 +40,20 @@
       <a href="/assets/previews/tools/freshdesk-billing-reconciliation.jpg" aria-label="Open the full-size example comparison"><img src="/assets/previews/tools/freshdesk-billing-reconciliation.jpg" alt="Development build comparing 75 original billable minutes with 85 current minutes across three changed time entries." width="1905" height="882"></a>
       <figcaption>Example data in the local development build. A revised entry adds 15 minutes, one no longer returned accounts for 30 fewer, and a new entry adds 25. The net change is 10 billable minutes.</figcaption>
     </figure>
+  </section>
+  <section class="buyer-guide" aria-labelledby="comparison-guide">
+    <h2 id="comparison-guide">Compare a billed period</h2>
+    <p>A billing reviewer needs two complete JSON snapshots from the app. Keep the first when you bill and compare it with a later observation of the same inclusive UTC dates. Both files must cover the same Freshdesk account and agent visibility. An earlier snapshot is essential to identify what has changed since billing.</p>
+    <ol>
+      <li>Choose the original file under <strong>Statement used for billing</strong>. Choose the later file under <strong>Latest statement for the same period</strong>.</li>
+      <li>Select <strong>Compare time entries</strong>. Review the original and current billable minutes, then check the affected entries by ticket ID. An entry marked <strong>No longer returned</strong> warrants checking in Freshdesk before you adjust a bill.</li>
+      <li>Select <strong>Download changes as CSV</strong> to keep the before and after values for every changed entry. The screen shows up to 200 changed entries. When both files agree, the app reports that no entries changed.</li>
+    </ol>
+    <h2>File handling and limits</h2>
+    <p>Comparison runs in your browser. Each input file can be up to 16 MiB. If a file is incomplete or the dates, account or visibility differ, select a matching pair and try again. Store downloaded files with your billing records. They contain ticket and time-entry identifiers, durations and billable flags.</p>
+    <p>The result measures billable minutes. Your billing team applies rates and decides whether to adjust an invoice. The comparison leaves Freshdesk time entries unchanged.</p>
+    <h2 id="support">Product support</h2>
+    <p>Include the step you reached and the error text. Please keep customer files, invoices and credentials out of the enquiry. <a href="/contact.html">Contact Howth Technology Factory</a>.</p>
   </section>
 </main>
 </body>
