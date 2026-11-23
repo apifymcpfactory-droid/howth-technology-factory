@@ -24,3 +24,5 @@ a:focus-visible,select:focus-visible{outline:3px solid #b25c0b;outline-offset:3p
 .record{margin:1rem 0;padding:.9rem 1.1rem;border:1px solid #d6dce0;background:#fff;border-radius:.35rem}
 .record dt{font-weight:700;margin:.4rem 0 .05rem}.record dd{margin:0 0 .5rem}
 code{font-size:.93em;white-space:pre-wrap}
+#review video{display:block;width:100%;height:auto;max-height:70vh;background:#111}
+#review button{font:inherit;padding:.55rem .9rem;cursor:pointer}

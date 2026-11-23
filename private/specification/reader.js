@@ -5,6 +5,40 @@
   const decode = value => Uint8Array.from(atob(value.replace(/-/g, '+').replace(/_/g, '/')), char => char.charCodeAt(0));
   let pages;
 
+  function addReview(review, key) {
+    if (!review || !/^[a-f0-9]{64}$/.test(review.sha256)) return;
+    const panel = get('review');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = 'Watch ' + review.title;
+    const caption = document.createElement('p');
+    caption.textContent = review.caption;
+    panel.append(button, caption);
+    panel.hidden = false;
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      try {
+        const response = await fetch('sample.enc', {cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});
+        if (!response.ok) throw new Error();
+        const bytes = new Uint8Array(await response.arrayBuffer());
+        const additionalData = new TextEncoder().encode('HTF-private-review-v1:' + review.sha256);
+        const movie = await crypto.subtle.decrypt({name:'AES-GCM',iv:bytes.subarray(0,12),additionalData},key,bytes.subarray(12));
+        const video = document.createElement('video');
+        video.controls = true;
+        video.playsInline = true;
+        video.setAttribute('aria-label',review.title);
+        const url = URL.createObjectURL(new Blob([movie],{type:'video/mp4'}));
+        window.addEventListener('pagehide', () => URL.revokeObjectURL(url), {once:true});
+        video.src = url;
+        button.replaceWith(video);
+        video.play().catch(() => {});
+      } catch {
+        button.textContent = 'Reload the clip';
+        button.disabled = false;
+      }
+    });
+  }
+
   function renderNode(node) {
     if (typeof node === 'string') return document.createTextNode(node);
     if (!allowed.has(node.tag)) throw new Error('Unsupported content');
@@ -52,6 +86,7 @@
     const spec = JSON.parse(new TextDecoder().decode(bytes));
     if (spec.schema !== 1 || !Array.isArray(spec.pages) || !spec.pages.length) throw new Error('Invalid document');
     pages = spec.pages;
+    addReview(spec.review,key);
     get('title').textContent = spec.title;
     get('lead').textContent = spec.lead;
     get('edition').textContent = spec.edition;
