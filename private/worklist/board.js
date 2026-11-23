@@ -221,7 +221,23 @@
     renderStaffMail();
     renderMarketplaceReadiness();
     const blueprints=$('#blueprints');blueprints.replaceChildren();
-    for(const b of data.blueprints||[]){if(b.route!=='/private/production-platform/')continue;const card=el('article'),link=el('a','Open blueprint and feature checklist');link.href=b.route+location.hash;card.append(el('h2',b.title),el('p',b.description),el('p',b.status),link);blueprints.append(card);}blueprints.hidden=!blueprints.children.length;
+    const blueprintRoutes = new Map([
+      ['/private/production-platform/', 'Open blueprint and feature checklist'],
+      ['/private/specification/', 'Read the product specification']
+    ]);
+    for (const item of data.blueprints || []) {
+      if (!blueprintRoutes.has(item.route)) continue;
+      const card = el('article');
+      const link = el('a', blueprintRoutes.get(item.route));
+      link.href = item.route + location.hash;
+      card.append(el('h2', item.title), el('p', item.description), el('p', item.status), link);
+      blueprints.append(card);
+    }
+    blueprints.hidden = !blueprints.children.length;
+    const specification = data.blueprints?.find(item => item.route === '/private/specification/');
+    const shortcut = $('#spec-shortcut');
+    if (specification) shortcut.href = specification.route + location.hash;
+    shortcut.hidden = !specification;
     $('#updated').textContent='Shared progress updated '+data.as_of+' · '+(data.focus||'Work one eligible release at a time.');
     const verified=data.entries.reduce((n,e)=>n+e.completed.length,0);
     const remaining=data.entries.reduce((count,entry)=>count+entry.tasks.filter(task=>task.done!==true).length,0);
