@@ -171,6 +171,7 @@
                 "name": "Future access"
             },
             {"id":"unreal-editor","name":"Unreal Engine Editor"},
+            {"id":"unity-editor","name":"Unity Editor"},
             {
                 "id": "jira-cloud",
                 "name": "Jira Cloud"
@@ -2111,7 +2112,7 @@
         {
             "id": "save-game-migration-unity",
             "name": "Save Game & Migration Workbench | HTF",
-            "summary": "Inspect game-save records, rehearse migrations and recover retained generations in Unity. Submitted to the Unity Asset Store for review.",
+            "summary": "Inspect game-save records, rehearse migrations and recover retained generations in Unity.",
             "url": "https://howthtechnologyfactory.pro/products/save-game-migration-unity.html",
             "problems": [
                 "game-save-development"
@@ -2123,14 +2124,22 @@
                 "plugin-integration"
             ],
             "access": [
-                "future"
+                "unity-editor"
             ],
             "ai_agent_compatible": false,
-            "release_status": "submitted_for_review",
-            "release_label": "Developed and in Review",
+            "release_status": "live",
+            "release_label": "Available for Purchase",
             "reviews": [],
-            "shopfronts": [],
-            "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools"
+            "shopfronts": [
+                {
+                    "id": "unity",
+                    "name": "Unity Asset Store",
+                    "url": "https://assetstore.unity.com/packages/tools/utilities/save-game-migration-workbench-htf-425526"
+                }
+            ],
+            "searchTerms": "Save Game & Migration Workbench | HTF Unity Asset Store save game recovery migration backup developer tools",
+            "status_verified": "2026-11-26",
+            "release_note": "Unity approved and published the workbench on 26 November 2026. The Asset Store lists it at US$25 per seat."
         },
         {
             "id": "fieldnote-playtest-research-studio",

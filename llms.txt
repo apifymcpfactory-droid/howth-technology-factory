@@ -111,7 +111,7 @@
 
 - [Fieldnote | Playtest Research Studio](https://howthtechnologyfactory.pro/products/fieldnote-playtest-research-studio.html): Record playtest task outcomes and timestamped notes, then export local HTML, CSV and JSON evidence from Unreal Engine. Unreal Engine 5.8 for Windows editor and Win64 Development playtest builds. Status: Available for Purchase. Marketplace: https://www.fab.com/listings/20389c79-3d1a-4113-beb2-351060c5b19a
 
-- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Submitted for Unity Asset Store review on 4 November 2026. Approval and public purchase are pending. Windows x64 on Unity 6.3 LTS and 6.6; US$25 per seat after approval. Status: Submitted and in Review.
+- [Save Game & Migration Workbench | HTF](https://howthtechnologyfactory.pro/products/save-game-migration-unity.html): Published on the [Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/save-game-migration-workbench-htf-425526) on 26 November 2026. Windows x64 on Unity 6.3 LTS and 6.6. US$25 per seat. Status: Available for Purchase.
 
 ## Products currently in marketplace review
 - [FluxAisle Studio | HTF](https://howthtechnologyfactory.pro/products/fluxaisle-studio-cgtrader.html): AI data centre visualisation kit with 66 reusable assets and two complete layouts. Status: Available for Purchase.

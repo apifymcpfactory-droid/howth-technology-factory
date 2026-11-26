@@ -1,6 +1,31 @@
 {
   "products": [
     {
+      "id": "save-game-migration-unity",
+      "label": "Save Game & Migration Workbench",
+      "platform": "Unity Asset Store",
+      "heading": [
+        "Inspect your saves.",
+        "Rehearse the next migration."
+      ],
+      "emphasisFrom": 1,
+      "intro": "See what a save contains, test schema changes on a copy and recover an earlier valid generation in Unity.",
+      "priceLead": "Available for Purchase",
+      "priceDetail": "US$25 per seat on the Unity Asset Store.",
+      "marketplace": {
+        "label": "View on Unity Asset Store",
+        "url": "https://assetstore.unity.com/packages/tools/utilities/save-game-migration-workbench-htf-425526"
+      },
+      "image": "/assets/previews/save-workbench-inspect-1920x1080.png",
+      "imageAlt": "Save Game & Migration Workbench inspecting sample save records in the Unity Editor.",
+      "caption": "The save inspector in Unity Editor, with sample save data.",
+      "facts": [
+        "Inspect save records",
+        "Rehearse migrations",
+        "Recover retained saves"
+      ]
+    },
+    {
       "id": "design-system-migration-toolkit-figma",
       "label": "Migration Toolkit",
       "platform": "Figma Design",
