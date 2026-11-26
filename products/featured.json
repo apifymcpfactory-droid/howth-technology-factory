@@ -1,6 +1,111 @@
 {
   "products": [
     {
+      "id": "design-system-migration-toolkit-figma",
+      "label": "Migration Toolkit",
+      "platform": "Figma Design",
+      "heading": [
+        "Old system.",
+        "New client.",
+        "A clear way",
+        "across."
+      ],
+      "emphasisFrom": 2,
+      "intro": "Replace variables, styles and compatible components with a migration plan you can check. Reuse your mappings. Keep a readable handover report.",
+      "priceLead": "Published on Figma Community",
+      "priceDetail": "Open the plugin in Figma to see its Pro options.",
+      "demo": "/products/demos/migration-toolkit/",
+      "marketplace": {
+        "label": "Open on Figma Community",
+        "url": "https://www.figma.com/community/plugin/1697342956800117056"
+      },
+      "image": "/assets/previews/migration-toolkit-htf-cover.jpg",
+      "imageAlt": "Design System Migration Toolkit by HTF: inspect, map, review changes and verify the result.",
+      "caption": "An independent HTF plugin for Figma Design. Try a fictional client migration in the browser demo.",
+      "facts": [
+        "Review before applying",
+        "Reusable recipes",
+        "Local processing"
+      ]
+    },
+    {
+      "id": "howth-icon-kits-figma",
+      "label": "SVG Icons",
+      "platform": "Figma Design",
+      "heading": [
+        "Find your icons.",
+        "Keep your set",
+        "together."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Search Lucide icons, collect a consistent project kit, and replace artwork without rebuilding your layout.",
+      "priceLead": "Published on Figma Community",
+      "priceDetail": "Open the plugin in Figma to see its Pro options.",
+      "demo": "/products/demos/howth-icon-kits/",
+      "marketplace": {
+        "label": "Open on Figma Community",
+        "url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf"
+      },
+      "image": "/assets/previews/svg-icons-htf-cover.jpg",
+      "imageAlt": "SVG Icons by HTF: search Lucide icons, save project kits and replace compatible icon artwork.",
+      "caption": "An independent HTF plugin for Figma Design. Explore the workflow in the browser demo.",
+      "facts": [
+        "2,193 bundled icons",
+        "Editable SVG vectors",
+        "No external icon API"
+      ]
+    },
+    {
+      "id": "questflow-narrative-studio",
+      "label": "QuestFlow Narrative Studio",
+      "platform": "Fab · Unreal Engine",
+      "heading": [
+        "Write a branching quest.",
+        "Play through both routes."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Connect choices to their destinations, replay branches from a shared checkpoint and catch broken paths inside Unreal Engine.",
+      "priceLead": "Available for Purchase",
+      "priceDetail": "For Unreal Engine 5.8 on Windows.",
+      "marketplace": {
+        "label": "View on Fab",
+        "url": "https://www.fab.com/listings/04af655a-71af-48da-bf06-f87c0d64514c"
+      },
+      "image": "/assets/previews/tools/questflow-narrative-studio.jpg",
+      "imageAlt": "The Last Ferry sample running in Unreal Engine.",
+      "caption": "The Last Ferry sample included with QuestFlow.",
+      "facts": [
+        "Branching choices",
+        "Checkpoint replay",
+        "Playable sample"
+      ]
+    },
+    {
+      "id": "industrial-operations-scene-collection",
+      "label": "Industrial Operations Site Planner",
+      "platform": "CGTrader · Blender",
+      "heading": [
+        "Lay out the site.",
+        "Walk through the handoffs."
+      ],
+      "emphasisFrom": 1,
+      "intro": "Move an editable receiving dock, electronics repair room and data-centre aisle into place for your next industrial concept review.",
+      "priceLead": "Available for Purchase",
+      "priceDetail": "Editable Blender scene with three zones and GLB exports.",
+      "marketplace": {
+        "label": "View on CGTrader",
+        "url": "https://www.cgtrader.com/3d-models/industrial/other/industrial-operations-site-planner-for-blender"
+      },
+      "image": "/assets/previews/tools/industrial-operations-scene-collection.jpg",
+      "imageAlt": "An overhead Blender render of the receiving, repair and data-centre zones.",
+      "caption": "The three zones in the included Blender site plan.",
+      "facts": [
+        "Three editable zones",
+        "Four review views",
+        "GLB exports"
+      ]
+    },
+    {
       "id": "confluence-reporting-workbench",
       "label": "Confluence Reporting Workbench",
       "platform": "Confluence Cloud",
@@ -355,61 +460,6 @@
         "Prototype-to-handover",
         "Editable board and labels",
         "PNG, SVG and PDF exports"
-      ]
-    },
-    {
-      "id": "design-system-migration-toolkit-figma",
-      "label": "Migration Toolkit",
-      "platform": "Figma Design",
-      "heading": [
-        "Old system.",
-        "New client.",
-        "A clear way",
-        "across."
-      ],
-      "emphasisFrom": 2,
-      "intro": "Replace variables, styles and compatible components with a migration plan you can check. Reuse your mappings. Keep a readable handover report.",
-      "priceLead": "Published on Figma Community",
-      "priceDetail": "Open the plugin in Figma to see its Pro options.",
-      "demo": "/products/demos/migration-toolkit/",
-      "marketplace": {
-        "label": "Open on Figma Community",
-        "url": "https://www.figma.com/community/plugin/1697342956800117056"
-      },
-      "image": "/assets/previews/migration-toolkit-htf-cover.jpg",
-      "imageAlt": "Design System Migration Toolkit by HTF: inspect, map, review changes and verify the result.",
-      "caption": "An independent HTF plugin for Figma Design. Try a fictional client migration in the browser demo.",
-      "facts": [
-        "Review before applying",
-        "Reusable recipes",
-        "Local processing"
-      ]
-    },
-    {
-      "id": "howth-icon-kits-figma",
-      "label": "SVG Icons",
-      "platform": "Figma Design",
-      "heading": [
-        "Find your icons.",
-        "Keep your set",
-        "together."
-      ],
-      "emphasisFrom": 1,
-      "intro": "Search Lucide icons, collect a consistent project kit, and replace artwork without rebuilding your layout.",
-      "priceLead": "Published on Figma Community",
-      "priceDetail": "Open the plugin in Figma to see its Pro options.",
-      "demo": "/products/demos/howth-icon-kits/",
-      "marketplace": {
-        "label": "Open on Figma Community",
-        "url": "https://www.figma.com/community/plugin/1697304793981798602/svg-icons-search-replace-htf"
-      },
-      "image": "/assets/previews/svg-icons-htf-cover.jpg",
-      "imageAlt": "SVG Icons by HTF: search Lucide icons, save project kits and replace compatible icon artwork.",
-      "caption": "An independent HTF plugin for Figma Design. Explore the workflow in the browser demo.",
-      "facts": [
-        "2,193 bundled icons",
-        "Editable SVG vectors",
-        "No external icon API"
       ]
     },
     {
