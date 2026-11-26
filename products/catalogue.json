@@ -2339,7 +2339,8 @@
             "editions": [
                 {
                     "platform": "Creative Market",
-                    "name": "Industrial Operations Scene Collection",
+                    "name": "Industrial Operations Scene Collection · Creative Market edition",
+                    "summary": "The Creative Market edition is awaiting submission. Visit the product page to buy the published CGTrader edition.",
                     "release_status": "developed_not_submitted",
                     "release_label": "Developed but not submitted",
                     "access": [
