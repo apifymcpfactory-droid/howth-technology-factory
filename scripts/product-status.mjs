@@ -8,7 +8,7 @@ export const releaseLabels = Object.freeze({
 export function releaseLabel(product) {
     const label = releaseLabels[product.release_status];
     if (!label) throw new Error(`${product.id}: unknown release status ${product.release_status}`);
-    return label;
+    return product.marketplace_publication || label;
 }
 
 export function renderReleaseStatus(product) {

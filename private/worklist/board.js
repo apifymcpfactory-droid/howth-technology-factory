@@ -251,7 +251,7 @@
       row.classList.add('compact-row');
       info.append(el('div',`${i+1} · ${e.platform}`,'platform'),el('div',e.product,'product'));
       const cls=e.status==='Available for Purchase'?'live':e.status==='Developed and in Review'?'review':e.status==='Developed but not submitted'?'built':'development';
-      info.append(el('span',e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
+      info.append(el('span',e.release_milestone || e.status,'badge '+cls),el('p',e.setup,'detail'+(['Waiting','Blocked','Owner action'].includes(e.lane)?' blocker':'')));
       if(compact){const toggle=el('button','View checklist','row-toggle');toggle.type='button';toggle.setAttribute('aria-expanded','false');toggle.addEventListener('click',()=>{const open=row.classList.toggle('expanded');toggle.textContent=open?'Hide checklist':'View checklist';toggle.setAttribute('aria-expanded',String(open));});info.append(toggle);}
       if(e.note)info.append(el('p',e.note,'detail row-detail'));
       if(e.completed.length)for(const text of e.completed){const item=el('div',undefined,'task');item.append(el('span','✓','done-icon'),el('span',text));done.append(item);}else done.append(el('p','No completed step recorded.','detail'));
