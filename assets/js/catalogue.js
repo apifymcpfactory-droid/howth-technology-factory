@@ -24,7 +24,7 @@
         const query = normalize(search.value);
         const selected = selectedByFacet();
         let visible = 0;
-        const shown = new Set();
+        const visibleProducts = new Set();
 
         for (const card of cards) {
             const platformMatch = !platform.value || card.closest('[data-platform-group]').dataset.platformGroup === platform.value;
@@ -33,15 +33,18 @@
                 const cardValues = (card.dataset[facet] || '').split(/\s+/).filter(Boolean);
                 return values.some((value) => cardValues.includes(value));
             });
-            card.hidden = !(platformMatch && searchMatch && facetMatch) || shown.has(card.dataset.productId);
+            card.hidden = !(platformMatch && searchMatch && facetMatch);
             if (!card.hidden) {
-                shown.add(card.dataset.productId);
+                visibleProducts.add(card.dataset.productId);
                 visible += 1;
             }
         }
         for (const group of groups) group.hidden = !group.querySelector('[data-product-card]:not([hidden])');
 
-        count.textContent = `${visible} ${visible === 1 ? 'tool' : 'tools'}`;
+        const resultCount = `${visible} ${visible === 1 ? 'result' : 'results'}`;
+        count.textContent = visible === visibleProducts.size
+            ? resultCount
+            : `${resultCount} across ${visibleProducts.size} ${visibleProducts.size === 1 ? 'product' : 'products'}`;
         empty.hidden = visible !== 0;
         for (const button of quickFilters) {
             const input = checks.find((candidate) =>

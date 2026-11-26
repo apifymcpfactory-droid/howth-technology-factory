@@ -232,12 +232,15 @@ const outputs = [];
 // --- products index ---
 {
     let html = read('products/index.html');
-    html = replaceGrid(html, /<div class="grid gap-8">/, '</article>', groupedCards(indexCards, true), 'products/index.html');
+    const cards = groupedCards(indexCards, true);
+    html = replaceGrid(html, /<div class="grid gap-8">/, '</article>', cards, 'products/index.html');
     html = replaceFeatured(html,true);
     // The result counter is a LIVE filter readout, not a claim about the catalogue.
     // Generated so its initial value can never go stale.
     const n = catalogue.products.length;
-    html = html.replace(/(<p data-result-count[^>]*>)[^<]*(<\/p>)/, `$1${n} tools$2`);
+    const cardCount = [...cards.matchAll(/data-product-card\b/g)].length;
+    const initialCount = cardCount === n ? `${n} results` : `${cardCount} results across ${n} products`;
+    html = html.replace(/(<p data-result-count[^>]*>)[^<]*(<\/p>)/, (_, open, close) => open + initialCount + close);
     html = html.replace(/(<script type="application\/ld\+json">)\s*({[\s\S]*?})(\s*<\/script>)/g, (block, open, json, close) => {
         const value = JSON.parse(json);
         if (value['@type'] !== 'ItemList') return block;
