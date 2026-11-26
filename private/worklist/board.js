@@ -65,13 +65,16 @@
       detail.append(summary);
       const evidence = el('div', undefined, 'readiness-detail');
       const facts = el('dl');
-      for(const [label, value] of [['First product intake', review.intake], ['HTF setup', review.stage], ['Customer payments', review.checkout], ['Irish sole trader', review.eligibility], ['What remains', review.gate], ['Business email', review.mail]]){
+      const profile = audit.publisher_profiles?.[platform];
+      for(const [label, value] of [['Publisher branding', profile?.status], ['Public profile check', profile?.detail], ['First product intake', review.intake], ['HTF setup', review.stage], ['Customer payments', review.checkout], ['Irish sole trader', review.eligibility], ['What remains', review.gate], ['Business email', review.mail]]){
         if(!value) continue;
         facts.append(el('dt', label), el('dd', value));
       }
       evidence.append(facts);
       const links = el('ul', undefined, 'readiness-links');
-      for(const source of review.sources || []){
+      const sources = [...(review.sources || [])];
+      if(profile?.url) sources.unshift({label:'Public publisher profile',url:profile.url});
+      for(const source of sources){
         const url = new URL(source.url);
         if(url.protocol !== 'https:') continue;
         const link = el('a', source.label);
