@@ -176,11 +176,13 @@ ${renderCards(products)}
 }
 
 function indexCards(products) {
-    const rank = (product) => product.release_status === 'in_development' ? 2
-        : product.release_status === 'submitted_for_review' ? 1 : 0;
+    const rank = (product) => product.marketplace_publication || product.release_status === 'live' ? 0
+        : product.release_status === 'developed_not_submitted' ? 1
+        : product.release_status === 'submitted_for_review' ? 2 : 3;
     return [...products].sort((a, b) => rank(a) - rank(b)).map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
-        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-status="${esc(p.release_status)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
+        const filterStatus = p.marketplace_publication && p.release_status !== 'live' ? 'published' : p.release_status;
+        return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-status="${esc(filterStatus)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
                             <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p>${renderReleaseStatus(p)}<p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}</p>
                         </article>`;
     }).join('\n');

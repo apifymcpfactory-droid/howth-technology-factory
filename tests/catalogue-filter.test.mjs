@@ -7,7 +7,7 @@ const html = fs.readFileSync(new URL('../products/index.html', import.meta.url),
 const script = fs.readFileSync(new URL('../assets/js/catalogue.js', import.meta.url), 'utf8');
 const catalogue = JSON.parse(fs.readFileSync(new URL('../products/catalogue.json', import.meta.url), 'utf8'));
 
-test('the purchase filter shows each live product in every marketplace where it is sold', () => {
+function cataloguePage(query = '') {
     const groups = [...html.matchAll(/<section data-platform-group="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)].map(([, platformGroup, markup]) => {
         const group = { dataset: { platformGroup } };
         group.cards = [...markup.matchAll(/data-product-id="([^"]+)" data-status="([^"]+)"/g)].map(([, productId, status]) => ({
@@ -18,9 +18,11 @@ test('the purchase filter shows each live product in every marketplace where it 
         return group;
     });
     const cards = groups.flatMap((group) => group.cards);
-    const purchase = { dataset: { facet: 'status' }, value: 'live' };
+    const checks = [...html.matchAll(/<input data-facet="status" value="([^"]+)"/g)]
+        .map(([, value]) => ({ dataset: { facet: 'status' }, value, checked: false }));
+    const purchase = checks.find((input) => input.value === 'live');
     const search = { value: '', focus() {} };
-    const platform = { value: '' };
+    const platform = { value: '', options: ['', 'mcpize', 'figma'].map((value) => ({ value })) };
     const count = {};
     const empty = {};
     const listeners = {};
@@ -35,7 +37,7 @@ test('the purchase filter shows each live product in every marketplace where it 
     const collections = {
         '[data-product-card]': cards,
         '[data-platform-group]': groups,
-        'input[data-facet]': [purchase],
+        'input[data-facet]': checks,
         '[data-quick-problem]': [],
     };
     const root = {
@@ -43,8 +45,12 @@ test('the purchase filter shows each live product in every marketplace where it 
         querySelectorAll: (selector) => collections[selector],
         addEventListener(event, handler) { listeners[event] = handler; },
     };
-    vm.runInNewContext(script, { document: { querySelector: () => root } });
+    vm.runInNewContext(script, { document: { querySelector: () => root }, window: { location: { search: query } }, URLSearchParams });
+    return { groups, cards, purchase, platform, count, empty, listeners };
+}
 
+test('the purchase filter shows each live product in every marketplace where it is sold', () => {
+    const { groups, cards, purchase, platform, count, empty, listeners } = cataloguePage();
     purchase.checked = true;
     listeners.change();
     const liveProducts = catalogue.products.filter((product) => product.release_status === 'live');
@@ -66,4 +72,20 @@ test('the purchase filter shows each live product in every marketplace where it 
     assert.equal(purchase.checked, false);
     assert.equal(cards.filter((card) => !card.hidden).length, cards.length);
     assert.equal(count.textContent, `${cards.length} results across ${catalogue.products.length} products`);
+});
+
+test('live products include the two published Figma plugins and the direct Figma link opens both', () => {
+    const figma = catalogue.products.filter((product) => product.marketplace_publication === 'Published on Figma Community');
+    assert.ok(figma.length > 0);
+    const figmaIds = figma.map((product) => product.id);
+    const visibleIds = (page) => page.cards.filter((card) => !card.hidden).map((card) => card.dataset.productId);
+    const live = cataloguePage('?status=published');
+    const expected = catalogue.products.filter((product) => product.release_status === 'live' || product.marketplace_publication);
+    assert.deepEqual([...new Set(visibleIds(live))].sort(), expected.map((product) => product.id).sort());
+    assert.match(html, /href="\?platform=figma&amp;status=published#catalogue-results"/);
+    const figmaOnly = cataloguePage('?platform=figma&status=published');
+    assert.deepEqual(visibleIds(figmaOnly), figmaIds);
+    assert.deepEqual(figmaOnly.groups.filter((group) => !group.hidden).map((group) => group.dataset.platformGroup), ['figma']);
+    const underReview = visibleIds(cataloguePage('?status=submitted_for_review'));
+    assert.ok(figmaIds.every((id) => !underReview.includes(id)));
 });

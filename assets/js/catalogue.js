@@ -31,6 +31,7 @@
             const searchMatch = !query || normalize(card.dataset.search).includes(query);
             const facetMatch = Object.entries(selected).every(([facet, values]) => {
                 const cardValues = (card.dataset[facet] || '').split(/\s+/).filter(Boolean);
+                if (facet === 'status' && cardValues.includes('live')) cardValues.push('published');
                 return values.some((value) => cardValues.includes(value));
             });
             card.hidden = !(platformMatch && searchMatch && facetMatch);
@@ -73,5 +74,15 @@
         search.focus();
     });
 
+    const filters = new URLSearchParams(window.location.search);
+    const initialStatus = filters.get('status');
+    const initialPlatform = filters.get('platform');
+    const statusInput = checks.find((input) => input.dataset.facet === 'status' && input.value === initialStatus);
+    const platformOption = [...platform.options].find((option) => option.value === initialPlatform);
+    if (statusInput || platformOption) {
+        search.value = '';
+        platform.value = platformOption?.value ?? '';
+        for (const input of checks) input.checked = input === statusInput;
+    }
     applyFilters();
 })();
