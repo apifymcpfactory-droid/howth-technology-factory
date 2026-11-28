@@ -105,7 +105,7 @@
 ## Receivables and collections for Zoho Books
 - [HTC Receivables Workbench](https://howthtechnologyfactory.pro/products/receivables-workbench-zoho-books.html) — Review a disputed invoice case, find its next action and export the cases checked for a weekly collections meeting in Zoho Books. Status: Developed but not submitted.
 
-- [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Submitted to Fab for review on 4 November 2026. Unreal Engine 5.8.4 / Windows Win64. Manual publication after approval and final release checks; not yet available to buy. Status: Developed and in Review.
+- [SaveGuard Studio | HTF](https://howthtechnologyfactory.pro/products/saveguard-studio-fab.html): Available for Purchase on [Fab](https://www.fab.com/listings/d459cd35-53bc-4635-8e3b-a95b16faaf8b). Verified for Unreal Engine 5.8.4 on Windows Win64.
 
 - [ReproCase | HTF](https://howthtechnologyfactory.pro/products/reprocase-unreal.html): Create, check, compare and export local bug-report evidence inside Unreal Editor. Approved and published on Fab on 17 November 2026. Unreal Engine 5.8 / Windows Win64 Editor. Status: Available for Purchase. Marketplace: https://www.fab.com/listings/44410d54-42ea-4bda-b103-1f1b3c2004a7
 
@@ -121,7 +121,7 @@
 - [Caliper Forge | Technical Catalogue Theme](https://howthtechnologyfactory.pro/products/caliper-forge-shopify-theme.html): A Shopify theme for specification-heavy catalogues, comparison and multi-option ordering. Design revisions required after initial review rejection on 17 November 2026; not currently in review or available to purchase. Status: Developed but not submitted.
 
 - [FlowDock Studio — Superhive edition](https://howthtechnologyfactory.pro/products/flowdock-studio-superhive.html): Editable warehouse scene kit with 215 named mesh parts. Superhive approved the 215-part edition for release on 2 December 2026.
-- Purchasing & Receiving Workbench for Magento Open Source: https://howthtechnologyfactory.pro/products/purchasing-workbench-magento.html (Developed but not submitted. Adobe marketing resubmission pending. US$39 one-time on release.)
+- Purchasing & Receiving Workbench for Magento Open Source: https://howthtechnologyfactory.pro/products/purchasing-workbench-magento.html (Developed but not submitted. Adobe manual technical QA is in progress. Marketing resubmission is pending. US$39 one-time on release.)
 - [QuestFlow Narrative Studio](https://howthtechnologyfactory.pro/products/questflow-narrative-studio.html) lets Unreal Engine teams author branching quests and rehearse player choices. Available for Purchase on [Fab](https://www.fab.com/listings/04af655a-71af-48da-bf06-f87c0d64514c).
 - [Industrial Wayfinding & Approval Kit](https://howthtechnologyfactory.pro/products/industrial-wayfinding-approval-kit.html) lets designers compare two sign placements and record the client's choice. Creative Market declined the shop application that included this kit. The kit is unavailable for purchase.
 - [Industrial Operations Site Planner for Blender](https://howthtechnologyfactory.pro/products/industrial-operations-scene-collection.html) provides editable scenes for industrial concept reviews. [Available for purchase on CGTrader](https://www.cgtrader.com/3d-models/industrial/other/industrial-operations-site-planner-for-blender) at a US$19.99 list price. The Creative Market edition is developed but not submitted.

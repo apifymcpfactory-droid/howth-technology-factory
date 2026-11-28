@@ -22,7 +22,8 @@ function cataloguePage(query = '') {
         .map(([, value]) => ({ dataset: { facet: 'status' }, value, checked: false }));
     const purchase = checks.find((input) => input.value === 'live');
     const search = { value: '', focus() {} };
-    const platform = { value: '', options: ['', 'mcpize', 'figma'].map((value) => ({ value })) };
+    const platformMarkup = /<select\b[^>]*data-catalogue-platform[^>]*>([\s\S]*?)<\/select>/.exec(html)?.[1] ?? '';
+    const platform = { value: '', options: [...platformMarkup.matchAll(/<option value="([^"]*)"/g)].map(([, value]) => ({ value })) };
     const count = {};
     const empty = {};
     const listeners = {};
@@ -88,4 +89,13 @@ test('live products include the two published Figma plugins and the direct Figma
     assert.deepEqual(figmaOnly.groups.filter((group) => !group.hidden).map((group) => group.dataset.platformGroup), ['figma']);
     const underReview = visibleIds(cataloguePage('?status=submitted_for_review'));
     assert.ok(figmaIds.every((id) => !underReview.includes(id)));
+});
+
+test('the Superhive filter opens the FlowDock edition at its own release status', () => {
+    const flowdock = catalogue.products.find(({ id }) => id === 'flowdock-studio-cgtrader');
+    const edition = flowdock.editions.find(({ platform }) => platform === 'Superhive');
+    const page = cataloguePage(`?platform=superhive&status=${edition.release_status}`);
+    assert.deepEqual(page.groups.filter((group) => !group.hidden).map((group) => group.dataset.platformGroup), ['superhive']);
+    assert.ok(page.cards.some((card) => !card.hidden && card.dataset.productId === flowdock.id));
+    assert.ok(html.includes(`href="${new URL(edition.url).pathname}"`));
 });

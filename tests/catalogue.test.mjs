@@ -28,11 +28,29 @@ for (const facet of ['problems', 'buyers', 'types', 'access']) {
 const productFiles = fs.readdirSync(path.join(root, 'products'))
     .filter((name) => name.endsWith('.html') && name !== 'index.html')
     .sort();
+const editions = catalogue.products.flatMap(({ editions = [] }) => editions);
+const editionPages = editions.flatMap((edition) => {
+    const match = edition.url?.match(/^https:\/\/howthtechnologyfactory\.pro\/products\/([a-z0-9-]+\.html)$/);
+    return match ? [{ edition, file: match[1] }] : [];
+});
+const cataloguePages = [
+    ...catalogue.products.map(({ id }) => `${id}.html`),
+    ...editionPages.map(({ file }) => file),
+];
+assert.equal(new Set(cataloguePages).size, cataloguePages.length, 'Catalogue pages must be unique');
 assert.deepEqual(
-    catalogue.products.map(({ id }) => `${id}.html`).sort(),
+    cataloguePages.sort(),
     productFiles,
-    'Every product page must have one catalogue record'
+    'Every product page must have one catalogue product or edition record'
 );
+for (const edition of editions) {
+    assert.equal(catalogue.release_statuses[edition.release_status], edition.release_label, `${edition.name}: use an approved status`);
+}
+for (const { edition, file } of editionPages) {
+    assert.ok(read('products', file).includes(`data-release-status="${edition.release_status}">${edition.release_label}</p>`),
+        `${file}: status must match the catalogue edition`);
+    assert.ok(html.includes(`href="/products/${file}"`), `${file}: missing from the products index`);
+}
 
 for (const product of catalogue.products) {
     assert.match(product.id, /^[a-z0-9-]+$/);
@@ -58,8 +76,10 @@ for (const product of catalogue.products) {
     assert.match(productHtml, /"@type":"BreadcrumbList"/);
     assert.match(productHtml, /<link rel="canonical"/);
     assert.equal(catalogue.release_statuses[product.release_status], product.release_label, `${product.id}: use an approved status`);
-    assert.ok(productHtml.includes(`data-release-status="${product.release_status}">${product.release_label}</p>`), `${product.id}: primary status must match the catalogue`);
-    assert.ok(html.includes(`data-product-id="${product.id}" data-status="${product.release_status}"`), `${product.id}: filter status must match the catalogue`);
+    const displayedLabel = product.marketplace_publication || product.release_label;
+    const filterStatus = product.marketplace_publication && product.release_status !== 'live' ? 'published' : product.release_status;
+    assert.ok(productHtml.includes(`data-release-status="${product.release_status}">${displayedLabel}</p>`), `${product.id}: primary status must match the catalogue`);
+    assert.ok(html.includes(`data-product-id="${product.id}" data-status="${filterStatus}"`), `${product.id}: filter status must match the catalogue`);
     if (product.release_status !== 'live') {
         assert.doesNotMatch(productHtml, /"@type"\s*:\s*"Offer"|data-shopfront=/);
     }

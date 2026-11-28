@@ -109,6 +109,7 @@ const plannedPlatforms = {
     'dialogue-quest-production-workbench-unity': ['unity'],
     'fieldnote-playtest-research-studio': ['fab'],
     'questflow-narrative-studio': ['fab'],
+    'flowdock-studio-cgtrader': ['superhive'],
     'industrial-operations-scene-collection': ['creative-market', 'cgtrader'],
     'industrial-wayfinding-approval-kit': ['creative-market'],
     'buildscope-release-readiness-studio': ['fab'],
@@ -129,6 +130,7 @@ function productPlatforms(product) {
 const platformGroups = [
     ['adobe-commerce', 'Adobe Commerce Marketplace', null],
     ['cgtrader', 'CGTrader', 'cgtrader.svg', 'https://www.cgtrader.com/designers/howth-technology-factory'],
+    ['superhive', 'Superhive', null],
     ['creative-market', 'Creative Market', null],
     ['figma', 'Figma', 'figma.png'],
     ['confluence', 'Confluence', 'atlassian.ico'],
@@ -165,8 +167,7 @@ function groupedCards(renderCards, cataloguePage = false) {
             : '';
         return `<section data-platform-group="${platform}" class="rounded-2xl border border-borderc p-4 sm:p-6" aria-labelledby="platform-${platform}">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
-        <h3 id="platform-${platform}" class="flex items-center gap-3 font-display text-2xl">${icon ? `<img src="/assets/platform-icons/${icon}" width="32" height="32" style="background:#fff;border-radius:6px;padding:4px;object-fit:contain" alt="">` : ''}${esc(name)}</h3>
-        ${publisherLink}
+        <h3 id="platform-${platform}" class="flex items-center gap-3 font-display text-2xl">${icon ? `<img src="/assets/platform-icons/${icon}" width="32" height="32" style="background:#fff;border-radius:6px;padding:4px;object-fit:contain" alt="">` : ''}${esc(name)}</h3>${publisherLink ? `\n        ${publisherLink}` : ''}
     </div>
     <div class="grid ${grid} gap-5">
 ${renderCards(products)}
@@ -181,9 +182,10 @@ function indexCards(products) {
         : product.release_status === 'submitted_for_review' ? 2 : 3;
     return [...products].sort((a, b) => rank(a) - rank(b)).map((p) => {
         const eyebrow = problemLabel[p.problems[0]] ?? 'Tools';
+        const href = esc(new URL(p.url).pathname);
         const filterStatus = p.marketplace_publication && p.release_status !== 'live' ? 'published' : p.release_status;
         return `                        <article class="catalogue-card frame-hover bg-surface border border-borderc rounded-2xl p-6" data-product-card data-product-id="${esc(p.id)}" data-status="${esc(filterStatus)}" data-problems="${esc(p.problems.join(' '))}" data-buyers="${esc(p.buyers.join(' '))}" data-types="${esc(p.types.join(' '))}" data-access="${esc(p.access.join(' '))}" data-ai="${p.ai_agent_compatible ? 'yes' : 'no'}" data-search="${esc(searchTerms(p))}">
-                            <a class="tool-card-art" href="/products/${p.id}.html" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="/products/${p.id}.html">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p>${renderReleaseStatus(p)}<p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}</p>
+                            <a class="tool-card-art" href="${href}" aria-label="Explore ${esc(p.name)}">${productArtwork(p)}</a><p class="text-xs text-gold uppercase tracking-wider">${esc(eyebrow)}</p><h3 class="font-display text-xl mt-2"><a class="hover:text-gold" href="${href}">${esc(p.name)}</a></h3><p class="text-muted text-sm mt-3">${esc(p.summary)}</p>${renderReleaseStatus(p)}<p class="text-xs text-faint mt-5">${esc(p.access.map((id) => accessLabel[id]).join(' · '))}</p>
                         </article>`;
     }).join('\n');
 }

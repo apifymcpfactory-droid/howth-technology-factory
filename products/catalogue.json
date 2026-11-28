@@ -243,7 +243,7 @@
             "shopfronts": [{"id":"cgtrader","name":"CGTrader","url":"https://www.cgtrader.com/3d-models/industrial/other/flowdock-studio-warehouse-operations-environment-kit"}],
             "planned_pricing": "$9.99 one-time",
             "development_status": "Published on CGTrader on 11 November 2026 with instant download verified.",
-            "editions": [{"platform":"Superhive","name":"FlowDock Studio — Warehouse Scene Kit","url":"https://howthtechnologyfactory.pro/products/flowdock-studio-superhive.html","release_status":"review","release_label":"Developed and in Review","named_mesh_parts":215,"submitted":"2026-11-17","submitted_price_usd":9.99,"approved_on":"2026-11-25","scheduled_publication":"2026-12-02"}],
+            "editions": [{"platform":"Superhive","name":"FlowDock Studio — Warehouse Scene Kit","url":"https://howthtechnologyfactory.pro/products/flowdock-studio-superhive.html","release_status":"submitted_for_review","release_label":"Developed and in Review","named_mesh_parts":215,"submitted":"2026-11-17","submitted_price_usd":9.99,"approved_on":"2026-11-25","scheduled_publication":"2026-12-02","summary":"Create warehouse visuals with an editable Blender scene and 215 named parts. The Superhive edition is scheduled for 2 December 2026.","image":"/assets/previews/tools/flowdock-studio-superhive.jpg","imageAlt":"An illustrative warehouse scene for the scheduled Superhive edition.","searchTerms":"FlowDock Studio Superhive warehouse scene kit Blender warehouse layout 215 parts receiving storage picking packing dispatch"}],
             "searchTerms": "FlowDock Studio HTF CGTrader warehouse operations environment Blender FBX GLB OBJ USD asset kit"
         },
         {
@@ -2267,14 +2267,14 @@
             "ai_agent_compatible": false,
             "release_status": "developed_not_submitted",
             "release_label": "Developed but not submitted",
-            "release_note": "Adobe requested changes to the marketplace listing. Marketing resubmission is pending, and version 1.0.0 is awaiting manual technical review.",
+            "release_note": "Adobe has started manual technical QA on version 1.0.0. Marketing resubmission is pending.",
             "planned_pricing": "US$39 one-time",
             "reviews": [],
             "shopfronts": [],
             "image": "/assets/previews/tools/purchasing-workbench-magento.png",
             "imageAlt": "Magento test order showing five packs ordered, two received and three still due.",
             "searchTerms": "Adobe Commerce Marketplace Magento Open Source purchase orders purchasing receiving inventory source stock partial delivery supplier offers outstanding orders CSV receipts",
-            "status_verified": "2026-11-20"
+            "status_verified": "2026-11-28"
         },
         {
             "id": "questflow-narrative-studio",

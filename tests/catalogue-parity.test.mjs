@@ -44,6 +44,19 @@ for (const p of catalogue.products) {
 // Every card must map back to a catalogue entry — no orphans left behind by a
 // rename or a removal.
 const known = new Set(ids);
+for (const product of catalogue.products) {
+    for (const edition of product.editions ?? []) {
+        const match = edition.url?.match(/^https:\/\/howthtechnologyfactory\.pro\/products\/([a-z0-9-]+)\.html$/);
+        if (!match) continue;
+        const id = match[1];
+        known.add(id);
+        const route = `/products/${id}.html`;
+        assert.ok(index.includes(`href="${route}"`), `${id}: missing an edition card on the products index`);
+        assert.ok(read('products', `${product.id}.html`).includes(route), `${id}: missing from the main product page`);
+        assert.ok(llms.includes(route), `${id}: missing from llms.txt`);
+        assert.ok(sitemap.includes(route), `${id}: missing from sitemap.xml`);
+    }
+}
 
 for (const m of home.matchAll(/href="products\/([a-z0-9-]+)\.html"/g)) {
     assert.ok(known.has(m[1]), `homepage links to "${m[1]}", which is not in the catalogue`);
